@@ -1,0 +1,25 @@
+var struct_rectpack_sharp_1_1_packing_rectangle =
+[
+    [ "PackingRectangle", "struct_rectpack_sharp_1_1_packing_rectangle.html#a0139d7fcc3ad92139c7139cd69e5d7a6", null ],
+    [ "PackingRectangle", "struct_rectpack_sharp_1_1_packing_rectangle.html#a5b9e70cd2369cb764fa66e5c74ff6c53", null ],
+    [ "CompareTo", "struct_rectpack_sharp_1_1_packing_rectangle.html#ab99599ce70fd449f432a2946fe6c8e1f", null ],
+    [ "Contains", "struct_rectpack_sharp_1_1_packing_rectangle.html#a5fd939f399592a59944fe8e4bd933bda", null ],
+    [ "Equals", "struct_rectpack_sharp_1_1_packing_rectangle.html#a53e0db4eaa7ea4889b744b635648e7bc", null ],
+    [ "Equals", "struct_rectpack_sharp_1_1_packing_rectangle.html#ac76c34c0e81bd60baf1bc982c99e17b5", null ],
+    [ "GetHashCode", "struct_rectpack_sharp_1_1_packing_rectangle.html#a0e03dcbed6a0dabb5dc28c5162f2c30f", null ],
+    [ "Intersection", "struct_rectpack_sharp_1_1_packing_rectangle.html#a1602d61929b9e4371dfeff1553ed2c9a", null ],
+    [ "Intersects", "struct_rectpack_sharp_1_1_packing_rectangle.html#a51d3513dcc6591bd6ae3339d68895911", null ],
+    [ "ToString", "struct_rectpack_sharp_1_1_packing_rectangle.html#a2b5457d3fe82c91ba7f9de6ddcc6263a", null ],
+    [ "Height", "struct_rectpack_sharp_1_1_packing_rectangle.html#aab090a1e44e90ec3b8e90de76ec2438b", null ],
+    [ "Id", "struct_rectpack_sharp_1_1_packing_rectangle.html#aff917c9300d4d98c471a083a2868c666", null ],
+    [ "SortKey", "struct_rectpack_sharp_1_1_packing_rectangle.html#acc9a270b974bfaf63584f3d8becfeb15", null ],
+    [ "Width", "struct_rectpack_sharp_1_1_packing_rectangle.html#ab1356f36d9ebf2dda4a044e40aa16018", null ],
+    [ "X", "struct_rectpack_sharp_1_1_packing_rectangle.html#ad4dc8a738a7ae0f4d837203939346532", null ],
+    [ "Y", "struct_rectpack_sharp_1_1_packing_rectangle.html#a559389e8e21e80eb7c2ccb8378d0606f", null ],
+    [ "Area", "struct_rectpack_sharp_1_1_packing_rectangle.html#a25d1707e4419ba56d136c7da5cf0cc00", null ],
+    [ "BiggerSide", "struct_rectpack_sharp_1_1_packing_rectangle.html#ab658635c18554dee795c81b0141f16db", null ],
+    [ "Bottom", "struct_rectpack_sharp_1_1_packing_rectangle.html#a65767c7a0816fb8c1e3045abcc9c1083", null ],
+    [ "PathologicalMultiplier", "struct_rectpack_sharp_1_1_packing_rectangle.html#a6d3051b5d3957026f3b0dbf53137bc0f", null ],
+    [ "Perimeter", "struct_rectpack_sharp_1_1_packing_rectangle.html#a49faac3671eea3a62ee90ecfd7743a3a", null ],
+    [ "Right", "struct_rectpack_sharp_1_1_packing_rectangle.html#a0792bd907784b8c9f082f7064a6550bc", null ]
+];

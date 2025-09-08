@@ -1,0 +1,4 @@
+var _sprite_renderer_8cs =
+[
+    [ "MGAlienLib.SpriteRenderer", "class_m_g_alien_lib_1_1_sprite_renderer.html", "class_m_g_alien_lib_1_1_sprite_renderer" ]
+];

@@ -1,0 +1,25 @@
+var struct_true_type_sharp_1_1_font_bitmap =
+[
+    [ "FontBitmap", "struct_true_type_sharp_1_1_font_bitmap.html#ac0cddf67fe666d203f8dec5866f0cb6f", null ],
+    [ "FontBitmap", "struct_true_type_sharp_1_1_font_bitmap.html#a1cb8e1874f675fe53f6a6980d4e488af", null ],
+    [ "GetObjectData", "struct_true_type_sharp_1_1_font_bitmap.html#a53f5372bcfe8fbad9ea20f58c200bcf8", null ],
+    [ "GetResizedBitmap", "struct_true_type_sharp_1_1_font_bitmap.html#a94a2c736b06afaf2b8ba4e908ef8f4ee", null ],
+    [ "GetResizedBitmap", "struct_true_type_sharp_1_1_font_bitmap.html#aaa7489039e9e5906cc8fe8a280e849b3", null ],
+    [ "GetResizedBitmapPow2", "struct_true_type_sharp_1_1_font_bitmap.html#a5a118d35543609713044e593fadaeb1e", null ],
+    [ "GetResizedBitmapPow2", "struct_true_type_sharp_1_1_font_bitmap.html#a16a9132a1dffc1326dcd439ea67013d4", null ],
+    [ "GetTrimmedBitmap", "struct_true_type_sharp_1_1_font_bitmap.html#a14a152adc19217d32fc0984b0f4590f1", null ],
+    [ "PixelConversionFunc< T >", "struct_true_type_sharp_1_1_font_bitmap.html#a667e44397c00db6b12b05233ccd3376d", null ],
+    [ "To2DBitmap", "struct_true_type_sharp_1_1_font_bitmap.html#a70bd13c706aa6386df511e3e867ae22b", null ],
+    [ "To2DBitmap", "struct_true_type_sharp_1_1_font_bitmap.html#a9678fc9cc1f73e7ece33d61877f90ced", null ],
+    [ "To2DBitmap< T >", "struct_true_type_sharp_1_1_font_bitmap.html#a695235c917d08a417bce17080b868700", null ],
+    [ "Buffer", "struct_true_type_sharp_1_1_font_bitmap.html#a084d90b6c082212063f8a63ae69ae22f", null ],
+    [ "BufferOffset", "struct_true_type_sharp_1_1_font_bitmap.html#aee3460d3ee247efd9c5489c398821b80", null ],
+    [ "Height", "struct_true_type_sharp_1_1_font_bitmap.html#a23811bd5eb9ec2c1414c9278d36acb2d", null ],
+    [ "Stride", "struct_true_type_sharp_1_1_font_bitmap.html#a859b4b7c76f14c10509015cb72c13a47", null ],
+    [ "Width", "struct_true_type_sharp_1_1_font_bitmap.html#a4f30ac5394131448635ec0fb0e03fa3c", null ],
+    [ "XOffset", "struct_true_type_sharp_1_1_font_bitmap.html#a7fc8dbdf0395813f7c3b6f95d5e5a3bc", null ],
+    [ "YOffset", "struct_true_type_sharp_1_1_font_bitmap.html#acda587fcb9b45ef326b6416aa15c9274", null ],
+    [ "IsValid", "struct_true_type_sharp_1_1_font_bitmap.html#a9337dcede7e2fccee398f5908da38d39", null ],
+    [ "StartOffset", "struct_true_type_sharp_1_1_font_bitmap.html#af6798f006c0da561c9fa587ac033530e", null ],
+    [ "this[int x, int y]", "struct_true_type_sharp_1_1_font_bitmap.html#af17e2e858d004cbc2969c66005cad757", null ]
+];

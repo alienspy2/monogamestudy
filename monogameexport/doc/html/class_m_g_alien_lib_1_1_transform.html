@@ -1,0 +1,1401 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.13.2"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>alien-monogame: MGAlienLib.Transform 클래스 참조</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(function() { init_search(); });
+/* @license-end */
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">alien-monogame
+   </div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
+          <input type="text" id="MSearchField" value="" placeholder="검색" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 다음에 의해 생성됨 :  Doxygen 1.13.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){initNavTree('class_m_g_alien_lib_1_1_transform.html',''); initResizable(true); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">로딩중...</div>
+<div class="SRStatus" id="Searching">검색중...</div>
+<div class="SRStatus" id="NoMatches">일치하는것 없음</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 멤버 함수</a> &#124;
+<a href="#pub-static-methods">정적 Public 멤버 함수</a> &#124;
+<a href="#properties">속성</a> &#124;
+<a href="class_m_g_alien_lib_1_1_transform-members.html">모든 멤버 목록</a>  </div>
+  <div class="headertitle"><div class="title">MGAlienLib.Transform 클래스 참조</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>게임 오브젝트의 변환 정보를 담는 컴포넌트  
+ <a href="#details">더 자세히 ...</a></p>
+<div class="dynheader">
+MGAlienLib.Transform에 대한 상속 다이어그램 : </div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="class_m_g_alien_lib_1_1_transform.png" usemap="#MGAlienLib.Transform_map" alt=""/>
+  <map id="MGAlienLib.Transform_map" name="MGAlienLib.Transform_map">
+<area href="class_m_g_alien_lib_1_1_component_base.html" title="컴포넌트의 기본 클래스입니다. todo : coroutine 추가" alt="MGAlienLib.ComponentBase" shape="rect" coords="105,112,306,136"/>
+<area href="class_m_g_alien_lib_1_1_m_g_disposable_object.html" alt="MGAlienLib.MGDisposableObject" shape="rect" coords="105,56,306,80"/>
+<area href="class_m_g_alien_lib_1_1_m_g_object.html" alt="MGAlienLib.MGObject" shape="rect" coords="0,0,201,24"/>
+  </map>
+</div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 멤버 함수</h2></td></tr>
+<tr class="memitem:a51f3bd7eb42762cac458ead0201f1514" id="r_a51f3bd7eb42762cac458ead0201f1514"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a51f3bd7eb42762cac458ead0201f1514">Transform</a> ()</td></tr>
+<tr class="memdesc:a51f3bd7eb42762cac458ead0201f1514"><td class="mdescLeft">&#160;</td><td class="mdescRight">새로운 <a class="el" href="class_m_g_alien_lib_1_1_transform.html" title="게임 오브젝트의 변환 정보를 담는 컴포넌트">Transform</a> 인스턴스를 생성합니다.  <br /></td></tr>
+<tr class="separator:a51f3bd7eb42762cac458ead0201f1514"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4e5b9cbc9017bdb267e5b3fa9c1bf855" id="r_a4e5b9cbc9017bdb267e5b3fa9c1bf855"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4e5b9cbc9017bdb267e5b3fa9c1bf855">SetParent</a> (<a class="el" href="class_m_g_alien_lib_1_1_transform.html">Transform</a> newParent)</td></tr>
+<tr class="memdesc:a4e5b9cbc9017bdb267e5b3fa9c1bf855"><td class="mdescLeft">&#160;</td><td class="mdescRight">부모 트랜스폼을 설정합니다.  <br /></td></tr>
+<tr class="separator:a4e5b9cbc9017bdb267e5b3fa9c1bf855"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7af9fe1cee83163258341100b23aa4b6" id="r_a7af9fe1cee83163258341100b23aa4b6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7af9fe1cee83163258341100b23aa4b6">SetAsFirstSibling</a> ()</td></tr>
+<tr class="memdesc:a7af9fe1cee83163258341100b23aa4b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">부모 노드 자식중 첫번째 자식으로 설정합니다.  <br /></td></tr>
+<tr class="separator:a7af9fe1cee83163258341100b23aa4b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab092b6dd0ea04091cf47b9ac97c523eb" id="r_ab092b6dd0ea04091cf47b9ac97c523eb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab092b6dd0ea04091cf47b9ac97c523eb">SetAsLastSibling</a> ()</td></tr>
+<tr class="memdesc:ab092b6dd0ea04091cf47b9ac97c523eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">부모 노드 자식중 마지막 자식으로 설정합니다.  <br /></td></tr>
+<tr class="separator:ab092b6dd0ea04091cf47b9ac97c523eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a248f9f6ce77943a9df4609268f387473" id="r_a248f9f6ce77943a9df4609268f387473"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a248f9f6ce77943a9df4609268f387473">GetSiblingIndex</a> ()</td></tr>
+<tr class="memdesc:a248f9f6ce77943a9df4609268f387473"><td class="mdescLeft">&#160;</td><td class="mdescRight">부모 노드 자식중 몇 번째 인지 가져옵니다  <br /></td></tr>
+<tr class="separator:a248f9f6ce77943a9df4609268f387473"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaa987cb3d6de035544d2448fd4dcde4f" id="r_aaa987cb3d6de035544d2448fd4dcde4f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_m_g_alien_lib_1_1_transform.html">Transform</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aaa987cb3d6de035544d2448fd4dcde4f">GetChild</a> (int index)</td></tr>
+<tr class="memdesc:aaa987cb3d6de035544d2448fd4dcde4f"><td class="mdescLeft">&#160;</td><td class="mdescRight">자식 노드중 index 번 째의 자식을 가져옵니다.  <br /></td></tr>
+<tr class="separator:aaa987cb3d6de035544d2448fd4dcde4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0690959892a31d0390526bc918a2d42b" id="r_a0690959892a31d0390526bc918a2d42b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0690959892a31d0390526bc918a2d42b">GetChildCount</a> ()</td></tr>
+<tr class="memdesc:a0690959892a31d0390526bc918a2d42b"><td class="mdescLeft">&#160;</td><td class="mdescRight">자식 노드의 개수를 가져옵니다.  <br /></td></tr>
+<tr class="separator:a0690959892a31d0390526bc918a2d42b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a23039202ba270b6541f7964849426b96" id="r_a23039202ba270b6541f7964849426b96"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_m_g_alien_lib_1_1_transform.html">Transform</a>[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a23039202ba270b6541f7964849426b96">GetChildren</a> ()</td></tr>
+<tr class="memdesc:a23039202ba270b6541f7964849426b96"><td class="mdescLeft">&#160;</td><td class="mdescRight">모든 자식 노드를 가져옵니다.  <br /></td></tr>
+<tr class="separator:a23039202ba270b6541f7964849426b96"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4926cc64d7ae78d0e2ca849ac1ba4a98" id="r_a4926cc64d7ae78d0e2ca849ac1ba4a98"><td class="memItemLeft" align="right" valign="top">IEnumerator&lt; <a class="el" href="class_m_g_alien_lib_1_1_transform.html">Transform</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4926cc64d7ae78d0e2ca849ac1ba4a98">GetEnumerator</a> ()</td></tr>
+<tr class="memdesc:a4926cc64d7ae78d0e2ca849ac1ba4a98"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_m_g_alien_lib_1_1_transform.html" title="게임 오브젝트의 변환 정보를 담는 컴포넌트">Transform</a> class 를 순환 할 수 있도록 해줍니다.  <br /></td></tr>
+<tr class="separator:a4926cc64d7ae78d0e2ca849ac1ba4a98"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7911fb6611af9dc89abbffdca70b453c" id="r_a7911fb6611af9dc89abbffdca70b453c"><td class="memItemLeft" align="right" valign="top">Vector3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7911fb6611af9dc89abbffdca70b453c">TransformPoint</a> (Vector3 <a class="el" href="#ad7859b580a7e33ddc4f1e10df220445f">position</a>)</td></tr>
+<tr class="memdesc:a7911fb6611af9dc89abbffdca70b453c"><td class="mdescLeft">&#160;</td><td class="mdescRight">point 하나를 local space 에서 world space 로 변환합니다.  <br /></td></tr>
+<tr class="separator:a7911fb6611af9dc89abbffdca70b453c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acf36cdaa76541b47d633e877bf76a4a5" id="r_acf36cdaa76541b47d633e877bf76a4a5"><td class="memItemLeft" align="right" valign="top">Vector3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acf36cdaa76541b47d633e877bf76a4a5">TransformVector</a> (Vector3 vector)</td></tr>
+<tr class="memdesc:acf36cdaa76541b47d633e877bf76a4a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">vector 하나를 local space 에서 world space 로 변환합니다.  <br /></td></tr>
+<tr class="separator:acf36cdaa76541b47d633e877bf76a4a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6a9b7801a795b30e633711eb65ca51db" id="r_a6a9b7801a795b30e633711eb65ca51db"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6a9b7801a795b30e633711eb65ca51db">TransformPoints</a> (Span&lt; Vector3 &gt; positions)</td></tr>
+<tr class="memdesc:a6a9b7801a795b30e633711eb65ca51db"><td class="mdescLeft">&#160;</td><td class="mdescRight">여러개의 point 를 local space 에서 world space 로 변환합니다.  <br /></td></tr>
+<tr class="separator:a6a9b7801a795b30e633711eb65ca51db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae40eec9ae553cafd607608acabd470f9" id="r_ae40eec9ae553cafd607608acabd470f9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae40eec9ae553cafd607608acabd470f9">TransformVectors</a> (Span&lt; Vector3 &gt; vectors)</td></tr>
+<tr class="memdesc:ae40eec9ae553cafd607608acabd470f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">여러개의 vector 를 local space 에서 world space 로 변환합니다.  <br /></td></tr>
+<tr class="separator:ae40eec9ae553cafd607608acabd470f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a43d621fc9c954ac5840cdc155a52b908" id="r_a43d621fc9c954ac5840cdc155a52b908"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a43d621fc9c954ac5840cdc155a52b908">LookAt</a> (Vector3 target, Vector3 worldUp)</td></tr>
+<tr class="memdesc:a43d621fc9c954ac5840cdc155a52b908"><td class="mdescLeft">&#160;</td><td class="mdescRight">world space 에서 현재 position 을 기준으로 target 을 바라보도록 회전합니다.  <br /></td></tr>
+<tr class="separator:a43d621fc9c954ac5840cdc155a52b908"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a34dbd9fa5e1539f125d7b8fd2865307d" id="r_a34dbd9fa5e1539f125d7b8fd2865307d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a34dbd9fa5e1539f125d7b8fd2865307d">LookAt</a> (<a class="el" href="class_m_g_alien_lib_1_1_transform.html">Transform</a> target, Vector3 worldUp)</td></tr>
+<tr class="memdesc:a34dbd9fa5e1539f125d7b8fd2865307d"><td class="mdescLeft">&#160;</td><td class="mdescRight">world space 에서 현재 position 을 기준으로 target 을 바라보도록 회전합니다.  <br /></td></tr>
+<tr class="separator:a34dbd9fa5e1539f125d7b8fd2865307d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a49c9643ed8dd8fb659430c99428bde6e" id="r_a49c9643ed8dd8fb659430c99428bde6e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a49c9643ed8dd8fb659430c99428bde6e">GetDescendants</a> (ref List&lt; <a class="el" href="class_m_g_alien_lib_1_1_transform.html">Transform</a> &gt; collector)</td></tr>
+<tr class="memdesc:a49c9643ed8dd8fb659430c99428bde6e"><td class="mdescLeft">&#160;</td><td class="mdescRight">자식 노드들을 <em>모두</em> 가져옵니다. 성능에 주의해야 합니다.  <br /></td></tr>
+<tr class="separator:a49c9643ed8dd8fb659430c99428bde6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af8170980d9391ef86704d7d41102ace0" id="r_af8170980d9391ef86704d7d41102ace0"><td class="memItemLeft" align="right" valign="top">override bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af8170980d9391ef86704d7d41102ace0">Equals</a> (object obj)</td></tr>
+<tr class="separator:af8170980d9391ef86704d7d41102ace0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:add2336796395a174156062f7db88f625" id="r_add2336796395a174156062f7db88f625"><td class="memItemLeft" align="right" valign="top">override int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#add2336796395a174156062f7db88f625">GetHashCode</a> ()</td></tr>
+<tr class="separator:add2336796395a174156062f7db88f625"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_class_m_g_alien_lib_1_1_component_base"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_class_m_g_alien_lib_1_1_component_base')"><img src="closed.png" alt="-"/>&#160;<a class="el" href="class_m_g_alien_lib_1_1_component_base.html">MGAlienLib.ComponentBase</a>(으)로부터 상속된 Public 멤버 함수</td></tr>
+<tr class="memitem:aa8ba8c98f37f458b837400ff4c26a33e inherit pub_methods_class_m_g_alien_lib_1_1_component_base" id="r_aa8ba8c98f37f458b837400ff4c26a33e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_m_g_alien_lib_1_1_game_object.html">GameObject</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_g_alien_lib_1_1_component_base.html#aa8ba8c98f37f458b837400ff4c26a33e">CreateGameObject</a> (string <a class="el" href="class_m_g_alien_lib_1_1_component_base.html#a740a4f15a2887c2d55611f52498e4860">name</a>, <a class="el" href="class_m_g_alien_lib_1_1_transform.html">Transform</a> parent)</td></tr>
+<tr class="memdesc:aa8ba8c98f37f458b837400ff4c26a33e inherit pub_methods_class_m_g_alien_lib_1_1_component_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">새로운 GameObject를 생성합니다. GameObject는 new GameObject() 로 생성할 수 없습니다.  <br /></td></tr>
+<tr class="separator:aa8ba8c98f37f458b837400ff4c26a33e inherit pub_methods_class_m_g_alien_lib_1_1_component_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a05e7e29a1e026e62e7555428eaadc58c inherit pub_methods_class_m_g_alien_lib_1_1_component_base" id="r_a05e7e29a1e026e62e7555428eaadc58c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_g_alien_lib_1_1_component_base.html#a05e7e29a1e026e62e7555428eaadc58c">ComponentBase</a> ()</td></tr>
+<tr class="memdesc:a05e7e29a1e026e62e7555428eaadc58c inherit pub_methods_class_m_g_alien_lib_1_1_component_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Component 는 new 로 생성할 수 없습니다. AddComponent 를 사용하여 생성해주세요.  <br /></td></tr>
+<tr class="separator:a05e7e29a1e026e62e7555428eaadc58c inherit pub_methods_class_m_g_alien_lib_1_1_component_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a85876d113b7f82c0ed6eae1814fab18b inherit pub_methods_class_m_g_alien_lib_1_1_component_base" id="r_a85876d113b7f82c0ed6eae1814fab18b"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_g_alien_lib_1_1_component_base.html#a85876d113b7f82c0ed6eae1814fab18b">Awake</a> ()</td></tr>
+<tr class="memdesc:a85876d113b7f82c0ed6eae1814fab18b inherit pub_methods_class_m_g_alien_lib_1_1_component_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">컴포넌트가 활성화될 때 호출됩니다. 컴포넌트가 속한 gameObject 가 꺼진 상태에서 생성되는 등 Awake 가 호출 될 수 없는 상황일 때에는 호출 가능해지는 시점에 호출됩니다.  <br /></td></tr>
+<tr class="separator:a85876d113b7f82c0ed6eae1814fab18b inherit pub_methods_class_m_g_alien_lib_1_1_component_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4e116c591487b4bdc0d020b2bc121045 inherit pub_methods_class_m_g_alien_lib_1_1_component_base" id="r_a4e116c591487b4bdc0d020b2bc121045"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_g_alien_lib_1_1_component_base.html#a4e116c591487b4bdc0d020b2bc121045">Start</a> ()</td></tr>
+<tr class="memdesc:a4e116c591487b4bdc0d020b2bc121045 inherit pub_methods_class_m_g_alien_lib_1_1_component_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">컴포넌트가 시작될 때 호출됩니다. Awake 와 비슷하나, 모든 컴포넌트의 Awake 가 호출된 이후에 호출됩니다. Start 가 호출 될 수 없는 상황일 때에는 호출 가능해지는 시점에 호출됩니다.  <br /></td></tr>
+<tr class="separator:a4e116c591487b4bdc0d020b2bc121045 inherit pub_methods_class_m_g_alien_lib_1_1_component_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af2ab676ce8636fc14842cd9bd6d00507 inherit pub_methods_class_m_g_alien_lib_1_1_component_base" id="r_af2ab676ce8636fc14842cd9bd6d00507"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_g_alien_lib_1_1_component_base.html#af2ab676ce8636fc14842cd9bd6d00507">internal_Update</a> ()</td></tr>
+<tr class="memdesc:af2ab676ce8636fc14842cd9bd6d00507 inherit pub_methods_class_m_g_alien_lib_1_1_component_base"><td class="mdescLeft">&#160;</td><td class="mdescRight"><em>사용불가</em> 내부적으로 호출되는 함수입니다.  <br /></td></tr>
+<tr class="separator:af2ab676ce8636fc14842cd9bd6d00507 inherit pub_methods_class_m_g_alien_lib_1_1_component_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7164c35e440acbd8a11c875e30844266 inherit pub_methods_class_m_g_alien_lib_1_1_component_base" id="r_a7164c35e440acbd8a11c875e30844266"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_g_alien_lib_1_1_component_base.html#a7164c35e440acbd8a11c875e30844266">Update</a> ()</td></tr>
+<tr class="memdesc:a7164c35e440acbd8a11c875e30844266 inherit pub_methods_class_m_g_alien_lib_1_1_component_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">컴포넌트가 업데이트될 때 마다 호출됩니다.  <br /></td></tr>
+<tr class="separator:a7164c35e440acbd8a11c875e30844266 inherit pub_methods_class_m_g_alien_lib_1_1_component_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3747f1cbf6889165632ea8262672f75c inherit pub_methods_class_m_g_alien_lib_1_1_component_base" id="r_a3747f1cbf6889165632ea8262672f75c"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_g_alien_lib_1_1_component_base.html#a3747f1cbf6889165632ea8262672f75c">LateUpdate</a> ()</td></tr>
+<tr class="memdesc:a3747f1cbf6889165632ea8262672f75c inherit pub_methods_class_m_g_alien_lib_1_1_component_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update 와 비슷하게 컴포넌트가 업데이트될 때 마다 호출됩니다. 단, 모든 Update 가 호출된 이후에 호출됩니다.  <br /></td></tr>
+<tr class="separator:a3747f1cbf6889165632ea8262672f75c inherit pub_methods_class_m_g_alien_lib_1_1_component_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a53ff01975bfd9fc93734d4e921052c62 inherit pub_methods_class_m_g_alien_lib_1_1_component_base" id="r_a53ff01975bfd9fc93734d4e921052c62"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_g_alien_lib_1_1_component_base.html#a53ff01975bfd9fc93734d4e921052c62">OnEnable</a> ()</td></tr>
+<tr class="memdesc:a53ff01975bfd9fc93734d4e921052c62 inherit pub_methods_class_m_g_alien_lib_1_1_component_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">컴포넌트가 활성화될 때 호출됩니다. 컴포넌트가 속한 gameObject 가 꺼진 상태등 호출 되기 불가능 한 상황일 때에는 호출 가능해지는 시점에 호출됩니다.  <br /></td></tr>
+<tr class="separator:a53ff01975bfd9fc93734d4e921052c62 inherit pub_methods_class_m_g_alien_lib_1_1_component_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8e9c575590466326f10db9d5fb3692b8 inherit pub_methods_class_m_g_alien_lib_1_1_component_base" id="r_a8e9c575590466326f10db9d5fb3692b8"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_g_alien_lib_1_1_component_base.html#a8e9c575590466326f10db9d5fb3692b8">OnDisable</a> ()</td></tr>
+<tr class="memdesc:a8e9c575590466326f10db9d5fb3692b8 inherit pub_methods_class_m_g_alien_lib_1_1_component_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">컴포넌트가 비활성화될 때 호출됩니다.  <br /></td></tr>
+<tr class="separator:a8e9c575590466326f10db9d5fb3692b8 inherit pub_methods_class_m_g_alien_lib_1_1_component_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad3e8790756a5a1e0b7e589ca6e0580a2 inherit pub_methods_class_m_g_alien_lib_1_1_component_base" id="r_ad3e8790756a5a1e0b7e589ca6e0580a2"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_g_alien_lib_1_1_component_base.html#ad3e8790756a5a1e0b7e589ca6e0580a2">OnDestroy</a> ()</td></tr>
+<tr class="memdesc:ad3e8790756a5a1e0b7e589ca6e0580a2 inherit pub_methods_class_m_g_alien_lib_1_1_component_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">컴포넌트가 파괴될 때 호출됩니다.  <br /></td></tr>
+<tr class="separator:ad3e8790756a5a1e0b7e589ca6e0580a2 inherit pub_methods_class_m_g_alien_lib_1_1_component_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1c304741c9c6d17fdec300c8ab3183d7 inherit pub_methods_class_m_g_alien_lib_1_1_component_base" id="r_a1c304741c9c6d17fdec300c8ab3183d7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_g_alien_lib_1_1_component_base.html#a1c304741c9c6d17fdec300c8ab3183d7">Destroy</a> (<a class="el" href="class_m_g_alien_lib_1_1_game_object.html">GameObject</a> obj)</td></tr>
+<tr class="memdesc:a1c304741c9c6d17fdec300c8ab3183d7 inherit pub_methods_class_m_g_alien_lib_1_1_component_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">게임 오브젝트를 파괴합니다. 즉시 파괴되지 않고, 예약 되었다가, 다음 프레임 시작 전에 일괄 파괴됩니다.  <br /></td></tr>
+<tr class="separator:a1c304741c9c6d17fdec300c8ab3183d7 inherit pub_methods_class_m_g_alien_lib_1_1_component_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2a1fc7dc80dfc290bfdc5a7f9bb29ae7 inherit pub_methods_class_m_g_alien_lib_1_1_component_base" id="r_a2a1fc7dc80dfc290bfdc5a7f9bb29ae7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_g_alien_lib_1_1_component_base.html#a2a1fc7dc80dfc290bfdc5a7f9bb29ae7">Destroy</a> (<a class="el" href="class_m_g_alien_lib_1_1_component_base.html">ComponentBase</a> component)</td></tr>
+<tr class="memdesc:a2a1fc7dc80dfc290bfdc5a7f9bb29ae7 inherit pub_methods_class_m_g_alien_lib_1_1_component_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">컴포넌트를 파괴합니다.  <br /></td></tr>
+<tr class="separator:a2a1fc7dc80dfc290bfdc5a7f9bb29ae7 inherit pub_methods_class_m_g_alien_lib_1_1_component_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa3d813f25bbd0eb69c3299d94673d61d inherit pub_methods_class_m_g_alien_lib_1_1_component_base" id="r_aa3d813f25bbd0eb69c3299d94673d61d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_g_alien_lib_1_1_component_base.html#aa3d813f25bbd0eb69c3299d94673d61d">internal_OnDestroy</a> ()</td></tr>
+<tr class="memdesc:aa3d813f25bbd0eb69c3299d94673d61d inherit pub_methods_class_m_g_alien_lib_1_1_component_base"><td class="mdescLeft">&#160;</td><td class="mdescRight"><em>사용불가</em> 내부적으로 호출되는 함수입니다.  <br /></td></tr>
+<tr class="separator:aa3d813f25bbd0eb69c3299d94673d61d inherit pub_methods_class_m_g_alien_lib_1_1_component_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4c0b492045ecec554036126d83321965 inherit pub_methods_class_m_g_alien_lib_1_1_component_base" id="r_a4c0b492045ecec554036126d83321965"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_g_alien_lib_1_1_component_base.html#a4c0b492045ecec554036126d83321965">internal_CheckLifeCycle</a> ()</td></tr>
+<tr class="memdesc:a4c0b492045ecec554036126d83321965 inherit pub_methods_class_m_g_alien_lib_1_1_component_base"><td class="mdescLeft">&#160;</td><td class="mdescRight"><em>사용불가</em> 내부적으로 호출되는 함수입니다.  <br /></td></tr>
+<tr class="separator:a4c0b492045ecec554036126d83321965 inherit pub_methods_class_m_g_alien_lib_1_1_component_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acf8e854a3da549c97a23afdc321d8666 inherit pub_methods_class_m_g_alien_lib_1_1_component_base" id="r_acf8e854a3da549c97a23afdc321d8666"><td class="memItemLeft" align="right" valign="top">override string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_g_alien_lib_1_1_component_base.html#acf8e854a3da549c97a23afdc321d8666">ToString</a> ()</td></tr>
+<tr class="separator:acf8e854a3da549c97a23afdc321d8666 inherit pub_methods_class_m_g_alien_lib_1_1_component_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a24d4673fb0396ce9f426cc7c404ddc77 inherit pub_methods_class_m_g_alien_lib_1_1_component_base" id="r_a24d4673fb0396ce9f426cc7c404ddc77"><td class="memItemLeft" align="right" valign="top">override bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_g_alien_lib_1_1_component_base.html#a24d4673fb0396ce9f426cc7c404ddc77">Equals</a> (object obj)</td></tr>
+<tr class="separator:a24d4673fb0396ce9f426cc7c404ddc77 inherit pub_methods_class_m_g_alien_lib_1_1_component_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a818cd8425ed3ed44e28bd9d1984c2cb7 inherit pub_methods_class_m_g_alien_lib_1_1_component_base" id="r_a818cd8425ed3ed44e28bd9d1984c2cb7"><td class="memItemLeft" align="right" valign="top">override int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_g_alien_lib_1_1_component_base.html#a818cd8425ed3ed44e28bd9d1984c2cb7">GetHashCode</a> ()</td></tr>
+<tr class="separator:a818cd8425ed3ed44e28bd9d1984c2cb7 inherit pub_methods_class_m_g_alien_lib_1_1_component_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aad5e2e132dad2f736e2dfd448913c7c1 inherit pub_methods_class_m_g_alien_lib_1_1_component_base" id="r_aad5e2e132dad2f736e2dfd448913c7c1"><td class="memItemLeft" align="right" valign="top">T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_g_alien_lib_1_1_component_base.html#aad5e2e132dad2f736e2dfd448913c7c1">AddComponent&lt; T &gt;</a> ()</td></tr>
+<tr class="memdesc:aad5e2e132dad2f736e2dfd448913c7c1 inherit pub_methods_class_m_g_alien_lib_1_1_component_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">컴포넌트를 추가합니다.  <br /></td></tr>
+<tr class="separator:aad5e2e132dad2f736e2dfd448913c7c1 inherit pub_methods_class_m_g_alien_lib_1_1_component_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a562202f3ea0407108ec34852ed3e4f32 inherit pub_methods_class_m_g_alien_lib_1_1_component_base" id="r_a562202f3ea0407108ec34852ed3e4f32"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_g_alien_lib_1_1_component_base.html#a562202f3ea0407108ec34852ed3e4f32">RemoveComponent</a> (<a class="el" href="class_m_g_alien_lib_1_1_component_base.html">ComponentBase</a> component)</td></tr>
+<tr class="memdesc:a562202f3ea0407108ec34852ed3e4f32 inherit pub_methods_class_m_g_alien_lib_1_1_component_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">컴포넌트를 제거합니다.  <br /></td></tr>
+<tr class="separator:a562202f3ea0407108ec34852ed3e4f32 inherit pub_methods_class_m_g_alien_lib_1_1_component_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a432fc7430f175f6643079bacb80b2498 inherit pub_methods_class_m_g_alien_lib_1_1_component_base" id="r_a432fc7430f175f6643079bacb80b2498"><td class="memItemLeft" align="right" valign="top">T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_g_alien_lib_1_1_component_base.html#a432fc7430f175f6643079bacb80b2498">GetComponent&lt; T &gt;</a> ()</td></tr>
+<tr class="memdesc:a432fc7430f175f6643079bacb80b2498 inherit pub_methods_class_m_g_alien_lib_1_1_component_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">컴포넌트를 하나 가져옵니다.  <br /></td></tr>
+<tr class="separator:a432fc7430f175f6643079bacb80b2498 inherit pub_methods_class_m_g_alien_lib_1_1_component_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7b066090119f368e8575a2a0dcbc852d inherit pub_methods_class_m_g_alien_lib_1_1_component_base" id="r_a7b066090119f368e8575a2a0dcbc852d"><td class="memItemLeft" align="right" valign="top">List&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_g_alien_lib_1_1_component_base.html#a7b066090119f368e8575a2a0dcbc852d">GetComponents&lt; T &gt;</a> ()</td></tr>
+<tr class="memdesc:a7b066090119f368e8575a2a0dcbc852d inherit pub_methods_class_m_g_alien_lib_1_1_component_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">컴포넌트를 <em>모두</em> 가져옵니다.  <br /></td></tr>
+<tr class="separator:a7b066090119f368e8575a2a0dcbc852d inherit pub_methods_class_m_g_alien_lib_1_1_component_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a839d45a2aa4f5d008d408e6c325b63e9 inherit pub_methods_class_m_g_alien_lib_1_1_component_base" id="r_a839d45a2aa4f5d008d408e6c325b63e9"><td class="memItemLeft" align="right" valign="top">T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_g_alien_lib_1_1_component_base.html#a839d45a2aa4f5d008d408e6c325b63e9">GetComponentInChildren&lt; T &gt;</a> ()</td></tr>
+<tr class="memdesc:a839d45a2aa4f5d008d408e6c325b63e9 inherit pub_methods_class_m_g_alien_lib_1_1_component_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">자식을 모두 찾아 컴포넌트를 하나 가져옵니다.  <br /></td></tr>
+<tr class="separator:a839d45a2aa4f5d008d408e6c325b63e9 inherit pub_methods_class_m_g_alien_lib_1_1_component_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a738d37240d3d85103f6c0f4ea1992e00 inherit pub_methods_class_m_g_alien_lib_1_1_component_base" id="r_a738d37240d3d85103f6c0f4ea1992e00"><td class="memItemLeft" align="right" valign="top">List&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_g_alien_lib_1_1_component_base.html#a738d37240d3d85103f6c0f4ea1992e00">GetComponentsInChildren&lt; T &gt;</a> ()</td></tr>
+<tr class="memdesc:a738d37240d3d85103f6c0f4ea1992e00 inherit pub_methods_class_m_g_alien_lib_1_1_component_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">자식을 모두 찾아 컴포넌트를 <em>모두</em> 가져옵니다.  <br /></td></tr>
+<tr class="separator:a738d37240d3d85103f6c0f4ea1992e00 inherit pub_methods_class_m_g_alien_lib_1_1_component_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8140096a71108978ddf646e993af0559 inherit pub_methods_class_m_g_alien_lib_1_1_component_base" id="r_a8140096a71108978ddf646e993af0559"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_g_alien_lib_1_1_component_base.html#a8140096a71108978ddf646e993af0559">OnDispose</a> ()</td></tr>
+<tr class="separator:a8140096a71108978ddf646e993af0559 inherit pub_methods_class_m_g_alien_lib_1_1_component_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a935876c7d60251a5dee52a5cc9ddd4da inherit pub_methods_class_m_g_alien_lib_1_1_component_base" id="r_a935876c7d60251a5dee52a5cc9ddd4da"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_g_alien_lib_1_1_component_base.html#a935876c7d60251a5dee52a5cc9ddd4da">Dispose</a> ()</td></tr>
+<tr class="separator:a935876c7d60251a5dee52a5cc9ddd4da inherit pub_methods_class_m_g_alien_lib_1_1_component_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_class_m_g_alien_lib_1_1_m_g_disposable_object"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_class_m_g_alien_lib_1_1_m_g_disposable_object')"><img src="closed.png" alt="-"/>&#160;<a class="el" href="class_m_g_alien_lib_1_1_m_g_disposable_object.html">MGAlienLib.MGDisposableObject</a>(으)로부터 상속된 Public 멤버 함수</td></tr>
+<tr class="memitem:ac8b43cfa15a6583fda818f6bb1fee8a9 inherit pub_methods_class_m_g_alien_lib_1_1_m_g_disposable_object" id="r_ac8b43cfa15a6583fda818f6bb1fee8a9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_g_alien_lib_1_1_m_g_disposable_object.html#ac8b43cfa15a6583fda818f6bb1fee8a9">Dispose</a> ()</td></tr>
+<tr class="separator:ac8b43cfa15a6583fda818f6bb1fee8a9 inherit pub_methods_class_m_g_alien_lib_1_1_m_g_disposable_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+정적 Public 멤버 함수</h2></td></tr>
+<tr class="memitem:ad8c63f7399cad463ddd04c3a2596fd17" id="r_ad8c63f7399cad463ddd04c3a2596fd17"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad8c63f7399cad463ddd04c3a2596fd17">operator==</a> (<a class="el" href="class_m_g_alien_lib_1_1_transform.html">Transform</a> a, <a class="el" href="class_m_g_alien_lib_1_1_transform.html">Transform</a> b)</td></tr>
+<tr class="separator:ad8c63f7399cad463ddd04c3a2596fd17"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abb4e5236f54316cd05496bb73370da5d" id="r_abb4e5236f54316cd05496bb73370da5d"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abb4e5236f54316cd05496bb73370da5d">operator!=</a> (<a class="el" href="class_m_g_alien_lib_1_1_transform.html">Transform</a> a, <a class="el" href="class_m_g_alien_lib_1_1_transform.html">Transform</a> b)</td></tr>
+<tr class="separator:abb4e5236f54316cd05496bb73370da5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_static_methods_class_m_g_alien_lib_1_1_component_base"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_static_methods_class_m_g_alien_lib_1_1_component_base')"><img src="closed.png" alt="-"/>&#160;<a class="el" href="class_m_g_alien_lib_1_1_component_base.html">MGAlienLib.ComponentBase</a>(으)로부터 상속된 정적 Public 멤버 함수</td></tr>
+<tr class="memitem:a8135da637e18a29b2efbf49544b1be4d inherit pub_static_methods_class_m_g_alien_lib_1_1_component_base" id="r_a8135da637e18a29b2efbf49544b1be4d"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_g_alien_lib_1_1_component_base.html#a8135da637e18a29b2efbf49544b1be4d">operator==</a> (<a class="el" href="class_m_g_alien_lib_1_1_component_base.html">ComponentBase</a> a, object b)</td></tr>
+<tr class="separator:a8135da637e18a29b2efbf49544b1be4d inherit pub_static_methods_class_m_g_alien_lib_1_1_component_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a22f0cdd570d22e7ae69f00df572772c2 inherit pub_static_methods_class_m_g_alien_lib_1_1_component_base" id="r_a22f0cdd570d22e7ae69f00df572772c2"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_g_alien_lib_1_1_component_base.html#a22f0cdd570d22e7ae69f00df572772c2">operator!=</a> (<a class="el" href="class_m_g_alien_lib_1_1_component_base.html">ComponentBase</a> a, object b)</td></tr>
+<tr class="separator:a22f0cdd570d22e7ae69f00df572772c2 inherit pub_static_methods_class_m_g_alien_lib_1_1_component_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="properties" name="properties"></a>
+속성</h2></td></tr>
+<tr class="memitem:aa8c369f744bbb9aa747eaa2ed185f7fe" id="r_aa8c369f744bbb9aa747eaa2ed185f7fe"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_m_g_alien_lib_1_1_transform.html">Transform</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa8c369f744bbb9aa747eaa2ed185f7fe">parent</a><code> [get, set]</code></td></tr>
+<tr class="memdesc:aa8c369f744bbb9aa747eaa2ed185f7fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">부모 트랜스폼을 가져오거나 설정합니다.  <br /></td></tr>
+<tr class="separator:aa8c369f744bbb9aa747eaa2ed185f7fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afc0dbdbf8509776a010f3e45f1f7c848" id="r_afc0dbdbf8509776a010f3e45f1f7c848"><td class="memItemLeft" align="right" valign="top">Vector3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afc0dbdbf8509776a010f3e45f1f7c848">localPosition</a><code> [get, set]</code></td></tr>
+<tr class="memdesc:afc0dbdbf8509776a010f3e45f1f7c848"><td class="mdescLeft">&#160;</td><td class="mdescRight">local space 에서의 위치를 가져오거나 설정합니다.  <br /></td></tr>
+<tr class="separator:afc0dbdbf8509776a010f3e45f1f7c848"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5fd11bf77b8f70f69ea11484222add8f" id="r_a5fd11bf77b8f70f69ea11484222add8f"><td class="memItemLeft" align="right" valign="top">Quaternion&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5fd11bf77b8f70f69ea11484222add8f">localRotation</a><code> [get, set]</code></td></tr>
+<tr class="memdesc:a5fd11bf77b8f70f69ea11484222add8f"><td class="mdescLeft">&#160;</td><td class="mdescRight">local space 에서의 회전을 가져오거나 설정합니다.  <br /></td></tr>
+<tr class="separator:a5fd11bf77b8f70f69ea11484222add8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abd44f0d23abe7e6808c7d89e579e60a2" id="r_abd44f0d23abe7e6808c7d89e579e60a2"><td class="memItemLeft" align="right" valign="top">Vector3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abd44f0d23abe7e6808c7d89e579e60a2">localScale</a><code> [get, set]</code></td></tr>
+<tr class="memdesc:abd44f0d23abe7e6808c7d89e579e60a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">local space 에서의 크기를 가져오거나 설정합니다.  <br /></td></tr>
+<tr class="separator:abd44f0d23abe7e6808c7d89e579e60a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad7859b580a7e33ddc4f1e10df220445f" id="r_ad7859b580a7e33ddc4f1e10df220445f"><td class="memItemLeft" align="right" valign="top">Vector3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad7859b580a7e33ddc4f1e10df220445f">position</a><code> [get, set]</code></td></tr>
+<tr class="memdesc:ad7859b580a7e33ddc4f1e10df220445f"><td class="mdescLeft">&#160;</td><td class="mdescRight">world space 에서의 위치를 가져오거나 설정합니다.  <br /></td></tr>
+<tr class="separator:ad7859b580a7e33ddc4f1e10df220445f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a967f10af6f0669a58a41a2b42ea41980" id="r_a967f10af6f0669a58a41a2b42ea41980"><td class="memItemLeft" align="right" valign="top">Quaternion&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a967f10af6f0669a58a41a2b42ea41980">rotation</a><code> [get, set]</code></td></tr>
+<tr class="memdesc:a967f10af6f0669a58a41a2b42ea41980"><td class="mdescLeft">&#160;</td><td class="mdescRight">world space 에서의 회전을 가져오거나 설정합니다.  <br /></td></tr>
+<tr class="separator:a967f10af6f0669a58a41a2b42ea41980"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af6b02d2540bfee34c49cacc262161719" id="r_af6b02d2540bfee34c49cacc262161719"><td class="memItemLeft" align="right" valign="top">Vector3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af6b02d2540bfee34c49cacc262161719">scale</a><code> [get, set]</code></td></tr>
+<tr class="memdesc:af6b02d2540bfee34c49cacc262161719"><td class="mdescLeft">&#160;</td><td class="mdescRight">world space 에서의 크기를 가져오거나 설정합니다.  <br /></td></tr>
+<tr class="separator:af6b02d2540bfee34c49cacc262161719"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae1506f52f5b532de00f1fa4f33bc09ac" id="r_ae1506f52f5b532de00f1fa4f33bc09ac"><td class="memItemLeft" align="right" valign="top">Vector3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae1506f52f5b532de00f1fa4f33bc09ac">right</a><code> [get]</code></td></tr>
+<tr class="memdesc:ae1506f52f5b532de00f1fa4f33bc09ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">world space 에서 transform 이 바라보는 방향에 상대적으로 오른쪽 방향을 가져옵니다.  <br /></td></tr>
+<tr class="separator:ae1506f52f5b532de00f1fa4f33bc09ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0f271ab66e6304703cdfac01c7eeb547" id="r_a0f271ab66e6304703cdfac01c7eeb547"><td class="memItemLeft" align="right" valign="top">Vector3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0f271ab66e6304703cdfac01c7eeb547">left</a><code> [get]</code></td></tr>
+<tr class="memdesc:a0f271ab66e6304703cdfac01c7eeb547"><td class="mdescLeft">&#160;</td><td class="mdescRight">world space 에서 transform 이 바라보는 방향에 상대적으로 왼쪽 방향을 가져옵니다.  <br /></td></tr>
+<tr class="separator:a0f271ab66e6304703cdfac01c7eeb547"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5f3689801d693c894187b1703aa8c9d9" id="r_a5f3689801d693c894187b1703aa8c9d9"><td class="memItemLeft" align="right" valign="top">Vector3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5f3689801d693c894187b1703aa8c9d9">up</a><code> [get]</code></td></tr>
+<tr class="memdesc:a5f3689801d693c894187b1703aa8c9d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">world space 에서 transform 이 바라보는 방향에 상대적으로 위쪽 방향을 가져옵니다.  <br /></td></tr>
+<tr class="separator:a5f3689801d693c894187b1703aa8c9d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb174596fd14dae5f2977ae5f1e62983" id="r_acb174596fd14dae5f2977ae5f1e62983"><td class="memItemLeft" align="right" valign="top">Vector3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acb174596fd14dae5f2977ae5f1e62983">down</a><code> [get]</code></td></tr>
+<tr class="memdesc:acb174596fd14dae5f2977ae5f1e62983"><td class="mdescLeft">&#160;</td><td class="mdescRight">world space 에서 transform 이 바라보는 방향에 상대적으로 아래쪽 방향을 가져옵니다.  <br /></td></tr>
+<tr class="separator:acb174596fd14dae5f2977ae5f1e62983"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3fc67d7f95c8be58c4f36ab786e620b6" id="r_a3fc67d7f95c8be58c4f36ab786e620b6"><td class="memItemLeft" align="right" valign="top">Vector3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3fc67d7f95c8be58c4f36ab786e620b6">forward</a><code> [get]</code></td></tr>
+<tr class="memdesc:a3fc67d7f95c8be58c4f36ab786e620b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">world space 에서 transform 이 바라보는 방향을 가져옵니다.  <br /></td></tr>
+<tr class="separator:a3fc67d7f95c8be58c4f36ab786e620b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a563b0cea10eca593a2a6cb80932f9c55" id="r_a563b0cea10eca593a2a6cb80932f9c55"><td class="memItemLeft" align="right" valign="top">Vector3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a563b0cea10eca593a2a6cb80932f9c55">back</a><code> [get]</code></td></tr>
+<tr class="memdesc:a563b0cea10eca593a2a6cb80932f9c55"><td class="mdescLeft">&#160;</td><td class="mdescRight">world space 에서 transform 이 바라보는 반대 방향을 가져옵니다.  <br /></td></tr>
+<tr class="separator:a563b0cea10eca593a2a6cb80932f9c55"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9a2dc50730bb2d20aa561eed371277c0" id="r_a9a2dc50730bb2d20aa561eed371277c0"><td class="memItemLeft" align="right" valign="top">Matrix&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9a2dc50730bb2d20aa561eed371277c0">localToWorldMatrix</a><code> [get]</code></td></tr>
+<tr class="memdesc:a9a2dc50730bb2d20aa561eed371277c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">local space 에서 world space 로 변환하는 행렬을 가져옵니다.  <br /></td></tr>
+<tr class="separator:a9a2dc50730bb2d20aa561eed371277c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ada2e8bf9302cffd0e2297d87418d0a19" id="r_ada2e8bf9302cffd0e2297d87418d0a19"><td class="memItemLeft" align="right" valign="top">Matrix&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ada2e8bf9302cffd0e2297d87418d0a19">worldToLocalMatrix</a><code> [get]</code></td></tr>
+<tr class="memdesc:ada2e8bf9302cffd0e2297d87418d0a19"><td class="mdescLeft">&#160;</td><td class="mdescRight">world space 에서 local space 로 변환하는 행렬을 가져옵니다.  <br /></td></tr>
+<tr class="separator:ada2e8bf9302cffd0e2297d87418d0a19"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a63da439fa9264b20fed0faf31ef979a3" id="r_a63da439fa9264b20fed0faf31ef979a3"><td class="memItemLeft" align="right" valign="top">IReadOnlyList&lt; <a class="el" href="class_m_g_alien_lib_1_1_transform.html">Transform</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a63da439fa9264b20fed0faf31ef979a3">Children</a><code> [get]</code></td></tr>
+<tr class="memdesc:a63da439fa9264b20fed0faf31ef979a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">자식 노드들  <br /></td></tr>
+<tr class="separator:a63da439fa9264b20fed0faf31ef979a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af4d038407c71e375c33dd403da63d7a5" id="r_af4d038407c71e375c33dd403da63d7a5"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af4d038407c71e375c33dd403da63d7a5">childCount</a><code> [get]</code></td></tr>
+<tr class="memdesc:af4d038407c71e375c33dd403da63d7a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">자식 노드의 개수  <br /></td></tr>
+<tr class="separator:af4d038407c71e375c33dd403da63d7a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header properties_class_m_g_alien_lib_1_1_component_base"><td colspan="2" onclick="javascript:dynsection.toggleInherit('properties_class_m_g_alien_lib_1_1_component_base')"><img src="closed.png" alt="-"/>&#160;<a class="el" href="class_m_g_alien_lib_1_1_component_base.html">MGAlienLib.ComponentBase</a>(으)로부터 상속된 속성</td></tr>
+<tr class="memitem:a3ac9d2ef4454a84b7b434633ddbdf9b8 inherit properties_class_m_g_alien_lib_1_1_component_base" id="r_a3ac9d2ef4454a84b7b434633ddbdf9b8"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_g_alien_lib_1_1_component_base.html#a3ac9d2ef4454a84b7b434633ddbdf9b8">destroyed</a> = false<code> [get]</code></td></tr>
+<tr class="memdesc:a3ac9d2ef4454a84b7b434633ddbdf9b8 inherit properties_class_m_g_alien_lib_1_1_component_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">컴포넌트가 파괴되었는지 여부를 가져옵니다.  <br /></td></tr>
+<tr class="separator:a3ac9d2ef4454a84b7b434633ddbdf9b8 inherit properties_class_m_g_alien_lib_1_1_component_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5a09619d6399b91a21caefa0ed01e7e8 inherit properties_class_m_g_alien_lib_1_1_component_base" id="r_a5a09619d6399b91a21caefa0ed01e7e8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_m_g_alien_lib_1_1_game_base.html">GameBase</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_g_alien_lib_1_1_component_base.html#a5a09619d6399b91a21caefa0ed01e7e8">game</a><code> [get]</code></td></tr>
+<tr class="separator:a5a09619d6399b91a21caefa0ed01e7e8 inherit properties_class_m_g_alien_lib_1_1_component_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa7a38bee7e9345a0da3cdf2528972c77 inherit properties_class_m_g_alien_lib_1_1_component_base" id="r_aa7a38bee7e9345a0da3cdf2528972c77"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_m_g_alien_lib_1_1_hierarchy_manager.html">HierarchyManager</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_g_alien_lib_1_1_component_base.html#aa7a38bee7e9345a0da3cdf2528972c77">hierarchyManager</a><code> [get]</code></td></tr>
+<tr class="separator:aa7a38bee7e9345a0da3cdf2528972c77 inherit properties_class_m_g_alien_lib_1_1_component_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abd4f74880694bf3011ab42187b2567e1 inherit properties_class_m_g_alien_lib_1_1_component_base" id="r_abd4f74880694bf3011ab42187b2567e1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_m_g_alien_lib_1_1_input_manager.html">InputManager</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_g_alien_lib_1_1_component_base.html#abd4f74880694bf3011ab42187b2567e1">inputManager</a><code> [get]</code></td></tr>
+<tr class="separator:abd4f74880694bf3011ab42187b2567e1 inherit properties_class_m_g_alien_lib_1_1_component_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afed1ade6a049f799807b1528d9ca2de9 inherit properties_class_m_g_alien_lib_1_1_component_base" id="r_afed1ade6a049f799807b1528d9ca2de9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_m_g_alien_lib_1_1_asset_manager.html">AssetManager</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_g_alien_lib_1_1_component_base.html#afed1ade6a049f799807b1528d9ca2de9">assetManager</a><code> [get]</code></td></tr>
+<tr class="separator:afed1ade6a049f799807b1528d9ca2de9 inherit properties_class_m_g_alien_lib_1_1_component_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5b2270d4ecd0a4ffa86f314e0d334433 inherit properties_class_m_g_alien_lib_1_1_component_base" id="r_a5b2270d4ecd0a4ffa86f314e0d334433"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_m_g_alien_lib_1_1_shader_manager.html">ShaderManager</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_g_alien_lib_1_1_component_base.html#a5b2270d4ecd0a4ffa86f314e0d334433">shaderManager</a><code> [get]</code></td></tr>
+<tr class="separator:a5b2270d4ecd0a4ffa86f314e0d334433 inherit properties_class_m_g_alien_lib_1_1_component_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa6c3dcb67ae4777fee0da0bc7b6773bc inherit properties_class_m_g_alien_lib_1_1_component_base" id="r_aa6c3dcb67ae4777fee0da0bc7b6773bc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_m_g_alien_lib_1_1_font_manager.html">FontManager</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_g_alien_lib_1_1_component_base.html#aa6c3dcb67ae4777fee0da0bc7b6773bc">fontManager</a><code> [get]</code></td></tr>
+<tr class="separator:aa6c3dcb67ae4777fee0da0bc7b6773bc inherit properties_class_m_g_alien_lib_1_1_component_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a13285666c7df1f6d6e034d7074e57219 inherit properties_class_m_g_alien_lib_1_1_component_base" id="r_a13285666c7df1f6d6e034d7074e57219"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_m_g_alien_lib_1_1_dynamic_texture_atlas_manager.html">DynamicTextureAtlasManager</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_g_alien_lib_1_1_component_base.html#a13285666c7df1f6d6e034d7074e57219">atlasMan</a><code> [get]</code></td></tr>
+<tr class="separator:a13285666c7df1f6d6e034d7074e57219 inherit properties_class_m_g_alien_lib_1_1_component_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6f01195f4996ce63d43dd849c014e325 inherit properties_class_m_g_alien_lib_1_1_component_base" id="r_a6f01195f4996ce63d43dd849c014e325"><td class="memItemLeft" align="right" valign="top">GameBase.DefaultAssets&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_g_alien_lib_1_1_component_base.html#a6f01195f4996ce63d43dd849c014e325">defaultAssets</a><code> [get]</code></td></tr>
+<tr class="separator:a6f01195f4996ce63d43dd849c014e325 inherit properties_class_m_g_alien_lib_1_1_component_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a92d3f75b42cdc7744c4b51542876cbab inherit properties_class_m_g_alien_lib_1_1_component_base" id="r_a92d3f75b42cdc7744c4b51542876cbab"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_m_g_alien_lib_1_1_transform.html">Transform</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_g_alien_lib_1_1_component_base.html#a92d3f75b42cdc7744c4b51542876cbab">root</a><code> [get]</code></td></tr>
+<tr class="separator:a92d3f75b42cdc7744c4b51542876cbab inherit properties_class_m_g_alien_lib_1_1_component_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4f4ac458f53e6cf2d0fe0ebb2e3d8e6f inherit properties_class_m_g_alien_lib_1_1_component_base" id="r_a4f4ac458f53e6cf2d0fe0ebb2e3d8e6f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_m_g_alien_lib_1_1_transform.html">Transform</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_g_alien_lib_1_1_component_base.html#a4f4ac458f53e6cf2d0fe0ebb2e3d8e6f">transform</a><code> [get]</code></td></tr>
+<tr class="memdesc:a4f4ac458f53e6cf2d0fe0ebb2e3d8e6f inherit properties_class_m_g_alien_lib_1_1_component_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">컴포넌트가 속한 게임 오브젝트의 트랜스폼을 가져옵니다.  <br /></td></tr>
+<tr class="separator:a4f4ac458f53e6cf2d0fe0ebb2e3d8e6f inherit properties_class_m_g_alien_lib_1_1_component_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a740a4f15a2887c2d55611f52498e4860 inherit properties_class_m_g_alien_lib_1_1_component_base" id="r_a740a4f15a2887c2d55611f52498e4860"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_g_alien_lib_1_1_component_base.html#a740a4f15a2887c2d55611f52498e4860">name</a><code> [get]</code></td></tr>
+<tr class="memdesc:a740a4f15a2887c2d55611f52498e4860 inherit properties_class_m_g_alien_lib_1_1_component_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">컴포넌트가 속한 게임 오브젝트의 이름을 가져옵니다. 만약 게임 오브젝트가 이미 파괴되었다면 "(null)"을 반환합니다.  <br /></td></tr>
+<tr class="separator:a740a4f15a2887c2d55611f52498e4860 inherit properties_class_m_g_alien_lib_1_1_component_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a39e1e8d6256591ec01f2d24e8496d586 inherit properties_class_m_g_alien_lib_1_1_component_base" id="r_a39e1e8d6256591ec01f2d24e8496d586"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_g_alien_lib_1_1_component_base.html#a39e1e8d6256591ec01f2d24e8496d586">enabled</a><code> [get, set]</code></td></tr>
+<tr class="memdesc:a39e1e8d6256591ec01f2d24e8496d586 inherit properties_class_m_g_alien_lib_1_1_component_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">컴포넌트가 활성화되어 있는지 여부를 가져오거나 설정합니다.  <br /></td></tr>
+<tr class="separator:a39e1e8d6256591ec01f2d24e8496d586 inherit properties_class_m_g_alien_lib_1_1_component_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
+추가로 상속된 멤버들</h2></td></tr>
+<tr class="inherit_header pub_attribs_class_m_g_alien_lib_1_1_component_base"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_attribs_class_m_g_alien_lib_1_1_component_base')"><img src="closed.png" alt="-"/>&#160;<a class="el" href="class_m_g_alien_lib_1_1_component_base.html">MGAlienLib.ComponentBase</a>(으)로부터 상속된 Public 속성</td></tr>
+<tr class="memitem:a870dc57aa4c6db7dbe228ac81194e91a inherit pub_attribs_class_m_g_alien_lib_1_1_component_base" id="r_a870dc57aa4c6db7dbe228ac81194e91a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_m_g_alien_lib_1_1_game_object.html">GameObject</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_g_alien_lib_1_1_component_base.html#a870dc57aa4c6db7dbe228ac81194e91a">gameObject</a></td></tr>
+<tr class="memdesc:a870dc57aa4c6db7dbe228ac81194e91a inherit pub_attribs_class_m_g_alien_lib_1_1_component_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">컴포넌트가 속한 게임 오브젝트를 가져옵니다.  <br /></td></tr>
+<tr class="separator:a870dc57aa4c6db7dbe228ac81194e91a inherit pub_attribs_class_m_g_alien_lib_1_1_component_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_methods_class_m_g_alien_lib_1_1_component_base"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pro_methods_class_m_g_alien_lib_1_1_component_base')"><img src="closed.png" alt="-"/>&#160;<a class="el" href="class_m_g_alien_lib_1_1_component_base.html">MGAlienLib.ComponentBase</a>(으)로부터 상속된 Protected 멤버 함수</td></tr>
+<tr class="memitem:a43e0bce9bbe70d3df79bd7462e1f9786 inherit pro_methods_class_m_g_alien_lib_1_1_component_base" id="r_a43e0bce9bbe70d3df79bd7462e1f9786"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_g_alien_lib_1_1_component_base.html#a43e0bce9bbe70d3df79bd7462e1f9786">Dispose</a> (bool disposing)</td></tr>
+<tr class="separator:a43e0bce9bbe70d3df79bd7462e1f9786 inherit pro_methods_class_m_g_alien_lib_1_1_component_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">상세한 설명</h2>
+<div class="textblock"><p>게임 오브젝트의 변환 정보를 담는 컴포넌트 </p>
+</div><h2 class="groupheader">생성자 &amp; 소멸자 문서화</h2>
+<a id="a51f3bd7eb42762cac458ead0201f1514" name="a51f3bd7eb42762cac458ead0201f1514"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a51f3bd7eb42762cac458ead0201f1514">&#9670;&#160;</a></span>Transform()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">MGAlienLib.Transform.Transform </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>새로운 <a class="el" href="class_m_g_alien_lib_1_1_transform.html" title="게임 오브젝트의 변환 정보를 담는 컴포넌트">Transform</a> 인스턴스를 생성합니다. </p>
+
+</div>
+</div>
+<h2 class="groupheader">멤버 함수 문서화</h2>
+<a id="af8170980d9391ef86704d7d41102ace0" name="af8170980d9391ef86704d7d41102ace0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af8170980d9391ef86704d7d41102ace0">&#9670;&#160;</a></span>Equals()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">override bool MGAlienLib.Transform.Equals </td>
+          <td>(</td>
+          <td class="paramtype">object</td>          <td class="paramname"><span class="paramname"><em>obj</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aaa987cb3d6de035544d2448fd4dcde4f" name="aaa987cb3d6de035544d2448fd4dcde4f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaa987cb3d6de035544d2448fd4dcde4f">&#9670;&#160;</a></span>GetChild()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_m_g_alien_lib_1_1_transform.html">Transform</a> MGAlienLib.Transform.GetChild </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>index</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>자식 노드중 index 번 째의 자식을 가져옵니다. </p>
+<dl class="params"><dt>매개변수</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>반환값</dt><dd></dd></dl>
+
+</div>
+</div>
+<a id="a0690959892a31d0390526bc918a2d42b" name="a0690959892a31d0390526bc918a2d42b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0690959892a31d0390526bc918a2d42b">&#9670;&#160;</a></span>GetChildCount()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int MGAlienLib.Transform.GetChildCount </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>자식 노드의 개수를 가져옵니다. </p>
+<dl class="section return"><dt>반환값</dt><dd></dd></dl>
+
+</div>
+</div>
+<a id="a23039202ba270b6541f7964849426b96" name="a23039202ba270b6541f7964849426b96"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a23039202ba270b6541f7964849426b96">&#9670;&#160;</a></span>GetChildren()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_m_g_alien_lib_1_1_transform.html">Transform</a>[] MGAlienLib.Transform.GetChildren </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>모든 자식 노드를 가져옵니다. </p>
+<dl class="section return"><dt>반환값</dt><dd></dd></dl>
+
+</div>
+</div>
+<a id="a49c9643ed8dd8fb659430c99428bde6e" name="a49c9643ed8dd8fb659430c99428bde6e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a49c9643ed8dd8fb659430c99428bde6e">&#9670;&#160;</a></span>GetDescendants()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MGAlienLib.Transform.GetDescendants </td>
+          <td>(</td>
+          <td class="paramtype">ref List&lt; <a class="el" href="class_m_g_alien_lib_1_1_transform.html">Transform</a> &gt;</td>          <td class="paramname"><span class="paramname"><em>collector</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>자식 노드들을 <em>모두</em> 가져옵니다. 성능에 주의해야 합니다. </p>
+<dl class="params"><dt>매개변수</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">collector</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a4926cc64d7ae78d0e2ca849ac1ba4a98" name="a4926cc64d7ae78d0e2ca849ac1ba4a98"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4926cc64d7ae78d0e2ca849ac1ba4a98">&#9670;&#160;</a></span>GetEnumerator()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">IEnumerator&lt; <a class="el" href="class_m_g_alien_lib_1_1_transform.html">Transform</a> &gt; MGAlienLib.Transform.GetEnumerator </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="class_m_g_alien_lib_1_1_transform.html" title="게임 오브젝트의 변환 정보를 담는 컴포넌트">Transform</a> class 를 순환 할 수 있도록 해줍니다. </p>
+<dl class="section return"><dt>반환값</dt><dd></dd></dl>
+
+</div>
+</div>
+<a id="add2336796395a174156062f7db88f625" name="add2336796395a174156062f7db88f625"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#add2336796395a174156062f7db88f625">&#9670;&#160;</a></span>GetHashCode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">override int MGAlienLib.Transform.GetHashCode </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a248f9f6ce77943a9df4609268f387473" name="a248f9f6ce77943a9df4609268f387473"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a248f9f6ce77943a9df4609268f387473">&#9670;&#160;</a></span>GetSiblingIndex()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int MGAlienLib.Transform.GetSiblingIndex </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>부모 노드 자식중 몇 번째 인지 가져옵니다 </p>
+<dl class="section return"><dt>반환값</dt><dd></dd></dl>
+
+</div>
+</div>
+<a id="a34dbd9fa5e1539f125d7b8fd2865307d" name="a34dbd9fa5e1539f125d7b8fd2865307d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a34dbd9fa5e1539f125d7b8fd2865307d">&#9670;&#160;</a></span>LookAt() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MGAlienLib.Transform.LookAt </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_m_g_alien_lib_1_1_transform.html">Transform</a></td>          <td class="paramname"><span class="paramname"><em>target</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Vector3</td>          <td class="paramname"><span class="paramname"><em>worldUp</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>world space 에서 현재 position 을 기준으로 target 을 바라보도록 회전합니다. </p>
+<dl class="params"><dt>매개변수</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">target</td><td></td></tr>
+    <tr><td class="paramname">worldUp</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a43d621fc9c954ac5840cdc155a52b908" name="a43d621fc9c954ac5840cdc155a52b908"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a43d621fc9c954ac5840cdc155a52b908">&#9670;&#160;</a></span>LookAt() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MGAlienLib.Transform.LookAt </td>
+          <td>(</td>
+          <td class="paramtype">Vector3</td>          <td class="paramname"><span class="paramname"><em>target</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Vector3</td>          <td class="paramname"><span class="paramname"><em>worldUp</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>world space 에서 현재 position 을 기준으로 target 을 바라보도록 회전합니다. </p>
+<dl class="params"><dt>매개변수</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">target</td><td></td></tr>
+    <tr><td class="paramname">worldUp</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="abb4e5236f54316cd05496bb73370da5d" name="abb4e5236f54316cd05496bb73370da5d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abb4e5236f54316cd05496bb73370da5d">&#9670;&#160;</a></span>operator!=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool MGAlienLib.Transform.operator!= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_m_g_alien_lib_1_1_transform.html">Transform</a></td>          <td class="paramname"><span class="paramname"><em>a</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_m_g_alien_lib_1_1_transform.html">Transform</a></td>          <td class="paramname"><span class="paramname"><em>b</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad8c63f7399cad463ddd04c3a2596fd17" name="ad8c63f7399cad463ddd04c3a2596fd17"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad8c63f7399cad463ddd04c3a2596fd17">&#9670;&#160;</a></span>operator==()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool MGAlienLib.Transform.operator== </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_m_g_alien_lib_1_1_transform.html">Transform</a></td>          <td class="paramname"><span class="paramname"><em>a</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_m_g_alien_lib_1_1_transform.html">Transform</a></td>          <td class="paramname"><span class="paramname"><em>b</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7af9fe1cee83163258341100b23aa4b6" name="a7af9fe1cee83163258341100b23aa4b6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7af9fe1cee83163258341100b23aa4b6">&#9670;&#160;</a></span>SetAsFirstSibling()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MGAlienLib.Transform.SetAsFirstSibling </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>부모 노드 자식중 첫번째 자식으로 설정합니다. </p>
+
+</div>
+</div>
+<a id="ab092b6dd0ea04091cf47b9ac97c523eb" name="ab092b6dd0ea04091cf47b9ac97c523eb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab092b6dd0ea04091cf47b9ac97c523eb">&#9670;&#160;</a></span>SetAsLastSibling()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MGAlienLib.Transform.SetAsLastSibling </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>부모 노드 자식중 마지막 자식으로 설정합니다. </p>
+
+</div>
+</div>
+<a id="a4e5b9cbc9017bdb267e5b3fa9c1bf855" name="a4e5b9cbc9017bdb267e5b3fa9c1bf855"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4e5b9cbc9017bdb267e5b3fa9c1bf855">&#9670;&#160;</a></span>SetParent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MGAlienLib.Transform.SetParent </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_m_g_alien_lib_1_1_transform.html">Transform</a></td>          <td class="paramname"><span class="paramname"><em>newParent</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>부모 트랜스폼을 설정합니다. </p>
+<dl class="params"><dt>매개변수</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">newParent</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a7911fb6611af9dc89abbffdca70b453c" name="a7911fb6611af9dc89abbffdca70b453c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7911fb6611af9dc89abbffdca70b453c">&#9670;&#160;</a></span>TransformPoint()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Vector3 MGAlienLib.Transform.TransformPoint </td>
+          <td>(</td>
+          <td class="paramtype">Vector3</td>          <td class="paramname"><span class="paramname"><em>position</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>point 하나를 local space 에서 world space 로 변환합니다. </p>
+<dl class="params"><dt>매개변수</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">position</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>반환값</dt><dd></dd></dl>
+
+</div>
+</div>
+<a id="a6a9b7801a795b30e633711eb65ca51db" name="a6a9b7801a795b30e633711eb65ca51db"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6a9b7801a795b30e633711eb65ca51db">&#9670;&#160;</a></span>TransformPoints()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MGAlienLib.Transform.TransformPoints </td>
+          <td>(</td>
+          <td class="paramtype">Span&lt; Vector3 &gt;</td>          <td class="paramname"><span class="paramname"><em>positions</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>여러개의 point 를 local space 에서 world space 로 변환합니다. </p>
+<dl class="params"><dt>매개변수</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">positions</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="acf36cdaa76541b47d633e877bf76a4a5" name="acf36cdaa76541b47d633e877bf76a4a5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acf36cdaa76541b47d633e877bf76a4a5">&#9670;&#160;</a></span>TransformVector()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Vector3 MGAlienLib.Transform.TransformVector </td>
+          <td>(</td>
+          <td class="paramtype">Vector3</td>          <td class="paramname"><span class="paramname"><em>vector</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>vector 하나를 local space 에서 world space 로 변환합니다. </p>
+<dl class="params"><dt>매개변수</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">vector</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>반환값</dt><dd></dd></dl>
+
+</div>
+</div>
+<a id="ae40eec9ae553cafd607608acabd470f9" name="ae40eec9ae553cafd607608acabd470f9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae40eec9ae553cafd607608acabd470f9">&#9670;&#160;</a></span>TransformVectors()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MGAlienLib.Transform.TransformVectors </td>
+          <td>(</td>
+          <td class="paramtype">Span&lt; Vector3 &gt;</td>          <td class="paramname"><span class="paramname"><em>vectors</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>여러개의 vector 를 local space 에서 world space 로 변환합니다. </p>
+<dl class="params"><dt>매개변수</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">vectors</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">속성 문서화</h2>
+<a id="a563b0cea10eca593a2a6cb80932f9c55" name="a563b0cea10eca593a2a6cb80932f9c55"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a563b0cea10eca593a2a6cb80932f9c55">&#9670;&#160;</a></span>back</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Vector3 MGAlienLib.Transform.back</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel get">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>world space 에서 transform 이 바라보는 반대 방향을 가져옵니다. </p>
+
+</div>
+</div>
+<a id="af4d038407c71e375c33dd403da63d7a5" name="af4d038407c71e375c33dd403da63d7a5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af4d038407c71e375c33dd403da63d7a5">&#9670;&#160;</a></span>childCount</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int MGAlienLib.Transform.childCount</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel get">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>자식 노드의 개수 </p>
+
+</div>
+</div>
+<a id="a63da439fa9264b20fed0faf31ef979a3" name="a63da439fa9264b20fed0faf31ef979a3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a63da439fa9264b20fed0faf31ef979a3">&#9670;&#160;</a></span>Children</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">IReadOnlyList&lt;<a class="el" href="class_m_g_alien_lib_1_1_transform.html">Transform</a>&gt; MGAlienLib.Transform.Children</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel get">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>자식 노드들 </p>
+
+</div>
+</div>
+<a id="acb174596fd14dae5f2977ae5f1e62983" name="acb174596fd14dae5f2977ae5f1e62983"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acb174596fd14dae5f2977ae5f1e62983">&#9670;&#160;</a></span>down</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Vector3 MGAlienLib.Transform.down</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel get">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>world space 에서 transform 이 바라보는 방향에 상대적으로 아래쪽 방향을 가져옵니다. </p>
+
+</div>
+</div>
+<a id="a3fc67d7f95c8be58c4f36ab786e620b6" name="a3fc67d7f95c8be58c4f36ab786e620b6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3fc67d7f95c8be58c4f36ab786e620b6">&#9670;&#160;</a></span>forward</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Vector3 MGAlienLib.Transform.forward</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel get">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>world space 에서 transform 이 바라보는 방향을 가져옵니다. </p>
+
+</div>
+</div>
+<a id="a0f271ab66e6304703cdfac01c7eeb547" name="a0f271ab66e6304703cdfac01c7eeb547"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0f271ab66e6304703cdfac01c7eeb547">&#9670;&#160;</a></span>left</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Vector3 MGAlienLib.Transform.left</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel get">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>world space 에서 transform 이 바라보는 방향에 상대적으로 왼쪽 방향을 가져옵니다. </p>
+
+</div>
+</div>
+<a id="afc0dbdbf8509776a010f3e45f1f7c848" name="afc0dbdbf8509776a010f3e45f1f7c848"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afc0dbdbf8509776a010f3e45f1f7c848">&#9670;&#160;</a></span>localPosition</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Vector3 MGAlienLib.Transform.localPosition</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel get">get</span><span class="mlabel set">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>local space 에서의 위치를 가져오거나 설정합니다. </p>
+
+</div>
+</div>
+<a id="a5fd11bf77b8f70f69ea11484222add8f" name="a5fd11bf77b8f70f69ea11484222add8f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5fd11bf77b8f70f69ea11484222add8f">&#9670;&#160;</a></span>localRotation</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Quaternion MGAlienLib.Transform.localRotation</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel get">get</span><span class="mlabel set">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>local space 에서의 회전을 가져오거나 설정합니다. </p>
+
+</div>
+</div>
+<a id="abd44f0d23abe7e6808c7d89e579e60a2" name="abd44f0d23abe7e6808c7d89e579e60a2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abd44f0d23abe7e6808c7d89e579e60a2">&#9670;&#160;</a></span>localScale</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Vector3 MGAlienLib.Transform.localScale</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel get">get</span><span class="mlabel set">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>local space 에서의 크기를 가져오거나 설정합니다. </p>
+
+</div>
+</div>
+<a id="a9a2dc50730bb2d20aa561eed371277c0" name="a9a2dc50730bb2d20aa561eed371277c0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9a2dc50730bb2d20aa561eed371277c0">&#9670;&#160;</a></span>localToWorldMatrix</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Matrix MGAlienLib.Transform.localToWorldMatrix</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel get">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>local space 에서 world space 로 변환하는 행렬을 가져옵니다. </p>
+
+</div>
+</div>
+<a id="aa8c369f744bbb9aa747eaa2ed185f7fe" name="aa8c369f744bbb9aa747eaa2ed185f7fe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa8c369f744bbb9aa747eaa2ed185f7fe">&#9670;&#160;</a></span>parent</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_m_g_alien_lib_1_1_transform.html">Transform</a> MGAlienLib.Transform.parent</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel get">get</span><span class="mlabel set">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>부모 트랜스폼을 가져오거나 설정합니다. </p>
+
+</div>
+</div>
+<a id="ad7859b580a7e33ddc4f1e10df220445f" name="ad7859b580a7e33ddc4f1e10df220445f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad7859b580a7e33ddc4f1e10df220445f">&#9670;&#160;</a></span>position</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Vector3 MGAlienLib.Transform.position</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel get">get</span><span class="mlabel set">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>world space 에서의 위치를 가져오거나 설정합니다. </p>
+
+</div>
+</div>
+<a id="ae1506f52f5b532de00f1fa4f33bc09ac" name="ae1506f52f5b532de00f1fa4f33bc09ac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae1506f52f5b532de00f1fa4f33bc09ac">&#9670;&#160;</a></span>right</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Vector3 MGAlienLib.Transform.right</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel get">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>world space 에서 transform 이 바라보는 방향에 상대적으로 오른쪽 방향을 가져옵니다. </p>
+
+</div>
+</div>
+<a id="a967f10af6f0669a58a41a2b42ea41980" name="a967f10af6f0669a58a41a2b42ea41980"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a967f10af6f0669a58a41a2b42ea41980">&#9670;&#160;</a></span>rotation</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Quaternion MGAlienLib.Transform.rotation</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel get">get</span><span class="mlabel set">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>world space 에서의 회전을 가져오거나 설정합니다. </p>
+
+</div>
+</div>
+<a id="af6b02d2540bfee34c49cacc262161719" name="af6b02d2540bfee34c49cacc262161719"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af6b02d2540bfee34c49cacc262161719">&#9670;&#160;</a></span>scale</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Vector3 MGAlienLib.Transform.scale</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel get">get</span><span class="mlabel set">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>world space 에서의 크기를 가져오거나 설정합니다. </p>
+
+</div>
+</div>
+<a id="a5f3689801d693c894187b1703aa8c9d9" name="a5f3689801d693c894187b1703aa8c9d9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5f3689801d693c894187b1703aa8c9d9">&#9670;&#160;</a></span>up</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Vector3 MGAlienLib.Transform.up</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel get">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>world space 에서 transform 이 바라보는 방향에 상대적으로 위쪽 방향을 가져옵니다. </p>
+
+</div>
+</div>
+<a id="ada2e8bf9302cffd0e2297d87418d0a19" name="ada2e8bf9302cffd0e2297d87418d0a19"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ada2e8bf9302cffd0e2297d87418d0a19">&#9670;&#160;</a></span>worldToLocalMatrix</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Matrix MGAlienLib.Transform.worldToLocalMatrix</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel get">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>world space 에서 local space 로 변환하는 행렬을 가져옵니다. </p>
+
+</div>
+</div>
+<hr/>이 클래스에 대한 문서화 페이지는 다음의 파일로부터 생성되었습니다.:<ul>
+<li>src/HierarchySystem/Component/<a class="el" href="_transform_8cs.html">Transform.cs</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="namespace_m_g_alien_lib.html">MGAlienLib</a></li><li class="navelem"><a class="el" href="class_m_g_alien_lib_1_1_transform.html">Transform</a></li>
+    <li class="footer">다음에 의해 생성됨 :  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,27 @@
+var searchData=
+[
+  ['initialize_0',['Initialize',['../class_m_g_alien_lib_1_1_game_base.html#a5db0a1723aee8e8edf4f7ef3729f87bf',1,'MGAlienLib::GameBase']]],
+  ['inputmanager_1',['InputManager',['../class_m_g_alien_lib_1_1_input_manager.html#a8c1caa089125f8fdf61b486063f723ce',1,'MGAlienLib::InputManager']]],
+  ['insert_2',['Insert',['../class_m_g_alien_lib_1_1_dynamic_texture_packer.html#aeba11428fd42e4d645e2292d3cb685e4',1,'MGAlienLib.DynamicTexturePacker.Insert()'],['../class_m_g_alien_lib_1_1_dynamic_texture_atlas_manager.html#a3f2469de76e7e412eed5d05799c9f5bc',1,'MGAlienLib.DynamicTextureAtlasManager.Insert(eDynamicAtlasCategory category, Texture2D source, out Rectangle rect)'],['../class_m_g_alien_lib_1_1_dynamic_texture_atlas_manager.html#a58ce6723fe3441f4ab8abbfc7d571e16',1,'MGAlienLib.DynamicTextureAtlasManager.Insert(eDynamicAtlasCategory category, eAssetSource source, string texAddress, out Rectangle rect)']]],
+  ['intenal_5fcreateroot_3',['Intenal_CreateRoot',['../class_m_g_alien_lib_1_1_hierarchy_manager.html#ad4e3d5c91100665379a2c1970f39aa9e',1,'MGAlienLib::HierarchyManager']]],
+  ['internal_5fadduiforraycasttarget_4',['internal_AddUIForRaycastTarget',['../class_m_g_alien_lib_1_1_camera.html#af93fb98ea84552849ba776494a23ceb8',1,'MGAlienLib::Camera']]],
+  ['internal_5fchecklifecycle_5',['internal_CheckLifeCycle',['../class_m_g_alien_lib_1_1_component_base.html#a4c0b492045ecec554036126d83321965',1,'MGAlienLib::ComponentBase']]],
+  ['internal_5fcreatereference_6',['internal_CreateReference',['../class_m_g_alien_lib_1_1_shared_asset-1-g.html#ae2a3d215148b4d88e0e09a9b719992d3',1,'MGAlienLib::SharedAsset-1-g']]],
+  ['internal_5fgetreadytorender_7',['internal_GetReadyToRender',['../class_m_g_alien_lib_1_1_camera.html#a8f79070bb290663cc932e6270575f38b',1,'MGAlienLib::Camera']]],
+  ['internal_5flateupdate_8',['internal_LateUpdate',['../class_m_g_alien_lib_1_1_game_object.html#a08db8ce6c3e119ff73c4be368155e56b',1,'MGAlienLib::GameObject']]],
+  ['internal_5fondestroy_9',['internal_OnDestroy',['../class_m_g_alien_lib_1_1_component_base.html#aa3d813f25bbd0eb69c3299d94673d61d',1,'MGAlienLib.ComponentBase.internal_OnDestroy()'],['../class_m_g_alien_lib_1_1_game_object.html#ace90db8bd60537618af12bf9dac4a6b5',1,'MGAlienLib.GameObject.internal_OnDestroy()']]],
+  ['internal_5fonrender_10',['internal_OnRender',['../class_m_g_alien_lib_1_1_u_i_transform.html#aa15ca465e378d8f6f30478cbc94aa4b5',1,'MGAlienLib::UITransform']]],
+  ['internal_5fonuipointerdown_11',['internal_OnUIPointerDown',['../class_m_g_alien_lib_1_1_renderable.html#a9720786618d550c1896e10e9469c1534',1,'MGAlienLib::Renderable']]],
+  ['internal_5fonuipointerenter_12',['internal_OnUIPointerEnter',['../class_m_g_alien_lib_1_1_renderable.html#af2092e575c8c937581ae7a35f6bf03a1',1,'MGAlienLib::Renderable']]],
+  ['internal_5fonuipointerexit_13',['internal_OnUIPointerExit',['../class_m_g_alien_lib_1_1_renderable.html#af79a6c96be322f6f7abbd7880a3c4615',1,'MGAlienLib::Renderable']]],
+  ['internal_5fonuipointerup_14',['internal_OnUIPointerUp',['../class_m_g_alien_lib_1_1_renderable.html#a9626b8ef9184a01ae1adb5c1ce65bf52',1,'MGAlienLib::Renderable']]],
+  ['internal_5frelease_15',['internal_Release',['../class_m_g_alien_lib_1_1_shared_asset-1-g.html#aa9326647e43156e7d4c89f345661aa2d',1,'MGAlienLib::SharedAsset-1-g']]],
+  ['internal_5frender_16',['internal_Render',['../class_m_g_alien_lib_1_1_renderable.html#a2cd909a8cd13254f48815fbd4f52cb51',1,'MGAlienLib::Renderable']]],
+  ['internal_5fsetexternalasset_17',['internal_SetExternalAsset',['../class_m_g_alien_lib_1_1_shared_asset-1-g.html#adb8b70ad4c76eece615b4fc8507dd4df',1,'MGAlienLib::SharedAsset-1-g']]],
+  ['internal_5fupdate_18',['internal_Update',['../class_m_g_alien_lib_1_1_component_base.html#af2ab676ce8636fc14842cd9bd6d00507',1,'MGAlienLib.ComponentBase.internal_Update()'],['../class_m_g_alien_lib_1_1_game_object.html#af492ae7ae116914b6c7886a2e5bcfe74',1,'MGAlienLib.GameObject.internal_Update()']]],
+  ['internalrendermanager_19',['InternalRenderManager',['../class_m_g_alien_lib_1_1_internal_render_manager.html#ab2618a460a9a34f68df10f5c8a9da9d6',1,'MGAlienLib::InternalRenderManager']]],
+  ['intersection_20',['Intersection',['../struct_rectpack_sharp_1_1_packing_rectangle.html#a1602d61929b9e4371dfeff1553ed2c9a',1,'RectpackSharp::PackingRectangle']]],
+  ['intersects_21',['Intersects',['../struct_rectpack_sharp_1_1_packing_rectangle.html#a51d3513dcc6591bd6ae3339d68895911',1,'RectpackSharp::PackingRectangle']]],
+  ['isdirty_22',['IsDirty',['../class_m_g_alien_lib_1_1_dynamic_texture_atlas_manager.html#a48425ce4c443daa1bb19d692142da9ff',1,'MGAlienLib::DynamicTextureAtlasManager']]],
+  ['ispressed_23',['IsPressed',['../class_m_g_alien_lib_1_1_input_manager.html#a06ddf5706828d5bcaa93a61d7dfa25cf',1,'MGAlienLib.InputManager.IsPressed(Keys key)'],['../class_m_g_alien_lib_1_1_input_manager.html#afd282e4f6a38015150aec644ce62dba1',1,'MGAlienLib.InputManager.IsPressed(eMouseButton button)']]]
+];

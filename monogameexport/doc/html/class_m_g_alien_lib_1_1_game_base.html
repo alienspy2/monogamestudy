@@ -1,0 +1,851 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.13.2"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>alien-monogame: MGAlienLib.GameBase 클래스 참조</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(function() { init_search(); });
+/* @license-end */
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">alien-monogame
+   </div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
+          <input type="text" id="MSearchField" value="" placeholder="검색" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 다음에 의해 생성됨 :  Doxygen 1.13.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){initNavTree('class_m_g_alien_lib_1_1_game_base.html',''); initResizable(true); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">로딩중...</div>
+<div class="SRStatus" id="Searching">검색중...</div>
+<div class="SRStatus" id="NoMatches">일치하는것 없음</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">클래스</a> &#124;
+<a href="#pub-methods">Public 멤버 함수</a> &#124;
+<a href="#pub-attribs">Public 속성</a> &#124;
+<a href="#pro-methods">Protected 멤버 함수</a> &#124;
+<a href="#pro-attribs">Protected 속성</a> &#124;
+<a href="#properties">속성</a> &#124;
+<a href="class_m_g_alien_lib_1_1_game_base-members.html">모든 멤버 목록</a>  </div>
+  <div class="headertitle"><div class="title">MGAlienLib.GameBase 클래스 참조</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Base class for game  
+ <a href="#details">더 자세히 ...</a></p>
+<div class="dynheader">
+MGAlienLib.GameBase에 대한 상속 다이어그램 : </div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="class_m_g_alien_lib_1_1_game_base.png" alt=""/>
+ </div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+클래스</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_g_alien_lib_1_1_game_base_1_1_default_assets.html">DefaultAssets</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 멤버 함수</h2></td></tr>
+<tr class="memitem:a99a3aff4679f54ed6a69dfae8d892fb1" id="r_a99a3aff4679f54ed6a69dfae8d892fb1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a99a3aff4679f54ed6a69dfae8d892fb1">GameBase</a> ()</td></tr>
+<tr class="separator:a99a3aff4679f54ed6a69dfae8d892fb1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab15ae5042d9fb25e769448183980c722" id="r_ab15ae5042d9fb25e769448183980c722"><td class="memItemLeft" align="right" valign="top">new void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab15ae5042d9fb25e769448183980c722">Exit</a> ()</td></tr>
+<tr class="separator:ab15ae5042d9fb25e769448183980c722"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9fc1111f923c00d7e6bfed4702cc5d2a" id="r_a9fc1111f923c00d7e6bfed4702cc5d2a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9fc1111f923c00d7e6bfed4702cc5d2a">ScalePresentationArea</a> ()</td></tr>
+<tr class="separator:a9fc1111f923c00d7e6bfed4702cc5d2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+Public 속성</h2></td></tr>
+<tr class="memitem:a234919606e6303aa5b0169d7a2dd8c77" id="r_a234919606e6303aa5b0169d7a2dd8c77"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a234919606e6303aa5b0169d7a2dd8c77">deltaTime</a></td></tr>
+<tr class="separator:a234919606e6303aa5b0169d7a2dd8c77"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a86604862f488802a9beaeb386f5f1e11" id="r_a86604862f488802a9beaeb386f5f1e11"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a86604862f488802a9beaeb386f5f1e11">time</a> = 0</td></tr>
+<tr class="separator:a86604862f488802a9beaeb386f5f1e11"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad8f7954dd6dfdf1fd041017937221dc9" id="r_ad8f7954dd6dfdf1fd041017937221dc9"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad8f7954dd6dfdf1fd041017937221dc9">frameCount</a> = 0</td></tr>
+<tr class="separator:ad8f7954dd6dfdf1fd041017937221dc9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab8e91b37a103dc747992f2a67ae1d145" id="r_ab8e91b37a103dc747992f2a67ae1d145"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_m_g_alien_lib_1_1_input_manager.html">InputManager</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab8e91b37a103dc747992f2a67ae1d145">inputManager</a></td></tr>
+<tr class="separator:ab8e91b37a103dc747992f2a67ae1d145"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9cdbb6412646c21d9f73ab4a621ba960" id="r_a9cdbb6412646c21d9f73ab4a621ba960"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_m_g_alien_lib_1_1_font_manager.html">FontManager</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9cdbb6412646c21d9f73ab4a621ba960">fontManager</a></td></tr>
+<tr class="separator:a9cdbb6412646c21d9f73ab4a621ba960"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad84eec95388df3f25f1fed84ebd650b4" id="r_ad84eec95388df3f25f1fed84ebd650b4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_m_g_alien_lib_1_1_hierarchy_manager.html">HierarchyManager</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad84eec95388df3f25f1fed84ebd650b4">hierarchyManager</a></td></tr>
+<tr class="separator:ad84eec95388df3f25f1fed84ebd650b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a27972a39deb41deca9febf5a6af1e213" id="r_a27972a39deb41deca9febf5a6af1e213"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_m_g_alien_lib_1_1_performance_manager.html">PerformanceManager</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a27972a39deb41deca9febf5a6af1e213">performanceManager</a></td></tr>
+<tr class="separator:a27972a39deb41deca9febf5a6af1e213"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2f7f8a981b582c3d7a5aade7d743947d" id="r_a2f7f8a981b582c3d7a5aade7d743947d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_m_g_alien_lib_1_1_render_queue.html">RenderQueue</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2f7f8a981b582c3d7a5aade7d743947d">renderQueue</a></td></tr>
+<tr class="separator:a2f7f8a981b582c3d7a5aade7d743947d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4b4bc6a150b5f21e0714b3235cb62179" id="r_a4b4bc6a150b5f21e0714b3235cb62179"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_m_g_alien_lib_1_1_asset_manager.html">AssetManager</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4b4bc6a150b5f21e0714b3235cb62179">assetManager</a></td></tr>
+<tr class="separator:a4b4bc6a150b5f21e0714b3235cb62179"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2b30b4c5b51dc2f86252c604bf2d555e" id="r_a2b30b4c5b51dc2f86252c604bf2d555e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_m_g_alien_lib_1_1_shader_manager.html">ShaderManager</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2b30b4c5b51dc2f86252c604bf2d555e">shaderManager</a></td></tr>
+<tr class="separator:a2b30b4c5b51dc2f86252c604bf2d555e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aace2e144ff0908c37331c8ebe4f5afdd" id="r_aace2e144ff0908c37331c8ebe4f5afdd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_m_g_alien_lib_1_1_layer_manager.html">LayerManager</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aace2e144ff0908c37331c8ebe4f5afdd">layerManager</a></td></tr>
+<tr class="separator:aace2e144ff0908c37331c8ebe4f5afdd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7e2814696d22b98f36ca58a9ee8c6e3c" id="r_a7e2814696d22b98f36ca58a9ee8c6e3c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_m_g_alien_lib_1_1_internal_render_manager.html">InternalRenderManager</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7e2814696d22b98f36ca58a9ee8c6e3c">internalRenderManager</a></td></tr>
+<tr class="separator:a7e2814696d22b98f36ca58a9ee8c6e3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a31d006ab6764f09935ddc8b9e5259031" id="r_a31d006ab6764f09935ddc8b9e5259031"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_m_g_alien_lib_1_1_dynamic_texture_atlas_manager.html">DynamicTextureAtlasManager</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a31d006ab6764f09935ddc8b9e5259031">dynamicTextureAtlasManager</a></td></tr>
+<tr class="separator:a31d006ab6764f09935ddc8b9e5259031"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aafc77dc6b22127f982179286c2366526" id="r_aafc77dc6b22127f982179286c2366526"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_m_g_alien_lib_1_1_game_base_1_1_default_assets.html">DefaultAssets</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aafc77dc6b22127f982179286c2366526">defaultAssets</a></td></tr>
+<tr class="separator:aafc77dc6b22127f982179286c2366526"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
+Protected 멤버 함수</h2></td></tr>
+<tr class="memitem:a55ad2be761cd3dd9eb0d0f6696595e8b" id="r_a55ad2be761cd3dd9eb0d0f6696595e8b"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a55ad2be761cd3dd9eb0d0f6696595e8b">LoadContent</a> ()</td></tr>
+<tr class="separator:a55ad2be761cd3dd9eb0d0f6696595e8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae98c167b5bb2c3c446d8b43bf27042db" id="r_ae98c167b5bb2c3c446d8b43bf27042db"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae98c167b5bb2c3c446d8b43bf27042db">OnLoadContent</a> ()</td></tr>
+<tr class="separator:ae98c167b5bb2c3c446d8b43bf27042db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5db0a1723aee8e8edf4f7ef3729f87bf" id="r_a5db0a1723aee8e8edf4f7ef3729f87bf"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5db0a1723aee8e8edf4f7ef3729f87bf">Initialize</a> ()</td></tr>
+<tr class="separator:a5db0a1723aee8e8edf4f7ef3729f87bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aad68797df789a05d88d8d0e08895e8c9" id="r_aad68797df789a05d88d8d0e08895e8c9"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aad68797df789a05d88d8d0e08895e8c9">OnInitialize</a> ()</td></tr>
+<tr class="separator:aad68797df789a05d88d8d0e08895e8c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afb918561838ba5e49d1e7a41805a12db" id="r_afb918561838ba5e49d1e7a41805a12db"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afb918561838ba5e49d1e7a41805a12db">Update</a> (GameTime gameTime)</td></tr>
+<tr class="separator:afb918561838ba5e49d1e7a41805a12db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af81e35d33c0a6ce786b4bc5039a6c7e7" id="r_af81e35d33c0a6ce786b4bc5039a6c7e7"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af81e35d33c0a6ce786b4bc5039a6c7e7">OnUpdate</a> (float dt)</td></tr>
+<tr class="separator:af81e35d33c0a6ce786b4bc5039a6c7e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2f65b53bc257c8aa83963338353c969b" id="r_a2f65b53bc257c8aa83963338353c969b"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2f65b53bc257c8aa83963338353c969b">OnDraw</a> (float dt)</td></tr>
+<tr class="separator:a2f65b53bc257c8aa83963338353c969b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
+Protected 속성</h2></td></tr>
+<tr class="memitem:ad7bf11bc1e297a28ca20acb6d470e976" id="r_ad7bf11bc1e297a28ca20acb6d470e976"><td class="memItemLeft" align="right" valign="top">GraphicsDeviceManager&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad7bf11bc1e297a28ca20acb6d470e976">_graphics</a></td></tr>
+<tr class="separator:ad7bf11bc1e297a28ca20acb6d470e976"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad97e11eaaf3e1f64e1239e1796ff3e83" id="r_ad97e11eaaf3e1f64e1239e1796ff3e83"><td class="memItemLeft" align="right" valign="top">Vector2&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad97e11eaaf3e1f64e1239e1796ff3e83">baseScreenSize</a> = new Vector2(1280, 720)</td></tr>
+<tr class="separator:ad97e11eaaf3e1f64e1239e1796ff3e83"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0cdab912e77eab9ae897da87789f12ce" id="r_a0cdab912e77eab9ae897da87789f12ce"><td class="memItemLeft" align="right" valign="top">Matrix&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0cdab912e77eab9ae897da87789f12ce">globalTransformation</a></td></tr>
+<tr class="separator:a0cdab912e77eab9ae897da87789f12ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="properties" name="properties"></a>
+속성</h2></td></tr>
+<tr class="memitem:a657ab7f67da4f6b6d413a0fdfc71f824" id="r_a657ab7f67da4f6b6d413a0fdfc71f824"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_m_g_alien_lib_1_1_game_base.html">GameBase</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a657ab7f67da4f6b6d413a0fdfc71f824">Instance</a><code> [get]</code></td></tr>
+<tr class="separator:a657ab7f67da4f6b6d413a0fdfc71f824"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6c257e4c5cee651cd312731c333e4d36" id="r_a6c257e4c5cee651cd312731c333e4d36"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6c257e4c5cee651cd312731c333e4d36">backbufferWidth</a><code> [get]</code></td></tr>
+<tr class="separator:a6c257e4c5cee651cd312731c333e4d36"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a311f17558ddb377169bb64fe533320a0" id="r_a311f17558ddb377169bb64fe533320a0"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a311f17558ddb377169bb64fe533320a0">backbufferHeight</a><code> [get]</code></td></tr>
+<tr class="separator:a311f17558ddb377169bb64fe533320a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5fc2459fa346e4687646f2a7867b77ad" id="r_a5fc2459fa346e4687646f2a7867b77ad"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5fc2459fa346e4687646f2a7867b77ad">screenSizeChangedThisFrame</a> = true<code> [get]</code></td></tr>
+<tr class="separator:a5fc2459fa346e4687646f2a7867b77ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2a2b2ea74fd64dca44f565ed3847dfb0" id="r_a2a2b2ea74fd64dca44f565ed3847dfb0"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2a2b2ea74fd64dca44f565ed3847dfb0">exiting</a> = false<code> [get]</code></td></tr>
+<tr class="separator:a2a2b2ea74fd64dca44f565ed3847dfb0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">상세한 설명</h2>
+<div class="textblock"><p>Base class for game </p>
+</div><h2 class="groupheader">생성자 &amp; 소멸자 문서화</h2>
+<a id="a99a3aff4679f54ed6a69dfae8d892fb1" name="a99a3aff4679f54ed6a69dfae8d892fb1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a99a3aff4679f54ed6a69dfae8d892fb1">&#9670;&#160;</a></span>GameBase()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">MGAlienLib.GameBase.GameBase </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">멤버 함수 문서화</h2>
+<a id="ab15ae5042d9fb25e769448183980c722" name="ab15ae5042d9fb25e769448183980c722"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab15ae5042d9fb25e769448183980c722">&#9670;&#160;</a></span>Exit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">new void MGAlienLib.GameBase.Exit </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5db0a1723aee8e8edf4f7ef3729f87bf" name="a5db0a1723aee8e8edf4f7ef3729f87bf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5db0a1723aee8e8edf4f7ef3729f87bf">&#9670;&#160;</a></span>Initialize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">override void MGAlienLib.GameBase.Initialize </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel sealed">sealed</span><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a55ad2be761cd3dd9eb0d0f6696595e8b" name="a55ad2be761cd3dd9eb0d0f6696595e8b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a55ad2be761cd3dd9eb0d0f6696595e8b">&#9670;&#160;</a></span>LoadContent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">override void MGAlienLib.GameBase.LoadContent </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel sealed">sealed</span><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2f65b53bc257c8aa83963338353c969b" name="a2f65b53bc257c8aa83963338353c969b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2f65b53bc257c8aa83963338353c969b">&#9670;&#160;</a></span>OnDraw()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void MGAlienLib.GameBase.OnDraw </td>
+          <td>(</td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>dt</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel protected">protected</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aad68797df789a05d88d8d0e08895e8c9" name="aad68797df789a05d88d8d0e08895e8c9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aad68797df789a05d88d8d0e08895e8c9">&#9670;&#160;</a></span>OnInitialize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void MGAlienLib.GameBase.OnInitialize </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel protected">protected</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae98c167b5bb2c3c446d8b43bf27042db" name="ae98c167b5bb2c3c446d8b43bf27042db"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae98c167b5bb2c3c446d8b43bf27042db">&#9670;&#160;</a></span>OnLoadContent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void MGAlienLib.GameBase.OnLoadContent </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel protected">protected</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af81e35d33c0a6ce786b4bc5039a6c7e7" name="af81e35d33c0a6ce786b4bc5039a6c7e7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af81e35d33c0a6ce786b4bc5039a6c7e7">&#9670;&#160;</a></span>OnUpdate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void MGAlienLib.GameBase.OnUpdate </td>
+          <td>(</td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>dt</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel protected">protected</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9fc1111f923c00d7e6bfed4702cc5d2a" name="a9fc1111f923c00d7e6bfed4702cc5d2a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9fc1111f923c00d7e6bfed4702cc5d2a">&#9670;&#160;</a></span>ScalePresentationArea()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MGAlienLib.GameBase.ScalePresentationArea </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="afb918561838ba5e49d1e7a41805a12db" name="afb918561838ba5e49d1e7a41805a12db"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afb918561838ba5e49d1e7a41805a12db">&#9670;&#160;</a></span>Update()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">override void MGAlienLib.GameBase.Update </td>
+          <td>(</td>
+          <td class="paramtype">GameTime</td>          <td class="paramname"><span class="paramname"><em>gameTime</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel sealed">sealed</span><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">멤버 데이터 문서화</h2>
+<a id="ad7bf11bc1e297a28ca20acb6d470e976" name="ad7bf11bc1e297a28ca20acb6d470e976"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad7bf11bc1e297a28ca20acb6d470e976">&#9670;&#160;</a></span>_graphics</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">GraphicsDeviceManager MGAlienLib.GameBase._graphics</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4b4bc6a150b5f21e0714b3235cb62179" name="a4b4bc6a150b5f21e0714b3235cb62179"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4b4bc6a150b5f21e0714b3235cb62179">&#9670;&#160;</a></span>assetManager</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_m_g_alien_lib_1_1_asset_manager.html">AssetManager</a> MGAlienLib.GameBase.assetManager</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad97e11eaaf3e1f64e1239e1796ff3e83" name="ad97e11eaaf3e1f64e1239e1796ff3e83"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad97e11eaaf3e1f64e1239e1796ff3e83">&#9670;&#160;</a></span>baseScreenSize</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Vector2 MGAlienLib.GameBase.baseScreenSize = new Vector2(1280, 720)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aafc77dc6b22127f982179286c2366526" name="aafc77dc6b22127f982179286c2366526"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aafc77dc6b22127f982179286c2366526">&#9670;&#160;</a></span>defaultAssets</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_m_g_alien_lib_1_1_game_base_1_1_default_assets.html">DefaultAssets</a> MGAlienLib.GameBase.defaultAssets</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a234919606e6303aa5b0169d7a2dd8c77" name="a234919606e6303aa5b0169d7a2dd8c77"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a234919606e6303aa5b0169d7a2dd8c77">&#9670;&#160;</a></span>deltaTime</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float MGAlienLib.GameBase.deltaTime</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a31d006ab6764f09935ddc8b9e5259031" name="a31d006ab6764f09935ddc8b9e5259031"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a31d006ab6764f09935ddc8b9e5259031">&#9670;&#160;</a></span>dynamicTextureAtlasManager</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_m_g_alien_lib_1_1_dynamic_texture_atlas_manager.html">DynamicTextureAtlasManager</a> MGAlienLib.GameBase.dynamicTextureAtlasManager</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9cdbb6412646c21d9f73ab4a621ba960" name="a9cdbb6412646c21d9f73ab4a621ba960"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9cdbb6412646c21d9f73ab4a621ba960">&#9670;&#160;</a></span>fontManager</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_m_g_alien_lib_1_1_font_manager.html">FontManager</a> MGAlienLib.GameBase.fontManager</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad8f7954dd6dfdf1fd041017937221dc9" name="ad8f7954dd6dfdf1fd041017937221dc9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad8f7954dd6dfdf1fd041017937221dc9">&#9670;&#160;</a></span>frameCount</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int MGAlienLib.GameBase.frameCount = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0cdab912e77eab9ae897da87789f12ce" name="a0cdab912e77eab9ae897da87789f12ce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0cdab912e77eab9ae897da87789f12ce">&#9670;&#160;</a></span>globalTransformation</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Matrix MGAlienLib.GameBase.globalTransformation</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad84eec95388df3f25f1fed84ebd650b4" name="ad84eec95388df3f25f1fed84ebd650b4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad84eec95388df3f25f1fed84ebd650b4">&#9670;&#160;</a></span>hierarchyManager</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_m_g_alien_lib_1_1_hierarchy_manager.html">HierarchyManager</a> MGAlienLib.GameBase.hierarchyManager</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab8e91b37a103dc747992f2a67ae1d145" name="ab8e91b37a103dc747992f2a67ae1d145"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab8e91b37a103dc747992f2a67ae1d145">&#9670;&#160;</a></span>inputManager</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_m_g_alien_lib_1_1_input_manager.html">InputManager</a> MGAlienLib.GameBase.inputManager</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7e2814696d22b98f36ca58a9ee8c6e3c" name="a7e2814696d22b98f36ca58a9ee8c6e3c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7e2814696d22b98f36ca58a9ee8c6e3c">&#9670;&#160;</a></span>internalRenderManager</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_m_g_alien_lib_1_1_internal_render_manager.html">InternalRenderManager</a> MGAlienLib.GameBase.internalRenderManager</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aace2e144ff0908c37331c8ebe4f5afdd" name="aace2e144ff0908c37331c8ebe4f5afdd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aace2e144ff0908c37331c8ebe4f5afdd">&#9670;&#160;</a></span>layerManager</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_m_g_alien_lib_1_1_layer_manager.html">LayerManager</a> MGAlienLib.GameBase.layerManager</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a27972a39deb41deca9febf5a6af1e213" name="a27972a39deb41deca9febf5a6af1e213"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a27972a39deb41deca9febf5a6af1e213">&#9670;&#160;</a></span>performanceManager</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_m_g_alien_lib_1_1_performance_manager.html">PerformanceManager</a> MGAlienLib.GameBase.performanceManager</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2f7f8a981b582c3d7a5aade7d743947d" name="a2f7f8a981b582c3d7a5aade7d743947d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2f7f8a981b582c3d7a5aade7d743947d">&#9670;&#160;</a></span>renderQueue</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_m_g_alien_lib_1_1_render_queue.html">RenderQueue</a> MGAlienLib.GameBase.renderQueue</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2b30b4c5b51dc2f86252c604bf2d555e" name="a2b30b4c5b51dc2f86252c604bf2d555e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2b30b4c5b51dc2f86252c604bf2d555e">&#9670;&#160;</a></span>shaderManager</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_m_g_alien_lib_1_1_shader_manager.html">ShaderManager</a> MGAlienLib.GameBase.shaderManager</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a86604862f488802a9beaeb386f5f1e11" name="a86604862f488802a9beaeb386f5f1e11"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a86604862f488802a9beaeb386f5f1e11">&#9670;&#160;</a></span>time</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float MGAlienLib.GameBase.time = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">속성 문서화</h2>
+<a id="a311f17558ddb377169bb64fe533320a0" name="a311f17558ddb377169bb64fe533320a0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a311f17558ddb377169bb64fe533320a0">&#9670;&#160;</a></span>backbufferHeight</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int MGAlienLib.GameBase.backbufferHeight</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel get">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6c257e4c5cee651cd312731c333e4d36" name="a6c257e4c5cee651cd312731c333e4d36"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6c257e4c5cee651cd312731c333e4d36">&#9670;&#160;</a></span>backbufferWidth</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int MGAlienLib.GameBase.backbufferWidth</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel get">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2a2b2ea74fd64dca44f565ed3847dfb0" name="a2a2b2ea74fd64dca44f565ed3847dfb0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2a2b2ea74fd64dca44f565ed3847dfb0">&#9670;&#160;</a></span>exiting</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool MGAlienLib.GameBase.exiting = false</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel get">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a657ab7f67da4f6b6d413a0fdfc71f824" name="a657ab7f67da4f6b6d413a0fdfc71f824"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a657ab7f67da4f6b6d413a0fdfc71f824">&#9670;&#160;</a></span>Instance</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_m_g_alien_lib_1_1_game_base.html">GameBase</a> MGAlienLib.GameBase.Instance</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel get">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5fc2459fa346e4687646f2a7867b77ad" name="a5fc2459fa346e4687646f2a7867b77ad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5fc2459fa346e4687646f2a7867b77ad">&#9670;&#160;</a></span>screenSizeChangedThisFrame</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool MGAlienLib.GameBase.screenSizeChangedThisFrame = true</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel get">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>이 클래스에 대한 문서화 페이지는 다음의 파일로부터 생성되었습니다.:<ul>
+<li>src/<a class="el" href="_game_base_8cs.html">GameBase.cs</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="namespace_m_g_alien_lib.html">MGAlienLib</a></li><li class="navelem"><a class="el" href="class_m_g_alien_lib_1_1_game_base.html">GameBase</a></li>
+    <li class="footer">다음에 의해 생성됨 :  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+  </ul>
+</div>
+</body>
+</html>

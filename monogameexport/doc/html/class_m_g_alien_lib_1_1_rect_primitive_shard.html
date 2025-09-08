@@ -1,0 +1,424 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.13.2"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>alien-monogame: MGAlienLib.RectPrimitiveShard 클래스 참조</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(function() { init_search(); });
+/* @license-end */
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">alien-monogame
+   </div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
+          <input type="text" id="MSearchField" value="" placeholder="검색" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 다음에 의해 생성됨 :  Doxygen 1.13.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){initNavTree('class_m_g_alien_lib_1_1_rect_primitive_shard.html',''); initResizable(true); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">로딩중...</div>
+<div class="SRStatus" id="Searching">검색중...</div>
+<div class="SRStatus" id="NoMatches">일치하는것 없음</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 멤버 함수</a> &#124;
+<a href="#pro-attribs">Protected 속성</a> &#124;
+<a href="#properties">속성</a> &#124;
+<a href="class_m_g_alien_lib_1_1_rect_primitive_shard-members.html">모든 멤버 목록</a>  </div>
+  <div class="headertitle"><div class="title">MGAlienLib.RectPrimitiveShard 클래스 참조</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>사각형 프리미티브를 나타내는 클래스입니다. PrimitiveBatch를 사용하여 효율적으로 그리기 위해 사용됩니다. <a class="el" href="class_m_g_alien_lib_1_1_renderable.html" title="렌더링 가능한 컴포넌트의 기본 클래스입니다.">Renderable</a> 컴포넌트에서 사용됩니다.  
+ <a href="#details">더 자세히 ...</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 멤버 함수</h2></td></tr>
+<tr class="memitem:a852611675c59078462be2e52aec3f78a" id="r_a852611675c59078462be2e52aec3f78a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a852611675c59078462be2e52aec3f78a">RectPrimitiveShard</a> ()</td></tr>
+<tr class="separator:a852611675c59078462be2e52aec3f78a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa2bc792aa35aadc885af190e75a3ab7c" id="r_aa2bc792aa35aadc885af190e75a3ab7c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa2bc792aa35aadc885af190e75a3ab7c">Render</a> (<a class="el" href="class_m_g_alien_lib_1_1_render_chunk.html">RenderChunk</a> chunk)</td></tr>
+<tr class="separator:aa2bc792aa35aadc885af190e75a3ab7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
+Protected 속성</h2></td></tr>
+<tr class="memitem:a00ad365a73dbef7c2f8ac870c36dc82a" id="r_a00ad365a73dbef7c2f8ac870c36dc82a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a00ad365a73dbef7c2f8ac870c36dc82a">trianglesCount</a> = 2</td></tr>
+<tr class="separator:a00ad365a73dbef7c2f8ac870c36dc82a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="properties" name="properties"></a>
+속성</h2></td></tr>
+<tr class="memitem:aff5314a1a1e0a5eb8b959c469d5c0d53" id="r_aff5314a1a1e0a5eb8b959c469d5c0d53"><td class="memItemLeft" align="right" valign="top">Color&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aff5314a1a1e0a5eb8b959c469d5c0d53">color</a><code> [get, set]</code></td></tr>
+<tr class="separator:aff5314a1a1e0a5eb8b959c469d5c0d53"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a393a08edd7366cc98f2d366f99fed55c" id="r_a393a08edd7366cc98f2d366f99fed55c"><td class="memItemLeft" align="right" valign="top">Vector2&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a393a08edd7366cc98f2d366f99fed55c">offset</a><code> [get, set]</code></td></tr>
+<tr class="separator:a393a08edd7366cc98f2d366f99fed55c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac075cc815a4c9fded507a48168e1d4c6" id="r_ac075cc815a4c9fded507a48168e1d4c6"><td class="memItemLeft" align="right" valign="top">Vector2&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac075cc815a4c9fded507a48168e1d4c6">size</a><code> [get, set]</code></td></tr>
+<tr class="separator:ac075cc815a4c9fded507a48168e1d4c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a80d4e1a0f6fb1777441382bc0f915288" id="r_a80d4e1a0f6fb1777441382bc0f915288"><td class="memItemLeft" align="right" valign="top">Vector2&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a80d4e1a0f6fb1777441382bc0f915288">pivot</a><code> [get, set]</code></td></tr>
+<tr class="separator:a80d4e1a0f6fb1777441382bc0f915288"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8152c7821c872f823e441c1fcb368ba9" id="r_a8152c7821c872f823e441c1fcb368ba9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_m_g_alien_lib_1_1_transform.html">Transform</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8152c7821c872f823e441c1fcb368ba9">transform</a><code> [get, set]</code></td></tr>
+<tr class="separator:a8152c7821c872f823e441c1fcb368ba9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8c3d402bc94d2d827b8401c7ab1da08c" id="r_a8c3d402bc94d2d827b8401c7ab1da08c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8c3d402bc94d2d827b8401c7ab1da08c">Flip</a><code> [get, set]</code></td></tr>
+<tr class="memdesc:a8c3d402bc94d2d827b8401c7ab1da08c"><td class="mdescLeft">&#160;</td><td class="mdescRight">스프라이트의 X축 뒤집기 여부를 가져오거나 설정합니다.  <br /></td></tr>
+<tr class="separator:a8c3d402bc94d2d827b8401c7ab1da08c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5554deec685b04035160b5efba25ecb5" id="r_a5554deec685b04035160b5efba25ecb5"><td class="memItemLeft" align="right" valign="top">Rectangle?&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5554deec685b04035160b5efba25ecb5">sourceRect</a><code> [get, set]</code></td></tr>
+<tr class="memdesc:a5554deec685b04035160b5efba25ecb5"><td class="mdescLeft">&#160;</td><td class="mdescRight">텍스처에서 사용할 소스 영역을 가져오거나 설정합니다. null이면 전체 텍스처를 사용합니다.  <br /></td></tr>
+<tr class="separator:a5554deec685b04035160b5efba25ecb5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa75d55de68df58f2d915326b983afe63" id="r_aa75d55de68df58f2d915326b983afe63"><td class="memItemLeft" align="right" valign="top">Vector2&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa75d55de68df58f2d915326b983afe63">textureSize</a><code> [get, set]</code></td></tr>
+<tr class="memdesc:aa75d55de68df58f2d915326b983afe63"><td class="mdescLeft">&#160;</td><td class="mdescRight">텍스처의 전체 크기를 가져오거나 설정합니다.  <br /></td></tr>
+<tr class="separator:aa75d55de68df58f2d915326b983afe63"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">상세한 설명</h2>
+<div class="textblock"><p>사각형 프리미티브를 나타내는 클래스입니다. PrimitiveBatch를 사용하여 효율적으로 그리기 위해 사용됩니다. <a class="el" href="class_m_g_alien_lib_1_1_renderable.html" title="렌더링 가능한 컴포넌트의 기본 클래스입니다.">Renderable</a> 컴포넌트에서 사용됩니다. </p>
+</div><h2 class="groupheader">생성자 &amp; 소멸자 문서화</h2>
+<a id="a852611675c59078462be2e52aec3f78a" name="a852611675c59078462be2e52aec3f78a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a852611675c59078462be2e52aec3f78a">&#9670;&#160;</a></span>RectPrimitiveShard()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">MGAlienLib.RectPrimitiveShard.RectPrimitiveShard </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">멤버 함수 문서화</h2>
+<a id="aa2bc792aa35aadc885af190e75a3ab7c" name="aa2bc792aa35aadc885af190e75a3ab7c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa2bc792aa35aadc885af190e75a3ab7c">&#9670;&#160;</a></span>Render()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MGAlienLib.RectPrimitiveShard.Render </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_m_g_alien_lib_1_1_render_chunk.html">RenderChunk</a></td>          <td class="paramname"><span class="paramname"><em>chunk</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">멤버 데이터 문서화</h2>
+<a id="a00ad365a73dbef7c2f8ac870c36dc82a" name="a00ad365a73dbef7c2f8ac870c36dc82a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a00ad365a73dbef7c2f8ac870c36dc82a">&#9670;&#160;</a></span>trianglesCount</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int MGAlienLib.RectPrimitiveShard.trianglesCount = 2</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">속성 문서화</h2>
+<a id="aff5314a1a1e0a5eb8b959c469d5c0d53" name="aff5314a1a1e0a5eb8b959c469d5c0d53"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aff5314a1a1e0a5eb8b959c469d5c0d53">&#9670;&#160;</a></span>color</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Color MGAlienLib.RectPrimitiveShard.color</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel get">get</span><span class="mlabel set">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8c3d402bc94d2d827b8401c7ab1da08c" name="a8c3d402bc94d2d827b8401c7ab1da08c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8c3d402bc94d2d827b8401c7ab1da08c">&#9670;&#160;</a></span>Flip</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool MGAlienLib.RectPrimitiveShard.Flip</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel get">get</span><span class="mlabel set">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>스프라이트의 X축 뒤집기 여부를 가져오거나 설정합니다. </p>
+
+</div>
+</div>
+<a id="a393a08edd7366cc98f2d366f99fed55c" name="a393a08edd7366cc98f2d366f99fed55c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a393a08edd7366cc98f2d366f99fed55c">&#9670;&#160;</a></span>offset</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Vector2 MGAlienLib.RectPrimitiveShard.offset</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel get">get</span><span class="mlabel set">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a80d4e1a0f6fb1777441382bc0f915288" name="a80d4e1a0f6fb1777441382bc0f915288"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a80d4e1a0f6fb1777441382bc0f915288">&#9670;&#160;</a></span>pivot</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Vector2 MGAlienLib.RectPrimitiveShard.pivot</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel get">get</span><span class="mlabel set">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac075cc815a4c9fded507a48168e1d4c6" name="ac075cc815a4c9fded507a48168e1d4c6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac075cc815a4c9fded507a48168e1d4c6">&#9670;&#160;</a></span>size</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Vector2 MGAlienLib.RectPrimitiveShard.size</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel get">get</span><span class="mlabel set">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5554deec685b04035160b5efba25ecb5" name="a5554deec685b04035160b5efba25ecb5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5554deec685b04035160b5efba25ecb5">&#9670;&#160;</a></span>sourceRect</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Rectangle? MGAlienLib.RectPrimitiveShard.sourceRect</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel get">get</span><span class="mlabel set">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>텍스처에서 사용할 소스 영역을 가져오거나 설정합니다. null이면 전체 텍스처를 사용합니다. </p>
+
+</div>
+</div>
+<a id="aa75d55de68df58f2d915326b983afe63" name="aa75d55de68df58f2d915326b983afe63"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa75d55de68df58f2d915326b983afe63">&#9670;&#160;</a></span>textureSize</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Vector2 MGAlienLib.RectPrimitiveShard.textureSize</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel get">get</span><span class="mlabel set">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>텍스처의 전체 크기를 가져오거나 설정합니다. </p>
+
+</div>
+</div>
+<a id="a8152c7821c872f823e441c1fcb368ba9" name="a8152c7821c872f823e441c1fcb368ba9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8152c7821c872f823e441c1fcb368ba9">&#9670;&#160;</a></span>transform</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_m_g_alien_lib_1_1_transform.html">Transform</a> MGAlienLib.RectPrimitiveShard.transform</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel get">get</span><span class="mlabel set">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>이 클래스에 대한 문서화 페이지는 다음의 파일로부터 생성되었습니다.:<ul>
+<li>src/Infra/Render/<a class="el" href="_rect_primitive_shard_8cs.html">RectPrimitiveShard.cs</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="namespace_m_g_alien_lib.html">MGAlienLib</a></li><li class="navelem"><a class="el" href="class_m_g_alien_lib_1_1_rect_primitive_shard.html">RectPrimitiveShard</a></li>
+    <li class="footer">다음에 의해 생성됨 :  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,911 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.13.2"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>alien-monogame: MGAlienLib.GameObject 클래스 참조</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(function() { init_search(); });
+/* @license-end */
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">alien-monogame
+   </div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
+          <input type="text" id="MSearchField" value="" placeholder="검색" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 다음에 의해 생성됨 :  Doxygen 1.13.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){initNavTree('class_m_g_alien_lib_1_1_game_object.html',''); initResizable(true); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">로딩중...</div>
+<div class="SRStatus" id="Searching">검색중...</div>
+<div class="SRStatus" id="NoMatches">일치하는것 없음</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 멤버 함수</a> &#124;
+<a href="#pub-static-methods">정적 Public 멤버 함수</a> &#124;
+<a href="#pub-attribs">Public 속성</a> &#124;
+<a href="#pub-static-attribs">정적 Public 속성</a> &#124;
+<a href="#pro-attribs">Protected 속성</a> &#124;
+<a href="#properties">속성</a> &#124;
+<a href="class_m_g_alien_lib_1_1_game_object-members.html">모든 멤버 목록</a>  </div>
+  <div class="headertitle"><div class="title">MGAlienLib.GameObject 클래스 참조</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>게임 오브젝트입니다. 독립적인 기능은 거의 없고, Component 를 담는 그릇의 역할을 합니다. new <a class="el" href="class_m_g_alien_lib_1_1_game_object.html" title="게임 오브젝트입니다. 독립적인 기능은 거의 없고, Component 를 담는 그릇의 역할을 합니다. new GameObject 로 생성하지 말고, CreateGameObject 함수...">GameObject</a> 로 생성하지 말고, CreateGameObject 함수를 사용하세요.  
+ <a href="#details">더 자세히 ...</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 멤버 함수</h2></td></tr>
+<tr class="memitem:aa22253f222aa3b3be5c3a79ba7adc12e" id="r_aa22253f222aa3b3be5c3a79ba7adc12e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa22253f222aa3b3be5c3a79ba7adc12e">GameObject</a> (string _name, bool _initialActive=true)</td></tr>
+<tr class="separator:aa22253f222aa3b3be5c3a79ba7adc12e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ace90db8bd60537618af12bf9dac4a6b5" id="r_ace90db8bd60537618af12bf9dac4a6b5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ace90db8bd60537618af12bf9dac4a6b5">internal_OnDestroy</a> ()</td></tr>
+<tr class="separator:ace90db8bd60537618af12bf9dac4a6b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a19cd531f59f21bb41d577d121560ff25" id="r_a19cd531f59f21bb41d577d121560ff25"><td class="memItemLeft" align="right" valign="top">T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a19cd531f59f21bb41d577d121560ff25">AddComponent&lt; T &gt;</a> ()</td></tr>
+<tr class="memdesc:a19cd531f59f21bb41d577d121560ff25"><td class="mdescLeft">&#160;</td><td class="mdescRight">컴포넌트를 추가합니다.  <br /></td></tr>
+<tr class="separator:a19cd531f59f21bb41d577d121560ff25"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aca388f0bfe3f5b6398caee13ef9220d9" id="r_aca388f0bfe3f5b6398caee13ef9220d9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aca388f0bfe3f5b6398caee13ef9220d9">RemoveComponent</a> (<a class="el" href="class_m_g_alien_lib_1_1_component_base.html">ComponentBase</a> component)</td></tr>
+<tr class="memdesc:aca388f0bfe3f5b6398caee13ef9220d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">컴포넌트를 제거합니다.  <br /></td></tr>
+<tr class="separator:aca388f0bfe3f5b6398caee13ef9220d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae299758d5b1f34459a02d8c1d25ed425" id="r_ae299758d5b1f34459a02d8c1d25ed425"><td class="memItemLeft" align="right" valign="top">T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae299758d5b1f34459a02d8c1d25ed425">GetComponent&lt; T &gt;</a> ()</td></tr>
+<tr class="memdesc:ae299758d5b1f34459a02d8c1d25ed425"><td class="mdescLeft">&#160;</td><td class="mdescRight">컴포넌트를 하나만 가져옵니다.  <br /></td></tr>
+<tr class="separator:ae299758d5b1f34459a02d8c1d25ed425"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5bd959c22d464b7238f190b76eacab80" id="r_a5bd959c22d464b7238f190b76eacab80"><td class="memItemLeft" align="right" valign="top">List&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5bd959c22d464b7238f190b76eacab80">GetComponents&lt; T &gt;</a> ()</td></tr>
+<tr class="memdesc:a5bd959c22d464b7238f190b76eacab80"><td class="mdescLeft">&#160;</td><td class="mdescRight">이 gameObject 의 컴포넌트중 해당 type 에 해당하는 요소를 <em>모두</em> 가져옵니다.  <br /></td></tr>
+<tr class="separator:a5bd959c22d464b7238f190b76eacab80"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5869a845261f032f9e35f4c6a3fc63ad" id="r_a5869a845261f032f9e35f4c6a3fc63ad"><td class="memItemLeft" align="right" valign="top">T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5869a845261f032f9e35f4c6a3fc63ad">GetComponentInChildren&lt; T &gt;</a> ()</td></tr>
+<tr class="memdesc:a5869a845261f032f9e35f4c6a3fc63ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">자식을 모두 찾아 컴포넌트를 하나만 가져옵니다.  <br /></td></tr>
+<tr class="separator:a5869a845261f032f9e35f4c6a3fc63ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af0e5b1675694dcdbe19b8dd0977b4e4e" id="r_af0e5b1675694dcdbe19b8dd0977b4e4e"><td class="memItemLeft" align="right" valign="top">List&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af0e5b1675694dcdbe19b8dd0977b4e4e">GetComponentsInChildren&lt; T &gt;</a> ()</td></tr>
+<tr class="memdesc:af0e5b1675694dcdbe19b8dd0977b4e4e"><td class="mdescLeft">&#160;</td><td class="mdescRight">자식을 모두 찾아 컴포넌트를 <em>모두</em> 가져옵니다.  <br /></td></tr>
+<tr class="separator:af0e5b1675694dcdbe19b8dd0977b4e4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af492ae7ae116914b6c7886a2e5bcfe74" id="r_af492ae7ae116914b6c7886a2e5bcfe74"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af492ae7ae116914b6c7886a2e5bcfe74">internal_Update</a> ()</td></tr>
+<tr class="separator:af492ae7ae116914b6c7886a2e5bcfe74"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a08db8ce6c3e119ff73c4be368155e56b" id="r_a08db8ce6c3e119ff73c4be368155e56b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a08db8ce6c3e119ff73c4be368155e56b">internal_LateUpdate</a> ()</td></tr>
+<tr class="separator:a08db8ce6c3e119ff73c4be368155e56b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a670969a5e4f2fe9f933a29a7bc2fd566" id="r_a670969a5e4f2fe9f933a29a7bc2fd566"><td class="memItemLeft" align="right" valign="top">override string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a670969a5e4f2fe9f933a29a7bc2fd566">ToString</a> ()</td></tr>
+<tr class="separator:a670969a5e4f2fe9f933a29a7bc2fd566"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3046b1f967586156d290d5d6b171c17e" id="r_a3046b1f967586156d290d5d6b171c17e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3046b1f967586156d290d5d6b171c17e">SetActive</a> (bool value)</td></tr>
+<tr class="separator:a3046b1f967586156d290d5d6b171c17e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae1bae4ce34bb6861b155698d0ce72d44" id="r_ae1bae4ce34bb6861b155698d0ce72d44"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae1bae4ce34bb6861b155698d0ce72d44">DestroyAtEndOfUpdate</a> ()</td></tr>
+<tr class="separator:ae1bae4ce34bb6861b155698d0ce72d44"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a95665c7d4b32783dff1ce6c5c860ae93" id="r_a95665c7d4b32783dff1ce6c5c860ae93"><td class="memItemLeft" align="right" valign="top">override bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a95665c7d4b32783dff1ce6c5c860ae93">Equals</a> (object obj)</td></tr>
+<tr class="separator:a95665c7d4b32783dff1ce6c5c860ae93"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a77b48a0d70999c4cf06723fe42ad07ca" id="r_a77b48a0d70999c4cf06723fe42ad07ca"><td class="memItemLeft" align="right" valign="top">override int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a77b48a0d70999c4cf06723fe42ad07ca">GetHashCode</a> ()</td></tr>
+<tr class="separator:a77b48a0d70999c4cf06723fe42ad07ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+정적 Public 멤버 함수</h2></td></tr>
+<tr class="memitem:adf2a495f1aa939e6c4ea3154c083636b" id="r_adf2a495f1aa939e6c4ea3154c083636b"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adf2a495f1aa939e6c4ea3154c083636b">operator==</a> (<a class="el" href="class_m_g_alien_lib_1_1_game_object.html">GameObject</a> a, object b)</td></tr>
+<tr class="separator:adf2a495f1aa939e6c4ea3154c083636b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a222f4d7ba808e878a15209746baab0df" id="r_a222f4d7ba808e878a15209746baab0df"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a222f4d7ba808e878a15209746baab0df">operator!=</a> (<a class="el" href="class_m_g_alien_lib_1_1_game_object.html">GameObject</a> a, object b)</td></tr>
+<tr class="separator:a222f4d7ba808e878a15209746baab0df"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+Public 속성</h2></td></tr>
+<tr class="memitem:ad8dd303906e4ad9423feaf78fe60bfac" id="r_ad8dd303906e4ad9423feaf78fe60bfac"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad8dd303906e4ad9423feaf78fe60bfac">layer</a> = 0</td></tr>
+<tr class="separator:ad8dd303906e4ad9423feaf78fe60bfac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a238f18306c91fe18fea4100779405586" id="r_a238f18306c91fe18fea4100779405586"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a238f18306c91fe18fea4100779405586">_active</a> = true</td></tr>
+<tr class="separator:a238f18306c91fe18fea4100779405586"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af3ce567560a4ef87913b992ee003abc3" id="r_af3ce567560a4ef87913b992ee003abc3"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af3ce567560a4ef87913b992ee003abc3">name</a></td></tr>
+<tr class="separator:af3ce567560a4ef87913b992ee003abc3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5c995a5f9fa6fb60c94e8af39c54b5f3" id="r_a5c995a5f9fa6fb60c94e8af39c54b5f3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_m_g_alien_lib_1_1_transform.html">Transform</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5c995a5f9fa6fb60c94e8af39c54b5f3">transform</a></td></tr>
+<tr class="separator:a5c995a5f9fa6fb60c94e8af39c54b5f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
+정적 Public 속성</h2></td></tr>
+<tr class="memitem:a6a711963a9d91eb5b3219fced0163f8b" id="r_a6a711963a9d91eb5b3219fced0163f8b"><td class="memItemLeft" align="right" valign="top">static long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6a711963a9d91eb5b3219fced0163f8b">IdSeed</a> = 0</td></tr>
+<tr class="separator:a6a711963a9d91eb5b3219fced0163f8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
+Protected 속성</h2></td></tr>
+<tr class="memitem:ad2c8a4286b0ecabc5957573de0c7d6ac" id="r_ad2c8a4286b0ecabc5957573de0c7d6ac"><td class="memItemLeft" align="right" valign="top">List&lt; <a class="el" href="class_m_g_alien_lib_1_1_component_base.html">ComponentBase</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad2c8a4286b0ecabc5957573de0c7d6ac">components</a> = new List&lt;<a class="el" href="class_m_g_alien_lib_1_1_component_base.html">ComponentBase</a>&gt;()</td></tr>
+<tr class="separator:ad2c8a4286b0ecabc5957573de0c7d6ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="properties" name="properties"></a>
+속성</h2></td></tr>
+<tr class="memitem:a5afc94f0f9d303f56b138489f25a5e8e" id="r_a5afc94f0f9d303f56b138489f25a5e8e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5afc94f0f9d303f56b138489f25a5e8e">destroyed</a> = false<code> [get]</code></td></tr>
+<tr class="separator:a5afc94f0f9d303f56b138489f25a5e8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a998bb1c73ed93e555d351a6b68ce791d" id="r_a998bb1c73ed93e555d351a6b68ce791d"><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a998bb1c73ed93e555d351a6b68ce791d">Id</a> = ++<a class="el" href="#a6a711963a9d91eb5b3219fced0163f8b">IdSeed</a><code> [get]</code></td></tr>
+<tr class="separator:a998bb1c73ed93e555d351a6b68ce791d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae8d7184f4e3e9511fc25b487639068b9" id="r_ae8d7184f4e3e9511fc25b487639068b9"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae8d7184f4e3e9511fc25b487639068b9">active</a><code> [get, set]</code></td></tr>
+<tr class="separator:ae8d7184f4e3e9511fc25b487639068b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">상세한 설명</h2>
+<div class="textblock"><p>게임 오브젝트입니다. 독립적인 기능은 거의 없고, Component 를 담는 그릇의 역할을 합니다. new <a class="el" href="class_m_g_alien_lib_1_1_game_object.html" title="게임 오브젝트입니다. 독립적인 기능은 거의 없고, Component 를 담는 그릇의 역할을 합니다. new GameObject 로 생성하지 말고, CreateGameObject 함수...">GameObject</a> 로 생성하지 말고, CreateGameObject 함수를 사용하세요. </p>
+</div><h2 class="groupheader">생성자 &amp; 소멸자 문서화</h2>
+<a id="aa22253f222aa3b3be5c3a79ba7adc12e" name="aa22253f222aa3b3be5c3a79ba7adc12e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa22253f222aa3b3be5c3a79ba7adc12e">&#9670;&#160;</a></span>GameObject()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">MGAlienLib.GameObject.GameObject </td>
+          <td>(</td>
+          <td class="paramtype">string</td>          <td class="paramname"><span class="paramname"><em>_name</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>_initialActive</em></span><span class="paramdefsep"> = </span><span class="paramdefval">true</span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">멤버 함수 문서화</h2>
+<a id="a19cd531f59f21bb41d577d121560ff25" name="a19cd531f59f21bb41d577d121560ff25"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a19cd531f59f21bb41d577d121560ff25">&#9670;&#160;</a></span>AddComponent&lt; T &gt;()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">T MGAlienLib.GameObject.AddComponent&lt; T &gt; </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>컴포넌트를 추가합니다. </p>
+<dl class="tparams"><dt>템플릿 파라메터</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>반환값</dt><dd></dd></dl>
+<div class="typeconstraint">
+<dl><dt><b>타입 한정자들</b></dt><dd>
+<table border="0" cellspacing="2" cellpadding="0">
+<tr><td valign="top"><em>T</em></td><td>&#160;:</td><td valign="top"><em>ComponentBase</em></td><td>&#160;</td></tr>
+</table>
+</dd>
+</dl>
+</div>
+
+</div>
+</div>
+<a id="ae1bae4ce34bb6861b155698d0ce72d44" name="ae1bae4ce34bb6861b155698d0ce72d44"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae1bae4ce34bb6861b155698d0ce72d44">&#9670;&#160;</a></span>DestroyAtEndOfUpdate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MGAlienLib.GameObject.DestroyAtEndOfUpdate </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a95665c7d4b32783dff1ce6c5c860ae93" name="a95665c7d4b32783dff1ce6c5c860ae93"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a95665c7d4b32783dff1ce6c5c860ae93">&#9670;&#160;</a></span>Equals()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">override bool MGAlienLib.GameObject.Equals </td>
+          <td>(</td>
+          <td class="paramtype">object</td>          <td class="paramname"><span class="paramname"><em>obj</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae299758d5b1f34459a02d8c1d25ed425" name="ae299758d5b1f34459a02d8c1d25ed425"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae299758d5b1f34459a02d8c1d25ed425">&#9670;&#160;</a></span>GetComponent&lt; T &gt;()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">T MGAlienLib.GameObject.GetComponent&lt; T &gt; </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>컴포넌트를 하나만 가져옵니다. </p>
+<dl class="tparams"><dt>템플릿 파라메터</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>반환값</dt><dd></dd></dl>
+<div class="typeconstraint">
+<dl><dt><b>타입 한정자들</b></dt><dd>
+<table border="0" cellspacing="2" cellpadding="0">
+<tr><td valign="top"><em>T</em></td><td>&#160;:</td><td valign="top"><em>ComponentBase</em></td><td>&#160;</td></tr>
+</table>
+</dd>
+</dl>
+</div>
+
+</div>
+</div>
+<a id="a5869a845261f032f9e35f4c6a3fc63ad" name="a5869a845261f032f9e35f4c6a3fc63ad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5869a845261f032f9e35f4c6a3fc63ad">&#9670;&#160;</a></span>GetComponentInChildren&lt; T &gt;()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">T MGAlienLib.GameObject.GetComponentInChildren&lt; T &gt; </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>자식을 모두 찾아 컴포넌트를 하나만 가져옵니다. </p>
+<dl class="tparams"><dt>템플릿 파라메터</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>반환값</dt><dd></dd></dl>
+<div class="typeconstraint">
+<dl><dt><b>타입 한정자들</b></dt><dd>
+<table border="0" cellspacing="2" cellpadding="0">
+<tr><td valign="top"><em>T</em></td><td>&#160;:</td><td valign="top"><em>ComponentBase</em></td><td>&#160;</td></tr>
+</table>
+</dd>
+</dl>
+</div>
+
+</div>
+</div>
+<a id="a5bd959c22d464b7238f190b76eacab80" name="a5bd959c22d464b7238f190b76eacab80"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5bd959c22d464b7238f190b76eacab80">&#9670;&#160;</a></span>GetComponents&lt; T &gt;()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">List&lt; T &gt; MGAlienLib.GameObject.GetComponents&lt; T &gt; </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>이 gameObject 의 컴포넌트중 해당 type 에 해당하는 요소를 <em>모두</em> 가져옵니다. </p>
+<dl class="tparams"><dt>템플릿 파라메터</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>반환값</dt><dd></dd></dl>
+<div class="typeconstraint">
+<dl><dt><b>타입 한정자들</b></dt><dd>
+<table border="0" cellspacing="2" cellpadding="0">
+<tr><td valign="top"><em>T</em></td><td>&#160;:</td><td valign="top"><em>ComponentBase</em></td><td>&#160;</td></tr>
+</table>
+</dd>
+</dl>
+</div>
+
+</div>
+</div>
+<a id="af0e5b1675694dcdbe19b8dd0977b4e4e" name="af0e5b1675694dcdbe19b8dd0977b4e4e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af0e5b1675694dcdbe19b8dd0977b4e4e">&#9670;&#160;</a></span>GetComponentsInChildren&lt; T &gt;()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">List&lt; T &gt; MGAlienLib.GameObject.GetComponentsInChildren&lt; T &gt; </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>자식을 모두 찾아 컴포넌트를 <em>모두</em> 가져옵니다. </p>
+<dl class="tparams"><dt>템플릿 파라메터</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>반환값</dt><dd></dd></dl>
+<div class="typeconstraint">
+<dl><dt><b>타입 한정자들</b></dt><dd>
+<table border="0" cellspacing="2" cellpadding="0">
+<tr><td valign="top"><em>T</em></td><td>&#160;:</td><td valign="top"><em>ComponentBase</em></td><td>&#160;</td></tr>
+</table>
+</dd>
+</dl>
+</div>
+
+</div>
+</div>
+<a id="a77b48a0d70999c4cf06723fe42ad07ca" name="a77b48a0d70999c4cf06723fe42ad07ca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a77b48a0d70999c4cf06723fe42ad07ca">&#9670;&#160;</a></span>GetHashCode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">override int MGAlienLib.GameObject.GetHashCode </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a08db8ce6c3e119ff73c4be368155e56b" name="a08db8ce6c3e119ff73c4be368155e56b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a08db8ce6c3e119ff73c4be368155e56b">&#9670;&#160;</a></span>internal_LateUpdate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MGAlienLib.GameObject.internal_LateUpdate </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ace90db8bd60537618af12bf9dac4a6b5" name="ace90db8bd60537618af12bf9dac4a6b5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ace90db8bd60537618af12bf9dac4a6b5">&#9670;&#160;</a></span>internal_OnDestroy()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MGAlienLib.GameObject.internal_OnDestroy </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af492ae7ae116914b6c7886a2e5bcfe74" name="af492ae7ae116914b6c7886a2e5bcfe74"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af492ae7ae116914b6c7886a2e5bcfe74">&#9670;&#160;</a></span>internal_Update()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MGAlienLib.GameObject.internal_Update </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a222f4d7ba808e878a15209746baab0df" name="a222f4d7ba808e878a15209746baab0df"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a222f4d7ba808e878a15209746baab0df">&#9670;&#160;</a></span>operator!=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool MGAlienLib.GameObject.operator!= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_m_g_alien_lib_1_1_game_object.html">GameObject</a></td>          <td class="paramname"><span class="paramname"><em>a</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">object</td>          <td class="paramname"><span class="paramname"><em>b</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="adf2a495f1aa939e6c4ea3154c083636b" name="adf2a495f1aa939e6c4ea3154c083636b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adf2a495f1aa939e6c4ea3154c083636b">&#9670;&#160;</a></span>operator==()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool MGAlienLib.GameObject.operator== </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_m_g_alien_lib_1_1_game_object.html">GameObject</a></td>          <td class="paramname"><span class="paramname"><em>a</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">object</td>          <td class="paramname"><span class="paramname"><em>b</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aca388f0bfe3f5b6398caee13ef9220d9" name="aca388f0bfe3f5b6398caee13ef9220d9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aca388f0bfe3f5b6398caee13ef9220d9">&#9670;&#160;</a></span>RemoveComponent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MGAlienLib.GameObject.RemoveComponent </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_m_g_alien_lib_1_1_component_base.html">ComponentBase</a></td>          <td class="paramname"><span class="paramname"><em>component</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>컴포넌트를 제거합니다. </p>
+<dl class="params"><dt>매개변수</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">component</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a3046b1f967586156d290d5d6b171c17e" name="a3046b1f967586156d290d5d6b171c17e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3046b1f967586156d290d5d6b171c17e">&#9670;&#160;</a></span>SetActive()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MGAlienLib.GameObject.SetActive </td>
+          <td>(</td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>value</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a670969a5e4f2fe9f933a29a7bc2fd566" name="a670969a5e4f2fe9f933a29a7bc2fd566"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a670969a5e4f2fe9f933a29a7bc2fd566">&#9670;&#160;</a></span>ToString()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">override string MGAlienLib.GameObject.ToString </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">멤버 데이터 문서화</h2>
+<a id="a238f18306c91fe18fea4100779405586" name="a238f18306c91fe18fea4100779405586"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a238f18306c91fe18fea4100779405586">&#9670;&#160;</a></span>_active</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool MGAlienLib.GameObject._active = true</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad2c8a4286b0ecabc5957573de0c7d6ac" name="ad2c8a4286b0ecabc5957573de0c7d6ac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad2c8a4286b0ecabc5957573de0c7d6ac">&#9670;&#160;</a></span>components</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">List&lt;<a class="el" href="class_m_g_alien_lib_1_1_component_base.html">ComponentBase</a>&gt; MGAlienLib.GameObject.components = new List&lt;<a class="el" href="class_m_g_alien_lib_1_1_component_base.html">ComponentBase</a>&gt;()</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6a711963a9d91eb5b3219fced0163f8b" name="a6a711963a9d91eb5b3219fced0163f8b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6a711963a9d91eb5b3219fced0163f8b">&#9670;&#160;</a></span>IdSeed</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">long MGAlienLib.GameObject.IdSeed = 0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad8dd303906e4ad9423feaf78fe60bfac" name="ad8dd303906e4ad9423feaf78fe60bfac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad8dd303906e4ad9423feaf78fe60bfac">&#9670;&#160;</a></span>layer</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int MGAlienLib.GameObject.layer = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af3ce567560a4ef87913b992ee003abc3" name="af3ce567560a4ef87913b992ee003abc3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af3ce567560a4ef87913b992ee003abc3">&#9670;&#160;</a></span>name</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">string MGAlienLib.GameObject.name</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5c995a5f9fa6fb60c94e8af39c54b5f3" name="a5c995a5f9fa6fb60c94e8af39c54b5f3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5c995a5f9fa6fb60c94e8af39c54b5f3">&#9670;&#160;</a></span>transform</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_m_g_alien_lib_1_1_transform.html">Transform</a> MGAlienLib.GameObject.transform</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">속성 문서화</h2>
+<a id="ae8d7184f4e3e9511fc25b487639068b9" name="ae8d7184f4e3e9511fc25b487639068b9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae8d7184f4e3e9511fc25b487639068b9">&#9670;&#160;</a></span>active</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool MGAlienLib.GameObject.active</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel get">get</span><span class="mlabel set">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5afc94f0f9d303f56b138489f25a5e8e" name="a5afc94f0f9d303f56b138489f25a5e8e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5afc94f0f9d303f56b138489f25a5e8e">&#9670;&#160;</a></span>destroyed</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool MGAlienLib.GameObject.destroyed = false</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel get">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a998bb1c73ed93e555d351a6b68ce791d" name="a998bb1c73ed93e555d351a6b68ce791d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a998bb1c73ed93e555d351a6b68ce791d">&#9670;&#160;</a></span>Id</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">long MGAlienLib.GameObject.Id = ++<a class="el" href="#a6a711963a9d91eb5b3219fced0163f8b">IdSeed</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel get">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>이 클래스에 대한 문서화 페이지는 다음의 파일로부터 생성되었습니다.:<ul>
+<li>src/HierarchySystem/<a class="el" href="_game_object_8cs.html">GameObject.cs</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="namespace_m_g_alien_lib.html">MGAlienLib</a></li><li class="navelem"><a class="el" href="class_m_g_alien_lib_1_1_game_object.html">GameObject</a></li>
+    <li class="footer">다음에 의해 생성됨 :  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+  </ul>
+</div>
+</body>
+</html>

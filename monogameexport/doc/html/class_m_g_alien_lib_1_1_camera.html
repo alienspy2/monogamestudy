@@ -1,0 +1,1024 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.13.2"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>alien-monogame: MGAlienLib.Camera 클래스 참조</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(function() { init_search(); });
+/* @license-end */
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">alien-monogame
+   </div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
+          <input type="text" id="MSearchField" value="" placeholder="검색" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 다음에 의해 생성됨 :  Doxygen 1.13.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){initNavTree('class_m_g_alien_lib_1_1_camera.html',''); initResizable(true); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">로딩중...</div>
+<div class="SRStatus" id="Searching">검색중...</div>
+<div class="SRStatus" id="NoMatches">일치하는것 없음</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-types">Public 타입</a> &#124;
+<a href="#pub-methods">Public 멤버 함수</a> &#124;
+<a href="#pub-attribs">Public 속성</a> &#124;
+<a href="#properties">속성</a> &#124;
+<a href="class_m_g_alien_lib_1_1_camera-members.html">모든 멤버 목록</a>  </div>
+  <div class="headertitle"><div class="title">MGAlienLib.Camera 클래스 참조</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>카메라 컴포넌트를 나타냅니다.  
+ <a href="#details">더 자세히 ...</a></p>
+<div class="dynheader">
+MGAlienLib.Camera에 대한 상속 다이어그램 : </div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="class_m_g_alien_lib_1_1_camera.png" usemap="#MGAlienLib.Camera_map" alt=""/>
+  <map id="MGAlienLib.Camera_map" name="MGAlienLib.Camera_map">
+<area href="class_m_g_alien_lib_1_1_component_base.html" title="컴포넌트의 기본 클래스입니다. todo : coroutine 추가" alt="MGAlienLib.ComponentBase" shape="rect" coords="105,112,306,136"/>
+<area href="class_m_g_alien_lib_1_1_m_g_disposable_object.html" alt="MGAlienLib.MGDisposableObject" shape="rect" coords="105,56,306,80"/>
+<area href="class_m_g_alien_lib_1_1_m_g_object.html" alt="MGAlienLib.MGObject" shape="rect" coords="0,0,201,24"/>
+  </map>
+</div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
+Public 타입</h2></td></tr>
+<tr class="memitem:a6786fd68f6bd5c88e398ed9e07c7e55a" id="r_a6786fd68f6bd5c88e398ed9e07c7e55a"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6786fd68f6bd5c88e398ed9e07c7e55a">eCameraClearFlag</a> { <a class="el" href="#a6786fd68f6bd5c88e398ed9e07c7e55aaf80a4ad87fee7c9fdc19b7769495fdb5">Nothing</a>
+, <a class="el" href="#a6786fd68f6bd5c88e398ed9e07c7e55aa63af9903673bdc27b881a7444b1f9854">SolidColor</a>
+, <a class="el" href="#a6786fd68f6bd5c88e398ed9e07c7e55aa675056ad1441b6375b2c5abd48c27ef1">Depth</a>
+ }</td></tr>
+<tr class="memdesc:a6786fd68f6bd5c88e398ed9e07c7e55a"><td class="mdescLeft">&#160;</td><td class="mdescRight">클리어 타입을 나타냅니다.  <a href="#a6786fd68f6bd5c88e398ed9e07c7e55a">더 자세히 ...</a><br /></td></tr>
+<tr class="separator:a6786fd68f6bd5c88e398ed9e07c7e55a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 멤버 함수</h2></td></tr>
+<tr class="memitem:ac65c5ba7d32809e7f9bb85fd5b6fb8d9" id="r_ac65c5ba7d32809e7f9bb85fd5b6fb8d9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac65c5ba7d32809e7f9bb85fd5b6fb8d9">Camera</a> ()</td></tr>
+<tr class="memdesc:ac65c5ba7d32809e7f9bb85fd5b6fb8d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a new instance of <a class="el" href="class_m_g_alien_lib_1_1_camera.html" title="카메라 컴포넌트를 나타냅니다.">Camera</a>  <br /></td></tr>
+<tr class="separator:ac65c5ba7d32809e7f9bb85fd5b6fb8d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa51155eb9da388a7d38680b957e8151e" id="r_aa51155eb9da388a7d38680b957e8151e"><td class="memItemLeft" align="right" valign="top">Vector3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa51155eb9da388a7d38680b957e8151e">Unproject</a> (Vector2 screenPos, float z_world)</td></tr>
+<tr class="memdesc:aa51155eb9da388a7d38680b957e8151e"><td class="mdescLeft">&#160;</td><td class="mdescRight">화면좌표를 월드 좌표로 변환합니다.  <br /></td></tr>
+<tr class="separator:aa51155eb9da388a7d38680b957e8151e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae8aaac311369c95e55bd5053ce499425" id="r_ae8aaac311369c95e55bd5053ce499425"><td class="memItemLeft" align="right" valign="top">Ray&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae8aaac311369c95e55bd5053ce499425">ScreenPointToRay</a> (Vector2 screenPos)</td></tr>
+<tr class="memdesc:ae8aaac311369c95e55bd5053ce499425"><td class="mdescLeft">&#160;</td><td class="mdescRight">화면 좌표를 월드 좌표 ray 로 변환합니다. 좌표를 특정 싶을 때에는 대상의 Plane 을 생성한 후 Ray 와 Plane 을 이용하여 교차점을 구할 수 있습니다.  <br /></td></tr>
+<tr class="separator:ae8aaac311369c95e55bd5053ce499425"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7f1fbd3749855df360c4d404e12f24ee" id="r_a7f1fbd3749855df360c4d404e12f24ee"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7f1fbd3749855df360c4d404e12f24ee">OnEnable</a> ()</td></tr>
+<tr class="memdesc:a7f1fbd3749855df360c4d404e12f24ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">컴포넌트가 활성화될 때 호출됩니다. 컴포넌트가 속한 gameObject 가 꺼진 상태등 호출 되기 불가능 한 상황일 때에는 호출 가능해지는 시점에 호출됩니다.  <br /></td></tr>
+<tr class="separator:a7f1fbd3749855df360c4d404e12f24ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3c48e0ceffb4758db757e55c11de01f8" id="r_a3c48e0ceffb4758db757e55c11de01f8"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3c48e0ceffb4758db757e55c11de01f8">OnDisable</a> ()</td></tr>
+<tr class="memdesc:a3c48e0ceffb4758db757e55c11de01f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">컴포넌트가 비활성화될 때 호출됩니다.  <br /></td></tr>
+<tr class="separator:a3c48e0ceffb4758db757e55c11de01f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8f79070bb290663cc932e6270575f38b" id="r_a8f79070bb290663cc932e6270575f38b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8f79070bb290663cc932e6270575f38b">internal_GetReadyToRender</a> (int stage)</td></tr>
+<tr class="memdesc:a8f79070bb290663cc932e6270575f38b"><td class="mdescLeft">&#160;</td><td class="mdescRight">렌더링 준비를 합니다. 내부적으로만 사용됩니다.  <br /></td></tr>
+<tr class="separator:a8f79070bb290663cc932e6270575f38b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af93fb98ea84552849ba776494a23ceb8" id="r_af93fb98ea84552849ba776494a23ceb8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af93fb98ea84552849ba776494a23ceb8">internal_AddUIForRaycastTarget</a> (<a class="el" href="class_m_g_alien_lib_1_1_u_i_transform.html">UITransform</a> ui)</td></tr>
+<tr class="memdesc:af93fb98ea84552849ba776494a23ceb8"><td class="mdescLeft">&#160;</td><td class="mdescRight">렌더링이 끝났을 때 호출됩니다. UIRaycast 를 위한 작업을 수행합니다. 내부적으로만 사용됩니다.  <br /></td></tr>
+<tr class="separator:af93fb98ea84552849ba776494a23ceb8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9ab3ffe975129b757ddc97870f123492" id="r_a9ab3ffe975129b757ddc97870f123492"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_m_g_alien_lib_1_1_u_i_transform.html">UITransform</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9ab3ffe975129b757ddc97870f123492">UIRaycast</a> (Vector2 screenPos)</td></tr>
+<tr class="memdesc:a9ab3ffe975129b757ddc97870f123492"><td class="mdescLeft">&#160;</td><td class="mdescRight">이 카메라에 의해 렌더링 된 UI 중, camera 로부터 가장 가까운 UI 를 찾아 반환합니다. projection 일 떄에도 동작합니다.  <br /></td></tr>
+<tr class="separator:a9ab3ffe975129b757ddc97870f123492"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa304908c5fa2b343ea07a98fb8acef33" id="r_aa304908c5fa2b343ea07a98fb8acef33"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa304908c5fa2b343ea07a98fb8acef33">Update</a> ()</td></tr>
+<tr class="memdesc:aa304908c5fa2b343ea07a98fb8acef33"><td class="mdescLeft">&#160;</td><td class="mdescRight">컴포넌트가 업데이트될 때 마다 호출됩니다.  <br /></td></tr>
+<tr class="separator:aa304908c5fa2b343ea07a98fb8acef33"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_class_m_g_alien_lib_1_1_component_base"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_class_m_g_alien_lib_1_1_component_base')"><img src="closed.png" alt="-"/>&#160;<a class="el" href="class_m_g_alien_lib_1_1_component_base.html">MGAlienLib.ComponentBase</a>(으)로부터 상속된 Public 멤버 함수</td></tr>
+<tr class="memitem:aa8ba8c98f37f458b837400ff4c26a33e inherit pub_methods_class_m_g_alien_lib_1_1_component_base" id="r_aa8ba8c98f37f458b837400ff4c26a33e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_m_g_alien_lib_1_1_game_object.html">GameObject</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_g_alien_lib_1_1_component_base.html#aa8ba8c98f37f458b837400ff4c26a33e">CreateGameObject</a> (string <a class="el" href="class_m_g_alien_lib_1_1_component_base.html#a740a4f15a2887c2d55611f52498e4860">name</a>, <a class="el" href="class_m_g_alien_lib_1_1_transform.html">Transform</a> parent)</td></tr>
+<tr class="memdesc:aa8ba8c98f37f458b837400ff4c26a33e inherit pub_methods_class_m_g_alien_lib_1_1_component_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">새로운 GameObject를 생성합니다. GameObject는 new GameObject() 로 생성할 수 없습니다.  <br /></td></tr>
+<tr class="separator:aa8ba8c98f37f458b837400ff4c26a33e inherit pub_methods_class_m_g_alien_lib_1_1_component_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a05e7e29a1e026e62e7555428eaadc58c inherit pub_methods_class_m_g_alien_lib_1_1_component_base" id="r_a05e7e29a1e026e62e7555428eaadc58c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_g_alien_lib_1_1_component_base.html#a05e7e29a1e026e62e7555428eaadc58c">ComponentBase</a> ()</td></tr>
+<tr class="memdesc:a05e7e29a1e026e62e7555428eaadc58c inherit pub_methods_class_m_g_alien_lib_1_1_component_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Component 는 new 로 생성할 수 없습니다. AddComponent 를 사용하여 생성해주세요.  <br /></td></tr>
+<tr class="separator:a05e7e29a1e026e62e7555428eaadc58c inherit pub_methods_class_m_g_alien_lib_1_1_component_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a85876d113b7f82c0ed6eae1814fab18b inherit pub_methods_class_m_g_alien_lib_1_1_component_base" id="r_a85876d113b7f82c0ed6eae1814fab18b"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_g_alien_lib_1_1_component_base.html#a85876d113b7f82c0ed6eae1814fab18b">Awake</a> ()</td></tr>
+<tr class="memdesc:a85876d113b7f82c0ed6eae1814fab18b inherit pub_methods_class_m_g_alien_lib_1_1_component_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">컴포넌트가 활성화될 때 호출됩니다. 컴포넌트가 속한 gameObject 가 꺼진 상태에서 생성되는 등 Awake 가 호출 될 수 없는 상황일 때에는 호출 가능해지는 시점에 호출됩니다.  <br /></td></tr>
+<tr class="separator:a85876d113b7f82c0ed6eae1814fab18b inherit pub_methods_class_m_g_alien_lib_1_1_component_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4e116c591487b4bdc0d020b2bc121045 inherit pub_methods_class_m_g_alien_lib_1_1_component_base" id="r_a4e116c591487b4bdc0d020b2bc121045"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_g_alien_lib_1_1_component_base.html#a4e116c591487b4bdc0d020b2bc121045">Start</a> ()</td></tr>
+<tr class="memdesc:a4e116c591487b4bdc0d020b2bc121045 inherit pub_methods_class_m_g_alien_lib_1_1_component_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">컴포넌트가 시작될 때 호출됩니다. Awake 와 비슷하나, 모든 컴포넌트의 Awake 가 호출된 이후에 호출됩니다. Start 가 호출 될 수 없는 상황일 때에는 호출 가능해지는 시점에 호출됩니다.  <br /></td></tr>
+<tr class="separator:a4e116c591487b4bdc0d020b2bc121045 inherit pub_methods_class_m_g_alien_lib_1_1_component_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af2ab676ce8636fc14842cd9bd6d00507 inherit pub_methods_class_m_g_alien_lib_1_1_component_base" id="r_af2ab676ce8636fc14842cd9bd6d00507"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_g_alien_lib_1_1_component_base.html#af2ab676ce8636fc14842cd9bd6d00507">internal_Update</a> ()</td></tr>
+<tr class="memdesc:af2ab676ce8636fc14842cd9bd6d00507 inherit pub_methods_class_m_g_alien_lib_1_1_component_base"><td class="mdescLeft">&#160;</td><td class="mdescRight"><em>사용불가</em> 내부적으로 호출되는 함수입니다.  <br /></td></tr>
+<tr class="separator:af2ab676ce8636fc14842cd9bd6d00507 inherit pub_methods_class_m_g_alien_lib_1_1_component_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3747f1cbf6889165632ea8262672f75c inherit pub_methods_class_m_g_alien_lib_1_1_component_base" id="r_a3747f1cbf6889165632ea8262672f75c"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_g_alien_lib_1_1_component_base.html#a3747f1cbf6889165632ea8262672f75c">LateUpdate</a> ()</td></tr>
+<tr class="memdesc:a3747f1cbf6889165632ea8262672f75c inherit pub_methods_class_m_g_alien_lib_1_1_component_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update 와 비슷하게 컴포넌트가 업데이트될 때 마다 호출됩니다. 단, 모든 Update 가 호출된 이후에 호출됩니다.  <br /></td></tr>
+<tr class="separator:a3747f1cbf6889165632ea8262672f75c inherit pub_methods_class_m_g_alien_lib_1_1_component_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad3e8790756a5a1e0b7e589ca6e0580a2 inherit pub_methods_class_m_g_alien_lib_1_1_component_base" id="r_ad3e8790756a5a1e0b7e589ca6e0580a2"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_g_alien_lib_1_1_component_base.html#ad3e8790756a5a1e0b7e589ca6e0580a2">OnDestroy</a> ()</td></tr>
+<tr class="memdesc:ad3e8790756a5a1e0b7e589ca6e0580a2 inherit pub_methods_class_m_g_alien_lib_1_1_component_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">컴포넌트가 파괴될 때 호출됩니다.  <br /></td></tr>
+<tr class="separator:ad3e8790756a5a1e0b7e589ca6e0580a2 inherit pub_methods_class_m_g_alien_lib_1_1_component_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1c304741c9c6d17fdec300c8ab3183d7 inherit pub_methods_class_m_g_alien_lib_1_1_component_base" id="r_a1c304741c9c6d17fdec300c8ab3183d7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_g_alien_lib_1_1_component_base.html#a1c304741c9c6d17fdec300c8ab3183d7">Destroy</a> (<a class="el" href="class_m_g_alien_lib_1_1_game_object.html">GameObject</a> obj)</td></tr>
+<tr class="memdesc:a1c304741c9c6d17fdec300c8ab3183d7 inherit pub_methods_class_m_g_alien_lib_1_1_component_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">게임 오브젝트를 파괴합니다. 즉시 파괴되지 않고, 예약 되었다가, 다음 프레임 시작 전에 일괄 파괴됩니다.  <br /></td></tr>
+<tr class="separator:a1c304741c9c6d17fdec300c8ab3183d7 inherit pub_methods_class_m_g_alien_lib_1_1_component_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2a1fc7dc80dfc290bfdc5a7f9bb29ae7 inherit pub_methods_class_m_g_alien_lib_1_1_component_base" id="r_a2a1fc7dc80dfc290bfdc5a7f9bb29ae7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_g_alien_lib_1_1_component_base.html#a2a1fc7dc80dfc290bfdc5a7f9bb29ae7">Destroy</a> (<a class="el" href="class_m_g_alien_lib_1_1_component_base.html">ComponentBase</a> component)</td></tr>
+<tr class="memdesc:a2a1fc7dc80dfc290bfdc5a7f9bb29ae7 inherit pub_methods_class_m_g_alien_lib_1_1_component_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">컴포넌트를 파괴합니다.  <br /></td></tr>
+<tr class="separator:a2a1fc7dc80dfc290bfdc5a7f9bb29ae7 inherit pub_methods_class_m_g_alien_lib_1_1_component_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa3d813f25bbd0eb69c3299d94673d61d inherit pub_methods_class_m_g_alien_lib_1_1_component_base" id="r_aa3d813f25bbd0eb69c3299d94673d61d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_g_alien_lib_1_1_component_base.html#aa3d813f25bbd0eb69c3299d94673d61d">internal_OnDestroy</a> ()</td></tr>
+<tr class="memdesc:aa3d813f25bbd0eb69c3299d94673d61d inherit pub_methods_class_m_g_alien_lib_1_1_component_base"><td class="mdescLeft">&#160;</td><td class="mdescRight"><em>사용불가</em> 내부적으로 호출되는 함수입니다.  <br /></td></tr>
+<tr class="separator:aa3d813f25bbd0eb69c3299d94673d61d inherit pub_methods_class_m_g_alien_lib_1_1_component_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4c0b492045ecec554036126d83321965 inherit pub_methods_class_m_g_alien_lib_1_1_component_base" id="r_a4c0b492045ecec554036126d83321965"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_g_alien_lib_1_1_component_base.html#a4c0b492045ecec554036126d83321965">internal_CheckLifeCycle</a> ()</td></tr>
+<tr class="memdesc:a4c0b492045ecec554036126d83321965 inherit pub_methods_class_m_g_alien_lib_1_1_component_base"><td class="mdescLeft">&#160;</td><td class="mdescRight"><em>사용불가</em> 내부적으로 호출되는 함수입니다.  <br /></td></tr>
+<tr class="separator:a4c0b492045ecec554036126d83321965 inherit pub_methods_class_m_g_alien_lib_1_1_component_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acf8e854a3da549c97a23afdc321d8666 inherit pub_methods_class_m_g_alien_lib_1_1_component_base" id="r_acf8e854a3da549c97a23afdc321d8666"><td class="memItemLeft" align="right" valign="top">override string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_g_alien_lib_1_1_component_base.html#acf8e854a3da549c97a23afdc321d8666">ToString</a> ()</td></tr>
+<tr class="separator:acf8e854a3da549c97a23afdc321d8666 inherit pub_methods_class_m_g_alien_lib_1_1_component_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a24d4673fb0396ce9f426cc7c404ddc77 inherit pub_methods_class_m_g_alien_lib_1_1_component_base" id="r_a24d4673fb0396ce9f426cc7c404ddc77"><td class="memItemLeft" align="right" valign="top">override bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_g_alien_lib_1_1_component_base.html#a24d4673fb0396ce9f426cc7c404ddc77">Equals</a> (object obj)</td></tr>
+<tr class="separator:a24d4673fb0396ce9f426cc7c404ddc77 inherit pub_methods_class_m_g_alien_lib_1_1_component_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a818cd8425ed3ed44e28bd9d1984c2cb7 inherit pub_methods_class_m_g_alien_lib_1_1_component_base" id="r_a818cd8425ed3ed44e28bd9d1984c2cb7"><td class="memItemLeft" align="right" valign="top">override int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_g_alien_lib_1_1_component_base.html#a818cd8425ed3ed44e28bd9d1984c2cb7">GetHashCode</a> ()</td></tr>
+<tr class="separator:a818cd8425ed3ed44e28bd9d1984c2cb7 inherit pub_methods_class_m_g_alien_lib_1_1_component_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aad5e2e132dad2f736e2dfd448913c7c1 inherit pub_methods_class_m_g_alien_lib_1_1_component_base" id="r_aad5e2e132dad2f736e2dfd448913c7c1"><td class="memItemLeft" align="right" valign="top">T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_g_alien_lib_1_1_component_base.html#aad5e2e132dad2f736e2dfd448913c7c1">AddComponent&lt; T &gt;</a> ()</td></tr>
+<tr class="memdesc:aad5e2e132dad2f736e2dfd448913c7c1 inherit pub_methods_class_m_g_alien_lib_1_1_component_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">컴포넌트를 추가합니다.  <br /></td></tr>
+<tr class="separator:aad5e2e132dad2f736e2dfd448913c7c1 inherit pub_methods_class_m_g_alien_lib_1_1_component_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a562202f3ea0407108ec34852ed3e4f32 inherit pub_methods_class_m_g_alien_lib_1_1_component_base" id="r_a562202f3ea0407108ec34852ed3e4f32"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_g_alien_lib_1_1_component_base.html#a562202f3ea0407108ec34852ed3e4f32">RemoveComponent</a> (<a class="el" href="class_m_g_alien_lib_1_1_component_base.html">ComponentBase</a> component)</td></tr>
+<tr class="memdesc:a562202f3ea0407108ec34852ed3e4f32 inherit pub_methods_class_m_g_alien_lib_1_1_component_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">컴포넌트를 제거합니다.  <br /></td></tr>
+<tr class="separator:a562202f3ea0407108ec34852ed3e4f32 inherit pub_methods_class_m_g_alien_lib_1_1_component_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a432fc7430f175f6643079bacb80b2498 inherit pub_methods_class_m_g_alien_lib_1_1_component_base" id="r_a432fc7430f175f6643079bacb80b2498"><td class="memItemLeft" align="right" valign="top">T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_g_alien_lib_1_1_component_base.html#a432fc7430f175f6643079bacb80b2498">GetComponent&lt; T &gt;</a> ()</td></tr>
+<tr class="memdesc:a432fc7430f175f6643079bacb80b2498 inherit pub_methods_class_m_g_alien_lib_1_1_component_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">컴포넌트를 하나 가져옵니다.  <br /></td></tr>
+<tr class="separator:a432fc7430f175f6643079bacb80b2498 inherit pub_methods_class_m_g_alien_lib_1_1_component_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7b066090119f368e8575a2a0dcbc852d inherit pub_methods_class_m_g_alien_lib_1_1_component_base" id="r_a7b066090119f368e8575a2a0dcbc852d"><td class="memItemLeft" align="right" valign="top">List&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_g_alien_lib_1_1_component_base.html#a7b066090119f368e8575a2a0dcbc852d">GetComponents&lt; T &gt;</a> ()</td></tr>
+<tr class="memdesc:a7b066090119f368e8575a2a0dcbc852d inherit pub_methods_class_m_g_alien_lib_1_1_component_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">컴포넌트를 <em>모두</em> 가져옵니다.  <br /></td></tr>
+<tr class="separator:a7b066090119f368e8575a2a0dcbc852d inherit pub_methods_class_m_g_alien_lib_1_1_component_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a839d45a2aa4f5d008d408e6c325b63e9 inherit pub_methods_class_m_g_alien_lib_1_1_component_base" id="r_a839d45a2aa4f5d008d408e6c325b63e9"><td class="memItemLeft" align="right" valign="top">T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_g_alien_lib_1_1_component_base.html#a839d45a2aa4f5d008d408e6c325b63e9">GetComponentInChildren&lt; T &gt;</a> ()</td></tr>
+<tr class="memdesc:a839d45a2aa4f5d008d408e6c325b63e9 inherit pub_methods_class_m_g_alien_lib_1_1_component_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">자식을 모두 찾아 컴포넌트를 하나 가져옵니다.  <br /></td></tr>
+<tr class="separator:a839d45a2aa4f5d008d408e6c325b63e9 inherit pub_methods_class_m_g_alien_lib_1_1_component_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a738d37240d3d85103f6c0f4ea1992e00 inherit pub_methods_class_m_g_alien_lib_1_1_component_base" id="r_a738d37240d3d85103f6c0f4ea1992e00"><td class="memItemLeft" align="right" valign="top">List&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_g_alien_lib_1_1_component_base.html#a738d37240d3d85103f6c0f4ea1992e00">GetComponentsInChildren&lt; T &gt;</a> ()</td></tr>
+<tr class="memdesc:a738d37240d3d85103f6c0f4ea1992e00 inherit pub_methods_class_m_g_alien_lib_1_1_component_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">자식을 모두 찾아 컴포넌트를 <em>모두</em> 가져옵니다.  <br /></td></tr>
+<tr class="separator:a738d37240d3d85103f6c0f4ea1992e00 inherit pub_methods_class_m_g_alien_lib_1_1_component_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8140096a71108978ddf646e993af0559 inherit pub_methods_class_m_g_alien_lib_1_1_component_base" id="r_a8140096a71108978ddf646e993af0559"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_g_alien_lib_1_1_component_base.html#a8140096a71108978ddf646e993af0559">OnDispose</a> ()</td></tr>
+<tr class="separator:a8140096a71108978ddf646e993af0559 inherit pub_methods_class_m_g_alien_lib_1_1_component_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a935876c7d60251a5dee52a5cc9ddd4da inherit pub_methods_class_m_g_alien_lib_1_1_component_base" id="r_a935876c7d60251a5dee52a5cc9ddd4da"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_g_alien_lib_1_1_component_base.html#a935876c7d60251a5dee52a5cc9ddd4da">Dispose</a> ()</td></tr>
+<tr class="separator:a935876c7d60251a5dee52a5cc9ddd4da inherit pub_methods_class_m_g_alien_lib_1_1_component_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_class_m_g_alien_lib_1_1_m_g_disposable_object"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_class_m_g_alien_lib_1_1_m_g_disposable_object')"><img src="closed.png" alt="-"/>&#160;<a class="el" href="class_m_g_alien_lib_1_1_m_g_disposable_object.html">MGAlienLib.MGDisposableObject</a>(으)로부터 상속된 Public 멤버 함수</td></tr>
+<tr class="memitem:ac8b43cfa15a6583fda818f6bb1fee8a9 inherit pub_methods_class_m_g_alien_lib_1_1_m_g_disposable_object" id="r_ac8b43cfa15a6583fda818f6bb1fee8a9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_g_alien_lib_1_1_m_g_disposable_object.html#ac8b43cfa15a6583fda818f6bb1fee8a9">Dispose</a> ()</td></tr>
+<tr class="separator:ac8b43cfa15a6583fda818f6bb1fee8a9 inherit pub_methods_class_m_g_alien_lib_1_1_m_g_disposable_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+Public 속성</h2></td></tr>
+<tr class="memitem:a3c07e3d771de612cca78a352e497274b" id="r_a3c07e3d771de612cca78a352e497274b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3c07e3d771de612cca78a352e497274b">cullingMask</a> = 0x7FFFFFFF</td></tr>
+<tr class="separator:a3c07e3d771de612cca78a352e497274b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae4b5bfdcc8db49943283a5bcea5d133e" id="r_ae4b5bfdcc8db49943283a5bcea5d133e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a6786fd68f6bd5c88e398ed9e07c7e55a">eCameraClearFlag</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae4b5bfdcc8db49943283a5bcea5d133e">clearFlags</a> = <a class="el" href="#a6786fd68f6bd5c88e398ed9e07c7e55aa63af9903673bdc27b881a7444b1f9854">eCameraClearFlag.SolidColor</a></td></tr>
+<tr class="memdesc:ae4b5bfdcc8db49943283a5bcea5d133e"><td class="mdescLeft">&#160;</td><td class="mdescRight">카메라의 클리어 타입을 가져오거나 설정합니다.  <br /></td></tr>
+<tr class="separator:ae4b5bfdcc8db49943283a5bcea5d133e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a99969b9725866c164eb2070f62d7bc0c" id="r_a99969b9725866c164eb2070f62d7bc0c"><td class="memItemLeft" align="right" valign="top">Color&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a99969b9725866c164eb2070f62d7bc0c">backgroundColor</a> = Color.CornflowerBlue</td></tr>
+<tr class="memdesc:a99969b9725866c164eb2070f62d7bc0c"><td class="mdescLeft">&#160;</td><td class="mdescRight">카메라의 클리어 색상을 가져오거나 설정합니다. 클리어 타입이 Color일 때만 사용됩니다.  <br /></td></tr>
+<tr class="separator:a99969b9725866c164eb2070f62d7bc0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_attribs_class_m_g_alien_lib_1_1_component_base"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_attribs_class_m_g_alien_lib_1_1_component_base')"><img src="closed.png" alt="-"/>&#160;<a class="el" href="class_m_g_alien_lib_1_1_component_base.html">MGAlienLib.ComponentBase</a>(으)로부터 상속된 Public 속성</td></tr>
+<tr class="memitem:a870dc57aa4c6db7dbe228ac81194e91a inherit pub_attribs_class_m_g_alien_lib_1_1_component_base" id="r_a870dc57aa4c6db7dbe228ac81194e91a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_m_g_alien_lib_1_1_game_object.html">GameObject</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_g_alien_lib_1_1_component_base.html#a870dc57aa4c6db7dbe228ac81194e91a">gameObject</a></td></tr>
+<tr class="memdesc:a870dc57aa4c6db7dbe228ac81194e91a inherit pub_attribs_class_m_g_alien_lib_1_1_component_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">컴포넌트가 속한 게임 오브젝트를 가져옵니다.  <br /></td></tr>
+<tr class="separator:a870dc57aa4c6db7dbe228ac81194e91a inherit pub_attribs_class_m_g_alien_lib_1_1_component_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="properties" name="properties"></a>
+속성</h2></td></tr>
+<tr class="memitem:a6be27efdeeabc1abbd30c447f034141c" id="r_a6be27efdeeabc1abbd30c447f034141c"><td class="memItemLeft" align="right" valign="top">Rectangle&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6be27efdeeabc1abbd30c447f034141c">viewport</a><code> [get, set]</code></td></tr>
+<tr class="separator:a6be27efdeeabc1abbd30c447f034141c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a30162b9204515abf68ebe58aaeb21db0" id="r_a30162b9204515abf68ebe58aaeb21db0"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a30162b9204515abf68ebe58aaeb21db0">nearClipPlane</a><code> [get, set]</code></td></tr>
+<tr class="separator:a30162b9204515abf68ebe58aaeb21db0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad96c56a367340da2133013ccfb96de19" id="r_ad96c56a367340da2133013ccfb96de19"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad96c56a367340da2133013ccfb96de19">farClipPlane</a><code> [get, set]</code></td></tr>
+<tr class="separator:ad96c56a367340da2133013ccfb96de19"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a52a22faedfaa44cb5e1f8f9f0c12b0a7" id="r_a52a22faedfaa44cb5e1f8f9f0c12b0a7"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a52a22faedfaa44cb5e1f8f9f0c12b0a7">orthographic</a><code> [get, set]</code></td></tr>
+<tr class="separator:a52a22faedfaa44cb5e1f8f9f0c12b0a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a639dcd0878ae6d3d835564438f129fcc" id="r_a639dcd0878ae6d3d835564438f129fcc"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a639dcd0878ae6d3d835564438f129fcc">orthographicSize</a><code> [get, set]</code></td></tr>
+<tr class="separator:a639dcd0878ae6d3d835564438f129fcc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8fb92a309b71c86ac7388ed29bbb45fa" id="r_a8fb92a309b71c86ac7388ed29bbb45fa"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8fb92a309b71c86ac7388ed29bbb45fa">fieldOfView</a><code> [get, set]</code></td></tr>
+<tr class="separator:a8fb92a309b71c86ac7388ed29bbb45fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac5e6d1b75b44823d8cb492188b075534" id="r_ac5e6d1b75b44823d8cb492188b075534"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac5e6d1b75b44823d8cb492188b075534">aspectRatio</a><code> [get, set]</code></td></tr>
+<tr class="separator:ac5e6d1b75b44823d8cb492188b075534"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aebbe10c376335f17d593a72d9df93551" id="r_aebbe10c376335f17d593a72d9df93551"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aebbe10c376335f17d593a72d9df93551">enableUIRaycast</a><code> [get, set]</code></td></tr>
+<tr class="separator:aebbe10c376335f17d593a72d9df93551"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a10005a77d1ffa5882ce48d8d5bc405d4" id="r_a10005a77d1ffa5882ce48d8d5bc405d4"><td class="memItemLeft" align="right" valign="top">Vector3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a10005a77d1ffa5882ce48d8d5bc405d4">pos</a><code> [get]</code></td></tr>
+<tr class="memdesc:a10005a77d1ffa5882ce48d8d5bc405d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">카메라의 위치를 가져옵니다.  <br /></td></tr>
+<tr class="separator:a10005a77d1ffa5882ce48d8d5bc405d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aab37f2433701e3cc242675c101bc49b7" id="r_aab37f2433701e3cc242675c101bc49b7"><td class="memItemLeft" align="right" valign="top">Quaternion&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aab37f2433701e3cc242675c101bc49b7">rot</a><code> [get]</code></td></tr>
+<tr class="memdesc:aab37f2433701e3cc242675c101bc49b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">카메라의 회전을 가져옵니다.  <br /></td></tr>
+<tr class="separator:aab37f2433701e3cc242675c101bc49b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6c6c78b16cbcec45dfc50243cc1391c2" id="r_a6c6c78b16cbcec45dfc50243cc1391c2"><td class="memItemLeft" align="right" valign="top">Matrix&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6c6c78b16cbcec45dfc50243cc1391c2">matView</a> = Matrix.Identity<code> [get]</code></td></tr>
+<tr class="memdesc:a6c6c78b16cbcec45dfc50243cc1391c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">world space 에서 view space 로 변환하는 행렬을 가져옵니다.  <br /></td></tr>
+<tr class="separator:a6c6c78b16cbcec45dfc50243cc1391c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aebf581bce27509197c2bf045ddf3ae13" id="r_aebf581bce27509197c2bf045ddf3ae13"><td class="memItemLeft" align="right" valign="top">Matrix&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aebf581bce27509197c2bf045ddf3ae13">matProjection</a> = Matrix.Identity<code> [get]</code></td></tr>
+<tr class="memdesc:aebf581bce27509197c2bf045ddf3ae13"><td class="mdescLeft">&#160;</td><td class="mdescRight">view space 에서 projection space 로 변환하는 행렬을 가져옵니다.  <br /></td></tr>
+<tr class="separator:aebf581bce27509197c2bf045ddf3ae13"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad57e0f695b0d790bc95bac176dc0be73" id="r_ad57e0f695b0d790bc95bac176dc0be73"><td class="memItemLeft" align="right" valign="top">Matrix&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad57e0f695b0d790bc95bac176dc0be73">matViewProjection</a> = Matrix.Identity<code> [get]</code></td></tr>
+<tr class="memdesc:ad57e0f695b0d790bc95bac176dc0be73"><td class="mdescLeft">&#160;</td><td class="mdescRight">world space 에서 projection space 로 변환하는 행렬을 가져옵니다.  <br /></td></tr>
+<tr class="separator:ad57e0f695b0d790bc95bac176dc0be73"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a08803f529f8c6e70f8cef57a794a617a" id="r_a08803f529f8c6e70f8cef57a794a617a"><td class="memItemLeft" align="right" valign="top">Matrix&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a08803f529f8c6e70f8cef57a794a617a">matViewProjectionINV</a> = Matrix.Identity<code> [get]</code></td></tr>
+<tr class="memdesc:a08803f529f8c6e70f8cef57a794a617a"><td class="mdescLeft">&#160;</td><td class="mdescRight">projection space 에서 world space 로 변환하는 행렬을 가져옵니다.  <br /></td></tr>
+<tr class="separator:a08803f529f8c6e70f8cef57a794a617a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header properties_class_m_g_alien_lib_1_1_component_base"><td colspan="2" onclick="javascript:dynsection.toggleInherit('properties_class_m_g_alien_lib_1_1_component_base')"><img src="closed.png" alt="-"/>&#160;<a class="el" href="class_m_g_alien_lib_1_1_component_base.html">MGAlienLib.ComponentBase</a>(으)로부터 상속된 속성</td></tr>
+<tr class="memitem:a3ac9d2ef4454a84b7b434633ddbdf9b8 inherit properties_class_m_g_alien_lib_1_1_component_base" id="r_a3ac9d2ef4454a84b7b434633ddbdf9b8"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_g_alien_lib_1_1_component_base.html#a3ac9d2ef4454a84b7b434633ddbdf9b8">destroyed</a> = false<code> [get]</code></td></tr>
+<tr class="memdesc:a3ac9d2ef4454a84b7b434633ddbdf9b8 inherit properties_class_m_g_alien_lib_1_1_component_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">컴포넌트가 파괴되었는지 여부를 가져옵니다.  <br /></td></tr>
+<tr class="separator:a3ac9d2ef4454a84b7b434633ddbdf9b8 inherit properties_class_m_g_alien_lib_1_1_component_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5a09619d6399b91a21caefa0ed01e7e8 inherit properties_class_m_g_alien_lib_1_1_component_base" id="r_a5a09619d6399b91a21caefa0ed01e7e8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_m_g_alien_lib_1_1_game_base.html">GameBase</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_g_alien_lib_1_1_component_base.html#a5a09619d6399b91a21caefa0ed01e7e8">game</a><code> [get]</code></td></tr>
+<tr class="separator:a5a09619d6399b91a21caefa0ed01e7e8 inherit properties_class_m_g_alien_lib_1_1_component_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa7a38bee7e9345a0da3cdf2528972c77 inherit properties_class_m_g_alien_lib_1_1_component_base" id="r_aa7a38bee7e9345a0da3cdf2528972c77"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_m_g_alien_lib_1_1_hierarchy_manager.html">HierarchyManager</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_g_alien_lib_1_1_component_base.html#aa7a38bee7e9345a0da3cdf2528972c77">hierarchyManager</a><code> [get]</code></td></tr>
+<tr class="separator:aa7a38bee7e9345a0da3cdf2528972c77 inherit properties_class_m_g_alien_lib_1_1_component_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abd4f74880694bf3011ab42187b2567e1 inherit properties_class_m_g_alien_lib_1_1_component_base" id="r_abd4f74880694bf3011ab42187b2567e1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_m_g_alien_lib_1_1_input_manager.html">InputManager</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_g_alien_lib_1_1_component_base.html#abd4f74880694bf3011ab42187b2567e1">inputManager</a><code> [get]</code></td></tr>
+<tr class="separator:abd4f74880694bf3011ab42187b2567e1 inherit properties_class_m_g_alien_lib_1_1_component_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afed1ade6a049f799807b1528d9ca2de9 inherit properties_class_m_g_alien_lib_1_1_component_base" id="r_afed1ade6a049f799807b1528d9ca2de9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_m_g_alien_lib_1_1_asset_manager.html">AssetManager</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_g_alien_lib_1_1_component_base.html#afed1ade6a049f799807b1528d9ca2de9">assetManager</a><code> [get]</code></td></tr>
+<tr class="separator:afed1ade6a049f799807b1528d9ca2de9 inherit properties_class_m_g_alien_lib_1_1_component_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5b2270d4ecd0a4ffa86f314e0d334433 inherit properties_class_m_g_alien_lib_1_1_component_base" id="r_a5b2270d4ecd0a4ffa86f314e0d334433"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_m_g_alien_lib_1_1_shader_manager.html">ShaderManager</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_g_alien_lib_1_1_component_base.html#a5b2270d4ecd0a4ffa86f314e0d334433">shaderManager</a><code> [get]</code></td></tr>
+<tr class="separator:a5b2270d4ecd0a4ffa86f314e0d334433 inherit properties_class_m_g_alien_lib_1_1_component_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa6c3dcb67ae4777fee0da0bc7b6773bc inherit properties_class_m_g_alien_lib_1_1_component_base" id="r_aa6c3dcb67ae4777fee0da0bc7b6773bc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_m_g_alien_lib_1_1_font_manager.html">FontManager</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_g_alien_lib_1_1_component_base.html#aa6c3dcb67ae4777fee0da0bc7b6773bc">fontManager</a><code> [get]</code></td></tr>
+<tr class="separator:aa6c3dcb67ae4777fee0da0bc7b6773bc inherit properties_class_m_g_alien_lib_1_1_component_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a13285666c7df1f6d6e034d7074e57219 inherit properties_class_m_g_alien_lib_1_1_component_base" id="r_a13285666c7df1f6d6e034d7074e57219"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_m_g_alien_lib_1_1_dynamic_texture_atlas_manager.html">DynamicTextureAtlasManager</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_g_alien_lib_1_1_component_base.html#a13285666c7df1f6d6e034d7074e57219">atlasMan</a><code> [get]</code></td></tr>
+<tr class="separator:a13285666c7df1f6d6e034d7074e57219 inherit properties_class_m_g_alien_lib_1_1_component_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6f01195f4996ce63d43dd849c014e325 inherit properties_class_m_g_alien_lib_1_1_component_base" id="r_a6f01195f4996ce63d43dd849c014e325"><td class="memItemLeft" align="right" valign="top">GameBase.DefaultAssets&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_g_alien_lib_1_1_component_base.html#a6f01195f4996ce63d43dd849c014e325">defaultAssets</a><code> [get]</code></td></tr>
+<tr class="separator:a6f01195f4996ce63d43dd849c014e325 inherit properties_class_m_g_alien_lib_1_1_component_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a92d3f75b42cdc7744c4b51542876cbab inherit properties_class_m_g_alien_lib_1_1_component_base" id="r_a92d3f75b42cdc7744c4b51542876cbab"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_m_g_alien_lib_1_1_transform.html">Transform</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_g_alien_lib_1_1_component_base.html#a92d3f75b42cdc7744c4b51542876cbab">root</a><code> [get]</code></td></tr>
+<tr class="separator:a92d3f75b42cdc7744c4b51542876cbab inherit properties_class_m_g_alien_lib_1_1_component_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4f4ac458f53e6cf2d0fe0ebb2e3d8e6f inherit properties_class_m_g_alien_lib_1_1_component_base" id="r_a4f4ac458f53e6cf2d0fe0ebb2e3d8e6f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_m_g_alien_lib_1_1_transform.html">Transform</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_g_alien_lib_1_1_component_base.html#a4f4ac458f53e6cf2d0fe0ebb2e3d8e6f">transform</a><code> [get]</code></td></tr>
+<tr class="memdesc:a4f4ac458f53e6cf2d0fe0ebb2e3d8e6f inherit properties_class_m_g_alien_lib_1_1_component_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">컴포넌트가 속한 게임 오브젝트의 트랜스폼을 가져옵니다.  <br /></td></tr>
+<tr class="separator:a4f4ac458f53e6cf2d0fe0ebb2e3d8e6f inherit properties_class_m_g_alien_lib_1_1_component_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a740a4f15a2887c2d55611f52498e4860 inherit properties_class_m_g_alien_lib_1_1_component_base" id="r_a740a4f15a2887c2d55611f52498e4860"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_g_alien_lib_1_1_component_base.html#a740a4f15a2887c2d55611f52498e4860">name</a><code> [get]</code></td></tr>
+<tr class="memdesc:a740a4f15a2887c2d55611f52498e4860 inherit properties_class_m_g_alien_lib_1_1_component_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">컴포넌트가 속한 게임 오브젝트의 이름을 가져옵니다. 만약 게임 오브젝트가 이미 파괴되었다면 "(null)"을 반환합니다.  <br /></td></tr>
+<tr class="separator:a740a4f15a2887c2d55611f52498e4860 inherit properties_class_m_g_alien_lib_1_1_component_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a39e1e8d6256591ec01f2d24e8496d586 inherit properties_class_m_g_alien_lib_1_1_component_base" id="r_a39e1e8d6256591ec01f2d24e8496d586"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_g_alien_lib_1_1_component_base.html#a39e1e8d6256591ec01f2d24e8496d586">enabled</a><code> [get, set]</code></td></tr>
+<tr class="memdesc:a39e1e8d6256591ec01f2d24e8496d586 inherit properties_class_m_g_alien_lib_1_1_component_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">컴포넌트가 활성화되어 있는지 여부를 가져오거나 설정합니다.  <br /></td></tr>
+<tr class="separator:a39e1e8d6256591ec01f2d24e8496d586 inherit properties_class_m_g_alien_lib_1_1_component_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
+추가로 상속된 멤버들</h2></td></tr>
+<tr class="inherit_header pub_static_methods_class_m_g_alien_lib_1_1_component_base"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_static_methods_class_m_g_alien_lib_1_1_component_base')"><img src="closed.png" alt="-"/>&#160;<a class="el" href="class_m_g_alien_lib_1_1_component_base.html">MGAlienLib.ComponentBase</a>(으)로부터 상속된 정적 Public 멤버 함수</td></tr>
+<tr class="memitem:a8135da637e18a29b2efbf49544b1be4d inherit pub_static_methods_class_m_g_alien_lib_1_1_component_base" id="r_a8135da637e18a29b2efbf49544b1be4d"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_g_alien_lib_1_1_component_base.html#a8135da637e18a29b2efbf49544b1be4d">operator==</a> (<a class="el" href="class_m_g_alien_lib_1_1_component_base.html">ComponentBase</a> a, object b)</td></tr>
+<tr class="separator:a8135da637e18a29b2efbf49544b1be4d inherit pub_static_methods_class_m_g_alien_lib_1_1_component_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a22f0cdd570d22e7ae69f00df572772c2 inherit pub_static_methods_class_m_g_alien_lib_1_1_component_base" id="r_a22f0cdd570d22e7ae69f00df572772c2"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_g_alien_lib_1_1_component_base.html#a22f0cdd570d22e7ae69f00df572772c2">operator!=</a> (<a class="el" href="class_m_g_alien_lib_1_1_component_base.html">ComponentBase</a> a, object b)</td></tr>
+<tr class="separator:a22f0cdd570d22e7ae69f00df572772c2 inherit pub_static_methods_class_m_g_alien_lib_1_1_component_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_methods_class_m_g_alien_lib_1_1_component_base"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pro_methods_class_m_g_alien_lib_1_1_component_base')"><img src="closed.png" alt="-"/>&#160;<a class="el" href="class_m_g_alien_lib_1_1_component_base.html">MGAlienLib.ComponentBase</a>(으)로부터 상속된 Protected 멤버 함수</td></tr>
+<tr class="memitem:a43e0bce9bbe70d3df79bd7462e1f9786 inherit pro_methods_class_m_g_alien_lib_1_1_component_base" id="r_a43e0bce9bbe70d3df79bd7462e1f9786"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_g_alien_lib_1_1_component_base.html#a43e0bce9bbe70d3df79bd7462e1f9786">Dispose</a> (bool disposing)</td></tr>
+<tr class="separator:a43e0bce9bbe70d3df79bd7462e1f9786 inherit pro_methods_class_m_g_alien_lib_1_1_component_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">상세한 설명</h2>
+<div class="textblock"><p>카메라 컴포넌트를 나타냅니다. </p>
+</div><h2 class="groupheader">멤버 열거형 문서화</h2>
+<a id="a6786fd68f6bd5c88e398ed9e07c7e55a" name="a6786fd68f6bd5c88e398ed9e07c7e55a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6786fd68f6bd5c88e398ed9e07c7e55a">&#9670;&#160;</a></span>eCameraClearFlag</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="#a6786fd68f6bd5c88e398ed9e07c7e55a">MGAlienLib.Camera.eCameraClearFlag</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>클리어 타입을 나타냅니다. </p>
+<table class="fieldtable">
+<tr><th colspan="2">열거형 멤버</th></tr><tr><td class="fieldname"><a id="a6786fd68f6bd5c88e398ed9e07c7e55aaf80a4ad87fee7c9fdc19b7769495fdb5" name="a6786fd68f6bd5c88e398ed9e07c7e55aaf80a4ad87fee7c9fdc19b7769495fdb5"></a>Nothing&#160;</td><td class="fielddoc"><p>클리어하지 않습니다. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a6786fd68f6bd5c88e398ed9e07c7e55aa63af9903673bdc27b881a7444b1f9854" name="a6786fd68f6bd5c88e398ed9e07c7e55aa63af9903673bdc27b881a7444b1f9854"></a>SolidColor&#160;</td><td class="fielddoc"><p>컬러로 클리어합니다. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a6786fd68f6bd5c88e398ed9e07c7e55aa675056ad1441b6375b2c5abd48c27ef1" name="a6786fd68f6bd5c88e398ed9e07c7e55aa675056ad1441b6375b2c5abd48c27ef1"></a>Depth&#160;</td><td class="fielddoc"><p>depth buffer 만 클리어합니다. </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<h2 class="groupheader">생성자 &amp; 소멸자 문서화</h2>
+<a id="ac65c5ba7d32809e7f9bb85fd5b6fb8d9" name="ac65c5ba7d32809e7f9bb85fd5b6fb8d9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac65c5ba7d32809e7f9bb85fd5b6fb8d9">&#9670;&#160;</a></span>Camera()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">MGAlienLib.Camera.Camera </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Create a new instance of <a class="el" href="class_m_g_alien_lib_1_1_camera.html" title="카메라 컴포넌트를 나타냅니다.">Camera</a> </p>
+
+</div>
+</div>
+<h2 class="groupheader">멤버 함수 문서화</h2>
+<a id="af93fb98ea84552849ba776494a23ceb8" name="af93fb98ea84552849ba776494a23ceb8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af93fb98ea84552849ba776494a23ceb8">&#9670;&#160;</a></span>internal_AddUIForRaycastTarget()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MGAlienLib.Camera.internal_AddUIForRaycastTarget </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_m_g_alien_lib_1_1_u_i_transform.html">UITransform</a></td>          <td class="paramname"><span class="paramname"><em>ui</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>렌더링이 끝났을 때 호출됩니다. UIRaycast 를 위한 작업을 수행합니다. 내부적으로만 사용됩니다. </p>
+<dl class="params"><dt>매개변수</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ui</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a8f79070bb290663cc932e6270575f38b" name="a8f79070bb290663cc932e6270575f38b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8f79070bb290663cc932e6270575f38b">&#9670;&#160;</a></span>internal_GetReadyToRender()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MGAlienLib.Camera.internal_GetReadyToRender </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>stage</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>렌더링 준비를 합니다. 내부적으로만 사용됩니다. </p>
+<dl class="params"><dt>매개변수</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">stage</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a3c48e0ceffb4758db757e55c11de01f8" name="a3c48e0ceffb4758db757e55c11de01f8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3c48e0ceffb4758db757e55c11de01f8">&#9670;&#160;</a></span>OnDisable()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">override void MGAlienLib.Camera.OnDisable </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>컴포넌트가 비활성화될 때 호출됩니다. </p>
+
+<p><a class="el" href="class_m_g_alien_lib_1_1_component_base.html#a8e9c575590466326f10db9d5fb3692b8">MGAlienLib.ComponentBase</a>(으)로부터 재구현되었습니다.</p>
+
+</div>
+</div>
+<a id="a7f1fbd3749855df360c4d404e12f24ee" name="a7f1fbd3749855df360c4d404e12f24ee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7f1fbd3749855df360c4d404e12f24ee">&#9670;&#160;</a></span>OnEnable()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">override void MGAlienLib.Camera.OnEnable </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>컴포넌트가 활성화될 때 호출됩니다. 컴포넌트가 속한 gameObject 가 꺼진 상태등 호출 되기 불가능 한 상황일 때에는 호출 가능해지는 시점에 호출됩니다. </p>
+
+<p><a class="el" href="class_m_g_alien_lib_1_1_component_base.html#a53ff01975bfd9fc93734d4e921052c62">MGAlienLib.ComponentBase</a>(으)로부터 재구현되었습니다.</p>
+
+</div>
+</div>
+<a id="ae8aaac311369c95e55bd5053ce499425" name="ae8aaac311369c95e55bd5053ce499425"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae8aaac311369c95e55bd5053ce499425">&#9670;&#160;</a></span>ScreenPointToRay()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Ray MGAlienLib.Camera.ScreenPointToRay </td>
+          <td>(</td>
+          <td class="paramtype">Vector2</td>          <td class="paramname"><span class="paramname"><em>screenPos</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>화면 좌표를 월드 좌표 ray 로 변환합니다. 좌표를 특정 싶을 때에는 대상의 Plane 을 생성한 후 Ray 와 Plane 을 이용하여 교차점을 구할 수 있습니다. </p>
+<dl class="params"><dt>매개변수</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">screenPos</td><td>화면 좌표. 좌측상단이 0,0. 화면 오른쪽이 +X, 화면 아래쪽이 +Y 입니다. input manager 의 마우스 좌표계와 동일합니다</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>반환값</dt><dd></dd></dl>
+
+</div>
+</div>
+<a id="a9ab3ffe975129b757ddc97870f123492" name="a9ab3ffe975129b757ddc97870f123492"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9ab3ffe975129b757ddc97870f123492">&#9670;&#160;</a></span>UIRaycast()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_m_g_alien_lib_1_1_u_i_transform.html">UITransform</a> MGAlienLib.Camera.UIRaycast </td>
+          <td>(</td>
+          <td class="paramtype">Vector2</td>          <td class="paramname"><span class="paramname"><em>screenPos</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>이 카메라에 의해 렌더링 된 UI 중, camera 로부터 가장 가까운 UI 를 찾아 반환합니다. projection 일 떄에도 동작합니다. </p>
+<dl class="params"><dt>매개변수</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">screenPos</td><td>화면 좌표. 좌측상단이 0,0. 화면 오른쪽이 +X, 화면 아래쪽이 +Y 입니다. input manager 의 마우스 좌표계와 동일합니다</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>반환값</dt><dd>찾은 대상. 없다면 null</dd></dl>
+
+</div>
+</div>
+<a id="aa51155eb9da388a7d38680b957e8151e" name="aa51155eb9da388a7d38680b957e8151e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa51155eb9da388a7d38680b957e8151e">&#9670;&#160;</a></span>Unproject()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Vector3 MGAlienLib.Camera.Unproject </td>
+          <td>(</td>
+          <td class="paramtype">Vector2</td>          <td class="paramname"><span class="paramname"><em>screenPos</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>z_world</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>화면좌표를 월드 좌표로 변환합니다. </p>
+<dl class="params"><dt>매개변수</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">screenPos</td><td>화면좌표계 사용. mouse 로부터 읽은 position 값을 사용합니다.</td></tr>
+    <tr><td class="paramname">z_world</td><td>카메라 near 평면으로부터 카메라가 바라보는 방향으로 world 좌표계 기준의 거리만큼 떨어진 점을 기준점으로 하여 좌표를 가져옵니다.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>반환값</dt><dd>월드 좌표계의 위치</dd></dl>
+
+</div>
+</div>
+<a id="aa304908c5fa2b343ea07a98fb8acef33" name="aa304908c5fa2b343ea07a98fb8acef33"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa304908c5fa2b343ea07a98fb8acef33">&#9670;&#160;</a></span>Update()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">override void MGAlienLib.Camera.Update </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>컴포넌트가 업데이트될 때 마다 호출됩니다. </p>
+
+<p><a class="el" href="class_m_g_alien_lib_1_1_component_base.html#a7164c35e440acbd8a11c875e30844266">MGAlienLib.ComponentBase</a>(으)로부터 재구현되었습니다.</p>
+
+</div>
+</div>
+<h2 class="groupheader">멤버 데이터 문서화</h2>
+<a id="a99969b9725866c164eb2070f62d7bc0c" name="a99969b9725866c164eb2070f62d7bc0c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a99969b9725866c164eb2070f62d7bc0c">&#9670;&#160;</a></span>backgroundColor</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Color MGAlienLib.Camera.backgroundColor = Color.CornflowerBlue</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>카메라의 클리어 색상을 가져오거나 설정합니다. 클리어 타입이 Color일 때만 사용됩니다. </p>
+
+</div>
+</div>
+<a id="ae4b5bfdcc8db49943283a5bcea5d133e" name="ae4b5bfdcc8db49943283a5bcea5d133e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae4b5bfdcc8db49943283a5bcea5d133e">&#9670;&#160;</a></span>clearFlags</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a6786fd68f6bd5c88e398ed9e07c7e55a">eCameraClearFlag</a> MGAlienLib.Camera.clearFlags = <a class="el" href="#a6786fd68f6bd5c88e398ed9e07c7e55aa63af9903673bdc27b881a7444b1f9854">eCameraClearFlag.SolidColor</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>카메라의 클리어 타입을 가져오거나 설정합니다. </p>
+
+</div>
+</div>
+<a id="a3c07e3d771de612cca78a352e497274b" name="a3c07e3d771de612cca78a352e497274b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3c07e3d771de612cca78a352e497274b">&#9670;&#160;</a></span>cullingMask</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int MGAlienLib.Camera.cullingMask = 0x7FFFFFFF</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">속성 문서화</h2>
+<a id="ac5e6d1b75b44823d8cb492188b075534" name="ac5e6d1b75b44823d8cb492188b075534"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac5e6d1b75b44823d8cb492188b075534">&#9670;&#160;</a></span>aspectRatio</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float MGAlienLib.Camera.aspectRatio</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel get">get</span><span class="mlabel set">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aebbe10c376335f17d593a72d9df93551" name="aebbe10c376335f17d593a72d9df93551"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aebbe10c376335f17d593a72d9df93551">&#9670;&#160;</a></span>enableUIRaycast</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool MGAlienLib.Camera.enableUIRaycast</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel get">get</span><span class="mlabel set">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad96c56a367340da2133013ccfb96de19" name="ad96c56a367340da2133013ccfb96de19"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad96c56a367340da2133013ccfb96de19">&#9670;&#160;</a></span>farClipPlane</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float MGAlienLib.Camera.farClipPlane</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel get">get</span><span class="mlabel set">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8fb92a309b71c86ac7388ed29bbb45fa" name="a8fb92a309b71c86ac7388ed29bbb45fa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8fb92a309b71c86ac7388ed29bbb45fa">&#9670;&#160;</a></span>fieldOfView</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float MGAlienLib.Camera.fieldOfView</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel get">get</span><span class="mlabel set">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aebf581bce27509197c2bf045ddf3ae13" name="aebf581bce27509197c2bf045ddf3ae13"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aebf581bce27509197c2bf045ddf3ae13">&#9670;&#160;</a></span>matProjection</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Matrix MGAlienLib.Camera.matProjection = Matrix.Identity</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel get">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>view space 에서 projection space 로 변환하는 행렬을 가져옵니다. </p>
+
+</div>
+</div>
+<a id="a6c6c78b16cbcec45dfc50243cc1391c2" name="a6c6c78b16cbcec45dfc50243cc1391c2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6c6c78b16cbcec45dfc50243cc1391c2">&#9670;&#160;</a></span>matView</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Matrix MGAlienLib.Camera.matView = Matrix.Identity</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel get">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>world space 에서 view space 로 변환하는 행렬을 가져옵니다. </p>
+
+</div>
+</div>
+<a id="ad57e0f695b0d790bc95bac176dc0be73" name="ad57e0f695b0d790bc95bac176dc0be73"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad57e0f695b0d790bc95bac176dc0be73">&#9670;&#160;</a></span>matViewProjection</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Matrix MGAlienLib.Camera.matViewProjection = Matrix.Identity</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel get">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>world space 에서 projection space 로 변환하는 행렬을 가져옵니다. </p>
+
+</div>
+</div>
+<a id="a08803f529f8c6e70f8cef57a794a617a" name="a08803f529f8c6e70f8cef57a794a617a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a08803f529f8c6e70f8cef57a794a617a">&#9670;&#160;</a></span>matViewProjectionINV</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Matrix MGAlienLib.Camera.matViewProjectionINV = Matrix.Identity</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel get">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>projection space 에서 world space 로 변환하는 행렬을 가져옵니다. </p>
+
+</div>
+</div>
+<a id="a30162b9204515abf68ebe58aaeb21db0" name="a30162b9204515abf68ebe58aaeb21db0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a30162b9204515abf68ebe58aaeb21db0">&#9670;&#160;</a></span>nearClipPlane</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float MGAlienLib.Camera.nearClipPlane</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel get">get</span><span class="mlabel set">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a52a22faedfaa44cb5e1f8f9f0c12b0a7" name="a52a22faedfaa44cb5e1f8f9f0c12b0a7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a52a22faedfaa44cb5e1f8f9f0c12b0a7">&#9670;&#160;</a></span>orthographic</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool MGAlienLib.Camera.orthographic</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel get">get</span><span class="mlabel set">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a639dcd0878ae6d3d835564438f129fcc" name="a639dcd0878ae6d3d835564438f129fcc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a639dcd0878ae6d3d835564438f129fcc">&#9670;&#160;</a></span>orthographicSize</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float MGAlienLib.Camera.orthographicSize</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel get">get</span><span class="mlabel set">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a10005a77d1ffa5882ce48d8d5bc405d4" name="a10005a77d1ffa5882ce48d8d5bc405d4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a10005a77d1ffa5882ce48d8d5bc405d4">&#9670;&#160;</a></span>pos</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Vector3 MGAlienLib.Camera.pos</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel get">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>카메라의 위치를 가져옵니다. </p>
+
+</div>
+</div>
+<a id="aab37f2433701e3cc242675c101bc49b7" name="aab37f2433701e3cc242675c101bc49b7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aab37f2433701e3cc242675c101bc49b7">&#9670;&#160;</a></span>rot</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Quaternion MGAlienLib.Camera.rot</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel get">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>카메라의 회전을 가져옵니다. </p>
+
+</div>
+</div>
+<a id="a6be27efdeeabc1abbd30c447f034141c" name="a6be27efdeeabc1abbd30c447f034141c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6be27efdeeabc1abbd30c447f034141c">&#9670;&#160;</a></span>viewport</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Rectangle MGAlienLib.Camera.viewport</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel get">get</span><span class="mlabel set">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>이 클래스에 대한 문서화 페이지는 다음의 파일로부터 생성되었습니다.:<ul>
+<li>src/HierarchySystem/Component/<a class="el" href="_camera_8cs.html">Camera.cs</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="namespace_m_g_alien_lib.html">MGAlienLib</a></li><li class="navelem"><a class="el" href="class_m_g_alien_lib_1_1_camera.html">Camera</a></li>
+    <li class="footer">다음에 의해 생성됨 :  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+  </ul>
+</div>
+</body>
+</html>

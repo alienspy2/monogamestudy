@@ -1,0 +1,27 @@
+var class_m_g_alien_lib_1_1_shared_asset_1_g =
+[
+    [ "Manager", "class_m_g_alien_lib_1_1_shared_asset-1-g_1_1_manager.html", null ],
+    [ "Reference", "class_m_g_alien_lib_1_1_shared_asset-1-g_1_1_reference.html", null ],
+    [ "AddReference", "class_m_g_alien_lib_1_1_shared_asset-1-g.html#a7275cc3336f8cd8f0250e141c67af5a2", null ],
+    [ "Clear", "class_m_g_alien_lib_1_1_shared_asset-1-g.html#a04ed782b95fdb3351d8b28b69a39067d", null ],
+    [ "Clone", "class_m_g_alien_lib_1_1_shared_asset-1-g.html#aac82fd4e81f0925f595c0a97cc74f140", null ],
+    [ "CreateAsset", "class_m_g_alien_lib_1_1_shared_asset-1-g.html#a8b1154009fd2a3a2f8a368756596a15e", null ],
+    [ "Dispose", "class_m_g_alien_lib_1_1_shared_asset-1-g.html#a8dac3b25f203582f4188a61b16725fe3", null ],
+    [ "Dispose", "class_m_g_alien_lib_1_1_shared_asset-1-g.html#a1ad1bd13b78e044f6f9901db98c4d641", null ],
+    [ "Get", "class_m_g_alien_lib_1_1_shared_asset-1-g.html#a2de271f8f14b029adde388ab54e31e90", null ],
+    [ "internal_CreateReference", "class_m_g_alien_lib_1_1_shared_asset-1-g.html#ae2a3d215148b4d88e0e09a9b719992d3", null ],
+    [ "internal_Release", "class_m_g_alien_lib_1_1_shared_asset-1-g.html#aa9326647e43156e7d4c89f345661aa2d", null ],
+    [ "internal_SetExternalAsset", "class_m_g_alien_lib_1_1_shared_asset-1-g.html#adb8b70ad4c76eece615b4fc8507dd4df", null ],
+    [ "Reference", "class_m_g_alien_lib_1_1_shared_asset-1-g.html#a1b3c15b45da74df7a8c9e1117749b40b", null ],
+    [ "Release", "class_m_g_alien_lib_1_1_shared_asset-1-g.html#a169e0126e0f0f6e4806f558d08ed6e93", null ],
+    [ "Release", "class_m_g_alien_lib_1_1_shared_asset-1-g.html#acf951da67d7f96dd0164734865a22eb6", null ],
+    [ "Release", "class_m_g_alien_lib_1_1_shared_asset-1-g.html#a9e6b6d21d23c29dab4cc03f75dd9ccda", null ],
+    [ "SharedAsset", "class_m_g_alien_lib_1_1_shared_asset-1-g.html#a45efae569e9bd5e33249a04b76a5ee2b", null ],
+    [ "SharedAsset", "class_m_g_alien_lib_1_1_shared_asset-1-g.html#aada0e43d375ecdd22985635d5367ca91", null ],
+    [ "ToString", "class_m_g_alien_lib_1_1_shared_asset-1-g.html#a2331eb6ca7d729d8270ad27eac7525cf", null ],
+    [ "address", "class_m_g_alien_lib_1_1_shared_asset-1-g.html#a512722b718548a7dee936680a3af3881", null ],
+    [ "asset", "class_m_g_alien_lib_1_1_shared_asset-1-g.html#a11692252086602bfa579cb69c7ad2f34", null ],
+    [ "internal_ReferenceCount", "class_m_g_alien_lib_1_1_shared_asset-1-g.html#afc57b5b07555b37febdef3d28bac3bd0", null ],
+    [ "internal_referenceCount", "class_m_g_alien_lib_1_1_shared_asset-1-g.html#af3b29fba418c5dd2aa22fffd6e1b0bfc", null ],
+    [ "isValid", "class_m_g_alien_lib_1_1_shared_asset-1-g.html#a91bcedcdafb98770f14edfaba8c3190c", null ]
+];

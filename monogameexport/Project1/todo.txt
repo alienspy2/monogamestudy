@@ -1,0 +1,63 @@
+in progress : scene view 에서 camera control
+- focus target
+- zoom
+- pan
+- orbital rotation
+
+(bug) aa spirte 삭제시 제대로 비워지지 않는것 같다
+(bug) auto atlas sprite texture 로 load 할 때 sprite 를 매번 load 한다. 옳지 않다
+(bug) dynamic texture manager 의 repack 이 제대로 동작하지 않음
+
+TODO  
+
+통합 editor
+  * serialize 할 때 default 값은 제외
+  * custom class 를 TOML 로 serialize 할 수 있도록
+  * inspector 에 object picker 추가
+  * inspector 에 custom class 도 추가
+  * popup dialog
+  * serialize (mpack)
+  * toolbar 만들기
+  * scene editor, prefab editor
+  * sprite editor 필요 -> sprite slice
+  * hierarchy view 에 incremental change 구현하기
+  * hierarchy view 에 drag and drop
+  * scene view 에서 gizmo 와 handles 구현. 이것을 잡고 편집
+  * scene view 에서 object 선택 할 수 있도록, 선택한 object 에 outline 그리기
+  * scene view 에서 camera control
+  * scene view 에 axis 보여주기
+
+3D 
+  * assimp sharp?
+
+기능 개선
+  * 한글이 안되더라도, TTF 말고 디버깅용 fixed font 있어야겠다
+  * static texture atlas packing 만들자.
+  * text fitting 개선 - anchordRect 와 pivot 이 아직 제대로 안됨
+  * input manager 에 was pressed 외에 repeating 추가
+  * ui raycast 가 카메라 별로 따로 돈다. 모든 카메라에 대해 1개만 pick 되어야한다.
+  * 키입력등이 focus 된 개체에만 적용되어야 한다.
+  * uitransform 의 sizefitter 만들기 : children 의 크기에 맞게 자동으로 크기를 조절해주는 컴포넌트
+  * text input 에 SDL 의 ime 붙이기
+  * window manager 필요. 마지막으로 선택한 윈도우가 위로 올라와야 한다
+  * window docking, snapping
+  * alpha bleding 된 애들은 back to front 로 sort 하여야 한다
+  * multi line text
+  * assets 를 src 로 취급하고, build 할때 7z 으로 bin 에 바뀐 파일만 업데이트 하는식으로 바꿔보자
+  * 예외처리 : exception 이 나도 프로그램이 죽지 않게 하자. component 나 gameObject 에서 fake null 처리
+  * opaque 와 alpha blend 분리. 현재는 모두 alpha blend 로 처리중
+  * texture 나 material 을 해제했다가 다시 할당받는 경우가 꽤 있을 수 있으므로, 
+    reference 가 0 이 되자마자 삭제하지 말고, 일정 시간 동안 유예를 줘야한다
+  * 현재 방식으로 구현한 treeview 는 너무 느리다.
+  * sprite renderer 와 UI sprite renderer 를 구분하자 
+  * AA sprite 는 UI 전용으로 바꾸자
+  * UI 조작시 consume 된 조작은 거기에서 stop
+
+노트
+  * batching 을 적극적으로 하고 싶지만,
+    불가능한 조건들이 있다
+
+    1. vertex 가 너무 많은경우
+    2. material 이 바뀌는 경우 <- masking 에 다른 texture 의 alpha 를 사용하려면 material 이 바뀜
+    3. alpha blending 등의 이유로 draw 순서가 필요한 경우
+

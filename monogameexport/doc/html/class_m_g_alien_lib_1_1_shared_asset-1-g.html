@@ -1,0 +1,967 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.13.2"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>alien-monogame: MGAlienLib.SharedAsset&lt; T &gt; 클래스 템플릿 참조</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(function() { init_search(); });
+/* @license-end */
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">alien-monogame
+   </div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
+          <input type="text" id="MSearchField" value="" placeholder="검색" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 다음에 의해 생성됨 :  Doxygen 1.13.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){initNavTree('class_m_g_alien_lib_1_1_shared_asset-1-g.html',''); initResizable(true); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">로딩중...</div>
+<div class="SRStatus" id="Searching">검색중...</div>
+<div class="SRStatus" id="NoMatches">일치하는것 없음</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">클래스</a> &#124;
+<a href="#pub-methods">Public 멤버 함수</a> &#124;
+<a href="#pro-methods">Protected 멤버 함수</a> &#124;
+<a href="#properties">속성</a> &#124;
+<a href="class_m_g_alien_lib_1_1_shared_asset-1-g-members.html">모든 멤버 목록</a>  </div>
+  <div class="headertitle"><div class="title">MGAlienLib.SharedAsset&lt; T &gt; 클래스 템플릿 참조<span class="mlabels"><span class="mlabel abstract">abstract</span></span></div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>공유 자원을 참조 카운팅 방식으로 관리하는 추상 클래스입니다.  
+ <a href="#details">더 자세히 ...</a></p>
+<div class="dynheader">
+MGAlienLib.SharedAsset&lt; T &gt;에 대한 상속 다이어그램 : </div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="class_m_g_alien_lib_1_1_shared_asset-1-g.png" usemap="#MGAlienLib.SharedAsset_3C_20T_20_3E_map" alt=""/>
+  <map id="MGAlienLib.SharedAsset_3C_20T_20_3E_map" name="MGAlienLib.SharedAsset_3C_20T_20_3E_map">
+<area href="class_m_g_alien_lib_1_1_asset_base.html" title="공유 자원을 참조 카운팅 방식으로 관리하는 추상 클래스입니다." alt="MGAlienLib.AssetBase" shape="rect" coords="105,112,306,136"/>
+<area href="class_m_g_alien_lib_1_1_m_g_disposable_object.html" alt="MGAlienLib.MGDisposableObject" shape="rect" coords="105,56,306,80"/>
+<area href="class_m_g_alien_lib_1_1_m_g_object.html" alt="MGAlienLib.MGObject" shape="rect" coords="0,0,201,24"/>
+<area href="class_m_g_alien_lib_1_1_shared_material.html" alt="MGAlienLib.SharedMaterial" shape="rect" coords="0,224,201,248"/>
+<area href="class_m_g_alien_lib_1_1_shared_texture.html" title="텍스처를 관리하는 클래스를 나타냅니다." alt="MGAlienLib.SharedTexture" shape="rect" coords="211,224,412,248"/>
+  </map>
+</div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+클래스</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_g_alien_lib_1_1_shared_asset-1-g_1_1_manager.html">Manager</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">공유 자원을 관리하고 참조를 생성 및 해제하는 매니저 클래스입니다.  <a href="class_m_g_alien_lib_1_1_shared_asset-1-g_1_1_manager.html#details">더 자세히 ...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_g_alien_lib_1_1_shared_asset-1-g_1_1_reference.html">Reference</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">공유 자원에 대한 참조를 나타내며, 자원의 유효성과 접근을 관리합니다.  <a href="class_m_g_alien_lib_1_1_shared_asset-1-g_1_1_reference.html#details">더 자세히 ...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 멤버 함수</h2></td></tr>
+<tr class="memitem:a2de271f8f14b029adde388ab54e31e90" id="r_a2de271f8f14b029adde388ab54e31e90"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_m_g_alien_lib_1_1_shared_asset-1-g_1_1_reference.html">Reference</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2de271f8f14b029adde388ab54e31e90">Get</a> (<a class="el" href="namespace_m_g_alien_lib.html#ac89dacad1a916d9b4a8fb359f45a30eb">eAssetSource</a> source, string <a class="el" href="#a512722b718548a7dee936680a3af3881">address</a>, object parameters, Func&lt; <a class="el" href="namespace_m_g_alien_lib.html#ac89dacad1a916d9b4a8fb359f45a30eb">eAssetSource</a>, string, object, <a class="el" href="#aada0e43d375ecdd22985635d5367ca91">SharedAsset</a>&lt; T &gt; &gt; factory)</td></tr>
+<tr class="memdesc:a2de271f8f14b029adde388ab54e31e90"><td class="mdescLeft">&#160;</td><td class="mdescRight">지정된 소스와 주소를 통해 공유 자원을 가져옵니다. 이미 존재하면 기존 자원을 반환합니다.  <br /></td></tr>
+<tr class="separator:a2de271f8f14b029adde388ab54e31e90"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9e6b6d21d23c29dab4cc03f75dd9ccda" id="r_a9e6b6d21d23c29dab4cc03f75dd9ccda"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9e6b6d21d23c29dab4cc03f75dd9ccda">Release</a> (<a class="el" href="class_m_g_alien_lib_1_1_shared_asset-1-g_1_1_reference.html">Reference</a> assetRef)</td></tr>
+<tr class="memdesc:a9e6b6d21d23c29dab4cc03f75dd9ccda"><td class="mdescLeft">&#160;</td><td class="mdescRight">지정된 자원 참조를 해제합니다. 참조 카운트가 0이 되면 자원을 제거합니다.  <br /></td></tr>
+<tr class="separator:a9e6b6d21d23c29dab4cc03f75dd9ccda"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a04ed782b95fdb3351d8b28b69a39067d" id="r_a04ed782b95fdb3351d8b28b69a39067d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a04ed782b95fdb3351d8b28b69a39067d">Clear</a> ()</td></tr>
+<tr class="memdesc:a04ed782b95fdb3351d8b28b69a39067d"><td class="mdescLeft">&#160;</td><td class="mdescRight">관리 중인 모든 자원을 해제하고 컬렉션을 비웁니다. 실행중 이 함수를 호출하면 절대 안됩니다. 앱이 꺼지는 중에만 호출해야 합니다.  <br /></td></tr>
+<tr class="separator:a04ed782b95fdb3351d8b28b69a39067d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2331eb6ca7d729d8270ad27eac7525cf" id="r_a2331eb6ca7d729d8270ad27eac7525cf"><td class="memItemLeft" align="right" valign="top">override string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2331eb6ca7d729d8270ad27eac7525cf">ToString</a> ()</td></tr>
+<tr class="memdesc:a2331eb6ca7d729d8270ad27eac7525cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">현재 관리 중인 자원의 상태를 문자열로 반환합니다.  <br /></td></tr>
+<tr class="separator:a2331eb6ca7d729d8270ad27eac7525cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1b3c15b45da74df7a8c9e1117749b40b" id="r_a1b3c15b45da74df7a8c9e1117749b40b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1b3c15b45da74df7a8c9e1117749b40b">Reference</a> (<a class="el" href="#aada0e43d375ecdd22985635d5367ca91">SharedAsset</a>&lt; T &gt; source)</td></tr>
+<tr class="memdesc:a1b3c15b45da74df7a8c9e1117749b40b"><td class="mdescLeft">&#160;</td><td class="mdescRight">새로운 자원 참조를 생성합니다.  <br /></td></tr>
+<tr class="separator:a1b3c15b45da74df7a8c9e1117749b40b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a169e0126e0f0f6e4806f558d08ed6e93" id="r_a169e0126e0f0f6e4806f558d08ed6e93"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a169e0126e0f0f6e4806f558d08ed6e93">Release</a> ()</td></tr>
+<tr class="memdesc:a169e0126e0f0f6e4806f558d08ed6e93"><td class="mdescLeft">&#160;</td><td class="mdescRight">이 참조를 해제합니다.  <br /></td></tr>
+<tr class="separator:a169e0126e0f0f6e4806f558d08ed6e93"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa9326647e43156e7d4c89f345661aa2d" id="r_aa9326647e43156e7d4c89f345661aa2d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa9326647e43156e7d4c89f345661aa2d">internal_Release</a> ()</td></tr>
+<tr class="separator:aa9326647e43156e7d4c89f345661aa2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aac82fd4e81f0925f595c0a97cc74f140" id="r_aac82fd4e81f0925f595c0a97cc74f140"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_m_g_alien_lib_1_1_shared_asset-1-g_1_1_reference.html">Reference</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aac82fd4e81f0925f595c0a97cc74f140">Clone</a> ()</td></tr>
+<tr class="memdesc:aac82fd4e81f0925f595c0a97cc74f140"><td class="mdescLeft">&#160;</td><td class="mdescRight">이 참조의 복사본을 생성합니다.  <br /></td></tr>
+<tr class="separator:aac82fd4e81f0925f595c0a97cc74f140"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aada0e43d375ecdd22985635d5367ca91" id="r_aada0e43d375ecdd22985635d5367ca91"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aada0e43d375ecdd22985635d5367ca91">SharedAsset</a> (string <a class="el" href="#a512722b718548a7dee936680a3af3881">address</a>, object parameters)</td></tr>
+<tr class="memdesc:aada0e43d375ecdd22985635d5367ca91"><td class="mdescLeft">&#160;</td><td class="mdescRight">기본 소스를 사용하여 공유 자원을 생성합니다.  <br /></td></tr>
+<tr class="separator:aada0e43d375ecdd22985635d5367ca91"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a45efae569e9bd5e33249a04b76a5ee2b" id="r_a45efae569e9bd5e33249a04b76a5ee2b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a45efae569e9bd5e33249a04b76a5ee2b">SharedAsset</a> (<a class="el" href="namespace_m_g_alien_lib.html#ac89dacad1a916d9b4a8fb359f45a30eb">eAssetSource</a> source, string <a class="el" href="#a512722b718548a7dee936680a3af3881">address</a>, object parameters)</td></tr>
+<tr class="memdesc:a45efae569e9bd5e33249a04b76a5ee2b"><td class="mdescLeft">&#160;</td><td class="mdescRight">지정된 소스와 주소를 사용하여 공유 자원을 생성합니다.  <br /></td></tr>
+<tr class="separator:a45efae569e9bd5e33249a04b76a5ee2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae2a3d215148b4d88e0e09a9b719992d3" id="r_ae2a3d215148b4d88e0e09a9b719992d3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_m_g_alien_lib_1_1_shared_asset-1-g_1_1_reference.html">Reference</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae2a3d215148b4d88e0e09a9b719992d3">internal_CreateReference</a> ()</td></tr>
+<tr class="separator:ae2a3d215148b4d88e0e09a9b719992d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8dac3b25f203582f4188a61b16725fe3" id="r_a8dac3b25f203582f4188a61b16725fe3"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8dac3b25f203582f4188a61b16725fe3">Dispose</a> ()</td></tr>
+<tr class="separator:a8dac3b25f203582f4188a61b16725fe3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_class_m_g_alien_lib_1_1_m_g_disposable_object"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_class_m_g_alien_lib_1_1_m_g_disposable_object')"><img src="closed.png" alt="-"/>&#160;<a class="el" href="class_m_g_alien_lib_1_1_m_g_disposable_object.html">MGAlienLib.MGDisposableObject</a>(으)로부터 상속된 Public 멤버 함수</td></tr>
+<tr class="memitem:ac8b43cfa15a6583fda818f6bb1fee8a9 inherit pub_methods_class_m_g_alien_lib_1_1_m_g_disposable_object" id="r_ac8b43cfa15a6583fda818f6bb1fee8a9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_g_alien_lib_1_1_m_g_disposable_object.html#ac8b43cfa15a6583fda818f6bb1fee8a9">Dispose</a> ()</td></tr>
+<tr class="separator:ac8b43cfa15a6583fda818f6bb1fee8a9 inherit pub_methods_class_m_g_alien_lib_1_1_m_g_disposable_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
+Protected 멤버 함수</h2></td></tr>
+<tr class="memitem:adb8b70ad4c76eece615b4fc8507dd4df" id="r_adb8b70ad4c76eece615b4fc8507dd4df"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adb8b70ad4c76eece615b4fc8507dd4df">internal_SetExternalAsset</a> (T externalAsset)</td></tr>
+<tr class="separator:adb8b70ad4c76eece615b4fc8507dd4df"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8b1154009fd2a3a2f8a368756596a15e" id="r_a8b1154009fd2a3a2f8a368756596a15e"><td class="memItemLeft" align="right" valign="top">T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8b1154009fd2a3a2f8a368756596a15e">CreateAsset</a> (<a class="el" href="namespace_m_g_alien_lib.html#ac89dacad1a916d9b4a8fb359f45a30eb">eAssetSource</a> source, string <a class="el" href="#a512722b718548a7dee936680a3af3881">address</a>, object parameters)</td></tr>
+<tr class="memdesc:a8b1154009fd2a3a2f8a368756596a15e"><td class="mdescLeft">&#160;</td><td class="mdescRight">자원을 생성하는 추상 메서드로, 상속 클래스에서 구현해야 합니다.  <br /></td></tr>
+<tr class="separator:a8b1154009fd2a3a2f8a368756596a15e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7275cc3336f8cd8f0250e141c67af5a2" id="r_a7275cc3336f8cd8f0250e141c67af5a2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7275cc3336f8cd8f0250e141c67af5a2">AddReference</a> ()</td></tr>
+<tr class="separator:a7275cc3336f8cd8f0250e141c67af5a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acf951da67d7f96dd0164734865a22eb6" id="r_acf951da67d7f96dd0164734865a22eb6"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acf951da67d7f96dd0164734865a22eb6">Release</a> ()</td></tr>
+<tr class="separator:acf951da67d7f96dd0164734865a22eb6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1ad1bd13b78e044f6f9901db98c4d641" id="r_a1ad1bd13b78e044f6f9901db98c4d641"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1ad1bd13b78e044f6f9901db98c4d641">Dispose</a> (bool disposing)</td></tr>
+<tr class="separator:a1ad1bd13b78e044f6f9901db98c4d641"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="properties" name="properties"></a>
+속성</h2></td></tr>
+<tr class="memitem:a91bcedcdafb98770f14edfaba8c3190c" id="r_a91bcedcdafb98770f14edfaba8c3190c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a91bcedcdafb98770f14edfaba8c3190c">isValid</a><code> [get]</code></td></tr>
+<tr class="memdesc:a91bcedcdafb98770f14edfaba8c3190c"><td class="mdescLeft">&#160;</td><td class="mdescRight">참조가 유효한지 여부를 나타냅니다.  <br /></td></tr>
+<tr class="separator:a91bcedcdafb98770f14edfaba8c3190c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afc57b5b07555b37febdef3d28bac3bd0" id="r_afc57b5b07555b37febdef3d28bac3bd0"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afc57b5b07555b37febdef3d28bac3bd0">internal_ReferenceCount</a><code> [get]</code></td></tr>
+<tr class="memdesc:afc57b5b07555b37febdef3d28bac3bd0"><td class="mdescLeft">&#160;</td><td class="mdescRight">내부 참조 카운트를 반환합니다.  <br /></td></tr>
+<tr class="separator:afc57b5b07555b37febdef3d28bac3bd0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a512722b718548a7dee936680a3af3881" id="r_a512722b718548a7dee936680a3af3881"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a512722b718548a7dee936680a3af3881">address</a><code> [get]</code></td></tr>
+<tr class="memdesc:a512722b718548a7dee936680a3af3881"><td class="mdescLeft">&#160;</td><td class="mdescRight">자원의 주소를 반환합니다.  <br /></td></tr>
+<tr class="separator:a512722b718548a7dee936680a3af3881"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a11692252086602bfa579cb69c7ad2f34" id="r_a11692252086602bfa579cb69c7ad2f34"><td class="memItemLeft" align="right" valign="top">T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a11692252086602bfa579cb69c7ad2f34">asset</a><code> [get]</code></td></tr>
+<tr class="memdesc:a11692252086602bfa579cb69c7ad2f34"><td class="mdescLeft">&#160;</td><td class="mdescRight">관리 중인 자원을 반환합니다.  <br /></td></tr>
+<tr class="separator:a11692252086602bfa579cb69c7ad2f34"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adc9e9ea8fd2a3d02945da18971cc6948" id="r_adc9e9ea8fd2a3d02945da18971cc6948"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_m_g_alien_lib_1_1_shared_asset-1-g_1_1_manager.html">Manager</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adc9e9ea8fd2a3d02945da18971cc6948">manager</a><code> [get]</code></td></tr>
+<tr class="memdesc:adc9e9ea8fd2a3d02945da18971cc6948"><td class="mdescLeft">&#160;</td><td class="mdescRight">공유 자원을 관리하는 싱글톤 매니저 인스턴스입니다.  <br /></td></tr>
+<tr class="separator:adc9e9ea8fd2a3d02945da18971cc6948"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af3b29fba418c5dd2aa22fffd6e1b0bfc" id="r_af3b29fba418c5dd2aa22fffd6e1b0bfc"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af3b29fba418c5dd2aa22fffd6e1b0bfc">internal_referenceCount</a> = 0<code> [get]</code></td></tr>
+<tr class="memdesc:af3b29fba418c5dd2aa22fffd6e1b0bfc"><td class="mdescLeft">&#160;</td><td class="mdescRight">현재 자원의 내부 참조 카운트를 가져옵니다.  <br /></td></tr>
+<tr class="separator:af3b29fba418c5dd2aa22fffd6e1b0bfc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a352037b6ba4e2e34270e126f0d4f8a52" id="r_a352037b6ba4e2e34270e126f0d4f8a52"><td class="memItemLeft" align="right" valign="top">static string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a352037b6ba4e2e34270e126f0d4f8a52">debug_ManagerStatus</a><code> [get]</code></td></tr>
+<tr class="memdesc:a352037b6ba4e2e34270e126f0d4f8a52"><td class="mdescLeft">&#160;</td><td class="mdescRight">관리 중인 모든 자원에 대한 정보를 문자열로 반환합니다.  <br /></td></tr>
+<tr class="separator:a352037b6ba4e2e34270e126f0d4f8a52"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header properties_class_m_g_alien_lib_1_1_asset_base"><td colspan="2" onclick="javascript:dynsection.toggleInherit('properties_class_m_g_alien_lib_1_1_asset_base')"><img src="closed.png" alt="-"/>&#160;<a class="el" href="class_m_g_alien_lib_1_1_asset_base.html">MGAlienLib.AssetBase</a>(으)로부터 상속된 속성</td></tr>
+<tr class="memitem:ab0d3d5115f85ffac92206967c927530a inherit properties_class_m_g_alien_lib_1_1_asset_base" id="r_ab0d3d5115f85ffac92206967c927530a"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_g_alien_lib_1_1_asset_base.html#ab0d3d5115f85ffac92206967c927530a">address</a><code> [get, protected set]</code></td></tr>
+<tr class="memdesc:ab0d3d5115f85ffac92206967c927530a inherit properties_class_m_g_alien_lib_1_1_asset_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">자원의 고유 주소입니다. 작업 중에는 raw file 로 사용하다가, 패킹된 파일로 전환할 때 변경사항을 최소화하기 위해. 자원의 source 종류가 바뀌어도 주소는 유지됩니다. 따라서, 다른 source 에 같은 주소를 가진 자원은 같은 자원이어야 합니다. 기본적으로 파일 경로를 사용합니다.  <br /></td></tr>
+<tr class="separator:ab0d3d5115f85ffac92206967c927530a inherit properties_class_m_g_alien_lib_1_1_asset_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a04e63f07e910ab6e29f18d74e2d64073 inherit properties_class_m_g_alien_lib_1_1_asset_base" id="r_a04e63f07e910ab6e29f18d74e2d64073"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_m_g_alien_lib_1_1_asset_manager.html">AssetManager</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_g_alien_lib_1_1_asset_base.html#a04e63f07e910ab6e29f18d74e2d64073">assetManager</a><code> [get]</code></td></tr>
+<tr class="separator:a04e63f07e910ab6e29f18d74e2d64073 inherit properties_class_m_g_alien_lib_1_1_asset_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1d8c3d3e5546cc7b90cc83708ecb0e14 inherit properties_class_m_g_alien_lib_1_1_asset_base" id="r_a1d8c3d3e5546cc7b90cc83708ecb0e14"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_m_g_alien_lib_1_1_shader_manager.html">ShaderManager</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_g_alien_lib_1_1_asset_base.html#a1d8c3d3e5546cc7b90cc83708ecb0e14">shaderManager</a><code> [get]</code></td></tr>
+<tr class="separator:a1d8c3d3e5546cc7b90cc83708ecb0e14 inherit properties_class_m_g_alien_lib_1_1_asset_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">상세한 설명</h2>
+<div class="textblock"><p>공유 자원을 참조 카운팅 방식으로 관리하는 추상 클래스입니다. </p>
+<dl class="tparams"><dt>템플릿 파라메터</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>관리할 자원의 타입으로, IDisposable을 구현해야 합니다.</td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="typeconstraint">
+<dl><dt><b>타입 한정자들</b></dt><dd>
+<table border="0" cellspacing="2" cellpadding="0">
+<tr><td valign="top"><em>T</em></td><td>&#160;:</td><td valign="top"><em>class</em></td><td>&#160;</td></tr>
+<tr><td valign="top"><em>T</em></td><td>&#160;:</td><td valign="top"><em>IDisposable</em></td><td>&#160;</td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div><h2 class="groupheader">멤버 함수 문서화</h2>
+<a id="a7275cc3336f8cd8f0250e141c67af5a2" name="a7275cc3336f8cd8f0250e141c67af5a2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7275cc3336f8cd8f0250e141c67af5a2">&#9670;&#160;</a></span>AddReference()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MGAlienLib.SharedAsset&lt; T &gt;.AddReference </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a04ed782b95fdb3351d8b28b69a39067d" name="a04ed782b95fdb3351d8b28b69a39067d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a04ed782b95fdb3351d8b28b69a39067d">&#9670;&#160;</a></span>Clear()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MGAlienLib.SharedAsset&lt; T &gt;.Clear </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>관리 중인 모든 자원을 해제하고 컬렉션을 비웁니다. 실행중 이 함수를 호출하면 절대 안됩니다. 앱이 꺼지는 중에만 호출해야 합니다. </p>
+
+</div>
+</div>
+<a id="aac82fd4e81f0925f595c0a97cc74f140" name="aac82fd4e81f0925f595c0a97cc74f140"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aac82fd4e81f0925f595c0a97cc74f140">&#9670;&#160;</a></span>Clone()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_m_g_alien_lib_1_1_shared_asset-1-g_1_1_reference.html">Reference</a> MGAlienLib.SharedAsset&lt; T &gt;.Clone </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>이 참조의 복사본을 생성합니다. </p>
+<dl class="section return"><dt>반환값</dt><dd>새로운 참조 객체</dd></dl>
+<dl class="exception"><dt>예외</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">ObjectDisposedException</td><td>참조가 유효하지 않을 경우 발생</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a8b1154009fd2a3a2f8a368756596a15e" name="a8b1154009fd2a3a2f8a368756596a15e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8b1154009fd2a3a2f8a368756596a15e">&#9670;&#160;</a></span>CreateAsset()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">T MGAlienLib.SharedAsset&lt; T &gt;.CreateAsset </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespace_m_g_alien_lib.html#ac89dacad1a916d9b4a8fb359f45a30eb">eAssetSource</a></td>          <td class="paramname"><span class="paramname"><em>source</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string</td>          <td class="paramname"><span class="paramname"><em>address</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">object</td>          <td class="paramname"><span class="paramname"><em>parameters</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel abstract">abstract</span><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>자원을 생성하는 추상 메서드로, 상속 클래스에서 구현해야 합니다. </p>
+<dl class="params"><dt>매개변수</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">source</td><td>자원의 소스</td></tr>
+    <tr><td class="paramname">address</td><td>자원의 고유 주소</td></tr>
+    <tr><td class="paramname">parameters</td><td>자원을 생성해야 할 때 전달되는 parameter </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>반환값</dt><dd>생성된 자원</dd></dl>
+
+</div>
+</div>
+<a id="a8dac3b25f203582f4188a61b16725fe3" name="a8dac3b25f203582f4188a61b16725fe3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8dac3b25f203582f4188a61b16725fe3">&#9670;&#160;</a></span>Dispose() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">override void MGAlienLib.SharedAsset&lt; T &gt;.Dispose </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1ad1bd13b78e044f6f9901db98c4d641" name="a1ad1bd13b78e044f6f9901db98c4d641"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1ad1bd13b78e044f6f9901db98c4d641">&#9670;&#160;</a></span>Dispose() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void MGAlienLib.SharedAsset&lt; T &gt;.Dispose </td>
+          <td>(</td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>disposing</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel protected">protected</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2de271f8f14b029adde388ab54e31e90" name="a2de271f8f14b029adde388ab54e31e90"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2de271f8f14b029adde388ab54e31e90">&#9670;&#160;</a></span>Get()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_m_g_alien_lib_1_1_shared_asset-1-g_1_1_reference.html">Reference</a> MGAlienLib.SharedAsset&lt; T &gt;.Get </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespace_m_g_alien_lib.html#ac89dacad1a916d9b4a8fb359f45a30eb">eAssetSource</a></td>          <td class="paramname"><span class="paramname"><em>source</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string</td>          <td class="paramname"><span class="paramname"><em>address</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">object</td>          <td class="paramname"><span class="paramname"><em>parameters</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Func&lt; <a class="el" href="namespace_m_g_alien_lib.html#ac89dacad1a916d9b4a8fb359f45a30eb">eAssetSource</a>, string, object, <a class="el" href="#aada0e43d375ecdd22985635d5367ca91">SharedAsset</a>&lt; T &gt; &gt;</td>          <td class="paramname"><span class="paramname"><em>factory</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>지정된 소스와 주소를 통해 공유 자원을 가져옵니다. 이미 존재하면 기존 자원을 반환합니다. </p>
+<dl class="params"><dt>매개변수</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">source</td><td>자원의 소스</td></tr>
+    <tr><td class="paramname">address</td><td>자원의 고유 주소</td></tr>
+    <tr><td class="paramname">parameters</td><td>자원 요처시, 생성이 필요한 경우 전달할 parameter</td></tr>
+    <tr><td class="paramname">factory</td><td>자원을 생성하는 팩토리 함수</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>반환값</dt><dd>공유 자원에 대한 참조</dd></dl>
+
+</div>
+</div>
+<a id="ae2a3d215148b4d88e0e09a9b719992d3" name="ae2a3d215148b4d88e0e09a9b719992d3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae2a3d215148b4d88e0e09a9b719992d3">&#9670;&#160;</a></span>internal_CreateReference()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_m_g_alien_lib_1_1_shared_asset-1-g_1_1_reference.html">Reference</a> MGAlienLib.SharedAsset&lt; T &gt;.internal_CreateReference </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa9326647e43156e7d4c89f345661aa2d" name="aa9326647e43156e7d4c89f345661aa2d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa9326647e43156e7d4c89f345661aa2d">&#9670;&#160;</a></span>internal_Release()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool MGAlienLib.SharedAsset&lt; T &gt;.internal_Release </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="adb8b70ad4c76eece615b4fc8507dd4df" name="adb8b70ad4c76eece615b4fc8507dd4df"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adb8b70ad4c76eece615b4fc8507dd4df">&#9670;&#160;</a></span>internal_SetExternalAsset()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MGAlienLib.SharedAsset&lt; T &gt;.internal_SetExternalAsset </td>
+          <td>(</td>
+          <td class="paramtype">T</td>          <td class="paramname"><span class="paramname"><em>externalAsset</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1b3c15b45da74df7a8c9e1117749b40b" name="a1b3c15b45da74df7a8c9e1117749b40b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1b3c15b45da74df7a8c9e1117749b40b">&#9670;&#160;</a></span>Reference()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">MGAlienLib.SharedAsset&lt; T &gt;.Reference </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#aada0e43d375ecdd22985635d5367ca91">SharedAsset</a>&lt; T &gt;</td>          <td class="paramname"><span class="paramname"><em>source</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>새로운 자원 참조를 생성합니다. </p>
+<dl class="params"><dt>매개변수</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">source</td><td>참조할 공유 자원</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a169e0126e0f0f6e4806f558d08ed6e93" name="a169e0126e0f0f6e4806f558d08ed6e93"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a169e0126e0f0f6e4806f558d08ed6e93">&#9670;&#160;</a></span>Release() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MGAlienLib.SharedAsset&lt; T &gt;.Release </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>이 참조를 해제합니다. </p>
+
+</div>
+</div>
+<a id="acf951da67d7f96dd0164734865a22eb6" name="acf951da67d7f96dd0164734865a22eb6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acf951da67d7f96dd0164734865a22eb6">&#9670;&#160;</a></span>Release() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool MGAlienLib.SharedAsset&lt; T &gt;.Release </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9e6b6d21d23c29dab4cc03f75dd9ccda" name="a9e6b6d21d23c29dab4cc03f75dd9ccda"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9e6b6d21d23c29dab4cc03f75dd9ccda">&#9670;&#160;</a></span>Release() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MGAlienLib.SharedAsset&lt; T &gt;.Release </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_m_g_alien_lib_1_1_shared_asset-1-g_1_1_reference.html">Reference</a></td>          <td class="paramname"><span class="paramname"><em>assetRef</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>지정된 자원 참조를 해제합니다. 참조 카운트가 0이 되면 자원을 제거합니다. </p>
+<dl class="params"><dt>매개변수</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">assetRef</td><td>해제할 자원 참조</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a45efae569e9bd5e33249a04b76a5ee2b" name="a45efae569e9bd5e33249a04b76a5ee2b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a45efae569e9bd5e33249a04b76a5ee2b">&#9670;&#160;</a></span>SharedAsset() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">MGAlienLib.SharedAsset&lt; T &gt;.SharedAsset </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespace_m_g_alien_lib.html#ac89dacad1a916d9b4a8fb359f45a30eb">eAssetSource</a></td>          <td class="paramname"><span class="paramname"><em>source</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string</td>          <td class="paramname"><span class="paramname"><em>address</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">object</td>          <td class="paramname"><span class="paramname"><em>parameters</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>지정된 소스와 주소를 사용하여 공유 자원을 생성합니다. </p>
+<dl class="params"><dt>매개변수</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">source</td><td>자원의 소스</td></tr>
+    <tr><td class="paramname">address</td><td>자원의 고유 주소</td></tr>
+    <tr><td class="paramname">parameters</td><td>자원을 생성해야 할 때 전달되는 parameter </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aada0e43d375ecdd22985635d5367ca91" name="aada0e43d375ecdd22985635d5367ca91"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aada0e43d375ecdd22985635d5367ca91">&#9670;&#160;</a></span>SharedAsset() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">MGAlienLib.SharedAsset&lt; T &gt;.SharedAsset </td>
+          <td>(</td>
+          <td class="paramtype">string</td>          <td class="paramname"><span class="paramname"><em>address</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">object</td>          <td class="paramname"><span class="paramname"><em>parameters</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>기본 소스를 사용하여 공유 자원을 생성합니다. </p>
+<dl class="params"><dt>매개변수</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">address</td><td>자원의 고유 주소</td></tr>
+    <tr><td class="paramname">parameters</td><td>자원을 생성해야 할 때 전달되는 parameter </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a2331eb6ca7d729d8270ad27eac7525cf" name="a2331eb6ca7d729d8270ad27eac7525cf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2331eb6ca7d729d8270ad27eac7525cf">&#9670;&#160;</a></span>ToString()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">override string MGAlienLib.SharedAsset&lt; T &gt;.ToString </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>현재 관리 중인 자원의 상태를 문자열로 반환합니다. </p>
+<dl class="section return"><dt>반환값</dt><dd>자원 목록과 참조 카운트를 포함한 문자열</dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">속성 문서화</h2>
+<a id="a512722b718548a7dee936680a3af3881" name="a512722b718548a7dee936680a3af3881"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a512722b718548a7dee936680a3af3881">&#9670;&#160;</a></span>address</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">string MGAlienLib.SharedAsset&lt; T &gt;.address</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel get">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>자원의 주소를 반환합니다. </p>
+
+</div>
+</div>
+<a id="a11692252086602bfa579cb69c7ad2f34" name="a11692252086602bfa579cb69c7ad2f34"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a11692252086602bfa579cb69c7ad2f34">&#9670;&#160;</a></span>asset</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">T MGAlienLib.SharedAsset&lt; T &gt;.asset</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel get">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>관리 중인 자원을 반환합니다. </p>
+<p>상속 클래스에서 접근 가능한 관리 중인 자원입니다.</p>
+<dl class="exception"><dt>예외</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">ObjectDisposedException</td><td>참조가 유효하지 않을 경우 발생</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a352037b6ba4e2e34270e126f0d4f8a52" name="a352037b6ba4e2e34270e126f0d4f8a52"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a352037b6ba4e2e34270e126f0d4f8a52">&#9670;&#160;</a></span>debug_ManagerStatus</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">string MGAlienLib.SharedAsset&lt; T &gt;.debug_ManagerStatus</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel get">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>관리 중인 모든 자원에 대한 정보를 문자열로 반환합니다. </p>
+
+</div>
+</div>
+<a id="afc57b5b07555b37febdef3d28bac3bd0" name="afc57b5b07555b37febdef3d28bac3bd0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afc57b5b07555b37febdef3d28bac3bd0">&#9670;&#160;</a></span>internal_ReferenceCount</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int MGAlienLib.SharedAsset&lt; T &gt;.internal_ReferenceCount</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel get">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>내부 참조 카운트를 반환합니다. </p>
+
+</div>
+</div>
+<a id="af3b29fba418c5dd2aa22fffd6e1b0bfc" name="af3b29fba418c5dd2aa22fffd6e1b0bfc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af3b29fba418c5dd2aa22fffd6e1b0bfc">&#9670;&#160;</a></span>internal_referenceCount</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int MGAlienLib.SharedAsset&lt; T &gt;.internal_referenceCount = 0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel get">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>현재 자원의 내부 참조 카운트를 가져옵니다. </p>
+
+</div>
+</div>
+<a id="a91bcedcdafb98770f14edfaba8c3190c" name="a91bcedcdafb98770f14edfaba8c3190c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a91bcedcdafb98770f14edfaba8c3190c">&#9670;&#160;</a></span>isValid</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool MGAlienLib.SharedAsset&lt; T &gt;.isValid</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel get">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>참조가 유효한지 여부를 나타냅니다. </p>
+
+</div>
+</div>
+<a id="adc9e9ea8fd2a3d02945da18971cc6948" name="adc9e9ea8fd2a3d02945da18971cc6948"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adc9e9ea8fd2a3d02945da18971cc6948">&#9670;&#160;</a></span>manager</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_m_g_alien_lib_1_1_shared_asset-1-g_1_1_manager.html">Manager</a> MGAlienLib.SharedAsset&lt; T &gt;.manager</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel get">get</span><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>공유 자원을 관리하는 싱글톤 매니저 인스턴스입니다. </p>
+
+</div>
+</div>
+<hr/>이 클래스에 대한 문서화 페이지는 다음의 파일로부터 생성되었습니다.:<ul>
+<li>src/Asset/<a class="el" href="_shared_asset_8cs.html">SharedAsset.cs</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="namespace_m_g_alien_lib.html">MGAlienLib</a></li><li class="navelem"><a class="el" href="class_m_g_alien_lib_1_1_shared_asset-1-g.html">SharedAsset-1-g</a></li>
+    <li class="footer">다음에 의해 생성됨 :  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+  </ul>
+</div>
+</body>
+</html>

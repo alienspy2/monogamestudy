@@ -1,0 +1,56 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <EnforceCodeStyleInBuild>True</EnforceCodeStyleInBuild>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+    <GenerateDocumentationFile>True</GenerateDocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <NoWarn>1701;1702;1591</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <NoWarn>1701;1702;1591</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Remove="src\external\**" />
+    <EmbeddedResource Remove="src\external\**" />
+    <None Remove="src\external\**" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Content\Content.mgcb" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="src\External\RectpackSharp\PackingException.cs" />
+    <Compile Include="src\External\RectpackSharp\PackingHints.cs" />
+    <Compile Include="src\External\RectpackSharp\PackingRectangle.cs" />
+    <Compile Include="src\External\RectpackSharp\RectanglePacker.cs" />
+    <Compile Include="src\External\TrueTypeSharp\BakedChar.cs" />
+    <Compile Include="src\External\TrueTypeSharp\BakedCharCollection.cs" />
+    <Compile Include="src\External\TrueTypeSharp\BakedQuad.cs" />
+    <Compile Include="src\External\TrueTypeSharp\ContourPoint.cs" />
+    <Compile Include="src\External\TrueTypeSharp\FakePtr.cs" />
+    <Compile Include="src\External\TrueTypeSharp\FontBitmap.cs" />
+    <Compile Include="src\External\TrueTypeSharp\GlyphVertex.cs" />
+    <Compile Include="src\External\TrueTypeSharp\GlyphVertexType.cs" />
+    <Compile Include="src\External\TrueTypeSharp\stb_truetype.cs" />
+    <Compile Include="src\External\TrueTypeSharp\TrueTypeFont.Codepoints.cs" />
+    <Compile Include="src\External\TrueTypeSharp\TrueTypeFont.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <MonoGameContentReference Include="Content\Content.mgcb" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\External\TrueTypeSharp\stb_truetype.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="GtkSharp" Version="3.24.24.95" />
+    <PackageReference Include="MonoGame.Content.Builder.Task" Version="3.8.2.1105" />
+    <PackageReference Include="MonoGame.Extended" Version="4.0.4" />
+    <PackageReference Include="MonoGame.Framework.DesktopGL" Version="3.8.2.1105" />
+    <PackageReference Include="SharpCompress" Version="0.39.0" />
+    <PackageReference Include="SixLabors.ImageSharp" Version="3.1.7" />
+    <PackageReference Include="SkiaSharp" Version="3.116.1" />
+    <PackageReference Include="Tomlyn" Version="0.19.0" />
+  </ItemGroup>
+</Project>
