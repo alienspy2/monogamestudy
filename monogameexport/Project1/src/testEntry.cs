@@ -171,7 +171,7 @@ namespace Project1
             }
 
             // mouse cursor
-            bool cursorTest = false;
+            bool cursorTest = true;
             if (cursorTest)
             {
                 var cursorObj = CreateGameObject("cursor", transform);
@@ -179,8 +179,8 @@ namespace Project1
                 cursor = cursorObj.AddComponent<AutoAtlasSpriteRenderer>();
                 var filename = assetManager.SearchFiles("ui cursor")[0];
                 cursor.Load(filename, false);
-                cursor.transform.position = new Vector3(500, 500, 4000);
-                cursor.transform.localScale = Vector3.One * 100f;
+                cursor.transform.position = new Vector3(500, 500, 1000);
+                cursor.transform.localScale = Vector3.One * 50f;
                 cursor.pivot = new Vector2(0.35f, 0.65f);
                 game.IsMouseVisible = false;
                 //var cursorSpr = cursorObj.AddComponent<SpriteRenderer>();
