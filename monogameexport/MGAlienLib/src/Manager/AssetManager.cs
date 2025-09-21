@@ -145,6 +145,19 @@ namespace MGAlienLib
             return results;
         }
 
+        /// <summary>
+        /// 재귀적으로 디렉터리 트리를 탐색하면서 검색어(terms)가 순서대로 포함된 파일 경로를 찾아 results 리스트에 추가합니다.
+        /// 중간어 검색을 지원합니다.
+        /// </summary>
+        /// <param name="node">현재 탐색 중인 DirectoryNode</param>
+        /// <param name="currentPath">
+        /// 현재 노드까지의 상대 경로 (루트에서부터 이어진 폴더 이름들, 예: "Assets/Textures")
+        /// </param>
+        /// <param name="terms">검색어 배열(순서대로 찾음). 대소문자 구분 없이 검색합니다.</param>
+        /// <param name="assetType">
+        /// 특정 자산 타입(eAssetType)을 필터링하려면 해당 enum 값을 지정. eAssetType.None이면 타입 무시.
+        /// </param>
+        /// <param name="results">검색 결과(경로)를 저장할 리스트</param>
         private void SearchNode(DirectoryNode node, string currentPath, string[] terms, eAssetType assetType, List<string> results)
         {
             foreach (var file in node.Files)

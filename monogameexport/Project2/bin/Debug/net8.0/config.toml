@@ -1,0 +1,5 @@
+raw_assets_root_path = "C:\\git\\monogamestudy\\monogameexport\\Project2\\Assets"
+packed_assets_root_path = "C:\\git\\monogamestudy\\monogameexport\\Project2\\PackedAssets"
+taget_fps = 60
+v_sync = 1
+log_to_file = true

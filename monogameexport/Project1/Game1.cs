@@ -23,5 +23,7 @@ public class Game1 : GameBase
 
         var entryObj = hierarchyManager.CreateGameObject("entry", null);
         entryObj.AddComponent<testEntry>();
+        //var gameEntry = hierarchyManager.CreateGameObject("GameEntry", null);
+        //gameEntry.AddComponent<Project1.src.Game1.GameEntry>();
     }
 }

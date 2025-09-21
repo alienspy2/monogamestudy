@@ -1,0 +1,23 @@
+["MGAlienLib.GameObject:9fe34289-1977-4f8c-bdcc-23cfe7327ad6"]
+_layer = 0
+_active = true
+_name = "ball"
+["MGAlienLib.Transform:ceaea6fe-3d27-4816-b8eb-97020c20f639"]
+_localPosition = [0.0, 0.0, 0.0]
+_localRotation = [0.0, 0.0, 0.0, 1.0]
+_localScale = [1.0, 1.0, 1.0]
+_parent = "34cc4877-1c1c-441d-92a4-0c35803ccf3e"
+_gameObjectId = "9fe34289-1977-4f8c-bdcc-23cfe7327ad6"
+_enabled = true
+["MGAlienLib.SpriteRenderer:69b50940-b23b-4827-9b47-035c3b385aed"]
+_assetAddress = "art\\UI\\ball.png"
+_flipX = false
+_importWidth = 0
+_importHeight = 0
+_useAsUI = false
+_enableUIRaycast = false
+_size = [1.0, 1.0]
+_pivot = [0.5, 0.5]
+_color = [255, 255, 255, 255]
+_gameObjectId = "9fe34289-1977-4f8c-bdcc-23cfe7327ad6"
+_enabled = true

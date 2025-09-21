@@ -1,0 +1,2106 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MGA</name>
+    </assembly>
+    <members>
+        <member name="T:MGAlienLib.AssetBase">
+            <summary>
+            공유 자원을 참조 카운팅 방식으로 관리하는 추상 클래스입니다.
+            </summary>
+        </member>
+        <member name="P:MGAlienLib.AssetBase.address">
+            <summary>
+            자원의 고유 주소입니다.
+            작업 중에는 raw file 로 사용하다가, 패킹된 파일로 전환할 때 변경사항을 최소화하기 위해.
+            자원의 source 종류가 바뀌어도 주소는 유지됩니다.
+            따라서, 다른 source 에 같은 주소를 가진 자원은 같은 자원이어야 합니다.
+            기본적으로 파일 경로를 사용합니다.
+            </summary>
+        </member>
+        <member name="T:MGAlienLib.SharedAsset`1">
+            <summary>
+            공유 자원을 참조 카운팅 방식으로 관리하는 추상 클래스입니다.
+            </summary>
+            <typeparam name="T">관리할 자원의 타입으로, IDisposable을 구현해야 합니다.</typeparam>
+        </member>
+        <member name="T:MGAlienLib.SharedAsset`1.Manager">
+            <summary>
+            공유 자원을 관리하고 참조를 생성 및 해제하는 매니저 클래스입니다.
+            </summary>
+        </member>
+        <member name="M:MGAlienLib.SharedAsset`1.Manager.Get(MGAlienLib.eAssetSource,System.String,System.Object,System.Func{MGAlienLib.eAssetSource,System.String,System.Object,MGAlienLib.SharedAsset{`0}})">
+            <summary>
+            지정된 소스와 주소를 통해 공유 자원을 가져옵니다. 이미 존재하면 기존 자원을 반환합니다.
+            </summary>
+            <param name="source">자원의 소스</param>
+            <param name="address">자원의 고유 주소</param>
+            <param name="parameters">자원 요처시, 생성이 필요한 경우 전달할 parameter</param>
+            <param name="factory">자원을 생성하는 팩토리 함수</param>
+            <returns>공유 자원에 대한 참조</returns>
+        </member>
+        <member name="M:MGAlienLib.SharedAsset`1.Manager.Release(MGAlienLib.SharedAsset{`0}.Reference)">
+            <summary>
+            지정된 자원 참조를 해제합니다. 참조 카운트가 0이 되면 자원을 제거합니다.
+            </summary>
+            <param name="assetRef">해제할 자원 참조</param>
+        </member>
+        <member name="M:MGAlienLib.SharedAsset`1.Manager.Clear">
+            <summary>
+            관리 중인 모든 자원을 해제하고 컬렉션을 비웁니다.
+            실행중 이 함수를 호출하면 절대 안됩니다.
+            앱이 꺼지는 중에만 호출해야 합니다.
+            </summary>
+        </member>
+        <member name="M:MGAlienLib.SharedAsset`1.Manager.ToString">
+            <summary>
+            현재 관리 중인 자원의 상태를 문자열로 반환합니다.
+            </summary>
+            <returns>자원 목록과 참조 카운트를 포함한 문자열</returns>
+        </member>
+        <member name="T:MGAlienLib.SharedAsset`1.Reference">
+            <summary>
+            공유 자원에 대한 참조를 나타내며, 자원의 유효성과 접근을 관리합니다.
+            </summary>
+        </member>
+        <member name="P:MGAlienLib.SharedAsset`1.Reference.isValid">
+            <summary>
+            참조가 유효한지 여부를 나타냅니다.
+            </summary>
+        </member>
+        <member name="P:MGAlienLib.SharedAsset`1.Reference.internal_ReferenceCount">
+            <summary>
+            내부 참조 카운트를 반환합니다.
+            </summary>
+        </member>
+        <member name="P:MGAlienLib.SharedAsset`1.Reference.address">
+            <summary>
+            자원의 주소를 반환합니다.
+            </summary>
+        </member>
+        <member name="P:MGAlienLib.SharedAsset`1.Reference.asset">
+            <summary>
+            관리 중인 자원을 반환합니다.
+            </summary>
+            <exception cref="T:System.ObjectDisposedException">참조가 유효하지 않을 경우 발생</exception>
+        </member>
+        <member name="M:MGAlienLib.SharedAsset`1.Reference.#ctor(MGAlienLib.SharedAsset{`0})">
+            <summary>
+            새로운 자원 참조를 생성합니다.
+            </summary>
+            <param name="source">참조할 공유 자원</param>
+        </member>
+        <member name="M:MGAlienLib.SharedAsset`1.Reference.Release">
+            <summary>
+            이 참조를 해제합니다.
+            </summary>
+        </member>
+        <member name="M:MGAlienLib.SharedAsset`1.Reference.Clone">
+            <summary>
+            이 참조의 복사본을 생성합니다.
+            </summary>
+            <returns>새로운 참조 객체</returns>
+            <exception cref="T:System.ObjectDisposedException">참조가 유효하지 않을 경우 발생</exception>
+        </member>
+        <member name="P:MGAlienLib.SharedAsset`1.manager">
+            <summary>
+            공유 자원을 관리하는 싱글톤 매니저 인스턴스입니다.
+            </summary>
+        </member>
+        <member name="P:MGAlienLib.SharedAsset`1.internal_referenceCount">
+            <summary>
+            현재 자원의 내부 참조 카운트를 가져옵니다.
+            </summary>
+        </member>
+        <member name="P:MGAlienLib.SharedAsset`1.asset">
+            <summary>
+            상속 클래스에서 접근 가능한 관리 중인 자원입니다.
+            </summary>
+        </member>
+        <member name="M:MGAlienLib.SharedAsset`1.#ctor(System.String,System.Object)">
+            <summary>
+            기본 소스를 사용하여 공유 자원을 생성합니다.
+            </summary>
+            <param name="address">자원의 고유 주소</param>
+            <param name="parameters">자원을 생성해야 할 때 전달되는 parameter </param>
+        </member>
+        <member name="M:MGAlienLib.SharedAsset`1.#ctor(MGAlienLib.eAssetSource,System.String,System.Object)">
+            <summary>
+            지정된 소스와 주소를 사용하여 공유 자원을 생성합니다.
+            </summary>
+            <param name="source">자원의 소스</param>
+            <param name="address">자원의 고유 주소</param>
+            <param name="parameters">자원을 생성해야 할 때 전달되는 parameter </param>
+        </member>
+        <member name="M:MGAlienLib.SharedAsset`1.CreateAsset(MGAlienLib.eAssetSource,System.String,System.Object)">
+            <summary>
+            자원을 생성하는 추상 메서드로, 상속 클래스에서 구현해야 합니다.
+            </summary>
+            <param name="source">자원의 소스</param>
+            <param name="address">자원의 고유 주소</param>
+            <param name="parameters">자원을 생성해야 할 때 전달되는 parameter </param>
+            <returns>생성된 자원</returns>
+        </member>
+        <member name="P:MGAlienLib.SharedAsset`1.debug_ManagerStatus">
+            <summary>
+            관리 중인 모든 자원에 대한 정보를 문자열로 반환합니다.
+            </summary>
+        </member>
+        <member name="T:MGAlienLib.SharedTexture">
+            <summary>
+            텍스처를 관리하는 클래스를 나타냅니다.
+            </summary>
+        </member>
+        <member name="M:MGAlienLib.SharedTexture.#ctor(MGAlienLib.eAssetSource,System.String,System.Object)">
+            <summary>
+            지정된 소스와 주소로부터 공유 텍스처를 가져옵니다.
+            </summary>
+            <param name="source">자원의 소스</param>
+            <param name="address">자원의 주소</param>
+            <param name="parameters">자원을 생성해야 할 때 전달되는 parameter</param>
+        </member>
+        <member name="M:MGAlienLib.SharedTexture.Get(System.String,System.Object)">
+            <summary>
+            지정된 주소로부터 공유 텍스처를 가져옵니다.
+            </summary>
+            <param name="address">자원의 주소</param>
+            <param name="parameters">자원을 생성해야 할 때 전달되는 parameter</param>
+            <returns></returns>
+        </member>
+        <member name="M:MGAlienLib.SharedTexture.Get(MGAlienLib.eAssetSource,System.String,System.Int32,System.Int32)">
+            <summary>
+            지정된 소스와 주소로부터 공유 텍스처를 가져옵니다.
+            </summary>
+            <param name="source"></param>
+            <param name="address"></param>
+            <param name="width">override 할 가로 크기. 이 크기대로 줄여서 load 한다</param>
+            <param name="height">override 할 세로 크기. 이 크기대로 줄여서 load 한다</param>
+            <returns></returns>
+        </member>
+        <member name="M:MGAlienLib.SharedTexture.CreateAsset(MGAlienLib.eAssetSource,System.String,System.Object)">
+            <summary>
+            공유중인 텍스쳐를 찾을 수 없을 때. 새로운 텍스처를 생성합니다.
+            </summary>
+            <param name="source"></param>
+            <param name="address"></param>
+            <param name="parameters">자원을 생성해야 할 때 전달되는 parameter</param>
+            <returns></returns>
+        </member>
+        <member name="T:MGAlienLib.GameBase">
+            <summary>
+            Base class for game
+            </summary>
+        </member>
+        <member name="T:MGAlienLib.AutoAtlasSpriteRenderer">
+            <summary>
+            스프라이트를 렌더링하는 컴포넌트를 나타냅니다.
+            texture 를 load 해서, 자동으로 atlas manager 에 등록하고 렌더링합니다.
+            텍스쳐 크기가 그다지 크지 않다면, AutoAtlasSpriteRenderer 를 사용하시기 바랍니다.
+            큰 텍스쳐를 사용해야 할 경우, SpriteRenderer 를 사용하시기 바랍니다.
+            AutoAtlasSpriteRenderer 가 SpriteRenderer 보다 압도적으로 효율적입니다.
+            </summary>
+        </member>
+        <member name="P:MGAlienLib.AutoAtlasSpriteRenderer.flipX">
+            <summary>
+            스프라이트의 X축 뒤집기 여부를 가져오거나 설정합니다.
+            </summary>
+        </member>
+        <member name="M:MGAlienLib.AutoAtlasSpriteRenderer.Load(System.String,System.Boolean,System.Int32,System.Int32)">
+            <summary>
+            지정된 소스와 주소로 텍스처를 로드합니다.
+            </summary>
+            <param name="address">주소</param>
+            <param name="dialate"></param>
+            <param name="importWidth">override 할 가로 크기. 이 크기로 resize 하여 로드합니다. 실행시간에 resize 하기 때문에, 많이 느립니다. 미리 image 의 크기를 바꿔 두는 것이 훨씬 좋습니다</param>
+            <param name="importHeight">override 할 세로 크기. 이 크기로 resize 하여 로드합니다 실행시간에 resize 하기 때문에, 많이 느립니다. 미리 image 의 크기를 바꿔 두는 것이 훨씬 좋습니다</param>
+        </member>
+        <member name="M:MGAlienLib.AutoAtlasSpriteRenderer.Render(MGAlienLib.RenderState)">
+            <summary>
+            렌더링을 수행합니다.
+            </summary>
+            <param name="renderState"></param>
+        </member>
+        <member name="T:MGAlienLib.Camera">
+            <summary>
+            카메라 컴포넌트를 나타냅니다.
+            </summary>
+        </member>
+        <member name="T:MGAlienLib.Camera.eCameraClearFlag">
+            <summary>
+            클리어 타입을 나타냅니다.
+            </summary>
+        </member>
+        <member name="F:MGAlienLib.Camera.eCameraClearFlag.Nothing">
+            <summary>
+            클리어하지 않습니다.
+            </summary>
+        </member>
+        <member name="F:MGAlienLib.Camera.eCameraClearFlag.SolidColor">
+            <summary>
+            컬러로 클리어합니다.
+            </summary>
+        </member>
+        <member name="F:MGAlienLib.Camera.eCameraClearFlag.Depth">
+            <summary>
+            depth buffer 만 클리어합니다.
+            </summary>
+        </member>
+        <member name="P:MGAlienLib.Camera.pos">
+            <summary>
+            카메라의 위치를 가져옵니다.
+            </summary>
+        </member>
+        <member name="P:MGAlienLib.Camera.rot">
+            <summary>
+            카메라의 회전을 가져옵니다.
+            </summary>
+        </member>
+        <member name="F:MGAlienLib.Camera.clearFlags">
+            <summary>
+            카메라의 클리어 타입을 가져오거나 설정합니다.
+            </summary>
+        </member>
+        <member name="F:MGAlienLib.Camera.backgroundColor">
+            <summary>
+            카메라의 클리어 색상을 가져오거나 설정합니다.
+            클리어 타입이 Color일 때만 사용됩니다.
+            </summary>
+        </member>
+        <member name="P:MGAlienLib.Camera.matView">
+            <summary>
+            world space 에서 view space 로 변환하는 행렬을 가져옵니다.
+            </summary>
+        </member>
+        <member name="P:MGAlienLib.Camera.matProjection">
+            <summary>
+            view space 에서 projection space 로 변환하는 행렬을 가져옵니다.
+            </summary>
+        </member>
+        <member name="P:MGAlienLib.Camera.matViewProjection">
+            <summary>
+            world space 에서 projection space 로 변환하는 행렬을 가져옵니다.
+            </summary>
+        </member>
+        <member name="P:MGAlienLib.Camera.matViewProjectionINV">
+            <summary>
+            projection space 에서 world space 로 변환하는 행렬을 가져옵니다.
+            </summary>
+        </member>
+        <member name="M:MGAlienLib.Camera.#ctor">
+            <summary>
+            Create a new instance of Camera
+            </summary>
+        </member>
+        <member name="M:MGAlienLib.Camera.internal_GetReadyToRender(System.Int32)">
+            <summary>
+            렌더링 준비를 합니다.
+            내부적으로만 사용됩니다.
+            </summary>
+            <param name="stage"></param>
+        </member>
+        <member name="M:MGAlienLib.Camera.internal_AddUIForUIRaycastTarget(MGAlienLib.UITransform)">
+            <summary>
+            렌더링이 끝났을 때 호출됩니다.
+            UIRaycast 를 위한 작업을 수행합니다.
+            내부적으로만 사용됩니다.
+            </summary>
+            <param name="ui"></param>
+        </member>
+        <member name="M:MGAlienLib.Camera.UIRaycast(Microsoft.Xna.Framework.Vector2)">
+            <summary>
+            (WIP) 이 카메라에 의해 렌더링 된 UI 중, camera 로부터 가장 가까운 UI 를 찾아 반환합니다.
+            projection 일 떄에도 동작합니다.
+            todo : rect 는 AABB 이므로, 이렇게 하면 안됨. UITransform 의 local 좌표계로 변환한 후 계산해야함.
+            </summary>
+            <param name="screenPos">화면 좌표. 좌측상단이 0,0. 화면 오른쪽이 +X, 화면 아래쪽이 +Y 입니다. input manager 의 마우스 좌표계와 동일합니다</param>
+            <returns>찾은 대상. 없다면 null</returns>
+        </member>
+        <member name="T:MGAlienLib.ComponentBase">
+            <summary>
+            컴포넌트의 기본 클래스입니다.
+            todo : coroutine 추가
+            </summary>
+        </member>
+        <member name="F:MGAlienLib.ComponentBase.gameObject">
+            <summary>
+            컴포넌트가 속한 게임 오브젝트를 가져옵니다.
+            </summary>
+        </member>
+        <member name="T:MGAlienLib.ComponentBase.Screen">
+            <summary>
+            화면 관련 정보를 제공하는 Utility class 입니다
+            </summary>
+        </member>
+        <member name="P:MGAlienLib.ComponentBase.Screen.width">
+            <summary>
+            화면의 가로 크기를 가져옵니다.
+            </summary>
+        </member>
+        <member name="P:MGAlienLib.ComponentBase.Screen.height">
+            <summary>
+            화면의 세로 크기를 가져옵니다.
+            </summary>
+        </member>
+        <member name="P:MGAlienLib.ComponentBase.Screen.screenSizeWasChangedThisFrame">
+            <summary>
+            이번 frame에 화면의 크기가 변경되었는지 여부를 가져옵니다.
+            </summary>
+        </member>
+        <member name="T:MGAlienLib.ComponentBase.Time">
+            <summary>
+            시간 관련 정보를 제공하는 Utility class 입니다
+            </summary>
+        </member>
+        <member name="P:MGAlienLib.ComponentBase.Time.time">
+            <summary>
+            게임이 시작된 이후의 시간을 가져옵니다.
+            </summary>
+        </member>
+        <member name="P:MGAlienLib.ComponentBase.Time.deltaTime">
+            <summary>
+            지난 프레임에서 현재 프레임까지의 시간을 가져옵니다.
+            </summary>
+        </member>
+        <member name="P:MGAlienLib.ComponentBase.Time.frameCount">
+            <summary>
+            게임이 시작된 이후의 프레임 수를 가져옵니다.
+            </summary>
+        </member>
+        <member name="P:MGAlienLib.ComponentBase.destroyed">
+            <summary>
+            컴포넌트가 파괴되었는지 여부를 가져옵니다.
+            </summary>
+        </member>
+        <member name="M:MGAlienLib.ComponentBase.CreateGameObject(System.String,MGAlienLib.Transform)">
+            <summary>
+            새로운 GameObject를 생성합니다.
+            GameObject는 new GameObject() 로 생성할 수 없습니다.
+            </summary>
+            <param name="name"></param>
+            <param name="parent"></param>
+            <returns></returns>
+        </member>
+        <member name="P:MGAlienLib.ComponentBase.transform">
+            <summary>
+            컴포넌트가 속한 게임 오브젝트의 트랜스폼을 가져옵니다.
+            </summary>
+        </member>
+        <member name="P:MGAlienLib.ComponentBase.name">
+            <summary>
+            컴포넌트가 속한 게임 오브젝트의 이름을 가져옵니다.
+            만약 게임 오브젝트가 이미 파괴되었다면 "(null)"을 반환합니다.
+            </summary>
+        </member>
+        <member name="P:MGAlienLib.ComponentBase.enabled">
+            <summary>
+            컴포넌트가 활성화되어 있는지 여부를 가져오거나 설정합니다.
+            </summary>
+        </member>
+        <member name="M:MGAlienLib.ComponentBase.#ctor">
+            <summary>
+            Component 는 new 로 생성할 수 없습니다.
+            AddComponent 를 사용하여 생성해주세요.
+            </summary>
+        </member>
+        <member name="M:MGAlienLib.ComponentBase.Awake">
+            <summary>
+            컴포넌트가 활성화될 때 호출됩니다.
+            컴포넌트가 속한 gameObject 가 꺼진 상태에서 생성되는 등
+            Awake 가 호출 될 수 없는 상황일 때에는
+            호출 가능해지는 시점에 호출됩니다.
+            </summary>
+        </member>
+        <member name="M:MGAlienLib.ComponentBase.Start">
+            <summary>
+            컴포넌트가 시작될 때 호출됩니다.
+            Awake 와 비슷하나, 모든 컴포넌트의 Awake 가 호출된 이후에 호출됩니다.
+            Start 가 호출 될 수 없는 상황일 때에는
+            호출 가능해지는 시점에 호출됩니다.
+            </summary>
+        </member>
+        <member name="M:MGAlienLib.ComponentBase.internal_PreUpdate">
+            <summary>
+            *사용불가* 내부적으로 호출되는 함수입니다.
+            </summary>
+        </member>
+        <member name="M:MGAlienLib.ComponentBase.Update">
+            <summary>
+            컴포넌트가 업데이트될 때 마다 호출됩니다.
+            </summary>
+        </member>
+        <member name="M:MGAlienLib.ComponentBase.LateUpdate">
+            <summary>
+            Update 와 비슷하게 컴포넌트가 업데이트될 때 마다 호출됩니다.
+            단, 모든 Update 가 호출된 이후에 호출됩니다.
+            </summary>
+        </member>
+        <member name="M:MGAlienLib.ComponentBase.OnEnable">
+            <summary>
+            컴포넌트가 활성화될 때 호출됩니다.
+            컴포넌트가 속한 gameObject 가 꺼진 상태등
+            호출 되기 불가능 한 상황일 때에는
+            호출 가능해지는 시점에 호출됩니다.
+            </summary>
+        </member>
+        <member name="M:MGAlienLib.ComponentBase.OnDisable">
+            <summary>
+            컴포넌트가 비활성화될 때 호출됩니다.
+            </summary>
+        </member>
+        <member name="M:MGAlienLib.ComponentBase.OnDestroy">
+            <summary>
+            컴포넌트가 파괴될 때 호출됩니다.
+            </summary>
+        </member>
+        <member name="M:MGAlienLib.ComponentBase.Destroy(MGAlienLib.GameObject)">
+            <summary>
+            게임 오브젝트를 파괴합니다.
+            즉시 파괴되지 않고, 예약 되었다가, 다음 프레임 시작 전에 일괄 파괴됩니다.
+            </summary>
+            <param name="obj"></param>
+        </member>
+        <member name="M:MGAlienLib.ComponentBase.Destroy(MGAlienLib.ComponentBase)">
+            <summary>
+            컴포넌트를 파괴합니다.
+            </summary>
+            <param name="component"></param>
+        </member>
+        <member name="M:MGAlienLib.ComponentBase.internal_OnDestroy">
+            <summary>
+            *사용불가* 내부적으로 호출되는 함수입니다.
+            </summary>
+        </member>
+        <member name="M:MGAlienLib.ComponentBase.internal_CheckLifeCycle">
+            <summary>
+            *사용불가* 내부적으로 호출되는 함수입니다.
+            </summary>
+        </member>
+        <member name="M:MGAlienLib.ComponentBase.AddComponent``1">
+            <summary>
+            컴포넌트를 추가합니다.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:MGAlienLib.ComponentBase.RemoveComponent(MGAlienLib.ComponentBase)">
+            <summary>
+            컴포넌트를 제거합니다.
+            </summary>
+            <param name="component"></param>
+        </member>
+        <member name="M:MGAlienLib.ComponentBase.GetComponent``1">
+            <summary>
+            컴포넌트를 하나 가져옵니다.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:MGAlienLib.ComponentBase.GetComponents``1">
+            <summary>
+            컴포넌트를 *모두* 가져옵니다.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:MGAlienLib.ComponentBase.GetComponentInChildren``1">
+            <summary>
+            자식을 모두 찾아 컴포넌트를 하나 가져옵니다.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:MGAlienLib.ComponentBase.GetComponentsInChildren``1">
+            <summary>
+            자식을 모두 찾아 컴포넌트를 *모두* 가져옵니다.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <returns></returns>
+        </member>
+        <member name="T:MGAlienLib.Renderable">
+            <summary>
+            렌더링 가능한 컴포넌트의 기본 클래스입니다.
+            </summary>
+        </member>
+        <member name="M:MGAlienLib.Renderable.Render(MGAlienLib.RenderState)">
+            <summary>
+            렌더링을 수행합니다.
+            최적화를 위해, batching 을 하는 경우가 있으므로,
+            구현에 따라 이 안에서 실제로 draw call 이 발생 하지 않을 수도 있습니다.
+            render target 에 그리는 경우, 이 안에서 draw call 이 발생합니다.
+            </summary>
+            <param name="renderState"></param>
+        </member>
+        <member name="M:MGAlienLib.Renderable.internal_Render(MGAlienLib.RenderState)">
+            <summary>
+            렌더링을 수행합니다.
+            내부적으로만 사용됩니다.
+            </summary>
+            <param name="renderState"></param>
+        </member>
+        <member name="T:MGAlienLib.SpriteRenderer">
+            <summary>
+            스프라이트를 렌더링하는 컴포넌트를 나타냅니다.
+            </summary>
+        </member>
+        <member name="P:MGAlienLib.SpriteRenderer.sourceRect">
+            <summary>
+            스프라이트가 사용하는 텍스처의 소스 영역을 가져오거나 설정합니다. null이면 전체 텍스처를 사용합니다.
+            </summary>
+        </member>
+        <member name="P:MGAlienLib.SpriteRenderer.flipX">
+            <summary>
+            스프라이트의 X축 뒤집기 여부를 가져오거나 설정합니다.
+            </summary>
+        </member>
+        <member name="M:MGAlienLib.SpriteRenderer.Load(MGAlienLib.eAssetSource,System.String,System.Int32,System.Int32)">
+            <summary>
+            지정된 주소에서 텍스처를 로드합니다.
+            </summary>
+            <param name="source">텍스처를 로드할 소스</param>
+            <param name="assetAddress">로드할 텍스처의 에셋 주소</param>
+            <param name="width">override 할 가로 크기. 이 크기대로 줄여서 load 한다</param>
+            <param name="height">override 할 세로 크기. 이 크기대로 줄여서 load 한다</param>
+        </member>
+        <member name="M:MGAlienLib.SpriteRenderer.Render(MGAlienLib.RenderState)">
+            <summary>
+            렌더링을 수행합니다.
+            </summary>
+            <param name="renderState"></param>
+        </member>
+        <member name="M:MGAlienLib.SpriteRenderer.OnDispose">
+            <summary>
+            스프라이트가 사용하는 모든 리소스를 해제합니다.
+            </summary>
+        </member>
+        <member name="M:MGAlienLib.SpriteRenderer.BuildAsUI(MGAlienLib.Transform,System.String,System.String,MonoGame.Extended.RectangleF,System.Single,System.Nullable{Microsoft.Xna.Framework.Vector2},System.Nullable{Microsoft.Xna.Framework.Vector2},System.String)">
+            <summary>
+            SpriteRenderer 를 생성합니다.
+            Button, Image 용도로 사용합니다.
+            </summary>
+            <param name="parent"></param>
+            <param name="name"></param>
+            <param name="textureAddress"></param>
+            <param name="anchoredRect"></param>
+            <param name="elevation"></param>
+            <param name="pivot"></param>
+            <param name="anchor"></param>
+            <param name="layer"></param>
+            <returns></returns>
+        </member>
+        <member name="T:MGAlienLib.TextRenderer">
+            <summary>
+            텍스트를 렌더링하는 컴포넌트를 나타냅니다.
+            </summary>
+        </member>
+        <member name="P:MGAlienLib.TextRenderer.sharpness">
+            <summary>
+            (test중) 텍스트의 날카로움을 가져오거나 설정합니다.
+            </summary>
+        </member>
+        <member name="P:MGAlienLib.TextRenderer.fontSize">
+            <summary>
+            텍스트의 폰트 크기를 가져오거나 설정합니다.
+            </summary>
+        </member>
+        <member name="P:MGAlienLib.TextRenderer.text">
+            <summary>
+            텍스트를 가져오거나 설정합니다.
+            </summary>
+        </member>
+        <member name="M:MGAlienLib.TextRenderer.#ctor">
+            <summary>
+            Create a new instance of TextRenderer
+            </summary>
+        </member>
+        <member name="M:MGAlienLib.TextRenderer.Render(MGAlienLib.RenderState)">
+            <summary>
+            렌더링을 수행합니다.
+            </summary>
+            <param name="renderState"></param>
+        </member>
+        <member name="M:MGAlienLib.TextRenderer.BuildAsUI(MGAlienLib.Transform,System.String,System.String,System.Int32,System.String,Microsoft.Xna.Framework.Color,MonoGame.Extended.RectangleF,System.Single,MGAlienLib.eHAlign,MGAlienLib.eVAlign,System.Boolean,System.Boolean,System.String)">
+            <summary>
+            TextRenderer 를 생성합니다.
+            </summary>
+            <param name="parent"></param>
+            <param name="name"></param>
+            <param name="fontName"></param>
+            <param name="fontSize"></param>
+            <param name="text"></param>
+            <param name="color"></param>
+            <param name="anchoredRect"></param>
+            <param name="elevation"></param>
+            <param name="hAlign"></param>
+            <param name="vAlign"></param>
+            <param name="useOutLine"></param>
+            <param name="useShadow"></param>
+            <param name="layer"></param>
+            <returns></returns>
+        </member>
+        <member name="T:MGAlienLib.Transform">
+            <summary>
+            게임 오브젝트의 변환 정보를 담는 컴포넌트
+            </summary>
+        </member>
+        <member name="P:MGAlienLib.Transform.localPosition">
+            <summary>
+            local space 에서의 위치를 가져오거나 설정합니다.
+            </summary>
+        </member>
+        <member name="P:MGAlienLib.Transform.localRotation">
+            <summary>
+            local space 에서의 회전을 가져오거나 설정합니다.
+            </summary>
+        </member>
+        <member name="P:MGAlienLib.Transform.localScale">
+            <summary>
+            local space 에서의 크기를 가져오거나 설정합니다.
+            </summary>
+        </member>
+        <member name="P:MGAlienLib.Transform.parent">
+            <summary>
+            부모 트랜스폼을 가져오거나 설정합니다.
+            </summary>
+        </member>
+        <member name="M:MGAlienLib.Transform.#ctor">
+            <summary>
+            새로운 Transform 인스턴스를 생성합니다.
+            </summary>
+        </member>
+        <member name="P:MGAlienLib.Transform.position">
+            <summary>
+            world space 에서의 위치를 가져오거나 설정합니다.
+            </summary>
+        </member>
+        <member name="P:MGAlienLib.Transform.rotation">
+            <summary>
+            world space 에서의 회전을 가져오거나 설정합니다.
+            </summary>
+        </member>
+        <member name="P:MGAlienLib.Transform.scale">
+            <summary>
+            world space 에서의 크기를 가져오거나 설정합니다.
+            </summary>
+        </member>
+        <member name="P:MGAlienLib.Transform.right">
+            <summary>
+            world space 에서 transform 이 바라보는 방향에 상대적으로 오른쪽 방향을 가져옵니다.
+            </summary>
+        </member>
+        <member name="P:MGAlienLib.Transform.left">
+            <summary>
+            world space 에서 transform 이 바라보는 방향에 상대적으로 왼쪽 방향을 가져옵니다.
+            </summary>
+        </member>
+        <member name="P:MGAlienLib.Transform.up">
+            <summary>
+            world space 에서 transform 이 바라보는 방향에 상대적으로 위쪽 방향을 가져옵니다.
+            </summary>
+        </member>
+        <member name="P:MGAlienLib.Transform.down">
+            <summary>
+            world space 에서 transform 이 바라보는 방향에 상대적으로 아래쪽 방향을 가져옵니다.
+            </summary>
+        </member>
+        <member name="P:MGAlienLib.Transform.forward">
+            <summary>
+            world space 에서 transform 이 바라보는 방향을 가져옵니다.
+            </summary>
+        </member>
+        <member name="P:MGAlienLib.Transform.Backward">
+            <summary>
+            world space 에서 transform 이 바라보는 반대 방향을 가져옵니다.
+            </summary>
+        </member>
+        <member name="M:MGAlienLib.Transform.SetParent(MGAlienLib.Transform)">
+            <summary>
+            부모 트랜스폼을 설정합니다.
+            </summary>
+            <param name="newParent"></param>
+        </member>
+        <member name="P:MGAlienLib.Transform.localToWorldMatrix">
+            <summary>
+            local space 에서 world space 로 변환하는 행렬을 가져옵니다.
+            </summary>
+        </member>
+        <member name="P:MGAlienLib.Transform.worldToLocalMatrix">
+            <summary>
+            world space 에서 local space 로 변환하는 행렬을 가져옵니다.
+            </summary>
+        </member>
+        <member name="P:MGAlienLib.Transform.Children">
+            <summary>
+            자식 노드들
+            </summary>
+        </member>
+        <member name="P:MGAlienLib.Transform.childCount">
+            <summary>
+            자식 노드의 개수
+            </summary>
+        </member>
+        <member name="M:MGAlienLib.Transform.SetAsFirstSibling">
+            <summary>
+            부모 노드 자식중 첫번째 자식으로 설정합니다.
+            </summary>
+        </member>
+        <member name="M:MGAlienLib.Transform.SetAsLastSibling">
+            <summary>
+            부모 노드 자식중 마지막 자식으로 설정합니다.
+            </summary>
+        </member>
+        <member name="M:MGAlienLib.Transform.GetSiblingIndex">
+            <summary>
+            부모 노드 자식중 몇 번째 인지 가져옵니다
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MGAlienLib.Transform.GetChild(System.Int32)">
+            <summary>
+            자식 노드중 index 번 째의 자식을 가져옵니다.
+            </summary>
+            <param name="index"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MGAlienLib.Transform.GetChildCount">
+            <summary>
+            자식 노드의 개수를 가져옵니다.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MGAlienLib.Transform.GetChildren">
+            <summary>
+            모든 자식 노드를 가져옵니다.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MGAlienLib.Transform.GetEnumerator">
+            <summary>
+            Transform class 를 순환 할 수 있도록 해줍니다.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MGAlienLib.Transform.TransformPoint(Microsoft.Xna.Framework.Vector3)">
+            <summary>
+            point 하나를 local space 에서 world space 로 변환합니다.
+            </summary>
+            <param name="position"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MGAlienLib.Transform.TransformVector(Microsoft.Xna.Framework.Vector3)">
+            <summary>
+            vector 하나를 local space 에서 world space 로 변환합니다.
+            </summary>
+            <param name="vector"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MGAlienLib.Transform.TransformPoints(System.Span{Microsoft.Xna.Framework.Vector3})">
+            <summary>
+            여러개의 point 를 local space 에서 world space 로 변환합니다.
+            </summary>
+            <param name="positions"></param>
+        </member>
+        <member name="M:MGAlienLib.Transform.TransformVectors(System.Span{Microsoft.Xna.Framework.Vector3})">
+            <summary>
+            여러개의 vector 를 local space 에서 world space 로 변환합니다.
+            </summary>
+            <param name="vectors"></param>
+        </member>
+        <member name="M:MGAlienLib.Transform.LookAt(Microsoft.Xna.Framework.Vector3,Microsoft.Xna.Framework.Vector3)">
+            <summary>
+            world space 에서 현재 position 을 기준으로 target 을 바라보도록 회전합니다.
+            </summary>
+            <param name="target"></param>
+            <param name="worldUp"></param>
+        </member>
+        <member name="M:MGAlienLib.Transform.LookAt(MGAlienLib.Transform,Microsoft.Xna.Framework.Vector3)">
+            <summary>
+            world space 에서 현재 position 을 기준으로 target 을 바라보도록 회전합니다.
+            </summary>
+            <param name="target"></param>
+            <param name="worldUp"></param>
+        </member>
+        <member name="M:MGAlienLib.Transform.GetDescendants(System.Collections.Generic.List{MGAlienLib.Transform}@)">
+            <summary>
+            자식 노드들을 *모두* 가져옵니다.
+            성능에 주의해야 합니다.
+            </summary>
+            <param name="collector"></param>
+        </member>
+        <member name="T:MGAlienLib.UIHStacker">
+            <summary>
+            UI 요소들을 수직으로 쌓아주는 컴포넌트입니다.
+            stacker 를 사용하면 자식들의 위치가 자동으로 조정해줍니다.
+            요소의 가로 크기는 stacker의 가로 크기에 맞춰집니다.
+            요소의 세로 크기는 자동으로 조정되지 않습니다. (나중에 기능 추가될 가능성 있음)
+            </summary>
+        </member>
+        <member name="P:MGAlienLib.UIRenderable.OnUIPointerEnter">
+            <summary>
+            마우스가 UITransform 의 영역 안으로 들어올 때 호출되는 이벤트입니다.
+            UI 로 사용할 때에만 사용가능합니다.
+            _enableRaycast 가 켜져야 합니다.
+            같은 gameObject 에 UITransform 도 같이 있어야 합니다
+            </summary>
+        </member>
+        <member name="P:MGAlienLib.UIRenderable.OnUIPointerExit">
+            <summary>
+            마우스가 UITransform 의 영역 밖으로 나갈 때 호출되는 이벤트입니다.
+            UI 로 사용할 때에만 사용가능합니다.
+            _enableRaycast 가 켜져야 합니다.
+            같은 gameObject 에 UITransform 도 같이 있어야 합니다
+            </summary>
+        </member>
+        <member name="P:MGAlienLib.UIRenderable.OnUIPointerDown">
+            <summary>
+            마우스가 UITransform 의 영역 안에서 눌렸을 때 호출되는 이벤트입니다.
+            UI 로 사용할 때에만 사용가능합니다.
+            _enableRaycast 가 켜져야 합니다.
+            같은 gameObject 에 UITransform 도 같이 있어야 합니다
+            </summary>
+        </member>
+        <member name="P:MGAlienLib.UIRenderable.OnUIPointerUp">
+            <summary>
+            마우스가 UITransform 의 영역 안에서 뗴어질 때 호출되는 이벤트입니다.
+            </summary>
+        </member>
+        <member name="P:MGAlienLib.UIRenderable.OnUICommand">
+            <summary>
+            이 요소의 영역 안에서 마우스가 눌렸다가, 영역 안에서 뗴어질 때 호출됩니다.
+            둘 중 하나라도 해당하지 않으면 호출되지 않습니다.
+            
+            UI 로 사용할 때에만 사용가능합니다.
+            _enableRaycast 가 켜져야 합니다.
+            같은 gameObject 에 UITransform 도 같이 있어야 합니다
+            </summary>
+        </member>
+        <member name="P:MGAlienLib.UIRenderable.enableUIRaycast">
+            <summary>
+            UI 레이캐스트를 활성화할지 여부를 가져오거나 설정합니다.
+            </summary>
+        </member>
+        <member name="M:MGAlienLib.UIRenderable.internal_Render(MGAlienLib.RenderState)">
+            <summary>
+            렌더링을 수행합니다.
+            내부적으로만 사용됩니다.
+            </summary>
+            <param name="renderState"></param>
+        </member>
+        <member name="M:MGAlienLib.UIRenderable.internal_OnUIPointerEnter">
+            <summary>
+            UI 요소에 마우스가 들어왔을 때 호출됩니다.
+            내부적으로만 사용됩니다.
+            </summary>
+        </member>
+        <member name="M:MGAlienLib.UIRenderable.internal_OnUIPointerExit">
+            <summary>
+            UI 요소에 마우스가 나갈 때 호출됩니다.
+            내부적으로만 사용됩니다.
+            </summary>
+        </member>
+        <member name="M:MGAlienLib.UIRenderable.internal_OnUIPointerDown">
+            <summary>
+            UI 요소에 마우스 버튼이 눌렸을 때 호출됩니다.
+            내부적으로만 사용됩니다.
+            </summary>
+        </member>
+        <member name="M:MGAlienLib.UIRenderable.internal_OnUIPointerUp">
+            <summary>
+            UI 요소에 마우스 버튼이 떼어졌을 때 호출됩니다.
+            내부적으로만 사용됩니다.
+            </summary>
+        </member>
+        <member name="T:MGAlienLib.UITransform">
+            <summary>
+            UI 요소의 위치와 크기를 나타내는 컴포넌트입니다.
+            UI 로 사용하고자 하는 GameObject에 추가합니다.
+            
+            monogame 의 기본 좌표계를 왼쪽 상단이 (0,0) 오른쪽이 +X, 아래쪽이 +Y 입니다.
+            UITransform 에서는 왼쪽 하단이 (0,0) 오른쪽이 +X, 위쪽이 +Y 입니다.
+            
+            예를 들어, 화면왼쪽 위에서 100,100 떨어져 있는 경우,
+            UITransform 의 좌표는 100, -100 이 됩니다.
+            이렇게 하는 이유는, 같은 rendable 객체를 2D 와 3D 에서 혼용하기 위함입니다.
+            </summary>
+        </member>
+        <member name="P:MGAlienLib.UITransform.anchoredRect">
+            <summary>
+            UI 요소의 위치와 크기를 가져오거나 설정합니다.
+            부모에 대해 상대적인 위치와 크기입니다.
+            </summary>
+        </member>
+        <member name="P:MGAlienLib.UITransform.pivot">
+            <summary>
+            UI 요소의 pivot을 가져오거나 설정합니다.
+            0,0 은 왼쪽 하단, 1,1은 오른쪽 상단입니다.
+            </summary>
+        </member>
+        <member name="P:MGAlienLib.UITransform.anchor">
+            <summary>
+            UI 요소의 anchor을 가져오거나 설정합니다.
+            부모의 anchoredRect를 기준으로 상대적인 위치입니다.
+            0,0 은 부모의 왼쪽 하단, 1,1은 부모의 오른쪽 상단입니다.
+            pivot 과 anchor 의 조합으로 위치를 결정합니다.
+            같은 값을 쓰는 것이 일반적입니다.
+            </summary>
+        </member>
+        <member name="P:MGAlienLib.UITransform.offset">
+            <summary>
+            UI 요소의 offset을 가져오거나 설정합니다.
+            최종 위치에 더해지는 상대적인 위치입니다.
+            필요시에만 사용하세요.
+            </summary>
+        </member>
+        <member name="P:MGAlienLib.UITransform.parent">
+            <summary>
+            부모 UITransform을 가져옵니다. 부모가 없으면 null을 반환합니다.
+            </summary>
+        </member>
+        <member name="P:MGAlienLib.UITransform.accumulatedRect">
+            <summary>
+            (WIP) 상위 UITransform 의 ancoredRect 를 누적한 UI 요소의 위치와 크기를 가져옵니다.
+            todo : Z 값이 적용 안되므로, 이렇게 하면 안됨
+            </summary>
+        </member>
+        <member name="M:MGAlienLib.UITransform.SetDirty">
+            <summary>
+             강제로 dirty 플래그를 설정합니다.
+             다음 프레임에 위치와 크기가 업데이트됩니다.
+            </summary>
+        </member>
+        <member name="M:MGAlienLib.UITransform.ClampWindowToBounds(System.Int32)">
+            <summary>
+            UI 요소의 위치를 화면 안으로 제한합니다.
+            title bar 가 맨 위에 있다고 가정하기 때문에,
+            상단은 창 전체가 제한됩니다.
+            </summary>
+            <param name="margin">각 화면 가장자리로부터 여유공간</param>
+        </member>
+        <member name="M:MGAlienLib.UITransform.internal_OnRender(MGAlienLib.RenderState)">
+            <summary>
+            렌더링 시 호출됩니다.
+            내부적으로만 사용됩니다.
+            실제로 render 된 UITransform 을 가진 개체만 RaycastTarget 로 등록합니다.
+            </summary>
+            <param name="renderState"></param>
+        </member>
+        <member name="T:MGAlienLib.UIVStacker">
+            <summary>
+            UI 요소들을 수직으로 쌓아주는 컴포넌트입니다.
+            stacker 를 사용하면 자식들의 위치가 자동으로 조정해줍니다.
+            요소의 가로 크기는 stacker의 가로 크기에 맞춰집니다.
+            요소의 세로 크기는 자동으로 조정되지 않습니다. (나중에 기능 추가될 가능성 있음)
+            </summary>
+        </member>
+        <member name="T:MGAlienLib.GameObject">
+            <summary>
+            게임 오브젝트입니다.
+            독립적인 기능은 거의 없고,
+            Component 를 담는 그릇의 역할을 합니다.
+            new GameObject 로 생성하지 말고,
+            CreateGameObject 함수를 사용하세요.
+            </summary>
+        </member>
+        <member name="M:MGAlienLib.GameObject.AddComponent``1">
+            <summary>
+            컴포넌트를 추가합니다.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:MGAlienLib.GameObject.RemoveComponent(MGAlienLib.ComponentBase)">
+            <summary>
+            컴포넌트를 제거합니다.
+            </summary>
+            <param name="component"></param>
+        </member>
+        <member name="M:MGAlienLib.GameObject.GetComponent``1">
+            <summary>
+            컴포넌트를 하나만 가져옵니다.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:MGAlienLib.GameObject.GetComponents``1">
+            <summary>
+            이 gameObject 의 컴포넌트중 해당 type 에 해당하는 요소를 *모두* 가져옵니다.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:MGAlienLib.GameObject.GetComponentInChildren``1">
+            <summary>
+            자식을 모두 찾아 컴포넌트를 하나만 가져옵니다.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:MGAlienLib.GameObject.GetComponentsInChildren``1">
+            <summary>
+            자식을 모두 찾아 컴포넌트를 *모두* 가져옵니다.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <returns></returns>
+        </member>
+        <member name="T:MGAlienLib.Bitmap">
+            <summary>
+            (WIP) 비트맵을 나타냅니다.
+            현재 1 channel 만 구현되어 있습니다.
+            </summary>
+        </member>
+        <member name="T:MGAlienLib.eHAlign">
+            <summary>
+            Enum for horizontal alignment
+            </summary>
+        </member>
+        <member name="T:MGAlienLib.eVAlign">
+            <summary>
+            Enum for vertical alignment
+            </summary>
+        </member>
+        <member name="T:MGAlienLib.eAssetSource">
+            <summary>
+            Asset의 원본을 나타냅니다.
+            </summary>
+        </member>
+        <member name="F:MGAlienLib.eAssetSource.Dummy">
+            <summary>
+            더미 소스입니다.
+            실제로 asset 에 연결되지 않습니다.
+            </summary>
+        </member>
+        <member name="F:MGAlienLib.eAssetSource.RawAssets">
+            <summary>
+            rawAssetsRootPath/Assets 아래에 있는 raw file 로부터 로드합니다.
+            </summary>
+        </member>
+        <member name="F:MGAlienLib.eAssetSource.PackedAssets">
+            <summary>
+            rawAssetsRootPath/PackedAssets 폴더에 있는 7zip 압축 파일로부터 로드합니다.
+            </summary>
+        </member>
+        <member name="F:MGAlienLib.eAssetSource.MGCB">
+            <summary>
+            MGCB로 빌드된 asset으로부터 로드합니다.
+            effect 등 특정 파일은 반드시 MGCB로 빌드해야 합니다.
+            </summary>
+        </member>
+        <member name="F:MGAlienLib.eAssetSource.HTTP">
+            <summary>
+            HTTP 프로토콜로부터 로드합니다.
+            todo : async 로 바꿔야 함
+            </summary>
+        </member>
+        <member name="F:MGAlienLib.eAssetSource.HTTPS">
+            <summary>
+            HTTPS 프로토콜로부터 로드합니다.
+            todo : async 로 바꿔야 함
+            </summary>
+        </member>
+        <member name="T:MGAlienLib.eAssetType">
+            <summary>
+            Asset의 타입을 나타냅니다.
+            </summary>
+        </member>
+        <member name="T:MGAlienLib.eDynamicAtlasCategory">
+            <summary>
+            DynamicTextureAtlasManager 에서 사용하는 카테고리를 나타냅니다.
+            </summary>
+        </member>
+        <member name="T:MGAlienLib.eMouseButton">
+            <summary>
+            마우스 버튼을 나타냅니다.
+            </summary>
+        </member>
+        <member name="T:MGAlienLib.DynamicRectPacker">
+            <summary>
+            rectangle 을 동적으로 packing 하는 클래스
+            실시간으로 넣고 빼는 것을 지원
+            </summary>
+        </member>
+        <member name="T:MGAlienLib.DynamicRectPacker.SkyLine">
+            <summary>
+            packer 내에서의 하나의 노드
+            이 아래에 rectangle 들이 들어감
+            </summary>
+        </member>
+        <member name="M:MGAlienLib.DynamicRectPacker.SkyLine.TryInsert(MGAlienLib.DynamicRectPacker,System.Int32,System.Int32,System.Int32,Microsoft.Xna.Framework.Rectangle@)">
+            <summary>
+            새로운 rect 를 넣을 수 있는지 시도
+            </summary>
+            <param name="owner"></param>
+            <param name="itemWidth"></param>
+            <param name="itemHeight"></param>
+            <param name="Id"></param>
+            <param name="rect"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MGAlienLib.DynamicRectPacker.SkyLine.TryRemove(System.Int32)">
+            <summary>
+            Id에 해당하는 rect 제거
+            </summary>
+            <param name="Id"></param>
+            <returns></returns>
+        </member>
+        <member name="P:MGAlienLib.DynamicRectPacker.width">
+            <summary>
+            packer의 너비 얻기
+            </summary>
+        </member>
+        <member name="P:MGAlienLib.DynamicRectPacker.height">
+            <summary>
+            packer의 높이 얻기
+            </summary>
+        </member>
+        <member name="P:MGAlienLib.DynamicRectPacker.coverage">
+            <summary>
+            현재 packer의 사용된 넓이의 비율
+            </summary>
+        </member>
+        <member name="M:MGAlienLib.DynamicRectPacker.Contains(System.Int32)">
+            <summary>
+            Id가 포함되어 있는지 확인
+            </summary>
+            <param name="Id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MGAlienLib.DynamicRectPacker.#ctor(System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            생성자
+            </summary>
+            <param name="width">넓이</param>
+            <param name="height">높이</param>
+            <param name="padding">rect 간 띄우기</param>
+            <param name="rejectWidthDiff">추가할 rect 의 width가 skyline의 넓이 보다 이 값이하로 작으면 그 node 에는 추가하지 않는다. 값이 너무 크거나 너무 작으면 효율이 떨어진다. 10이 적당하다. </param>
+        </member>
+        <member name="M:MGAlienLib.DynamicRectPacker.TryInsert(System.Int32,System.Int32,System.Int32,Microsoft.Xna.Framework.Rectangle@)">
+            <summary>
+            rect 추가 시도
+            </summary>
+            <param name="itemWidth"></param>
+            <param name="itemHeight"></param>
+            <param name="Id"></param>
+            <param name="rect"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MGAlienLib.DynamicRectPacker.TryRemove(System.Int32)">
+            <summary>
+            rect 제거 시도
+            </summary>
+            <param name="Id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MGAlienLib.DynamicRectPacker.GetRects">
+            <summary>
+            모든 rect 얻기
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MGAlienLib.DynamicRectPacker.GetRect(System.Int32)">
+            <summary>
+            Id에 해당하는 rect 얻기
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MGAlienLib.DynamicRectPacker.RepackFrom(MGAlienLib.DynamicRectPacker)">
+            <summary>
+            다른 packer의 모든 rect 를 이 packer 에 모두 추가
+            </summary>
+            <param name="oldPacker"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MGAlienLib.DynamicRectPacker.debug_Visualize(System.String)">
+            <summary>
+            디버깅용. packer 내의 모든 rect 를 그려서 png 로 저장
+            </summary>
+            <param name="filename"></param>
+        </member>
+        <member name="T:MGAlienLib.DynamicTexturePacker">
+            <summary>
+            동적으로 Texture 를 Packing 하는 클래스입니다.
+            DynamicRectPacker 를 사용해서 Texture2D 를 Packing 합니다.
+            여러 페이지를 가질 수 있습니다.
+            (WIP) page 의 coverage 가 일정 수준 이하로 떨어지면 repack 을 시도합니다. (현재 버그로 인해 repack 이 제대로 동작하지 않습니다.)
+            texture format 은 SurfaceFormat.Color 와 SurfaceFormat.Alpha8 를 지원합니다.
+            </summary>
+        </member>
+        <member name="M:MGAlienLib.DynamicTexturePacker.#ctor(System.String,Microsoft.Xna.Framework.Graphics.SurfaceFormat,System.Int32,System.Int32)">
+            <summary>
+            생성자
+            </summary>
+            <param name="name"></param>
+            <param name="format"></param>
+            <param name="pageSize"></param>
+            <param name="padding"></param>
+        </member>
+        <member name="M:MGAlienLib.DynamicTexturePacker.Insert(Microsoft.Xna.Framework.Graphics.Texture2D,System.Boolean,Microsoft.Xna.Framework.Rectangle@,System.Boolean@)">
+            <summary>
+            Texture2D 를 Packing 합니다.
+            </summary>
+            <param name="source"></param>
+            <param name="rect"></param>
+            <param name="repacked"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MGAlienLib.DynamicTexturePacker.debug_SavePng(System.String)">
+            <summary>
+            디버깅용. 현재 packing 된 texture 를 저장합니다.
+            </summary>
+            <param name="path"></param>
+        </member>
+        <member name="M:MGAlienLib.DynamicTexturePacker.GetPage(System.Int32)">
+            <summary>
+            atlasId 가 포함된 page index 를 반환합니다.
+            </summary>
+            <param name="atalsId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MGAlienLib.DynamicTexturePacker.GetRect(System.Int32)">
+            <summary>
+            atlasId 에 해당하는 rect 를 반환합니다.
+            </summary>
+            <param name="atalsId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MGAlienLib.DynamicTexturePacker.GetTexture(System.Int32)">
+            <summary>
+            atlasId 에 해당하는 texture 를 반환합니다.
+            </summary>
+            <param name="atalsId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MGAlienLib.DynamicTexturePacker.GetTexureByPageIndex(System.Int32)">
+            <summary>
+            pageIndex 에 해당하는 texture 를 반환합니다.
+            </summary>
+            <param name="index"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MGAlienLib.DynamicTexturePacker.Remove(System.Int32)">
+            <summary>
+            atlasId 에 해당하는 texture 를 제거합니다.
+            </summary>
+            <param name="atlasId"></param>
+            <returns></returns>
+        </member>
+        <member name="T:MGAlienLib.Logger">
+            <summary>
+            로그를 남기는 클래스입니다.
+            </summary>
+        </member>
+        <member name="M:MGAlienLib.Logger.Log(System.String)">
+            <summary>
+            로그를 남깁니다.
+            </summary>
+            <param name="str"></param>
+        </member>
+        <member name="M:MGAlienLib.Logger.Log(System.Object)">
+            <summary>
+            로그를 남깁니다.
+            </summary>
+            <param name="msg"></param>
+        </member>
+        <member name="F:MGAlienLib.Logger.Pipe">
+            <summary>
+            로그를 남길 때 pipe 에 추가된 함수를 실행합니다.
+            </summary>
+        </member>
+        <member name="M:MGAlienLib.Logger.PipeToLogFile(System.String)">
+            <summary>
+            log.txt 파일로 로그를 남기는, 미리 정의된 pipe 함수입니다.
+            Logger.Pipe += Logger.PipeToLogFile; 와 같이 사용하세요.
+            </summary>
+            <param name="str"></param>
+        </member>
+        <member name="T:MGAlienLib.Mathf">
+            <summary>
+            수학 함수를 제공합니다.
+            </summary>
+        </member>
+        <member name="T:MGAlienLib.MGMathUtil">
+            <summary>
+            수학 관련 유틸리티 클래스입니다.
+            </summary>
+        </member>
+        <member name="M:MGAlienLib.MGMathUtil.ToEulerAngles(Microsoft.Xna.Framework.Quaternion)">
+            <summary>
+            Extension method to convert a Quaternion to Euler angles using YXZ order
+            </summary>
+            <param name="q">The quaternion to convert</param>
+            <returns>Vector3 containing Euler angles in YXZ order</returns>
+        </member>
+        <member name="T:MGAlienLib.MicroRoutine">
+            <summary>
+            매 프레임마다 호출되는 델리게이트를 갖는 미니 루틴
+            소유자가 무효화 되면 루틴이 호출되지 않음
+            coroutine 과 비슷하지만, 대기가 불가능하고, 조금 더 가볍다
+            routine 의 반환값이 false 면 루틴이 종료됨
+            </summary>
+        </member>
+        <member name="T:MGAlienLib.DebugDraw">
+            <summary>
+            디버깅용 그리기 함수를 제공합니다.
+            </summary>
+        </member>
+        <member name="T:MGAlienLib.NineSlicePrimitiveShard">
+            <summary>
+            9-슬라이스 프리미티브를 나타내는 클래스입니다.
+            9개 영역으로 나누어진 텍스처를 사용하여 크기 조정이 가능한 UI 요소를 렌더링합니다.
+            PrimitiveBatch를 사용하여 효율적으로 그리기 위해 사용됩니다.
+            Renderable 컴포넌트에서 사용됩니다.
+            </summary>
+        </member>
+        <member name="P:MGAlienLib.NineSlicePrimitiveShard.leftMargin">
+            <summary>
+            9-슬라이스의 왼쪽 마진을 가져오거나 설정합니다.
+            </summary>
+        </member>
+        <member name="P:MGAlienLib.NineSlicePrimitiveShard.rightMargin">
+            <summary>
+            9-슬라이스의 오른쪽 마진을 가져오거나 설정합니다.
+            </summary>
+        </member>
+        <member name="P:MGAlienLib.NineSlicePrimitiveShard.topMargin">
+            <summary>
+            9-슬라이스의 위쪽 마진을 가져오거나 설정합니다.
+            </summary>
+        </member>
+        <member name="P:MGAlienLib.NineSlicePrimitiveShard.bottomMargin">
+            <summary>
+            9-슬라이스의 아래쪽 마진을 가져오거나 설정합니다.
+            </summary>
+        </member>
+        <member name="M:MGAlienLib.NineSlicePrimitiveShard.SetMargins(System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            모든 마진을 한번에 설정합니다.
+            </summary>
+            <param name="left">왼쪽 마진</param>
+            <param name="top">위쪽 마진</param>
+            <param name="right">오른쪽 마진</param>
+            <param name="bottom">아래쪽 마진</param>
+        </member>
+        <member name="T:MGAlienLib.PrimitiveBatch">
+            <summary>
+            기본 프리미티브를 그리는 클래스입니다.
+            PrimitiveShard 를 모아서 한번에 그리는 방식으로 사용합니다.
+            </summary>
+        </member>
+        <member name="M:MGAlienLib.PrimitiveBatch.#ctor(MGAlienLib.Material)">
+            <summary>
+            새 PrimitiveBatch 인스턴스를 생성합니다.
+            </summary>
+            <param name="material"></param>
+        </member>
+        <member name="T:MGAlienLib.RectPrimitiveShard">
+            <summary>
+            사각형 프리미티브를 나타내는 클래스입니다.
+            PrimitiveBatch를 사용하여 효율적으로 그리기 위해 사용됩니다.
+            Renderable 컴포넌트에서 사용됩니다.
+            </summary>
+        </member>
+        <member name="T:MGAlienLib.AssetManager">
+            <summary>
+            Asset 관리자입니다.
+            주로 내부에서 사용합니다.
+            최적화등의 이유로 복잡한 구현이 많기 때문에,
+            AssetManager를 외부에서 직접 사용하는 경우는 드뭅니다.
+            </summary>
+        </member>
+        <member name="M:MGAlienLib.AssetManager.TypeByExtension(System.String)">
+            <summary>
+            파일 확장자로부터 AssetType을 결정합니다.
+            </summary>
+            <param name="ext"></param>
+            <returns></returns>
+        </member>
+        <member name="P:MGAlienLib.AssetManager.rawAssetsRootPath">
+            <summary>
+            대상 폴더를 지정합니다.
+            기본값은 cwd 입니다.
+            </summary>
+        </member>
+        <member name="P:MGAlienLib.AssetManager.defaultSource">
+            <summary>
+            소스를 지정하지 않을 때 사용되는 기본 소스입니다.
+            </summary>
+        </member>
+        <member name="M:MGAlienLib.AssetManager.#ctor(MGAlienLib.GameBase)">
+            <summary>
+            AssetManager를 생성합니다.
+            </summary>
+            <param name="owner"></param>
+        </member>
+        <member name="M:MGAlienLib.AssetManager.RefreshDB">
+            <summary>
+            DB를 갱신합니다.
+            </summary>
+        </member>
+        <member name="M:MGAlienLib.AssetManager.SearchFiles(System.String,MGAlienLib.eAssetType)">
+            <summary>
+            파일을 검색합니다.
+            중간어 검색을 지원합니다.
+            예를 들어 art/UI/frame.png 라는 파일이 있을 때, "UI frame" 만으로도 검색이 가능합니다.
+            </summary>
+            <param name="searchTerms"></param>
+            <param name="assetType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MGAlienLib.AssetManager.SearchNode(MGAlienLib.DirectoryNode,System.String,System.String[],MGAlienLib.eAssetType,System.Collections.Generic.List{System.String})">
+            <summary>
+            재귀적으로 디렉터리 트리를 탐색하면서 검색어(terms)가 순서대로 포함된 파일 경로를 찾아 results 리스트에 추가합니다.
+            중간어 검색을 지원합니다.
+            </summary>
+            <param name="node">현재 탐색 중인 DirectoryNode</param>
+            <param name="currentPath">
+            현재 노드까지의 상대 경로 (루트에서부터 이어진 폴더 이름들, 예: "Assets/Textures")
+            </param>
+            <param name="terms">검색어 배열(순서대로 찾음). 대소문자 구분 없이 검색합니다.</param>
+            <param name="assetType">
+            특정 자산 타입(eAssetType)을 필터링하려면 해당 enum 값을 지정. eAssetType.None이면 타입 무시.
+            </param>
+            <param name="results">검색 결과(경로)를 저장할 리스트</param>
+        </member>
+        <member name="M:MGAlienLib.AssetManager.ViaStream``1(MGAlienLib.eAssetSource,System.String,System.Func{System.IO.Stream,``0})">
+            <summary>
+            주어진 경로에 있는 파일의 타입을 반환합니다.
+            </summary>
+            <param name="relativePath"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MGAlienLib.AssetManager.GetTexture2D(MGAlienLib.eAssetSource,System.String,System.Int32,System.Int32)">
+            <summary>
+            지정된 소스와 주소로부터 Texture2D를 로드합니다.
+            </summary>
+            <param name="source"></param>
+            <param name="address"></param>
+            <param name="importWidth"></param>
+            <param name="importHeight"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MGAlienLib.AssetManager.GetEffect(System.String)">
+            <summary>
+            주소로부터 Effect를 로드합니다.
+            monogame 의 Effect는 shader 를 의미합니다.
+            </summary>
+            <param name="path"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MGAlienLib.DynamicTextureAtlasManager.Insert(MGAlienLib.eDynamicAtlasCategory,Microsoft.Xna.Framework.Graphics.Texture2D,System.Boolean,Microsoft.Xna.Framework.Rectangle@)">
+            <summary>
+            주어진 texture 를 atlas 에 넣고, 해당 texture 의 rect 를 반환한다.
+            </summary>
+            <param name="category"></param>
+            <param name="source"></param>
+            <param name="rect"></param>
+            <returns>atlasID , -1 이면 실패</returns>
+        </member>
+        <member name="M:MGAlienLib.DynamicTextureAtlasManager.Insert(MGAlienLib.eDynamicAtlasCategory,MGAlienLib.eAssetSource,System.String,System.Boolean,Microsoft.Xna.Framework.Rectangle@)">
+            <summary>
+            assetmanager 를 이용하여 주어진 source 와 주소로부터 로드한 후 atlas 에 넣고, 해당 texture 의 rect 를 반환한다.
+            이후 같은 texAddress 로 다시 호출될 경우, texture 를 다시 로드하지 않고, 기존에 pack 한 atlasId 를 반환한다.
+            </summary>
+            <param name="category"></param>
+            <param name="source"></param>
+            <param name="texAddress"></param>
+            <param name="rect"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MGAlienLib.DynamicTextureAtlasManager.GetRect(MGAlienLib.eDynamicAtlasCategory,System.Int32)">
+            <summary>
+            atlasId 에 해당하는 texture 의 rect 를 반환한다.
+            </summary>
+            <param name="category"></param>
+            <param name="atlasId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MGAlienLib.DynamicTextureAtlasManager.GetTexSize(MGAlienLib.eDynamicAtlasCategory,System.Int32)">
+            <summary>
+            atlasId 에 해당하는 texture 의 크기를 반환한다.
+            </summary>
+            <param name="category"></param>
+            <param name="atlasId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MGAlienLib.DynamicTextureAtlasManager.IsDirty(MGAlienLib.eDynamicAtlasCategory,System.Int32)">
+            <summary>
+            category 와 atlasId 에 해당하는 texture 가 remapped 되어서 변경된 상태인지 반환한다.
+            </summary>
+            <param name="category"></param>
+            <param name="atlasId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MGAlienLib.DynamicTextureAtlasManager.Remove(MGAlienLib.eDynamicAtlasCategory,System.Int32)">
+            <summary>
+            category 와 atlasId 에 해당하는 texture 를 atlas 에서 제거한다.
+            </summary>
+            <param name="category"></param>
+            <param name="atlasId"></param>
+        </member>
+        <member name="M:MGAlienLib.DynamicTextureAtlasManager.GetTextureByPage(MGAlienLib.eDynamicAtlasCategory,System.Int32)">
+            <summary>
+            category 와 pageID 에 해당하는 atlas 의 texture 를 반환한다.
+            </summary>
+            <param name="category"></param>
+            <param name="pageId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MGAlienLib.DynamicTextureAtlasManager.GetTextureByAtlasId(MGAlienLib.eDynamicAtlasCategory,System.Int32)">
+            <summary>
+            category 와 atlasId 에 해당하는 atlas 의 texture 를 반환한다.
+            </summary>
+            <param name="category"></param>
+            <param name="atlasId"></param>
+            <returns></returns>
+        </member>
+        <member name="T:MGAlienLib.FontManager">
+            <summary>
+            (WIP) 폰트를 관리하는 매니저입니다.
+            </summary>
+        </member>
+        <member name="T:MGAlienLib.HierarchyManager">
+            <summary>
+            게임 오브젝트의 계층 구조를 관리하는 매니저 클래스입니다.
+            </summary>
+        </member>
+        <member name="M:MGAlienLib.HierarchyManager.GetRootTransform">
+            <summary>
+            루트 트랜스폼을 반환합니다.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MGAlienLib.HierarchyManager.debug_Describe(MGAlienLib.Transform,System.Int32)">
+            <summary>
+            디버깅용
+            모든 게임 오브젝트의 정보를 text 로 반환합니다.
+            </summary>
+            <param name="node"></param>
+            <param name="depth"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MGAlienLib.HierarchyManager.AddToDestroyQueue(MGAlienLib.GameObject)">
+            <summary>
+            게임 오브젝트를 파괴합니다.
+            </summary>
+            <param name="obj"></param>
+        </member>
+        <member name="M:MGAlienLib.HierarchyManager.OnPostUpdate">
+            <summary>
+            hierarchy 에 등록된 모든 GameObject 와 Component 들을 lifecycle 을 돌립니다.
+            </summary>
+        </member>
+        <member name="M:MGAlienLib.HierarchyManager.CreateGameObject(System.String,MGAlienLib.Transform,System.Boolean)">
+            <summary>
+            새로운 게임 오브젝트를 생성합니다.
+            GameObject 는 반드시 이 함수를 통해 생성해야 합니다.
+            </summary>
+            <param name="name"></param>
+            <param name="parent"></param>
+            <param name="initialActive"></param>
+            <returns></returns>
+        </member>
+        <member name="T:MGAlienLib.InputManager">
+            <summary>
+            이 클래스는 입력을 관리합니다.
+            </summary>
+        </member>
+        <member name="M:MGAlienLib.InputManager.WasPressedThisFrame(Microsoft.Xna.Framework.Input.Keys)">
+            <summary>
+            키가 이번 프레임에 눌렸는지 확인합니다.
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MGAlienLib.InputManager.WasReleasedThisFrame(Microsoft.Xna.Framework.Input.Keys)">
+            <summary>
+            키가 이번 프레임에 떼어졌는지 확인합니다.
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MGAlienLib.InputManager.IsPressed(Microsoft.Xna.Framework.Input.Keys)">
+            <summary>
+            키가 눌려있는지 확인합니다.
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MGAlienLib.InputManager.WasPressedThisFrame(MGAlienLib.eMouseButton)">
+            <summary>
+            마우스 버튼이 이번 프레임에 눌렸는지 확인합니다.
+            </summary>
+            <param name="button"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MGAlienLib.InputManager.WasReleasedThisFrame(MGAlienLib.eMouseButton)">
+            <summary>
+            마우스 버튼이 이번 프레임에 떼어졌는지 확인합니다.
+            </summary>
+            <param name="button"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MGAlienLib.InputManager.IsPressed(MGAlienLib.eMouseButton)">
+            <summary>
+            마우스 버튼이 눌려있는지 확인합니다.
+            </summary>
+            <param name="button"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MGAlienLib.InputManager.GetMousePos">
+            <summary>
+            screen space 에서 마우스 위치를 반환합니다.
+            screen space 는 왼쪽 상단이 (0,0) 이고, 오른쪽이 +X 아래쪽이 +Y 입니다.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MGAlienLib.InputManager.GetMousePosDelta">
+            <summary>
+            screen space 에서 마우스 위치 변화량을 반환합니다. 오른쪽이 +X 아래쪽이 +Y 입니다.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MGAlienLib.InputManager.GetMouseWheelDelta">
+            <summary>
+            /screen space 에서 마우스 휠 변화량을 반환합니다.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:MGAlienLib.InternalRenderManager">
+            <summary>
+            툴과 디버깅을 위한 렌더링을 담당하는 클래스
+            </summary>
+        </member>
+        <member name="T:MGAlienLib.LayerMask">
+            <summary>
+            레이어 관리 클래스
+            </summary>
+        </member>
+        <member name="M:MGAlienLib.LayerMask.GetMask(System.String[])">
+            <summary>
+            레이어 이름을 비트마스크로 변환합니다.
+            </summary>
+            <param name="layerNames"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MGAlienLib.LayerMask.NameToLayer(System.String)">
+            <summary>
+            레이어 이름을 레이어 인덱스로 변환합니다.
+            </summary>
+            <param name="layerName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MGAlienLib.LayerMask.LayerToName(System.Int32)">
+            <summary>
+            레이어 인덱스를 레이어 이름으로 변환합니다.
+            </summary>
+            <param name="layerIndex"></param>
+            <returns></returns>
+        </member>
+        <member name="T:MGAlienLib.LayerManager">
+            <summary>
+            레이어 관리 클래스
+            </summary>
+        </member>
+        <member name="M:MGAlienLib.LayerManager.GetLayerInfo(System.Int32)">
+            <summary>
+            레이어 정보를 가져옵니다.
+            </summary>
+            <param name="index"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MGAlienLib.LayerManager.GetLayerInfo(System.String)">
+            <summary>
+            레이어 정보를 가져옵니다.
+            </summary>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MGAlienLib.LayerManager.SetLayerInfo(System.Int32,System.String)">
+            <summary>
+            레이어 정보를 설정합니다.
+            </summary>
+            <param name="index"></param>
+            <param name="name"></param>
+        </member>
+        <member name="T:MGAlienLib.ManagerBase">
+            <summary>
+            manager base class
+            </summary>
+        </member>
+        <member name="T:MGAlienLib.PerformanceManager">
+            <summary>
+            (WIP) 성능 관리자입니다.
+            </summary>
+        </member>
+        <member name="T:MGAlienLib.RenderChunk">
+            <summary>
+            primitive 를 효율적으로 그리기 위해 사용하는 클래스
+            </summary>
+        </member>
+        <member name="T:MGAlienLib.RenderState">
+            <summary>
+            렌더링 상태를 나타내는 클래스
+            </summary>
+        </member>
+        <member name="T:MGAlienLib.RenderQueue">
+            <summary>
+            렌더 큐를 관리하는 클래스
+            </summary>
+        </member>
+        <member name="T:MGAlienLib.Shader">
+            <summary>
+            Shader class
+            </summary>
+        </member>
+        <member name="P:MGAlienLib.Shader.effect">
+            <summary>
+            Effect instance
+            </summary>
+        </member>
+        <member name="P:MGAlienLib.Shader.name">
+            <summary>
+            Name of the shader
+            </summary>
+        </member>
+        <member name="F:MGAlienLib.Shader.ParameterNames">
+            <summary>
+            List of parameter names
+            </summary>
+        </member>
+        <member name="M:MGAlienLib.Shader.#ctor(System.String,Microsoft.Xna.Framework.Graphics.Effect)">
+            <summary>
+            Create a new instance of Shader
+            </summary>
+            <param name="effect"></param>
+        </member>
+        <member name="M:MGAlienLib.Shader.SetFloat(System.String,System.Single)">
+            <summary>
+            Set float value to the shader
+            </summary>
+            <param name="name"></param>
+            <param name="value"></param>
+        </member>
+        <member name="M:MGAlienLib.Shader.SetTexture(System.String,Microsoft.Xna.Framework.Graphics.Texture2D)">
+            <summary>
+            Set texture value to the shader
+            </summary>
+            <param name="name"></param>
+            <param name="value"></param>
+        </member>
+        <member name="T:MGAlienLib.ShaderManager">
+            <summary>
+            Shader manager class
+            shader 는 생성후, 삭제하지 않는다.
+            </summary>
+        </member>
+        <member name="M:MGAlienLib.ShaderManager.LoadShader(System.String,System.String)">
+            <summary>
+            Load shader from the path
+            </summary>
+            <param name="name"></param>
+            <param name="path"></param>
+        </member>
+        <member name="M:MGAlienLib.ShaderManager.GetShaderByName(System.String)">
+            <summary>
+            Get shader by name
+            </summary>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MGAlienLib.ShaderManager.GetEffectByName(System.String)">
+            <summary>
+            Get effect by name
+            </summary>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="T:MGAlienLib.Material">
+            <summary>
+            (WIP) Material class
+            </summary>
+        </member>
+        <member name="T:TrueTypeSharp.TrueTypeSharpUtility">
+            <summary>
+            Utility class for rendering TrueTypeFont
+            </summary>
+        </member>
+        <member name="M:TrueTypeSharp.TrueTypeSharpUtility.#ctor(System.String)">
+            <summary>
+            Create a new instance of TrueTypeSharpUtility
+            </summary>
+            <param name="fontname"></param>
+        </member>
+        <member name="M:TrueTypeSharp.TrueTypeSharpUtility.ClearCache">
+            <summary>
+            cache 를 모두 지운다
+            </summary>
+        </member>
+        <member name="M:TrueTypeSharp.TrueTypeSharpUtility.RenderString(System.String,System.Int32,System.Int32@)">
+            <summary>
+            string 을 렌더링하여 텍스처로 반환한다
+            </summary>
+            <param name="str"></param>
+            <param name="fontSize"></param>
+        </member>
+        <member name="M:TrueTypeSharp.TrueTypeSharpUtility.GetSizeFromString(System.String,System.Int32,System.Int32@)">
+            <summary>
+            string 을 render 했을 떄의 크기를 반환한다
+            실제로 render 하기 전에 크기를 알고 싶을 때 사용
+            하지만, ttf library 의 제약으로, 실제로 렌더하고 이를 cache 에 넣기 때문에,
+            그다지 효율적이지는 않다
+            </summary>
+            <param name="str"></param>
+            <param name="fontSize"></param>
+            <param name="yOffsetMin"></param>
+            <returns></returns>
+        </member>
+        <member name="T:RectpackSharp.PackingHints">
+            <summary>
+            Specifies hints that help optimize the rectangle packing algorithm. 
+            </summary>
+        </member>
+        <member name="F:RectpackSharp.PackingHints.TryByArea">
+            <summary>Tells the rectangle packer to try inserting the rectangles ordered by area.</summary>
+        </member>
+        <member name="F:RectpackSharp.PackingHints.TryByPerimeter">
+            <summary>Tells the rectangle packer to try inserting the rectangles ordered by perimeter.</summary>
+        </member>
+        <member name="F:RectpackSharp.PackingHints.TryByBiggerSide">
+            <summary>Tells the rectangle packer to try inserting the rectangles ordered by bigger side.</summary>
+        </member>
+        <member name="F:RectpackSharp.PackingHints.TryByWidth">
+            <summary>Tells the rectangle packer to try inserting the rectangles ordered by width.</summary>
+        </member>
+        <member name="F:RectpackSharp.PackingHints.TryByHeight">
+            <summary>Tells the rectangle packer to try inserting the rectangles ordered by height.</summary>
+        </member>
+        <member name="F:RectpackSharp.PackingHints.TryByPathologicalMultiplier">
+            <summary>Tells the rectangle packer to try inserting the rectangles ordered by a pathological multiplier.</summary>
+        </member>
+        <member name="F:RectpackSharp.PackingHints.FindBest">
+            <summary>Specifies to try all the possible hints, as to find the best packing configuration.</summary>
+        </member>
+        <member name="F:RectpackSharp.PackingHints.UnusualSizes">
+            <summary>Specifies hints to optimize for rectangles who have one side much bigger than the other.</summary>
+        </member>
+        <member name="F:RectpackSharp.PackingHints.MostlySquared">
+            <summary>Specifies hints to optimize for rectangles whose sides are relatively similar.</summary>
+        </member>
+        <member name="T:RectpackSharp.PackingHintExtensions">
+            <summary>
+            Provides internal values and functions used by the rectangle packing algorithm.
+            </summary>
+        </member>
+        <member name="T:RectpackSharp.PackingHintExtensions.GetSortKeyDelegate">
+            <summary>
+            Represents a method for calculating a sort key from a <see cref="T:RectpackSharp.PackingRectangle"/>.
+            </summary>
+            <param name="rectangle">The <see cref="T:RectpackSharp.PackingRectangle"/> whose sort key to calculate.</param>
+            <returns>The value that should be assigned to <see cref="F:RectpackSharp.PackingRectangle.SortKey"/>.</returns>
+        </member>
+        <member name="F:RectpackSharp.PackingHintExtensions.MaxHintCount">
+            <summary>The maximum amount of hints that can be specified by a <see cref="!:PackingHint"/>.</summary>
+        </member>
+        <member name="M:RectpackSharp.PackingHintExtensions.GetFlagsFrom(RectpackSharp.PackingHints,System.Span{RectpackSharp.PackingHints}@)">
+            <summary>
+            Separates a <see cref="!:PackingHint"/> into the multiple options it contains,
+            saving each of those separately onto a <see cref="T:System.Span`1"/>.
+            </summary>
+            <param name="packingHint">The <see cref="!:PackingHint"/> to separate.</param>
+            <param name="span">The span in which to write the resulting hints. This span's excess will be sliced.</param>
+        </member>
+        <member name="M:RectpackSharp.PackingHintExtensions.SortByPackingHint(System.Span{RectpackSharp.PackingRectangle},RectpackSharp.PackingHints)">
+            <summary>
+            Sorts the given <see cref="T:RectpackSharp.PackingRectangle"/> array using the specified <see cref="!:PackingHint"/>.
+            </summary>
+            <param name="rectangles">The rectangles to sort.</param>
+            <param name="packingHint">The hint to sort by. Must be a single bit value.</param>
+            <remarks>
+            The <see cref="F:RectpackSharp.PackingRectangle.SortKey"/> values will be modified.
+            </remarks>
+        </member>
+        <member name="T:RectpackSharp.PackingRectangle">
+            <summary>
+            A rectangle that can be used for a rectangle packing operation.
+            </summary>
+        </member>
+        <member name="F:RectpackSharp.PackingRectangle.Id">
+            <summary>
+            A value that can be used to identify this <see cref="T:RectpackSharp.PackingRectangle"/>. This value is
+            never touched by the rectangle packing algorithm.
+            </summary>
+        </member>
+        <member name="F:RectpackSharp.PackingRectangle.SortKey">
+            <summary>A value used internally by the packing algorithm for sorting rectangles.</summary>
+        </member>
+        <member name="F:RectpackSharp.PackingRectangle.X">
+            <summary>The X coordinate of the left edge of this <see cref="T:RectpackSharp.PackingRectangle"/>.</summary>
+        </member>
+        <member name="F:RectpackSharp.PackingRectangle.Y">
+            <summary>The Y coordinate of the top edge of this <see cref="T:RectpackSharp.PackingRectangle"/>.</summary>
+        </member>
+        <member name="F:RectpackSharp.PackingRectangle.Width">
+            <summary>The width of this <see cref="T:RectpackSharp.PackingRectangle"/>.</summary>
+        </member>
+        <member name="F:RectpackSharp.PackingRectangle.Height">
+            <summary>The height of this <see cref="T:RectpackSharp.PackingRectangle"/>.</summary>
+        </member>
+        <member name="P:RectpackSharp.PackingRectangle.Right">
+            <summary>
+            Gets or sets the X coordinate of the right edge of this <see cref="T:RectpackSharp.PackingRectangle"/>.
+            </summary>
+            <remarks>Setting this will only modify the <see cref="F:RectpackSharp.PackingRectangle.Width"/>.</remarks>
+        </member>
+        <member name="P:RectpackSharp.PackingRectangle.Bottom">
+            <summary>
+            Gets or sets the Y coordinate of the bottom edge of this <see cref="T:RectpackSharp.PackingRectangle"/>.
+            </summary>
+            <remarks>Setting this will only modify the <see cref="F:RectpackSharp.PackingRectangle.Height"/>.</remarks>
+        </member>
+        <member name="P:RectpackSharp.PackingRectangle.Area">
+            <summary>Calculates this <see cref="T:RectpackSharp.PackingRectangle"/>'s area.</summary>
+        </member>
+        <member name="P:RectpackSharp.PackingRectangle.Perimeter">
+            <summary>Calculates this <see cref="T:RectpackSharp.PackingRectangle"/>'s perimeter.</summary>
+        </member>
+        <member name="P:RectpackSharp.PackingRectangle.BiggerSide">
+            <summary>Gets this <see cref="T:RectpackSharp.PackingRectangle"/>'s bigger side.</summary>
+        </member>
+        <member name="P:RectpackSharp.PackingRectangle.PathologicalMultiplier">
+            <summary>Calculates this <see cref="T:RectpackSharp.PackingRectangle"/>'s pathological multiplier.</summary>
+            <remarks>This is calculated as: <code>max(width, height) / min(width, height) * width * height</code></remarks>
+        </member>
+        <member name="M:RectpackSharp.PackingRectangle.#ctor(System.UInt32,System.UInt32,System.UInt32,System.UInt32,System.Int32)">
+            <summary>
+            Creates a <see cref="T:RectpackSharp.PackingRectangle"/> with the specified values.
+            </summary>
+        </member>
+        <member name="M:RectpackSharp.PackingRectangle.#ctor(System.Drawing.Rectangle,System.Int32)">
+            <summary>
+            Creates a <see cref="T:RectpackSharp.PackingRectangle"/> from a <see cref="T:System.Drawing.Rectangle"/>.
+            </summary>
+        </member>
+        <member name="M:RectpackSharp.PackingRectangle.Contains(RectpackSharp.PackingRectangle@)">
+            <summary>
+            Returns whether the given <see cref="T:RectpackSharp.PackingRectangle"/> is contained
+            entirely within this <see cref="T:RectpackSharp.PackingRectangle"/>.
+            </summary>
+        </member>
+        <member name="M:RectpackSharp.PackingRectangle.Intersects(RectpackSharp.PackingRectangle@)">
+            <summary>
+            Returns whether the given <see cref="T:RectpackSharp.PackingRectangle"/> intersects with
+            this <see cref="T:RectpackSharp.PackingRectangle"/>.
+            </summary>
+        </member>
+        <member name="M:RectpackSharp.PackingRectangle.Intersection(RectpackSharp.PackingRectangle@)">
+            <summary>
+            Calculates the intersection of this <see cref="T:RectpackSharp.PackingRectangle"/> with another.
+            </summary>
+        </member>
+        <member name="M:RectpackSharp.PackingRectangle.CompareTo(RectpackSharp.PackingRectangle)">
+            <summary>
+            Compares this <see cref="F:RectpackSharp.PackingRectangle.SortKey"/> with another <see cref="T:RectpackSharp.PackingRectangle"/>'s.
+            </summary>
+        </member>
+        <member name="T:RectpackSharp.RectanglePacker">
+            <summary>
+            A static class providing functionality for packing rectangles into a bin as small as possible.
+            </summary>
+        </member>
+        <member name="F:RectpackSharp.RectanglePacker.oldListReference">
+            <summary>A weak reference to the last list used, so it can be reused in subsequent packs.</summary>
+        </member>
+        <member name="M:RectpackSharp.RectanglePacker.Pack(System.Span{RectpackSharp.PackingRectangle},RectpackSharp.PackingRectangle@,RectpackSharp.PackingHints,System.Double,System.UInt32,System.Nullable{System.UInt32},System.Nullable{System.UInt32})">
+            <summary>
+            Finds a way to pack all the given rectangles into a single bin. Performance can be traded for
+            space efficiency by using the optional parameters.
+            </summary>
+            <param name="rectangles">The rectangles to pack. The result is saved onto this array.</param>
+            <param name="bounds">The bounds of the resulting bin. This will always be at X=Y=0.</param>
+            <param name="packingHint">Specifies hints for optimizing performance.</param>
+            <param name="acceptableDensity">Searching stops once a bin is found with this density (usedArea/boundsArea) or better.</param>
+            <param name="stepSize">The amount by which to increment/decrement size when trying to pack another bin.</param>
+            <param name="maxBoundsWidth">The maximum allowed width for the resulting bin, or null for no limit.</param>
+            <param name="maxBoundsHeight">The maximum allowed height for the resulting bin, or null for no limit.</param>
+            <remarks>
+            The <see cref="F:RectpackSharp.PackingRectangle.Id"/> values are never touched. Use this to identify your rectangles.
+            </remarks>
+        </member>
+        <member name="M:RectpackSharp.RectanglePacker.TryFindBestBin(System.Collections.Generic.List{RectpackSharp.PackingRectangle},System.Span{RectpackSharp.PackingRectangle}@,System.Span{RectpackSharp.PackingRectangle}@,System.UInt32,System.UInt32,System.UInt32,System.UInt32,RectpackSharp.PackingRectangle@)">
+            <summary>
+            Tries to find a solution with the smallest bin size possible, packing
+            the rectangles in the order in which the were provided.
+            </summary>
+            <param name="emptySpaces">The list of empty spaces for reusing.</param>
+            <param name="rectangles">The rectangles to pack. Might get swapped with "tmpArray".</param>
+            <param name="tmpArray">A temporary array the function needs. Might get swapped with "rectangles".</param>
+            <param name="binWidth">The maximum bin width to try.</param>
+            <param name="binHeight">The maximum bin height to try.</param>
+            <param name="stepSize">The amount by which to increment/decrement size when trying to pack another bin.</param>
+            <param name="acceptableArea">Stops searching once a bin with this area or less is found.</param>
+            <param name="bounds">The bounds of the resulting bin (0, 0, width, height).</param>
+            <returns>Whether a solution was found.</returns>
+        </member>
+        <member name="M:RectpackSharp.RectanglePacker.TryPackAsOrdered(System.Collections.Generic.List{RectpackSharp.PackingRectangle},System.Span{RectpackSharp.PackingRectangle},System.Span{RectpackSharp.PackingRectangle},System.UInt32,System.UInt32,System.UInt32@,System.UInt32@)">
+            <summary>
+            Tries to pack the rectangles in the given order into a bin of the specified size.
+            </summary>
+            <param name="emptySpaces">The list of empty spaces for reusing.</param>
+            <param name="unpacked">The unpacked rectangles.</param>
+            <param name="packed">Where the resulting rectangles will be written.</param>
+            <param name="binWidth">The width of the bin.</param>
+            <param name="binHeight">The height of the bin.</param>
+            <param name="boundsWidth">The width of the resulting bin.</param>
+            <param name="boundsHeight">The height of the resulting bin.</param>
+            <returns>Whether the operation succeeded.</returns>
+            <remarks>The unpacked and packed spans can be the same.</remarks>
+        </member>
+        <member name="M:RectpackSharp.RectanglePacker.TryFindBestSpace(RectpackSharp.PackingRectangle@,System.Collections.Generic.List{RectpackSharp.PackingRectangle},System.Int32@)">
+            <summary>
+            Tries to find the best empty space that can fit the given rectangle.
+            </summary>
+            <param name="rectangle">The rectangle to find a space for.</param>
+            <param name="emptySpaces">The list with the empty spaces.</param>
+            <param name="index">The index of the space found.</param>
+            <returns>Whether a suitable space was found.</returns>
+        </member>
+        <member name="M:RectpackSharp.RectanglePacker.GetList(System.Int32)">
+            <summary>
+            Gets a list of rectangles that can be used for empty spaces.
+            </summary>
+            <param name="preferredCapacity">If a list has to be created, this is used as initial capacity.</param>
+        </member>
+        <member name="M:RectpackSharp.RectanglePacker.ReturnList(System.Collections.Generic.List{RectpackSharp.PackingRectangle})">
+            <summary>
+            Returns a list so it can be used in future pack operations. The list should
+            no longer be used after returned.
+            </summary>
+        </member>
+        <member name="M:RectpackSharp.RectanglePacker.AddSorted(System.Collections.Generic.List{RectpackSharp.PackingRectangle},RectpackSharp.PackingRectangle)">
+            <summary>
+            Adds a rectangle to the list in sorted order.
+            </summary>
+        </member>
+        <member name="M:RectpackSharp.RectanglePacker.EnsureSorted(System.Collections.Generic.List{RectpackSharp.PackingRectangle},System.Int32)">
+            <summary>
+            Updates an item's SortKey and ensures it is in the correct sorted position.
+            If it's not, it is moved to the correct position.
+            </summary>
+            <remarks>If an item needs to be moved, it will only be moved forward. Never backwards.</remarks>
+        </member>
+        <member name="M:RectpackSharp.RectanglePacker.CalculateTotalArea(System.ReadOnlySpan{RectpackSharp.PackingRectangle})">
+            <summary>
+            Calculates the sum of the areas of all the given <see cref="T:RectpackSharp.PackingRectangle"/>-s.
+            </summary>
+        </member>
+        <member name="M:RectpackSharp.RectanglePacker.FindBounds(System.ReadOnlySpan{RectpackSharp.PackingRectangle})">
+            <summary>
+            Calculates the smallest possible rectangle that contains all the given rectangles.
+            </summary>
+        </member>
+        <member name="M:RectpackSharp.RectanglePacker.AnyIntersects(System.ReadOnlySpan{RectpackSharp.PackingRectangle})">
+            <summary>
+            Returns true if any two different rectangles in the given span intersect.
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,137 @@
+["MGAlienLib.GameObject:ea33c341-ae37-429b-aa3e-981f2e6cd7ae"]
+_layer = 1
+_active = true
+_name = "MainMenuPanel"
+["MGAlienLib.Transform:a554b8e1-c925-4b5a-8301-7e0ca8bb39a0"]
+_localPosition = [0.0, 0.0, 0.0]
+_localRotation = [0.0, 0.0, 0.0, 1.0]
+_localScale = [1.0, 1.0, 1.0]
+_parent = "b8fca5d4-a6e0-4c76-bb53-b14fc1f815a3"
+_gameObjectId = "ea33c341-ae37-429b-aa3e-981f2e6cd7ae"
+_enabled = true
+["MGAlienLib.UITransform:b4d281e9-c4e8-4220-a49c-3aa8d2c393e5"]
+_anchoredRect = [0.0, 0.0, 1280.0, 30.0]
+_pivot = [0.0, 0.0]
+_anchor = [0.0, 0.0]
+_offset = [0.0, 0.0]
+_elevation = 1000.0
+_expandWidthToParent = true
+_expandWidthToParentMargin = 0.0
+_expandHeightToParent = false
+_gameObjectId = "ea33c341-ae37-429b-aa3e-981f2e6cd7ae"
+_enabled = true
+["MGAlienLib.AutoAtlasSpriteRenderer:a8a1b2bd-2615-472b-b241-5815bacaa53a"]
+_assetAddress = "art/UI/white.png"
+_flipX = false
+_importWidth = 0
+_importHeight = 0
+_dialate = true
+_useSlice = false
+_useAsUI = true
+_enableUIRaycast = true
+_size = [1.0, 1.0]
+_pivot = [0.5, 0.5]
+_color = [36, 31, 49, 255]
+_gameObjectId = "ea33c341-ae37-429b-aa3e-981f2e6cd7ae"
+_enabled = true
+["MGAlienLib.UIHStacker:aa4f15a3-c511-441e-aedf-20e5b938d009"]
+_topMargin = 5.0
+_bottomMargin = 5.0
+_leftMargin = 5.0
+_rightMargin = 5.0
+_spacing = 5.0
+_autoSize = false
+_expandChildHeight = false
+_gameObjectId = "ea33c341-ae37-429b-aa3e-981f2e6cd7ae"
+_enabled = true
+["MGAlienLib.GameObject:6d7a9f65-67a8-423a-b22e-08f94d0a4f31"]
+_layer = 1
+_active = true
+_name = "FileMenu"
+["MGAlienLib.Transform:7f878527-2516-41a4-a4c1-e6cb88768be1"]
+_localPosition = [0.0, 0.0, 0.0]
+_localRotation = [0.0, 0.0, 0.0, 1.0]
+_localScale = [1.0, 1.0, 1.0]
+_parent = "a554b8e1-c925-4b5a-8301-7e0ca8bb39a0"
+_gameObjectId = "6d7a9f65-67a8-423a-b22e-08f94d0a4f31"
+_enabled = true
+["MGAlienLib.AutoAtlasSpriteRenderer:b0106cb5-309e-4d8e-851a-4409749f2b7a"]
+_flipX = false
+_importWidth = 0
+_importHeight = 0
+_dialate = false
+_useSlice = false
+_useAsUI = true
+_enableUIRaycast = false
+_size = [1.0, 1.0]
+_pivot = [0.5, 0.5]
+_color = [255, 255, 255, 255]
+_gameObjectId = "6d7a9f65-67a8-423a-b22e-08f94d0a4f31"
+_enabled = true
+["MGAlienLib.UIButton:557a1a6b-a5b1-4028-a3c6-90af96e338b1"]
+_useDimmingAnimation = true
+_assetAddress = "art/UI/white.png"
+_flipX = false
+_importWidth = 0
+_importHeight = 0
+_dialate = false
+_useSlice = false
+_useAsUI = true
+_enableUIRaycast = true
+_size = [1.0, 1.0]
+_pivot = [0.5, 0.5]
+_color = [154, 153, 150, 255]
+_gameObjectId = "6d7a9f65-67a8-423a-b22e-08f94d0a4f31"
+_enabled = true
+["MGAlienLib.UITransform:209f99de-547f-4229-b4f0-bb0b11852ec0"]
+_anchoredRect = [5.0, 5.0, 100.0, 30.0]
+_pivot = [0.0, 1.0]
+_anchor = [0.0, 1.0]
+_offset = [0.0, 0.0]
+_elevation = 0.100000001
+_expandWidthToParent = false
+_expandWidthToParentMargin = 0.0
+_expandHeightToParent = false
+_gameObjectId = "6d7a9f65-67a8-423a-b22e-08f94d0a4f31"
+_enabled = true
+["MGAlienLib.GameObject:7beb0228-908f-4a67-b084-e3dc3b1e5f27"]
+_layer = 1
+_active = true
+_name = "label"
+["MGAlienLib.Transform:04732c0f-c82e-4bdf-bab0-1ce79f27bf84"]
+_localPosition = [0.0, 0.0, 0.0]
+_localRotation = [0.0, 0.0, 0.0, 1.0]
+_localScale = [1.0, 1.0, 1.0]
+_parent = "7f878527-2516-41a4-a4c1-e6cb88768be1"
+_gameObjectId = "7beb0228-908f-4a67-b084-e3dc3b1e5f27"
+_enabled = true
+["MGAlienLib.TextRenderer:23349a6b-f617-4707-a1da-3e3107aa9c6d"]
+HAlign = "Center"
+VAlign = "Middle"
+_fontSize = 16
+_text = "hello"
+_sharpness = 0.5
+_shadow = false
+_shadowColor = [0, 0, 0, 255]
+_shadowOffset = [1.0, -1.0]
+_outline = true
+_outlineColor = [0, 0, 0, 255]
+_outlineOffset = 1.0
+_useAsUI = true
+_enableUIRaycast = false
+_size = [53.0, 17.0]
+_pivot = [0.5, 0.5]
+_color = [255, 255, 255, 255]
+_gameObjectId = "7beb0228-908f-4a67-b084-e3dc3b1e5f27"
+_enabled = true
+["MGAlienLib.UITransform:9a877807-65eb-41a4-a631-f3ce6710190b"]
+_anchoredRect = [0.0, 0.0, 100.0, 30.0]
+_pivot = [0.0, 0.0]
+_anchor = [0.0, 0.0]
+_offset = [0.0, 0.0]
+_elevation = 0.0
+_expandWidthToParent = true
+_expandWidthToParentMargin = 0.0
+_expandHeightToParent = true
+_gameObjectId = "7beb0228-908f-4a67-b084-e3dc3b1e5f27"
+_enabled = true
