@@ -20,13 +20,15 @@ namespace Project2
 
         private EditorFunctionality editorFunction;
 
+        private List<Vector3> test_oldMousePos = new List<Vector3>();
+
         public override void Awake()
         {
             // setup world camera
             {
                 var camObj = hierarchyManager.CreateGameObject("cam", transform);
                 cam = camObj.AddComponent<Camera>();
-                cam.useAsUI = true;
+                cam.useAsUI = false;
                 cam.uiRoot = this.transform;
                 //cam.viewport = new Rectangle(0, 0, Screen.width, Screen.height);
                 cam.nearClipPlane = 100;
@@ -40,14 +42,14 @@ namespace Project2
                 cam.transform.position = new Vector3(0, 0, 1000);
 
                 cam.orthographic = true;
-                cam.orthographicSize = 500;//  Screen.height / 2;
+                cam.orthographicSize = 4;//  Screen.height / 2;
                 cam.fieldOfView = 45;
                 cam.aspectRatio = (float)Screen.width / (float)Screen.height;
                 cam.renderPriority = 1;
             }
 
             // mouse cursor
-            bool cursorTest = false;
+            bool cursorTest = true;
             if (cursorTest)
             {
                 var cursorObj = CreateGameObject("cursor", transform);
@@ -55,20 +57,21 @@ namespace Project2
                 cursor = cursorObj.AddComponent<SpriteRenderer>();
                 var filename = assetManager.SearchRawFiles("ui cursor")[0];
                 cursor.Load(filename);
-                cursor.transform.position = new Vector3(500, 500, 1000-1);
+                cursor.transform.position = new Vector3(500, 500, 2000);
                 cursor.transform.localScale = Vector3.One * 50f;
                 cursor.pivot = new Vector2(0.35f, 0.65f);
                 game.IsMouseVisible = false;
-                //var cursorSpr = cursorObj.AddComponent<SpriteRenderer>();
-                //cursorSpr.sprite = new Sprite("art/UI/cursor.png");
-                //cursorSpr.transform.position = new Vector3(0, 0, 0);
-                //cursorSpr.transform.localScale = Vector3.One * 1f;
             }
 
             balls = new List<GravityBall>();
 
             editorFunction = AddComponent<EditorFunctionality>();
             editorFunction.Hide();
+
+            uiman.console.RegisterCommand("stat", (args) =>
+            {
+                uiman.console.Log($"FPS : {GameBase.Instance.performanceManager.fps} Drawcalls : {GameBase.Instance.performanceManager.drawcallCount}");
+            });
 
             Test();
         }
@@ -90,15 +93,12 @@ namespace Project2
             {
                 var mousePos = inputManager.GetMousePos();
                 cursor.transform.position = new Vector3(mousePos.X, Screen.height - mousePos.Y, cursor.transform.position.Z);
-            }
 
-            if (inputManager.WasPressedThisFrame(Keys.OemTilde))
-            {
-                uiman.ShowConsole(!uiman.IsConsoleVisible());
-                uiman.console.RegisterCommand("stat", (args) =>
-                {
-                    uiman.console.Log($"FPS : {GameBase.Instance.performanceManager.fps} Drawcalls : {GameBase.Instance.performanceManager.drawcallCount}");
-                });
+                var worldPos = cam.Unproject(mousePos, 0);
+                test_oldMousePos.Add(worldPos);
+
+                if (test_oldMousePos.Count>=2) DebugDraw.DrawLineStrip(test_oldMousePos, Color.Red);
+                if (test_oldMousePos.Count > 20) test_oldMousePos.RemoveAt(0);
             }
 
             if (inputManager.WasPressedThisFrame(Keys.Space))
@@ -122,6 +122,8 @@ namespace Project2
             {
                 Logger.Log(Serializer.SerializePrefab(gameObject));
             }
+
+            DebugDraw.DrawMesh(mesh);
         }
 
         private void RefreshScreenSize()
@@ -130,14 +132,18 @@ namespace Project2
             cam.aspectRatio = (float)Screen.width / (float)Screen.height;
         }
 
+        DebugDraw.DebugMesh mesh;
+
         private void Test()
         {
-            var image = CreateGameObject("image", transform);
-            image.layer = LayerMask.NameToLayer("UI");
-            image.transform.position = new Vector3(100, 100, 0);
-            image.transform.localScale = Vector3.One * 100f;
-            var imgRenderer = image.AddComponent<SpriteRenderer>();
-            imgRenderer.Load("raw://art/etc/hello.png");
+            //var image = CreateGameObject("image", transform);
+            //image.layer = LayerMask.NameToLayer("Default");
+            //image.transform.position = new Vector3(0, 0, 0);
+            //image.transform.localScale = Vector3.One * 1f;
+            //var imgRenderer = image.AddComponent<SpriteRenderer>();
+            //imgRenderer.Load("raw://art/etc/hello.png");
+
+            mesh = MGAGLTFUtil.Load("test/box.glb");
         }
     }
 }

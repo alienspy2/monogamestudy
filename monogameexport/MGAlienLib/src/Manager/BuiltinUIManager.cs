@@ -76,8 +76,6 @@ namespace MGAlienLib
 
 
             ShowConsole(false);
-            //ShowHierarchyView(false);
-            //ShowInspectorPanel(false);
         }
 
         public override void OnPreUpdate()

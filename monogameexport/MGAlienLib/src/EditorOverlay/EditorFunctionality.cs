@@ -73,7 +73,10 @@ namespace MGAlienLib
                 else
                 {
                     selectionManager.ClearSelection();
-                    selectionManager.AddToSelection(t.gameObject);
+                    if (t != null)
+                    {
+                        selectionManager.AddToSelection(t.gameObject);
+                    }
                 }
             };
 
