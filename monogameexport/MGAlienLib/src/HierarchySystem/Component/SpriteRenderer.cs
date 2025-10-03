@@ -191,6 +191,7 @@ namespace MGAlienLib
         /// <param name="elevation"></param>
         /// <param name="pivot"></param>
         /// <param name="anchor"></param>
+        /// <param name="color"></param>
         /// <param name="layer"></param>
         /// <returns></returns>
         public static T BuildAsUI<T>(Transform parent,
@@ -198,6 +199,7 @@ namespace MGAlienLib
             string textureAddress,
             RectangleF anchoredRect, float elevation,
             Vector2? pivot = null, Vector2? anchor = null,
+            Color? color = null,
             string layer = "UI") where T : SpriteRenderer
         {
             var uiimageObj = GameBase.Instance.hierarchyManager.CreateGameObject(name, parent);
@@ -210,7 +212,7 @@ namespace MGAlienLib
             int h = (int)spr.height;
             spr.size = new Vector2(1, 1);
             spr.pivot = new Vector2(0, 0);
-            spr.color = Color.White;
+            spr.color = color==null?Color.White:color.Value;
 
             var uitransform = uiimageObj.GetComponent<UITransform>();
             uitransform.elevation = elevation;

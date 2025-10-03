@@ -1,10 +1,11 @@
-﻿
+﻿#nullable enable
+
 using Microsoft.Xna.Framework;
 using MonoGame.Extended;
 using System;
 namespace MGAlienLib
 {
-    public class UIButton : AutoAtlasSpriteRenderer
+    public class UIButton : UIImage
     {
         public static new readonly bool IsAddableFromInspector = true;
 
@@ -105,9 +106,9 @@ namespace MGAlienLib
             textColor ??= Color.Black;
 
             anchor = pivot = Vector2.UnitY;
-            var btn = AutoAtlasSpriteRenderer.BuildAsUI<UIButton>(parent,
+            var btn = SpriteRenderer.BuildAsUI<UIButton>(parent,
                 name,
-                textureAddress, dialate, useSlice,
+                textureAddress,
                 anchoredRect, z,
                 pivot, anchor,
                 color,

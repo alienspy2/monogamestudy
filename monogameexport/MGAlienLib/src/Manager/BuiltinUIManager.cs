@@ -9,6 +9,8 @@ namespace MGAlienLib
 {
     public class BuiltinUIManager : ManagerBase
     {
+        private const string defaultImage = "raw://art/UI/white.png";
+
         public static float PopupElevation = 3000f;
 
         public static float ConsoleElevation = 1000f;
@@ -152,7 +154,7 @@ namespace MGAlienLib
 
             var panel = AutoAtlasSpriteRenderer.BuildAsUI<AutoAtlasSpriteRenderer>(_uiRoot,
                 "popupMenu",
-                "art/UI/white.png", true, false,
+                defaultImage, true, false,
                 new Rectangle(0, 0, 100, 100), BuiltinUIManager.PopupElevation,
                 Vector2.UnitY, Vector2.UnitY,
                 color: color.Dimming(0.4f), layer: "UI"
@@ -167,7 +169,7 @@ namespace MGAlienLib
             if (useFilter)
             {
                 filter = UIInputField.Build(panel.transform,
-                    "filter", "art/UI/white.png", true, false,
+                    "filter", defaultImage, true, false,
                     new RectangleF(0, 0, 100, h), 0.1f,
                     fontSize: fs,
                     textColor: Color.Red.Dimming(0.5f),
@@ -186,7 +188,7 @@ namespace MGAlienLib
             {
                 var button = UIButton.Build(panel.transform,
                     item,
-                    "art/UI/white.png", true, false,
+                    defaultImage, true, false,
                     new RectangleF(0, 0, 100, h), .1f,
                     color: color.Dimming(0.3f),
                     text: item,
@@ -221,7 +223,7 @@ namespace MGAlienLib
 
             var panel = AutoAtlasSpriteRenderer.BuildAsUI<AutoAtlasSpriteRenderer>(_uiRoot,
                 "popupMenu",
-                "art/UI/white.png", true, false,
+                defaultImage, true, false,
                 new Rectangle(0, 0, 200, 30 + 5 + 5), BuiltinUIManager.PopupElevation,
                 Vector2.UnitY, Vector2.UnitY,
                 color: Color.White.Dimming(0.6f), layer: "UI"
@@ -230,7 +232,7 @@ namespace MGAlienLib
 
             // todo : color picker UI 로 변경
             var temp_if = UIInputField.Build(panel.transform,
-                "Input Field", "art/UI/white.png", true, false,
+                "Input Field", defaultImage, true, false,
                 new RectangleF(5, -5, 200 - 5 - 5, 30), 0.3f,
                 fontSize: fontSize,
                 textColor: textColor,
@@ -279,7 +281,7 @@ namespace MGAlienLib
 
             var panel = AutoAtlasSpriteRenderer.BuildAsUI<AutoAtlasSpriteRenderer>(_uiRoot,
                 "popupMenu",
-                "art/UI/white.png", true, false,
+                defaultImage, true, false,
                 new Rectangle(0, 0, 200, 30 + 5 + 5), BuiltinUIManager.PopupElevation,
                 Vector2.UnitY, Vector2.UnitY,
                 color: Color.White.Dimming(0.6f), layer: "UI"
@@ -287,7 +289,7 @@ namespace MGAlienLib
             panel.UITransform.position = anchoredPositionInScreen;
 
             var temp_if = UIInputField.Build(panel.transform,
-                "Input Field", "art/UI/white.png", true, false,
+                "Input Field", defaultImage, true, false,
                 new RectangleF(5, -5, 200 - 5 - 5, 30), 0.3f,
                 fontSize: fontSize,
                 textColor: textColor,

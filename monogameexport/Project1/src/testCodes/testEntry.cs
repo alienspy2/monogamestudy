@@ -11,6 +11,8 @@ namespace Project1
 {
     public class testEntry : ComponentBase
     {
+        private const string defaultImage = "raw://art/UI/white.png";
+
         //public static readonly bool IsAddableFromInspector = true;
 
         private Camera cam;
@@ -82,14 +84,14 @@ namespace Project1
                 var demoPanel = UIPanel.Build<UIPanel>(uiman.uiRoot,
                     "Demo",
                     new RectangleF(0, 0, 10, 10), 100,
-                    contentBGTexAddress: "art/UI/white.png",
+                    contentBGTexAddress: defaultImage,
                     useTitleBar: true,
                     useResizer: false,
                     useVStacker: true,
                     useCloseButton: false,
                     useContentBgSlice: false,
                     useContextSizeFitter: true,
-                    titleBarBGTexAddress: "art/UI/white.png",
+                    titleBarBGTexAddress: defaultImage,
                     titleTextColor: Color.White,
                     titleBarColor: Color.Black,
                     contentColor: Color.White);
@@ -116,7 +118,7 @@ namespace Project1
 
                 var bt1 = UIButton.Build(demoPanel.contentRoot.transform,
                     "aademo",
-                    "art/UI/white.png", true, false,
+                    defaultImage, true, false,
                     new RectangleF(0, 0, 120, 30), 0.1f,
                     (_) =>
                     {
@@ -133,7 +135,7 @@ namespace Project1
 
                 var bt2 = UIButton.Build(demoPanel.contentRoot.transform,
                     "tweener",
-                    "art/UI/white.png", true, false,
+                    defaultImage, true, false,
                     new RectangleF(0, 0, 120, 30), 0.1f,
                     (_) =>
                     {
@@ -150,7 +152,7 @@ namespace Project1
 
                 var bt3 = UIButton.Build(demoPanel.contentRoot.transform,
                     "3D UI",
-                    "art/UI/white.png", true, false,
+                    defaultImage, true, false,
                     new RectangleF(0, 0, 120, 30), 0.1f,
                     (_) =>
                     {

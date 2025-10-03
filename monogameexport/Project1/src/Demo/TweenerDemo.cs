@@ -60,7 +60,7 @@ namespace MGAlienLib
                 float x = (i % 8) * spacing;
                 float y = (i / 8) * hightGap;
                 var aa = hierarchyManager.CreateGameObject($"aa {i}", transform).AddComponent<SpriteRenderer>();
-                aa.Load("art/UI/ball.png");
+                aa.Load("raw://art/UI/ball.png");
                 aa.transform.scale = Vector3.One * 20f;
 
                 aa.transform.DOMove(new Vector3(x, y + 100, 0), duration).

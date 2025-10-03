@@ -8,6 +8,8 @@ namespace MGAlienLib
 {
     public class UIHierarchyViewPanel : UIPanel
     {
+        private const string defaultImage = "raw://art/UI/white.png";
+
         private enum eMenuItems
         {
             None,
@@ -52,7 +54,7 @@ namespace MGAlienLib
 
             var refreshButton = UIButton.Build(_titleBG.transform,
                 "Refresh Button",
-                "art/UI/refresh.png", false, false,
+                "raw://art/UI/refresh.png", false, false,
                 new RectangleF(0, 0, 24, 24), 0.1f,
                 onCommand: (_) => Refresh(),
                 pivot: Vector2.UnitY, anchor: Vector2.UnitY);
@@ -67,7 +69,7 @@ namespace MGAlienLib
 
             _sceneTreeView = UITree.Build(scrollView.content.transform,
                 "treeview",
-                "art/UI/white.png", true, false,
+                defaultImage, true, false,
                 new Rectangle(0, 0, 0, 10),
                 color: contentBGColor);
             _sceneTreeView.UITransform.expandWidthToParent = true;
@@ -238,14 +240,14 @@ namespace MGAlienLib
             var treeviewPanel = UIPanel.Build<UIHierarchyViewPanel>(parent,
                 "Hierarchy view Panel",
                 new RectangleF(400, 0, 500, 600), BuiltinUIManager.HierarchyViewElevation,
-                contentBGTexAddress: "art/UI/white.png",
+                contentBGTexAddress: defaultImage,
                 useTitleBar: true,
                 useResizer: true,
                 useVStacker: false,
                 useCloseButton: true,
                 useContentBgSlice: false,
                 useContextSizeFitter: false,
-                titleBarBGTexAddress: "art/UI/white.png",
+                titleBarBGTexAddress: defaultImage,
                 titleTextColor: Color.White,
                 titleBarColor: titleColor,
                 contentColor: contentBGColor);

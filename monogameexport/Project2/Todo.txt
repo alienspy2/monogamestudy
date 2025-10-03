@@ -1,6 +1,16 @@
-﻿
+﻿project2 - game project
+
+간단 설명 :
+
+최초 실행 후 output folder 에 생성된 config.txt 에서 raw asset folder 를 지정한 후
+다시 실행 해야 한다.
+
+  * space 누르면 공 생성
+  * tilde 누르면 콘솔 열기
+  * F1 누르면 hierarchy view 와 property 창기
+  * output folder 에 log.txt 를 tail blazer 로 열면 로그 확인
+
+
 todo : 
-- asset manager 에 source 를 enum 으로 선택하고 있는데, string 으로 바꾸기
-- AA sprite 제거
-- 현재 3D sprite 를 use as UI 하고 있는데, UI 와 3D 오브젝트 완전 분리 하자.
-- sharp gltf loader 붙이기
+
+

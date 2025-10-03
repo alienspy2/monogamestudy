@@ -1,0 +1,21 @@
+
+<-- 아직 정식 작업 아님
+가능성 타진중
+
+통합 editor
+  * serialize 할 때 default 값은 제외
+  * custom class 를 TOML 로 serialize 할 수 있도록
+  * inspector 에 object picker 추가
+  * inspector 에 custom class 도 추가
+  * popup dialog
+  * serialize (mpack)
+  * toolbar 만들기
+  * scene editor, prefab editor
+  * sprite editor 필요 -> sprite slice
+  * hierarchy view 에 incremental change 구현하기
+  * hierarchy view 에 drag and drop
+  * scene view 에서 gizmo 와 handles 구현. 이것을 잡고 편집
+  * scene view 에서 object 선택 할 수 있도록, 선택한 object 에 outline 그리기
+  * scene view 에서 camera control
+  * scene view 에 axis 보여주기
+  * UI 용 texture 를 한장에 모으고 theme 처럼 사용하기

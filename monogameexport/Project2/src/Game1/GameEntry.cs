@@ -18,6 +18,8 @@ namespace Project2
 
         private List<GravityBall> balls;
 
+        private EditorFunctionality editorFunction;
+
         public override void Awake()
         {
             // setup world camera
@@ -65,6 +67,9 @@ namespace Project2
 
             balls = new List<GravityBall>();
 
+            editorFunction = AddComponent<EditorFunctionality>();
+            editorFunction.Hide();
+
             Test();
         }
 
@@ -110,6 +115,12 @@ namespace Project2
                     );
 
                 balls.Add(newBall);
+            }
+
+            // test serializing
+            if (inputManager.WasPressedThisFrame(Keys.D1))
+            {
+                Logger.Log(Serializer.SerializePrefab(gameObject));
             }
         }
 

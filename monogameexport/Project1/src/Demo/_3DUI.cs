@@ -22,7 +22,7 @@ namespace MGAlienLib
             anchorTestCanvas.mode = eCanvasType.World;
             //anchorTestCanvas.mode = eCanvasType.Screen;
             var anchorTestFrame = AutoAtlasSpriteRenderer.BuildAsUI<AutoAtlasSpriteRenderer>(anchorTestCanvas.transform, "uiimage",
-                "art/UI/SimpleFrame.png", false, true,
+                "raw://art/UI/SimpleFrame.png", false, true,
                 new Rectangle(100, 100, 500, 500), 0,
                 layer: layer);
             anchorTestFrame.color = Color.Wheat * alpha;
@@ -30,11 +30,12 @@ namespace MGAlienLib
             for (int x = 0; x < 3; x++)
                 for (int y = 0; y < 3; y++)
                 {
-                    var uiimage2 = SpriteRenderer.BuildAsUI<UIImage>(anchorTestFrame.transform, $"uiimage2 {x},{y}", "art/UI/SimpleFrame.png",
+                    var uiimage2 = SpriteRenderer.BuildAsUI<UIImage>(anchorTestFrame.transform, 
+                        $"uiimage2 {x},{y}", "raw://art/UI/SimpleFrame.png",
                         new Rectangle(0, 0, 100, 100), 0.1f,
                         new Vector2(x * .5f, y * .5f),
                         new Vector2(x * .5f, y * .5f),
-                        layer);
+                        layer: layer);
                     uiimage2.color = Color.Red * alpha;
                     uiimage2.OnUIPointerEnter += (_) =>
                     {

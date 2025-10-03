@@ -6,17 +6,17 @@ using System.Collections.Generic;
 
 namespace MGAlienLib
 {
-    public class UIInputField : AutoAtlasSpriteRenderer
+    public class UIInputField : UIImage
     {
         public static new readonly bool IsAddableFromInspector = true;
-        private static string CaretTexAddress = "art/UI/white.png";
+        private static string CaretTexAddress = "raw://art/UI/white.png";
 
         [SerializeField] protected Vector2 _textOffset = new Vector2(8, 8);
         [SerializeField] protected Color _activatedBGColor = Color.Yellow;
         [SerializeField] protected Color _deactivatedBGColor = Color.White;
 
         [SerializeField] protected TextRenderer _textRenderer;
-        [SerializeField] protected AutoAtlasSpriteRenderer _caret;
+        [SerializeField] protected SpriteRenderer _caret;
 
         private Action<UIInputField> _onEndEdit;
         private Action<UIInputField> _onCancelEdit;
@@ -136,9 +136,9 @@ namespace MGAlienLib
 
             var caretObj = hierarchyManager.CreateGameObject("caret", transform);
             caretObj.layer = gameObject.layer;
-            _caret = caretObj.AddComponent<AutoAtlasSpriteRenderer>();
+            _caret = caretObj.AddComponent<SpriteRenderer>();
             _caret.useAsUI = true;
-            _caret.Load(UIInputField.CaretTexAddress, true);
+            _caret.Load(UIInputField.CaretTexAddress);
             _caret.UITransform.anchoredRect = new RectangleF(0, 0, 3, UITransform.size.Y);
             _caret.UITransform.elevation = 0.1f;
             _caret.UITransform.pivot = new Vector2(0, 1);
@@ -312,9 +312,9 @@ namespace MGAlienLib
             anchor ??= Vector2.UnitY;
             pivot ??= Vector2.UnitY;
 
-            var inputField = AutoAtlasSpriteRenderer.BuildAsUI<UIInputField>(parent,
+            var inputField = SpriteRenderer.BuildAsUI<UIInputField>(parent,
                 name,
-                textureAddress, dialate, useSlice,
+                textureAddress,
                 anchoredRect, z,
                 pivot, anchor,
                 deactivatedColor,

@@ -35,7 +35,7 @@ namespace MGAlienLib
             contentRoot.GetComponent<AutoAtlasSpriteRenderer>().useSlice = false;
 
             _inputField = UIInputField.Build(contentRoot.transform,
-                "Input Field", "art/UI/white.png", true, false,
+                "Input Field", "raw://art/UI/white.png", true, false,
                 new RectangleF(0, -30, 400, 30), 0.3f,
                 fontSize: 16,
                 activatedColor: Color.White,

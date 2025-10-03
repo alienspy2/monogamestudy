@@ -10,6 +10,8 @@ namespace MGAlienLib
 {
     public class UIInspectorPanel : UIPanel
     {
+        private const string defaultImage = "raw://art/UI/white.png";
+
         public static readonly float DrawerHeight = 20;
         public static readonly int DrawerFontSize = 10;
         public static readonly int DrawerLineSpacing = 3;
@@ -26,7 +28,7 @@ namespace MGAlienLib
 
             var refreshButton = UIButton.Build(_titleBG.transform,
                 "Refresh Button",
-                "art/UI/refresh.png", false, false,
+                "raw://art/UI/refresh.png", false, false,
                 new RectangleF(0, 0, 24, 24), 0.1f,
                 onCommand: (_) => Refresh(),
                 pivot: Vector2.UnitY, anchor: Vector2.UnitY);
@@ -82,7 +84,7 @@ namespace MGAlienLib
 
                 var title = UIButton.Build(
                     spacer.transform, "title",
-                    "art/UI/white.png", true, false,
+                    defaultImage, true, false,
                     new RectangleF(0, 0, w - h - 5, h), 0.2f,
                     text: _text, fontName: "notoKR", fontSize: fs, textColor: Color.White,
                     color: Color.Yellow.Dimming(0.4f));
@@ -98,7 +100,7 @@ namespace MGAlienLib
 
                 var deleteButton = UIButton.Build(
                     spacer.transform, "delete",
-                    "art/UI/white.png", true, false,
+                    defaultImage, true, false,
                     new RectangleF(w - h, 0, h, h), 0.2f,
                     text: "X", fontName: "notoKR", fontSize: fs, textColor: Color.White,
                     color: Color.Red.Dimming(0.6f));
@@ -131,7 +133,7 @@ namespace MGAlienLib
 
             // add component button
             var addComponentButton = UIButton.Build(scrollView.content.transform, "addComponent",
-                "art/UI/white.png", true, false,
+                defaultImage, true, false,
                 new RectangleF(0, 0, w, h), 0.1f,
                 text: "Add Component", fontName: "notoKR", fontSize: fs, textColor: Color.White,
                 color: Color.Green.Dimming(0.5f));
@@ -352,7 +354,7 @@ namespace MGAlienLib
                 {
                     if (_success)
                     {
-                        _f.SetValue(_o, _newValue);
+                        _f.SetValue(_o, "raw://" + _newValue);
                         if (_o is ComponentBase _co) _co.internal_Invalidate();
                         SetTarget(target);
                     }
@@ -548,7 +550,7 @@ namespace MGAlienLib
             // Add button
             var addButton = UIButton.Build(
                 countRow.transform, "add",
-                "art/UI/white.png", true, false,
+                defaultImage, true, false,
                 new RectangleF(countRow.UITransform.size.X * 0.7f, 0, countRow.UITransform.size.X * 0.3f, DrawerHeight), 0.1f,
                 color: Color.Green.Dimming(0.4f));
 
@@ -592,7 +594,7 @@ namespace MGAlienLib
                 // Remove button
                 var removeButton = UIButton.Build(
                     itemRow.transform, "remove",
-                    "art/UI/white.png", true, false,
+                    defaultImage, true, false,
                     new RectangleF(itemRow.UITransform.size.X * 0.8f, 0, itemRow.UITransform.size.X * 0.2f, DrawerHeight), 0.1f,
                     color: Color.Red.Dimming(0.4f));
 
@@ -721,14 +723,14 @@ namespace MGAlienLib
             var inspector = UIPanel.Build<UIInspectorPanel>(parent,
               "Inspector",
               new RectangleF(0, 0, 400, 400), BuiltinUIManager.InspectorElevation,
-              contentBGTexAddress: "art/UI/white.png",
+              contentBGTexAddress: defaultImage,
               useTitleBar: true,
               useResizer: true,
               useVStacker: false,
               useCloseButton: true,
               useContentBgSlice: true,
               useContextSizeFitter: false,
-              titleBarBGTexAddress: "art/UI/white.png",
+              titleBarBGTexAddress: defaultImage,
               titleTextColor: Color.White,
               titleBarColor: new Color(100, 120, 140, 255),
               contentColor: Color.White.Dimming(0.1f));

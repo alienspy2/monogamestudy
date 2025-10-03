@@ -10,8 +10,8 @@ namespace MGAlienLib
         private const float ScrollBarWidth = 16;
         private const float HandleHeight = 32;
 
-        [SerializeField] protected AutoAtlasSpriteRenderer _scrollBarBG = null;
-        [SerializeField] protected AutoAtlasSpriteRenderer _scrollBarHandle = null;
+        [SerializeField] protected SpriteRenderer _scrollBarBG = null;
+        [SerializeField] protected SpriteRenderer _scrollBarHandle = null;
         [SerializeField] protected UISpacer _content = null;
         [SerializeField] protected float _scrollValue = 0;
 
@@ -112,8 +112,8 @@ namespace MGAlienLib
             scrollView.UITransform.expandWidthToParent = expandWidth;
             scrollView.UITransform.expandHeightToParent = expandHeight;
 
-            scrollView._scrollBarBG = AutoAtlasSpriteRenderer.BuildAsUI<AutoAtlasSpriteRenderer>(scrollView.transform,
-                $"{name}_scrollBarBG", "art/UI/white.png", true, false,
+            scrollView._scrollBarBG = SpriteRenderer.BuildAsUI<SpriteRenderer>(scrollView.transform,
+                $"{name}_scrollBarBG", "raw://art/UI/white.png",
                 new RectangleF(0, 0, ScrollBarWidth, ScrollBarWidth), 0.5f,
                 color: (new Color(1f,1f,1f,.5f)).Dimming(.5f),
                 pivot: Vector2.One, anchor: Vector2.One,
@@ -121,11 +121,11 @@ namespace MGAlienLib
                 );
             scrollView._scrollBarBG.UITransform.expandHeightToParent = true;
 
-            scrollView._scrollBarHandle = AutoAtlasSpriteRenderer.BuildAsUI<AutoAtlasSpriteRenderer>(scrollView.transform,
-                $"{name}_scrollBarHandle", "art/UI/white.png", true, false,
+            scrollView._scrollBarHandle = SpriteRenderer.BuildAsUI<SpriteRenderer>(scrollView.transform,
+                $"{name}_scrollBarHandle", "raw://art/UI/white.png", //true, false,
                 new RectangleF(0, 0, ScrollBarWidth, HandleHeight), .6f,
                 color: Color.White,
-                pivot: Vector2.One, anchor: Vector2.One,
+                //pivot: Vector2.One, anchor: Vector2.One,
                 layer: layer
                 );
             scrollView._scrollBarHandle.enableUIRaycast = true;

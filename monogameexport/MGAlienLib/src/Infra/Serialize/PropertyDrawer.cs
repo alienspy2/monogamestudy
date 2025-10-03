@@ -8,6 +8,7 @@ namespace MGAlienLib
 {
     public static class PropertyDrawer
     {
+        private const string defaultImage = "raw://art/UI/white.png";
         public static string PrettyFloatToString(float value, int precision = 4)
         {
             string format = "F" + precision;
@@ -53,7 +54,7 @@ namespace MGAlienLib
             spacer.AddComponent<UIHStacker>().SetMargins(0, 0, 0, 0, 20);
 
             var xInput = UIInputField.BuildAsUI<UIInputField>(spacer.transform, "xPropertyDrawer",
-                "art/UI/white.png", true, false,
+                defaultImage, //true, false,
                 new RectangleF(0, 0, parentW / 2f - 10, parentH), 0.01f);
             //xInput.UITransform.expandWidthToParent = true;
             //xInput.UITransform.expandHeightToParent = true;
@@ -74,7 +75,7 @@ namespace MGAlienLib
             };
 
             var yInput = UIInputField.BuildAsUI<UIInputField>(spacer.transform, "yPropertyDrawer",
-                "art/UI/white.png", true, false,
+                defaultImage, //true, false,
                 new RectangleF(0, 0, parentW / 2f - 10, parentH), 0.01f);
             //yInput.UITransform.expandWidthToParent = true;
             //yInput.UITransform.expandHeightToParent = true;
@@ -114,7 +115,7 @@ namespace MGAlienLib
 
             // X Input
             var xInput = UIInputField.BuildAsUI<UIInputField>(spacer.transform, "xPropertyDrawer",
-                "art/UI/white.png", true, false,
+                defaultImage, //true, false,
                 new RectangleF(0, 0, fieldWidth, parentH), 0.01f);
             xInput.textOffset = new Vector2(8, 0);
             xInput.color = Color.White.Dimming(0.2f);
@@ -134,7 +135,7 @@ namespace MGAlienLib
 
             // Y Input
             var yInput = UIInputField.BuildAsUI<UIInputField>(spacer.transform, "yPropertyDrawer",
-                "art/UI/white.png", true, false,
+                defaultImage, //true, false,
                 new RectangleF(0, 0, fieldWidth, parentH), 0.01f);
             yInput.textOffset = new Vector2(8, 0);
             yInput.color = Color.White.Dimming(0.2f);
@@ -154,7 +155,7 @@ namespace MGAlienLib
 
             // Z Input
             var zInput = UIInputField.BuildAsUI<UIInputField>(spacer.transform, "zPropertyDrawer",
-                "art/UI/white.png", true, false,
+                defaultImage, //true, false,
                 new RectangleF(0, 0, fieldWidth, parentH), 0.01f);
             zInput.textOffset = new Vector2(8, 0);
             zInput.color = Color.White.Dimming(0.2f);
@@ -192,7 +193,7 @@ namespace MGAlienLib
 
             // X Input
             var xInput = UIInputField.BuildAsUI<UIInputField>(spacer.transform, "xPropertyDrawer",
-                "art/UI/white.png", true, false,
+                defaultImage, //true, false,
                 new RectangleF(0, 0, fieldWidth, parentH), 0.01f);
             xInput.textOffset = new Vector2(8, 0);
             xInput.color = Color.White.Dimming(0.2f);
@@ -212,7 +213,7 @@ namespace MGAlienLib
 
             // Y Input
             var yInput = UIInputField.BuildAsUI<UIInputField>(spacer.transform, "yPropertyDrawer",
-                "art/UI/white.png", true, false,
+                defaultImage, //true, false,
                 new RectangleF(0, 0, fieldWidth, parentH), 0.01f);
             yInput.textOffset = new Vector2(8, 0);
             yInput.color = Color.White.Dimming(0.2f);
@@ -232,7 +233,7 @@ namespace MGAlienLib
 
             // Z Input
             var zInput = UIInputField.BuildAsUI<UIInputField>(spacer.transform, "zPropertyDrawer",
-                "art/UI/white.png", true, false,
+                defaultImage, //true, false,
                 new RectangleF(0, 0, fieldWidth, parentH), 0.01f);
             zInput.textOffset = new Vector2(8, 0);
             zInput.color = Color.White.Dimming(0.2f);
@@ -252,7 +253,7 @@ namespace MGAlienLib
 
             // W Input
             var wInput = UIInputField.BuildAsUI<UIInputField>(spacer.transform, "wPropertyDrawer",
-                "art/UI/white.png", true, false,
+                defaultImage,// true, false,
                 new RectangleF(0, 0, fieldWidth, parentH), 0.01f);
             wInput.textOffset = new Vector2(8, 0);
             wInput.color = Color.White.Dimming(0.2f);
@@ -290,7 +291,7 @@ namespace MGAlienLib
 
             // x
             var xInput = UIInputField.BuildAsUI<UIInputField>(spacer.transform, "xPropertyDrawer",
-                "art/UI/white.png", true, false,
+                defaultImage, //true, false,
                 new RectangleF(0, 0, fieldWidth, parentH), 0.01f);
             xInput.textOffset = new Vector2(8, 0);
             xInput.color = Color.White.Dimming(0.2f);
@@ -310,7 +311,7 @@ namespace MGAlienLib
 
             // y
             var yInput = UIInputField.BuildAsUI<UIInputField>(spacer.transform, "yPropertyDrawer",
-                "art/UI/white.png", true, false,
+                defaultImage, //true, false,
                 new RectangleF(0, 0, fieldWidth, parentH), 0.01f);
             yInput.textOffset = new Vector2(8, 0);
             yInput.color = Color.White.Dimming(0.2f);
@@ -330,7 +331,7 @@ namespace MGAlienLib
 
             // width
             var widthInput = UIInputField.BuildAsUI<UIInputField>(spacer.transform, "widthPropertyDrawer",
-                "art/UI/white.png", true, false,
+                defaultImage, //true, false,
                 new RectangleF(0, 0, fieldWidth, parentH), 0.01f);
             widthInput.textOffset = new Vector2(8, 0);
             widthInput.color = Color.White.Dimming(0.2f);
@@ -350,7 +351,7 @@ namespace MGAlienLib
 
             // height
             var heightInput = UIInputField.BuildAsUI<UIInputField>(spacer.transform, "heightPropertyDrawer",
-                "art/UI/white.png", true, false,
+                defaultImage, //true, false,
                 new RectangleF(0, 0, fieldWidth, parentH), 0.01f);
             heightInput.textOffset = new Vector2(8, 0);
             heightInput.color = Color.White.Dimming(0.2f);
@@ -388,7 +389,7 @@ namespace MGAlienLib
 
             // X
             var xInput = UIInputField.BuildAsUI<UIInputField>(spacer.transform, "xPropertyDrawer",
-                "art/UI/white.png", true, false,
+                defaultImage, //true, false,
                 new RectangleF(0, 0, fieldWidth, parentH), 0.01f);
             xInput.textOffset = new Vector2(8, 0);
             xInput.color = Color.White.Dimming(0.2f);
@@ -406,7 +407,7 @@ namespace MGAlienLib
 
             // Y
             var yInput = UIInputField.BuildAsUI<UIInputField>(spacer.transform, "yPropertyDrawer",
-                "art/UI/white.png", true, false,
+                defaultImage, //true, false,
                 new RectangleF(0, 0, fieldWidth, parentH), 0.01f);
             yInput.textOffset = new Vector2(8, 0);
             yInput.color = Color.White.Dimming(0.2f);
@@ -424,7 +425,7 @@ namespace MGAlienLib
 
             // Width
             var widthInput = UIInputField.BuildAsUI<UIInputField>(spacer.transform, "widthPropertyDrawer",
-                "art/UI/white.png", true, false,
+                defaultImage, //true, false,
                 new RectangleF(0, 0, fieldWidth, parentH), 0.01f);
             widthInput.textOffset = new Vector2(8, 0);
             widthInput.color = Color.White.Dimming(0.2f);
@@ -442,7 +443,7 @@ namespace MGAlienLib
 
             // Height
             var heightInput = UIInputField.BuildAsUI<UIInputField>(spacer.transform, "heightPropertyDrawer",
-                "art/UI/white.png", true, false,
+                defaultImage, //true, false,
                 new RectangleF(0, 0, fieldWidth, parentH), 0.01f);
             heightInput.textOffset = new Vector2(8, 0);
             heightInput.color = Color.White.Dimming(0.2f);
@@ -467,7 +468,7 @@ namespace MGAlienLib
             int dummyW = 10, dummyH = 10;
 
             var button = UIButton.Build(parent,
-                "valueButton", "art/UI/white.png", true, false,
+                "valueButton", defaultImage, true, false,
                 new RectangleF(0, 0, dummyW, dummyH), 0.1f,
                 (_) =>
                 {
@@ -497,7 +498,7 @@ namespace MGAlienLib
             int dummyW = 10, dummyH = 10;
 
             var button = UIButton.Build(parent,
-                "valueButton", "art/UI/white.png", true, false,
+                "valueButton", defaultImage, true, false,
                 new RectangleF(0, 0, dummyW, dummyH), 0.1f,
                 (_) => callback(!oldValue, true),
                 oldValue.ToString(), Color.White, "notoKR", UIInspectorPanel.DrawerFontSize,
@@ -519,7 +520,7 @@ namespace MGAlienLib
             //spacer.UITransform.expandWidthToParent = true;
             //spacer.UITransform.expandHeightToParent = true;
             var getter = UIInputField.BuildAsUI<UIInputField>(spacer.transform, "stringPropertyDrawer",
-                "art/UI/white.png", true, false,
+                defaultImage, //true, false,
                 new RectangleF(parentH + 5, 0, parentW - parentH - 5, parentH), 0.01f);
             getter.textOffset = new Vector2(8, 3);
             getter.color = Color.White.Dimming(0.2f);
@@ -533,7 +534,7 @@ namespace MGAlienLib
             };
 
             var button = UIButton.Build(spacer.transform, "browseButton",
-                "art/UI/white.png", true, false,
+                defaultImage, true, false,
                 new RectangleF(0, 0, parentH, parentH), 0.01f,
                 (_) =>
                 {
@@ -575,7 +576,7 @@ namespace MGAlienLib
             spacer.UITransform.expandHeightToParent = true;
 
             var getter = UIInputField.BuildAsUI<UIInputField>(spacer.transform, "intPropertyDrawer",
-                "art/UI/white.png", true, false,
+                defaultImage, //true, false,
                 new RectangleF(0, 0, dummyW, dummyH), 0.01f);
             getter.UITransform.expandWidthToParent = true;
             getter.UITransform.expandHeightToParent = true;
@@ -626,7 +627,7 @@ namespace MGAlienLib
             spacer.UITransform.expandWidthToParent = true;
             spacer.UITransform.expandHeightToParent = true;
             var getter = UIButton.Build(spacer.transform, "enumPropertyDrawer",
-                "art/UI/white.png", true, false,
+                defaultImage, true, false,
                 new RectangleF(0, 0, dummyW, dummyH), 0.01f,
                 (_) =>
                 {

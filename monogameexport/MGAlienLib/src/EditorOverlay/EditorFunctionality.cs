@@ -77,13 +77,27 @@ namespace MGAlienLib
                 }
             };
 
-            var path = System.IO.Path.Combine(assetManager.rawAssetsRootPath, "prefabs/MainMenu.prefab");
-            var toml = System.IO.File.ReadAllText(path);
-            _mainMenuObj = Serializer.DeserializePrefab(toml);
-            _mainMenuObj.transform.SetParent(uiman.uiRoot);
+            //var path = System.IO.Path.Combine(assetManager.rawAssetsRootPath, "prefabs/MainMenu.prefab");
+            //var toml = System.IO.File.ReadAllText(path);
+            //_mainMenuObj = Serializer.DeserializePrefab(toml);
+            //_mainMenuObj.transform.SetParent(uiman.uiRoot);
 
             ShowHierarchyView(true);
             ShowInspectorPanel(true);
+        }
+
+        public void Show()
+        {
+            ShowHierarchyView(true);
+            ShowInspectorPanel(true);
+            visible = true;
+        }
+
+        public void Hide()
+        {
+            ShowHierarchyView(false);
+            ShowInspectorPanel(false);
+            visible = false;
         }
 
         public override void Update()
