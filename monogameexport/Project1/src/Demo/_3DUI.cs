@@ -30,7 +30,7 @@ namespace MGAlienLib
             for (int x = 0; x < 3; x++)
                 for (int y = 0; y < 3; y++)
                 {
-                    var uiimage2 = SpriteRenderer.BuildAsUI(anchorTestFrame.transform, $"uiimage2 {x},{y}", "art/UI/SimpleFrame.png",
+                    var uiimage2 = SpriteRenderer.BuildAsUI<UIImage>(anchorTestFrame.transform, $"uiimage2 {x},{y}", "art/UI/SimpleFrame.png",
                         new Rectangle(0, 0, 100, 100), 0.1f,
                         new Vector2(x * .5f, y * .5f),
                         new Vector2(x * .5f, y * .5f),

@@ -263,13 +263,12 @@ namespace MGAlienLib
             }
 
             var texture = assetManager.GetTexture2D(
-                assetManager.defaultSource, 
                 _assetAddress,
                 _importWidth, 
                 _importHeight);
             if (texture == null)
             {
-                Logger.Log($"Cannot load texture from {assetManager.defaultSource} : {_assetAddress}");
+                Logger.Log($"Cannot load texture : {_assetAddress}");
             }
             else
             {

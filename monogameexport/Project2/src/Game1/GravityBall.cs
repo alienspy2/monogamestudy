@@ -22,8 +22,8 @@ namespace Project2
         public override void Awake()
         {
             ball = AddComponent<SpriteRenderer>();
-            var filename = assetManager.SearchFiles("ui ball")[0];
-            ball.Load(filename);
+            ball.Load("mgcb://test/ball");
+            //ball.Load("raw://test/ball.png");
             ball.transform.position = Vector3.Zero;
             ball.transform.localScale = Vector3.One * 50f;
             ball.pivot = new Vector2(0.5f, 0.5f);

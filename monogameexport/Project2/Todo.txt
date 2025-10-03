@@ -1,0 +1,6 @@
+﻿
+todo : 
+- asset manager 에 source 를 enum 으로 선택하고 있는데, string 으로 바꾸기
+- AA sprite 제거
+- 현재 3D sprite 를 use as UI 하고 있는데, UI 와 3D 오브젝트 완전 분리 하자.
+- sharp gltf loader 붙이기

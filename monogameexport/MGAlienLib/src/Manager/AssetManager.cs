@@ -51,6 +51,50 @@ namespace MGAlienLib
             };
         }
 
+        public bool IsAddressMGCB(string address)
+        {
+            return address.StartsWith("mgcb://");
+        }
+
+        public eAssetSource ParseAssetSourceFromAddress(string address, out string path)
+        {
+            eAssetSource source = eAssetSource.Unknown;
+            path = null;
+
+            if (address.StartsWith("mgcb://"))
+            {
+                source = eAssetSource.MGCB;
+                path = address.Substring("mgcb://".Length);
+            }
+            else if (address.StartsWith("raw://"))
+            {
+                source = eAssetSource.RawAssets;
+                path = address.Substring("raw://".Length);
+            }
+            else if (address.StartsWith("packed://"))
+            {
+                source = eAssetSource.PackedAssets;
+                path = address.Substring("packed://".Length);
+            }
+            else if (address.StartsWith("http://"))
+            {
+                source = eAssetSource.HTTP;
+                path = address; // 여기서는 전체 주소를 그대로 사용
+            }
+            else if (address.StartsWith("https://"))
+            {
+                source = eAssetSource.HTTPS;
+                path = address; // 여기서는 전체 주소를 그대로 사용
+            }
+            else
+            {
+                source = eAssetSource.Unknown;
+                path = address; // fallback
+            }
+
+            return source;
+        }
+
         /// <summary>
         /// 대상 폴더를 지정합니다.
         /// 기본값은 cwd 입니다.
@@ -58,10 +102,6 @@ namespace MGAlienLib
         public string rawAssetsRootPath { get; set; } = "";
         public string packedAssetsRootPath { get; set; } = "";
 
-        /// <summary>
-        /// 소스를 지정하지 않을 때 사용되는 기본 소스입니다.
-        /// </summary>
-        public eAssetSource defaultSource { get; set; } = eAssetSource.RawAssets;
         private DirectoryNode _rootNode;
 
         /// <summary>
@@ -135,7 +175,7 @@ namespace MGAlienLib
         /// <param name="searchTerms"></param>
         /// <param name="assetType"></param>
         /// <returns></returns>
-        public List<string> SearchFiles(string searchTerms, eAssetType assetType = eAssetType.None)
+        public List<string> SearchRawFiles(string searchTerms, eAssetType assetType = eAssetType.None)
         {
             List<string> results = new List<string>();
             string[] terms = searchTerms.Trim().Split(' ', StringSplitOptions.RemoveEmptyEntries);
@@ -187,7 +227,7 @@ namespace MGAlienLib
 
                 if (matchesInOrder && (assetType == eAssetType.None || type == assetType))
                 {
-                    results.Add(fullPath);
+                    results.Add("raw://" + fullPath);
                 }
             }
 
@@ -250,12 +290,15 @@ namespace MGAlienLib
         //    return currentNode.Files.TryGetValue(parts[^1], out eAssetType type) ? type : eAssetType.None;
         //}
 
-        private T ViaStream<T>(eAssetSource source, string address, Func<Stream, T> func) where T : class
+        private T ViaStream<T>(eAssetSource source, string path, Func<Stream, T> func) where T : class
         {
+            if (source == eAssetSource.Unknown)
+                throw new Exception("지원하지 않는 주소 형식입니다. mgcb://, raw://, packed://, http://, https:// 만 지원합니다.");
+
             if (source == eAssetSource.RawAssets)
             {
                 // Assets 폴더 아래에서 파일 검색
-                var filePath = Path.Combine(rawAssetsRootPath, $"{address}");
+                var filePath = Path.Combine(rawAssetsRootPath, $"{path}");
                 if (!File.Exists(filePath))
                 {
                     return null;
@@ -277,14 +320,14 @@ namespace MGAlienLib
             else if (source == eAssetSource.PackedAssets)
             {
                 // headless 의 첫번째 / 까지는 7zip file 이름
-                int separatorIndex = address.IndexOf('/');
+                int separatorIndex = path.IndexOf('/');
 
                 // 첫 번째 '/'까지가 7zip 파일 이름
-                var archivePath = separatorIndex >= 0 ? address.Substring(0, separatorIndex) : address;
+                var archivePath = separatorIndex >= 0 ? path.Substring(0, separatorIndex) : path;
                 archivePath = Path.Combine(packedAssetsRootPath, $"{archivePath}.7z");
 
                 // 나머지가 경로 (separatorIndex + 1부터 끝까지)
-                var assetPath = separatorIndex >= 0 ? address.Substring(separatorIndex + 1) : "";
+                var assetPath = separatorIndex >= 0 ? path.Substring(separatorIndex + 1) : "";
 
                 using (var archive = ArchiveFactory.Open(archivePath))
                 {
@@ -308,9 +351,9 @@ namespace MGAlienLib
                         client.DefaultRequestHeaders.Add("User-Agent", "AlienMonoGame/1.0");
 
                         string url;
-                        if (address.StartsWith("http://") || address.StartsWith("https://"))
+                        if (path.StartsWith("http://") || path.StartsWith("https://"))
                         {
-                            url = address;
+                            url = path;
                         }
                         else
                         {
@@ -341,16 +384,30 @@ namespace MGAlienLib
 
         /// <summary>
         /// 지정된 소스와 주소로부터 Texture2D를 로드합니다.
+        /// 소스는 mgcb://, raw://, packed://, http://, https:// 등을 지원합니다.
         /// </summary>
-        /// <param name="source"></param>
         /// <param name="address"></param>
         /// <param name="importWidth"></param>
         /// <param name="importHeight"></param>
         /// <returns></returns>
-        public Texture2D GetTexture2D(eAssetSource source, string address, int importWidth = 0, int importHeight = 0) => source switch
+        public Texture2D GetTexture2D(string address, int importWidth = 0, int importHeight = 0)
         {
-            eAssetSource.MGCB => owner.Content.Load<Texture2D>(address),
-            _ => ViaStream(source, address, (fileStream) =>
+            var source = ParseAssetSourceFromAddress(address, out string path);
+            if (IsAddressMGCB(address))
+            {
+                try
+                {
+                    Texture2D result = owner.Content.Load<Texture2D>(path);
+                    return result;
+                }
+                catch (Exception ex)
+                {
+                    Logger.Log("MGCB 로드 실패: " + address);
+                    return owner.defaultAssets.magentaTexture.asset;
+                }
+            }
+
+            return ViaStream(source, path, (fileStream) =>
             {
                 var info = Image.Identify(fileStream);
                 fileStream.Position = 0;
@@ -388,8 +445,8 @@ namespace MGAlienLib
                 texture.Name = address;
 
                 return texture;
-            }),
-        };
+            });
+        }
 
         /// <summary>
         /// 주소로부터 Effect를 로드합니다.

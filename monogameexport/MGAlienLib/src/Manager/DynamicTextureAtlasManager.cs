@@ -81,7 +81,7 @@ namespace MGAlienLib
         /// <param name="texAddress"></param>
         /// <param name="rect"></param>
         /// <returns></returns>
-        public int Insert(eDynamicAtlasCategory category, eAssetSource source, string texAddress, bool dialate, out Rectangle rect)
+        public int Insert(eDynamicAtlasCategory category, string texAddress, bool dialate, out Rectangle rect)
         {
             if (data[(int)category].addressToId.TryGetValue(texAddress, out int atlasId))
             {
@@ -90,7 +90,7 @@ namespace MGAlienLib
             }
             else
             {
-                var tex = owner.assetManager.GetTexture2D(source, texAddress);
+                var tex = owner.assetManager.GetTexture2D(texAddress);
                 int newAtlasId = data[(int)category].packer.Insert(tex,dialate, out rect, out bool repacked);
                 int pageIndex = data[(int)category].packer.GetPage(newAtlasId);
                 while (data[(int)category].pages.Count <= pageIndex)

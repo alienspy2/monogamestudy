@@ -20,17 +20,16 @@ namespace MGAlienLib
             /// <summary>
             /// 지정된 소스와 주소를 통해 공유 자원을 가져옵니다. 이미 존재하면 기존 자원을 반환합니다.
             /// </summary>
-            /// <param name="source">자원의 소스</param>
             /// <param name="address">자원의 고유 주소</param>
             /// <param name="parameters">자원 요처시, 생성이 필요한 경우 전달할 parameter</param>
             /// <param name="factory">자원을 생성하는 팩토리 함수</param>
             /// <returns>공유 자원에 대한 참조</returns>
-            public Reference Get(eAssetSource source, string address, object parameters, Func<eAssetSource, string, object, SharedAsset<T>> factory)
+            public Reference Get(string address, object parameters, Func<string, object, SharedAsset<T>> factory)
             {
                 var key = address;
                 if (sharedAssets.ContainsKey(key) == false)
                 {
-                    sharedAssets.Add(key, factory(source, address, parameters));
+                    sharedAssets.Add(key, factory(address, parameters));
                 }
                 return sharedAssets[key].internal_CreateReference();
             }
@@ -184,35 +183,24 @@ namespace MGAlienLib
         }
 
         /// <summary>
-        /// 기본 소스를 사용하여 공유 자원을 생성합니다.
-        /// </summary>
-        /// <param name="address">자원의 고유 주소</param>
-        /// <param name="parameters">자원을 생성해야 할 때 전달되는 parameter </param>
-        public SharedAsset(string address, object parameters) : this(GameBase.Instance.assetManager.defaultSource, address, parameters)
-        {
-        }
-
-        /// <summary>
         /// 지정된 소스와 주소를 사용하여 공유 자원을 생성합니다.
         /// </summary>
-        /// <param name="source">자원의 소스</param>
         /// <param name="address">자원의 고유 주소</param>
         /// <param name="parameters">자원을 생성해야 할 때 전달되는 parameter </param>
-        public SharedAsset(eAssetSource source, string address, object parameters)
+        public SharedAsset(string address, object parameters)
         {
             this.address = address;
-            _asset = CreateAsset(source, address, parameters);
+            _asset = CreateAsset(address, parameters);
             internal_referenceCount = 0;
         }
 
         /// <summary>
         /// 자원을 생성하는 추상 메서드로, 상속 클래스에서 구현해야 합니다.
         /// </summary>
-        /// <param name="source">자원의 소스</param>
         /// <param name="address">자원의 고유 주소</param>
         /// <param name="parameters">자원을 생성해야 할 때 전달되는 parameter </param>
         /// <returns>생성된 자원</returns>
-        protected abstract T CreateAsset(eAssetSource source, string address, object parameters);
+        protected abstract T CreateAsset(string address, object parameters);
 
         public Reference internal_CreateReference()
         {

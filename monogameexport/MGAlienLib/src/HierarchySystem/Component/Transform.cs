@@ -207,6 +207,8 @@ namespace MGAlienLib
         public Vector3 down => Vector3.Transform(-Vector3.UnitY, rotation);
         /// <summary>
         /// world space 에서 transform 이 바라보는 방향을 가져옵니다.
+        /// 주의 : unity 의 forward 는 -Z 방향이지만, 
+        /// 여기서는 MonoGame 의 기본 좌표계에 맞춰 +Z 방향을 forward 로 정의합니다.
         /// </summary>
         public Vector3 forward => Vector3.Transform(Vector3.UnitZ, rotation);
         /// <summary>

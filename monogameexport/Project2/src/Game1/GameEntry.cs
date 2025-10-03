@@ -45,13 +45,13 @@ namespace Project2
             }
 
             // mouse cursor
-            bool cursorTest = true;
+            bool cursorTest = false;
             if (cursorTest)
             {
                 var cursorObj = CreateGameObject("cursor", transform);
                 cursorObj.layer = LayerMask.NameToLayer("UI");
                 cursor = cursorObj.AddComponent<SpriteRenderer>();
-                var filename = assetManager.SearchFiles("ui cursor")[0];
+                var filename = assetManager.SearchRawFiles("ui cursor")[0];
                 cursor.Load(filename);
                 cursor.transform.position = new Vector3(500, 500, 1000-1);
                 cursor.transform.localScale = Vector3.One * 50f;
@@ -64,6 +64,8 @@ namespace Project2
             }
 
             balls = new List<GravityBall>();
+
+            Test();
         }
 
         public override void Start()
@@ -117,5 +119,14 @@ namespace Project2
             cam.aspectRatio = (float)Screen.width / (float)Screen.height;
         }
 
+        private void Test()
+        {
+            var image = CreateGameObject("image", transform);
+            image.layer = LayerMask.NameToLayer("UI");
+            image.transform.position = new Vector3(100, 100, 0);
+            image.transform.localScale = Vector3.One * 100f;
+            var imgRenderer = image.AddComponent<SpriteRenderer>();
+            imgRenderer.Load("raw://art/etc/hello.png");
+        }
     }
 }

@@ -25,7 +25,7 @@ namespace MGAlienLib
         {
             base.Awake();
 
-            var filenames = assetManager.SearchFiles("ui Lorc icon")[0..400];
+            var filenames = assetManager.SearchRawFiles("ui Lorc icon")[0..400];
             testAASpriteRenderers = new();
 
             int i_file = 0;

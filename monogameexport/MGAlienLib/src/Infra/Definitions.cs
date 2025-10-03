@@ -54,6 +54,10 @@ namespace MGAlienLib
         /// todo : async 로 바꿔야 함
         /// </summary>
         HTTPS,
+        /// <summary>
+        /// 알 수 없는 소스입니다.
+        /// </summary>
+        Unknown,
     }
 
     /// <summary>

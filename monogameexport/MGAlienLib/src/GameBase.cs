@@ -82,10 +82,10 @@ namespace MGAlienLib
             public DefaultAssets(GameBase owner)
             {
                 // 텍스처 로드. 절대 해제하지 않는다
-                _whiteTexture = SharedTexture.Get(eAssetSource.MGCB, "DefaultTex/white");
-                _blackTexture = SharedTexture.Get(eAssetSource.MGCB, "DefaultTex/black");
-                _redTexture = SharedTexture.Get(eAssetSource.MGCB, "DefaultTex/red");
-                _magentaTexture = SharedTexture.Get(eAssetSource.MGCB, "DefaultTex/magenta");
+                _whiteTexture = SharedTexture.Get("mgcb://DefaultTex/white");
+                _blackTexture = SharedTexture.Get("mgcb://DefaultTex/black");
+                _redTexture = SharedTexture.Get("mgcb://DefaultTex/red");
+                _magentaTexture = SharedTexture.Get("mgcb://DefaultTex/magenta");
 
                 _unlitShader = owner.shaderManager.LoadShader("MG/unlit", "Effects/Unlit");
                 _ttsfontShader = owner.shaderManager.LoadShader("MG/TTSFont", "Effects/TTSFont");

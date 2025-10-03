@@ -51,7 +51,7 @@ namespace Project1.src.Game1
                 var cursorObj = CreateGameObject("cursor", transform);
                 cursorObj.layer = LayerMask.NameToLayer("UI");
                 cursor = cursorObj.AddComponent<SpriteRenderer>();
-                var filename = assetManager.SearchFiles("ui cursor")[0];
+                var filename = assetManager.SearchRawFiles("ui cursor")[0];
                 cursor.Load(filename);
                 cursor.transform.position = new Vector3(500, 500, 1000-1);
                 cursor.transform.localScale = Vector3.One * 50f;

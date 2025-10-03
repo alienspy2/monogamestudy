@@ -55,19 +55,13 @@ namespace MGAlienLib
             Dispose(false);
         }
 
-        public void Load(string assetAddress, int width = 0, int height = 0)
-        {
-            Load(assetManager.defaultSource, assetAddress, width, height);
-        }
-
         /// <summary>
         /// 지정된 주소에서 텍스처를 로드합니다.
         /// </summary>
-        /// <param name="source">텍스처를 로드할 소스</param>
         /// <param name="assetAddress">로드할 텍스처의 에셋 주소</param>
         /// <param name="width">override 할 가로 크기. 이 크기대로 줄여서 load 한다</param>
         /// <param name="height">override 할 세로 크기. 이 크기대로 줄여서 load 한다</param>
-        private void Load(eAssetSource source, string assetAddress, int width = 0, int height = 0)
+        public void Load(string assetAddress, int width = 0, int height = 0)
         {
             if (string.IsNullOrEmpty(assetAddress))
                 throw new ArgumentNullException(nameof(assetAddress));
@@ -83,7 +77,7 @@ namespace MGAlienLib
                 _material = null;
             }
 
-            _texRef = SharedTexture.Get(source, assetAddress, width, height);
+            _texRef = SharedTexture.Get(assetAddress, width, height);
             _assetAddress = assetAddress;
             //_width = width;
             //_height = height;
@@ -199,16 +193,16 @@ namespace MGAlienLib
         /// <param name="anchor"></param>
         /// <param name="layer"></param>
         /// <returns></returns>
-        public static SpriteRenderer BuildAsUI(Transform parent,
+        public static T BuildAsUI<T>(Transform parent,
             string name,
             string textureAddress,
             RectangleF anchoredRect, float elevation,
             Vector2? pivot = null, Vector2? anchor = null,
-            string layer = "UI")
+            string layer = "UI") where T : SpriteRenderer
         {
             var uiimageObj = GameBase.Instance.hierarchyManager.CreateGameObject(name, parent);
             uiimageObj.layer = LayerMask.NameToLayer(layer);
-            var spr = uiimageObj.AddComponent<SpriteRenderer>();
+            var spr = uiimageObj.AddComponent<T>();
             spr.useAsUI = true;
             spr.enableUIRaycast = true;
             spr.Load(textureAddress);
