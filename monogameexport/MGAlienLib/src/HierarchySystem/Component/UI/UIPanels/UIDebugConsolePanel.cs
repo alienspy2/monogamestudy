@@ -8,6 +8,9 @@ using System.Collections.Generic;
 
 namespace MGAlienLib
 {
+    /// <summary>
+    /// draft : 디버그 콘솔 패널을 나타냅니다. 명령어 입력과 로그 출력을 지원합니다.
+    /// </summary>
     public class UIDebugConsolePanel : UIPanel
     {
         private readonly string FontName = "notoKR";

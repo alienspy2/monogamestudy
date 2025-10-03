@@ -20,6 +20,9 @@ TODO
 3D 
   * sharp gltf 붙이기
 
+고민중
+  * ingame UI 를 만들지 말고 web UI 방식으로 할까?
+
 기능 개선
   * 한글이 안되더라도, TTF 말고 디버깅용 fixed font 있어야겠다
   * text fitting 개선 - anchordRect 와 pivot 이 아직 제대로 안됨

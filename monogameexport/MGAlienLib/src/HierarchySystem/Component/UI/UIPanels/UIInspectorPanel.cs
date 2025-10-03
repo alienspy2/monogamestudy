@@ -8,6 +8,9 @@ using System.Reflection;
 
 namespace MGAlienLib
 {
+    /// <summary>
+    /// draft : 인스펙터 패널을 나타냅니다. 게임 오브젝트와 컴포넌트의 속성을 편집할 수 있습니다.
+    /// </summary>
     public class UIInspectorPanel : UIPanel
     {
         private const string defaultImage = "raw://art/UI/white.png";

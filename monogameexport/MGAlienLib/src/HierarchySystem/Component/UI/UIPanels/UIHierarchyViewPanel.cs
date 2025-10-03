@@ -6,6 +6,9 @@ using System.Collections.Generic;
 
 namespace MGAlienLib
 {
+    /// <summary>
+    /// draft : 씬의 계층 구조를 트리 뷰로 보여주는 패널을 나타냅니다.
+    /// </summary>
     public class UIHierarchyViewPanel : UIPanel
     {
         private const string defaultImage = "raw://art/UI/white.png";
