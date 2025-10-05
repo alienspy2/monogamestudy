@@ -1,14 +1,14 @@
 project1 - demo project for engine development 
 
-in progress : scene view 에서 camera control
-- focus target
-- zoom
-- pan
-- orbital rotation
+note
+  * MGCB 는 shader 외에는 쓰지 말자
+    - 쓰기도 번거롭고 mesh 등 지원하지 않는 asset 은 어차피 빌드해주지 않는다.
+    - dds 압축시 quality 설정이 불가
 
-(bug) aa spirte 삭제시 제대로 비워지지 않는것 같다 -> aa sprite 는 제거하자
-(bug) auto atlas sprite texture 로 load 할 때 sprite 를 매번 load 한다. 옳지 않다 -> aa sprite 는 제거하자
-(bug) dynamic texture manager 의 repack 이 제대로 동작하지 않음
+BUG 
+  * aa spirte 삭제시 제대로 비워지지 않는것 같다 -> aa sprite 는 제거하자
+  * auto atlas sprite texture 로 load 할 때 sprite 를 매번 load 한다. 옳지 않다 -> aa sprite 는 제거하자
+  * dynamic texture manager 의 repack 이 제대로 동작하지 않음
 
 TODO  
   * static texture atlas packing 만들자.
@@ -18,7 +18,6 @@ TODO
   * AA sprite 제거
 
 3D 
-  
   * mesh asset 추가
   * PBR shader
   * lighting 
@@ -27,7 +26,7 @@ TODO
   * 물리엔진 (bepuphysics?) 붙이기 
 
 고민중
-  * ingame UI 를 만들지 말고 web UI 방식으로 할까?
+  * web UI 를 추가할까?
 
 기능 개선
   * 한글이 안되더라도, TTF 말고 디버깅용 fixed font 있어야겠다
@@ -41,19 +40,10 @@ TODO
   * window docking, snapping
   * alpha bleding 된 애들은 back to front 로 sort 하여야 한다
   * multi line text
-  * assets 를 src 로 취급하고, build 할때 7z 으로 bin 에 바뀐 파일만 업데이트 하는식으로 바꿔보자
   * 예외처리 : exception 이 나도 프로그램이 죽지 않게 하자. component 나 gameObject 에서 fake null 처리
   * opaque 와 alpha blend 분리. 현재는 모두 alpha blend 로 처리중
   * texture 나 material 을 해제했다가 다시 할당받는 경우가 꽤 있을 수 있으므로, 
     reference 가 0 이 되자마자 삭제하지 말고, 일정 시간 동안 유예를 줘야한다
-  * 현재 방식으로 구현한 treeview 는 너무 느리다.
   * UI 조작시 consume 된 조작은 거기에서 stop
 
-노트
-  * batching 을 적극적으로 하고 싶지만,
-    불가능한 조건들이 있다
-
-    1. vertex 가 너무 많은경우
-    2. material 이 바뀌는 경우 <- masking 에 다른 texture 의 alpha 를 사용하려면 material 이 바뀜
-    3. alpha blending 등의 이유로 draw 순서가 필요한 경우
 
