@@ -136,12 +136,12 @@ namespace Project2
 
         private void Test()
         {
-            //var image = CreateGameObject("image", transform);
-            //image.layer = LayerMask.NameToLayer("Default");
-            //image.transform.position = new Vector3(0, 0, 0);
-            //image.transform.localScale = Vector3.One * 1f;
-            //var imgRenderer = image.AddComponent<SpriteRenderer>();
-            //imgRenderer.Load("raw://art/etc/hello.png");
+            var image = CreateGameObject("image", transform);
+            image.layer = LayerMask.NameToLayer("Default");
+            image.transform.position = new Vector3(0, 0, 0);
+            image.transform.localScale = Vector3.One * 1f;
+            var imgRenderer = image.AddComponent<SpriteRenderer>();
+            imgRenderer.Load("raw://test/ball.dds");
 
             mesh = MGAGLTFUtil.Load("test/box.glb");
         }

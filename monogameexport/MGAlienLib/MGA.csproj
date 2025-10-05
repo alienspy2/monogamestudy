@@ -44,6 +44,8 @@
     <None Include="src\External\TrueTypeSharp\stb_truetype.h" />
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="BepuPhysics" Version="2.4.0" />
+    <PackageReference Include="BepuUtilities" Version="2.4.0" />
     <PackageReference Include="GtkSharp" Version="3.24.24.95" />
     <PackageReference Include="MonoGame.Content.Builder.Task" Version="3.8.4" />
     <PackageReference Include="MonoGame.Extended" Version="5.1.0" />

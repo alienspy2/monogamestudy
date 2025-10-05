@@ -1,8 +1,6 @@
-﻿using SharpGLTF.Schema2;
-using SharpGLTF.Geometry;
-using SharpGLTF.Memory;
+﻿using MGAlienLib;
 using Microsoft.Xna.Framework;
-using MGAlienLib;
+using SharpGLTF.Schema2;
 
 namespace Project2
 {
@@ -33,8 +31,8 @@ namespace Project2
                                   ?.AsVector3Array();
 
                 result.v = new DebugDraw.VertexPositionNormalTextureColor[positions.Count];
-                
-                for(int i=0;i<result.v.Length;i++)
+
+                for (int i = 0; i < result.v.Length; i++)
                 {
                     result.v[i] = new DebugDraw.VertexPositionNormalTextureColor(positions[i], normals[i], texcoords[i], Color.White);
                 }

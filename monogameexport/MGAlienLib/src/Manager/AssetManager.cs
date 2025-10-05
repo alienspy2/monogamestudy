@@ -42,6 +42,7 @@ namespace MGAlienLib
                 ".bmp" => eAssetType.Texture,
                 ".tga" => eAssetType.Texture,
                 ".gif" => eAssetType.Texture,
+                ".dds" => eAssetType.Texture,
                 ".mp3" => eAssetType.AudioClip,
                 ".wav" => eAssetType.AudioClip,
                 ".ogg" => eAssetType.AudioClip,
@@ -49,6 +50,13 @@ namespace MGAlienLib
                 ".otf" => eAssetType.TrueTypeFont,
                 _ => eAssetType.None,
             };
+        }
+        
+        public bool IsPathDDS(string address)
+        {
+            if (address.Length > 4) return false;
+            var extstring = address.Substring(address.Length - 4);
+            return (extstring.ToLower() == ".dds");
         }
 
         public bool IsAddressMGCB(string address)
@@ -257,8 +265,6 @@ namespace MGAlienLib
             }
         }
 
-        //public int CacheCount => CountFilesInNode(_rootNode);
-
         private int CountFilesInNode(DirectoryNode node)
         {
             int count = node.Files.Count;
@@ -268,27 +274,6 @@ namespace MGAlienLib
             }
             return count;
         }
-
-        /// <summary>
-        /// 주어진 경로에 있는 파일의 타입을 반환합니다.
-        /// </summary>
-        /// <param name="relativePath"></param>
-        /// <returns></returns>
-        //public eAssetType GetFileType(string relativePath)
-        //{
-        //    string[] parts = relativePath.Split('/');
-        //    DirectoryNode currentNode = _rootNode;
-
-        //    for (int i = 0; i < parts.Length - 1; i++)
-        //    {
-        //        if (!currentNode.SubDirectories.TryGetValue(parts[i], out currentNode))
-        //        {
-        //            return eAssetType.None;
-        //        }
-        //    }
-
-        //    return currentNode.Files.TryGetValue(parts[^1], out eAssetType type) ? type : eAssetType.None;
-        //}
 
         private T ViaStream<T>(eAssetSource source, string path, Func<Stream, T> func) where T : class
         {
@@ -409,42 +394,49 @@ namespace MGAlienLib
 
             return ViaStream(source, path, (fileStream) =>
             {
-                var info = Image.Identify(fileStream);
-                fileStream.Position = 0;
-
-                Texture2D texture = null;
-                SurfaceFormat textureFormat = SurfaceFormat.Color;
-
-                if (info.PixelType.BitsPerPixel == 32 || info.PixelType.BitsPerPixel == 24)
+                if (IsPathDDS(path))
                 {
-                    Image<Rgba32> image = Image.Load<Rgba32>(fileStream);
-                    textureFormat = SurfaceFormat.Color;
-                    if (importWidth > 0 && importHeight > 0)
-                    {
-                        image.Mutate(x => x.Resize(importWidth, importHeight, KnownResamplers.Lanczos3)); // 리사이징 적용
-                    }
-                    byte[] pixels = new byte[image.Width * image.Height * (32 / 8)];
-                    image.CopyPixelDataTo(pixels);
-                    texture = new Texture2D(owner.GraphicsDevice, image.Width, image.Height, false, textureFormat);
-                    texture.SetData(pixels);
+                    return LoadTextureDDS(owner.GraphicsDevice, fileStream);
                 }
-                else if (info.PixelType.BitsPerPixel == 8)
+                else
                 {
-                    Image<L8> image = Image.Load<L8>(fileStream);
-                    textureFormat = SurfaceFormat.Alpha8;
-                    if (importWidth > 0 && importHeight > 0)
+                    var info = Image.Identify(fileStream);
+                    fileStream.Position = 0;
+
+                    Texture2D texture = null;
+                    SurfaceFormat textureFormat = SurfaceFormat.Color;
+
+                    if (info.PixelType.BitsPerPixel == 32 || info.PixelType.BitsPerPixel == 24)
                     {
-                        image.Mutate(x => x.Resize(importWidth, importHeight, KnownResamplers.Lanczos3)); // 리사이징 적용
+                        Image<Rgba32> image = Image.Load<Rgba32>(fileStream);
+                        textureFormat = SurfaceFormat.Color;
+                        if (importWidth > 0 && importHeight > 0)
+                        {
+                            image.Mutate(x => x.Resize(importWidth, importHeight, KnownResamplers.Lanczos3)); // 리사이징 적용
+                        }
+                        byte[] pixels = new byte[image.Width * image.Height * (32 / 8)];
+                        image.CopyPixelDataTo(pixels);
+                        texture = new Texture2D(owner.GraphicsDevice, image.Width, image.Height, false, textureFormat);
+                        texture.SetData(pixels);
                     }
-                    byte[] pixels = new byte[image.Width * image.Height * (info.PixelType.BitsPerPixel / 8)];
-                    image.CopyPixelDataTo(pixels);
-                    texture = new Texture2D(owner.GraphicsDevice, image.Width, image.Height, false, textureFormat);
-                    texture.SetData(pixels);
+                    else if (info.PixelType.BitsPerPixel == 8)
+                    {
+                        Image<L8> image = Image.Load<L8>(fileStream);
+                        textureFormat = SurfaceFormat.Alpha8;
+                        if (importWidth > 0 && importHeight > 0)
+                        {
+                            image.Mutate(x => x.Resize(importWidth, importHeight, KnownResamplers.Lanczos3)); // 리사이징 적용
+                        }
+                        byte[] pixels = new byte[image.Width * image.Height * (info.PixelType.BitsPerPixel / 8)];
+                        image.CopyPixelDataTo(pixels);
+                        texture = new Texture2D(owner.GraphicsDevice, image.Width, image.Height, false, textureFormat);
+                        texture.SetData(pixels);
+                    }
+
+                    texture.Name = address;
+                    return texture;
                 }
 
-                texture.Name = address;
-
-                return texture;
             });
         }
 
@@ -459,6 +451,39 @@ namespace MGAlienLib
             return owner.Content.Load<Effect>(path);
         }
 
+        private static Texture2D LoadTextureDDS(GraphicsDevice device, Stream stream)
+        {
+            using (BinaryReader reader = new BinaryReader(stream))
+            {
+                // DDS 헤더 체크
+                uint magic = reader.ReadUInt32();
+                if (magic != 0x20534444) // "DDS "
+                    throw new Exception("Not a DDS file.");
 
+                // DDS_HEADER 읽기 (124 bytes)
+                byte[] header = reader.ReadBytes(124);
+                int height = BitConverter.ToInt32(header, 8);
+                int width = BitConverter.ToInt32(header, 12);
+                int linearSize = BitConverter.ToInt32(header, 16);
+                int mipMapCount = Math.Max(1, BitConverter.ToInt32(header, 24));
+                string fourCC = System.Text.Encoding.ASCII.GetString(header, 80, 4);
+
+                SurfaceFormat format;
+                if (fourCC == "DXT1") format = SurfaceFormat.Dxt1;
+                else if (fourCC == "DXT3") format = SurfaceFormat.Dxt3;
+                else if (fourCC == "DXT5") format = SurfaceFormat.Dxt5;
+                else throw new NotSupportedException("Only DXT1/3/5 supported.");
+
+                // 데이터 읽기
+                int blockSize = (format == SurfaceFormat.Dxt1) ? 8 : 16;
+                int dataSize = Math.Max(1, ((width + 3) / 4) * ((height + 3) / 4) * blockSize);
+                byte[] ddsData = reader.ReadBytes(dataSize);
+
+                // Texture2D 생성
+                Texture2D texture = new Texture2D(device, width, height, false, format);
+                texture.SetData(ddsData);
+                return texture;
+            }
+        }
     }
 }
