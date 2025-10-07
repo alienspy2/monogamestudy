@@ -13,8 +13,11 @@
     <NoWarn>1701;1702;1591</NoWarn>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Remove="Content\Effects\Lit\**" />
     <Compile Remove="src\external\**" />
+    <EmbeddedResource Remove="Content\Effects\Lit\**" />
     <EmbeddedResource Remove="src\external\**" />
+    <None Remove="Content\Effects\Lit\**" />
     <None Remove="src\external\**" />
   </ItemGroup>
   <ItemGroup>

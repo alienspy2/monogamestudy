@@ -21,6 +21,13 @@ namespace MGAlienLib
         public Dictionary<string, Vector4> vectorParams = new();    
         public Dictionary<string, Texture2D> textureParams = new();
 
+        RasterizerState rasterizerState = new RasterizerState();
+        public CullMode cullMode
+        {
+            get => rasterizerState.CullMode;
+            set => rasterizerState.CullMode = value;
+        }
+
         public void SetFloat(string name, float value)
         {
             floatParams[name] = value;
@@ -52,6 +59,8 @@ namespace MGAlienLib
             {
                 shader.SetTexture(kv.Key, kv.Value);
             }
+
+            GameBase.Instance.GraphicsDevice.RasterizerState = rasterizerState;
         }
 
 

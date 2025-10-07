@@ -43,9 +43,9 @@ namespace MGAlienLib
                 scissorsDataTable[masking.scissorsID] = scissorsData;
             }
 
-            var shader = GameBase.Instance.shaderManager.GetShaderByName("MG/TTSFont");
+            var shader = GameBase.Instance.shaderManager.GetShaderByName("MG/UI/TTSFont");
             shader.SetVector4Array("_Scissors", scissorsDataTable);
-            shader = GameBase.Instance.shaderManager.GetShaderByName("MG/unlit");
+            shader = GameBase.Instance.shaderManager.GetShaderByName("MG/UI/unlit");
             shader.SetVector4Array("_Scissors", scissorsDataTable);
         }
 

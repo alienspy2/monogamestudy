@@ -249,11 +249,5 @@ namespace MGAlienLib
                 internal_DrawMesh(effect, mesh);
             });
         }
-
-        // todo
-        //public static void _DrawText(SpriteBatch spriteBatch, TrueTypeSharpUtility font, string text, Vector2 position, Color color, HAlign hAlign = HAlign.center, VAlign valign = VAlign.center)
-        //{
-        //    font.DrawString(spriteBatch, position, text, 20, color, 0, 0, hAlign, valign);
-        //}
     }
 }

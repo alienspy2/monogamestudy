@@ -53,9 +53,6 @@ PS_INPUT VS_Main(VS_INPUT input)
 float4 PS_Main(PS_INPUT input) : SV_Target
 {
     int scissorIndex = (int)round(input.extData.x);
-    //if (scissorIndex == -1) return float4(1, 0, 0, 1);
-    //if (scissorIndex == 0) return float4(0, 0, 1, 1);
-    //if (scissorIndex == 1) return float4(0, 0, 1, 1);
 
     float4 _mainTex = tex2D(MainTextureSampler,input.TextureCoordinates);
     if (_mainTex.a < 1.5/255) discard;

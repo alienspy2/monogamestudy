@@ -50,6 +50,18 @@ namespace MGAlienLib
             }
         }
 
+        private bool _billboardMode = false;
+
+        public void UseAsWorldSpace(bool billboardMode)
+        {
+            if (_material == null) return;
+            if (_material.asset == null) return;
+
+            _material.asset.cullMode = Microsoft.Xna.Framework.Graphics.CullMode.CullClockwiseFace;
+            flipX = true;
+            _billboardMode = billboardMode;
+        }
+
         ~SpriteRenderer()
         {
             Dispose(false);
@@ -86,7 +98,7 @@ namespace MGAlienLib
                 //size = new Vector2(_texRef.asset.Width, _texRef.asset.Height); // 텍스처 로드 시 초기 크기 설정
                 //pivot = Vector2.One * .5f;
 
-                _material = SharedMaterial.Get(0, defaultAssets.unlitShader, _texRef);
+                _material = SharedMaterial.Get(0, defaultAssets.UI_unlitShader, _texRef);
 
                 _rectPrimitiveShard ??= new RectPrimitiveShard();
                 sourceRect = null; // 기본적으로 전체 텍스처 사용
@@ -132,6 +144,8 @@ namespace MGAlienLib
             }
             else
             {
+                if (_billboardMode)
+                    transform.LookAt(renderState.camera.transform.position, Vector3.Up);
                 _rectPrimitiveShard.transform = transform;
                 _rectPrimitiveShard.size = size;
                 _rectPrimitiveShard.pivot = pivot;

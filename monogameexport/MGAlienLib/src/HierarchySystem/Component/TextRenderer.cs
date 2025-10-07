@@ -171,7 +171,7 @@ namespace MGAlienLib
                 var tex = atlasMan.GetTextureByAtlasId(aaCaterogy, _atlasId);
                 string address = $"{tex.Name}_{(int)(sharpness * 100f)}_TextRenderer";
                 _material = SharedMaterial.Get(address);
-                _material.asset.shader = GameBase.Instance.defaultAssets.ttsfontShader;
+                _material.asset.shader = GameBase.Instance.defaultAssets.UI_ttsfontShader;
                 _material.asset.SetTexture("_MainTex", tex);
                 _material.asset.SetFloat("_Sharpness", sharpness);
                 _material.asset.renderPriority = 0;

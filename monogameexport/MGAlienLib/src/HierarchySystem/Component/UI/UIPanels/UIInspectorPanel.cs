@@ -152,10 +152,6 @@ namespace MGAlienLib
 
                 foreach(var type in allTypes)
                 {
-                    if (type.Name == "UIButton")
-                    {
-                        Logger.Log("!");
-                    }
                     // type 내의 static bool IsAsable 변수의 값 확인
                     var addableField = type.GetField("IsAddableFromInspector", BindingFlags.Public | BindingFlags.Static);
                     var addableValue = addableField?.GetValue(null);

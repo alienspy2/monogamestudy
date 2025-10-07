@@ -111,7 +111,7 @@ namespace MGAlienLib
         {
         }
 
-        public override void OnPostInitialize()
+        public override void OnPreInitialize()
         {
             shaders["BasicEffect"] = new Shader("BasicEffect",
                 new BasicEffect(owner.GraphicsDevice)

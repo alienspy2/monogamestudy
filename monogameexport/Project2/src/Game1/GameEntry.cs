@@ -3,14 +3,17 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Input;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Project2
 {
     internal class GameEntry : ComponentBase
     {
+        private const bool test_debugDraw = false;
+        private const bool test_debugMesh = false;
+        private const bool test_softwareCursor = true;
+        private const bool test_loadDDS = true;
+        private const bool test_mesh = true;
+
         private Camera cam;
         private SpriteRenderer cursor;
 
@@ -22,6 +25,10 @@ namespace Project2
 
         private List<Vector3> test_oldMousePos = new List<Vector3>();
 
+        DebugDraw.DebugMesh test_debugMeshData;
+        GameObject test_meshObj;
+        GameObject test_ddsImage;
+
         public override void Awake()
         {
             // setup world camera
@@ -31,26 +38,31 @@ namespace Project2
                 cam.useAsUI = false;
                 cam.uiRoot = this.transform;
                 //cam.viewport = new Rectangle(0, 0, Screen.width, Screen.height);
-                cam.nearClipPlane = 100;
-                cam.farClipPlane = 10000;
+                cam.nearClipPlane = 0.1f;
+                cam.farClipPlane = 1000;
                 cam.cullingMask = LayerMask.GetMask("Default");
                 cam.clearFlags = Camera.eCameraClearFlag.SolidColor;
                 cam.backgroundColor = Color.CornflowerBlue;
 
-                cam.transform.position = new Vector3(0, 0, 1000);
-                cam.transform.LookAt(Vector3.Zero, Vector3.Up);
-                cam.transform.position = new Vector3(0, 0, 1000);
+                cam.transform.position = new Vector3(-5, 5, 10);
+                //cam.transform.localRotation = Quaternion.CreateFromYawPitchRoll(0,-10,0);
+                cam.transform.LookAt(new Vector3(0,.5f,0), Vector3.Up);
+                //var ypr = cam.transform.rotation.ToEulerAngles();
+                //cam.transform.rotation = new Vector3(-20,0,0).FromEulerAnglesToQuaternion();
 
-                cam.orthographic = true;
-                cam.orthographicSize = 4;//  Screen.height / 2;
+                //var r = ypr.FromEulerAnglesToQuaternion();
+                //var ypr2 = r.ToEulerAngles();
+
+                cam.orthographic = false;
+                //cam.orthographicSize = 4;
+
                 cam.fieldOfView = 45;
                 cam.aspectRatio = (float)Screen.width / (float)Screen.height;
                 cam.renderPriority = 1;
             }
 
             // mouse cursor
-            bool cursorTest = true;
-            if (cursorTest)
+            if (test_softwareCursor)
             {
                 var cursorObj = CreateGameObject("cursor", transform);
                 cursorObj.layer = LayerMask.NameToLayer("UI");
@@ -89,15 +101,23 @@ namespace Project2
                 RefreshScreenSize();
             }
 
-            if (cursor != null)
+            DebugDraw.DrawLine(Vector3.Zero, Vector3.Right, Color.Red);
+            DebugDraw.DrawLine(Vector3.Zero, Vector3.Up, Color.Green);
+            DebugDraw.DrawLine(Vector3.Zero, Vector3.Forward, Color.Blue);
+
+            if (test_softwareCursor)
             {
                 var mousePos = inputManager.GetMousePos();
                 cursor.transform.position = new Vector3(mousePos.X, Screen.height - mousePos.Y, cursor.transform.position.Z);
+            }
 
+            if (test_debugDraw)
+            {
+                var mousePos = inputManager.GetMousePos();
                 var worldPos = cam.Unproject(mousePos, 0);
                 test_oldMousePos.Add(worldPos);
 
-                if (test_oldMousePos.Count>=2) DebugDraw.DrawLineStrip(test_oldMousePos, Color.Red);
+                if (test_oldMousePos.Count >= 2) DebugDraw.DrawLineStrip(test_oldMousePos, Color.Red);
                 if (test_oldMousePos.Count > 20) test_oldMousePos.RemoveAt(0);
             }
 
@@ -123,7 +143,22 @@ namespace Project2
                 Logger.Log(Serializer.SerializePrefab(gameObject));
             }
 
-            DebugDraw.DrawMesh(mesh);
+            if (test_debugMesh)
+            {
+                DebugDraw.DrawMesh(test_debugMeshData);
+            }
+
+            if (test_mesh)
+            {
+                float yaw = Time.time;
+                float pitch = 0;// Time.time* 1.1f;
+                float roll = 0;// Time.time * 1.2f;
+                float ypos = Mathf.Sin(Time.time);
+
+                test_meshObj.transform.localRotation = Quaternion.CreateFromYawPitchRoll(yaw,pitch,roll);
+                test_meshObj.transform.position = Vector3.Up * ypos;
+            }
+
         }
 
         private void RefreshScreenSize()
@@ -132,18 +167,36 @@ namespace Project2
             cam.aspectRatio = (float)Screen.width / (float)Screen.height;
         }
 
-        DebugDraw.DebugMesh mesh;
 
         private void Test()
         {
-            var image = CreateGameObject("image", transform);
-            image.layer = LayerMask.NameToLayer("Default");
-            image.transform.position = new Vector3(0, 0, 0);
-            image.transform.localScale = Vector3.One * 1f;
-            var imgRenderer = image.AddComponent<SpriteRenderer>();
-            imgRenderer.Load("raw://test/ball.dds");
+            if (test_loadDDS)
+            {
+                test_ddsImage = CreateGameObject("image", transform);
+                test_ddsImage.layer = LayerMask.NameToLayer("Default");
+                test_ddsImage.transform.position = new Vector3(2, 0, 0);
+                test_ddsImage.transform.localScale = Vector3.One * 1f;
+                var imgRenderer = test_ddsImage.AddComponent<SpriteRenderer>();
+                imgRenderer.Load("raw://test/ball.dds");
+                imgRenderer.UseAsWorldSpace(billboardMode: true);
+            }
 
-            mesh = MGAGLTFUtil.Load("test/box.glb");
+            if (test_debugMesh)
+            {
+                test_debugMeshData = MGAGLTFUtil.Load("test/box.glb");
+            }
+
+            if (test_mesh)
+            {
+                test_meshObj = CreateGameObject("mesh", transform);
+                test_meshObj.layer = LayerMask.NameToLayer("Default");
+                test_meshObj.transform.position = new Vector3(0, 0, 0);
+                test_meshObj.transform.localPosition = Vector3.One * 1;
+                var meshRenderer = test_meshObj.AddComponent<MeshRenderer>();
+                meshRenderer.Load("raw://test/box.glb");
+                //meshRenderer.LoadMaterial("BasicEffect");
+                meshRenderer.LoadMaterial("MG/3D/Lit");
+            }
         }
     }
 }

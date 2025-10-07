@@ -61,17 +61,23 @@
 /processorParam:TextureFormat=Color
 /build:DefaultTex/white.png
 
-#begin Effects/TTSFont.fx
+#begin Effects/3D/Lit.fx
 /importer:EffectImporter
 /processor:EffectProcessor
 /processorParam:DebugMode=Auto
-/build:Effects/TTSFont.fx
+/build:Effects/3D/Lit.fx
 
-#begin Effects/Unlit.fx
+#begin Effects/UI/UITTSFont.fx
 /importer:EffectImporter
 /processor:EffectProcessor
 /processorParam:DebugMode=Auto
-/build:Effects/Unlit.fx
+/build:Effects/UI/UITTSFont.fx
+
+#begin Effects/UI/UIUnlit.fx
+/importer:EffectImporter
+/processor:EffectProcessor
+/processorParam:DebugMode=Auto
+/build:Effects/UI/UIUnlit.fx
 
 #begin Fonts/debugFont.spritefont
 /importer:FontDescriptionImporter

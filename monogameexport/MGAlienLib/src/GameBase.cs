@@ -66,8 +66,8 @@ namespace MGAlienLib
             private SharedTexture.Reference _blackTexture;
             private SharedTexture.Reference _redTexture;
             private SharedTexture.Reference _magentaTexture;
-            private Shader _unlitShader;
-            private Shader _ttsfontShader;
+            private Shader _UI_unlitShader;
+            private Shader _UI_ttsfontShader;
             public SpriteFont _debugFont;
 
             public SharedTexture.Reference whiteTexture => _whiteTexture.Clone();
@@ -75,9 +75,12 @@ namespace MGAlienLib
             public SharedTexture.Reference redTexture => _redTexture.Clone();
             public SharedTexture.Reference magentaTexture => _magentaTexture.Clone();
 
-            public Shader unlitShader => _unlitShader;
-            public Shader ttsfontShader => _ttsfontShader;
+            public Shader UI_unlitShader => _UI_unlitShader;
+            public Shader UI_ttsfontShader => _UI_ttsfontShader;
             public SpriteFont debugFont => _debugFont;
+
+            // <- todo : runtime 에 로딩 가능해야 함
+            public Shader testLit;
 
             public DefaultAssets(GameBase owner)
             {
@@ -87,9 +90,11 @@ namespace MGAlienLib
                 _redTexture = SharedTexture.Get("mgcb://DefaultTex/red");
                 _magentaTexture = SharedTexture.Get("mgcb://DefaultTex/magenta");
 
-                _unlitShader = owner.shaderManager.LoadShader("MG/unlit", "Effects/Unlit");
-                _ttsfontShader = owner.shaderManager.LoadShader("MG/TTSFont", "Effects/TTSFont");
+                _UI_unlitShader = owner.shaderManager.LoadShader("MG/UI/unlit", "Effects/UI/UIUnlit");
+                _UI_ttsfontShader = owner.shaderManager.LoadShader("MG/UI/TTSFont", "Effects/UI/UITTSFont");
                 _debugFont = owner.Content.Load<SpriteFont>("Fonts/debugFont");
+
+                testLit = owner.shaderManager.LoadShader("MG/3D/Lit", "Effects/3D/Lit");
             }
         }
 

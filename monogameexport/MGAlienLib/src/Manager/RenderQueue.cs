@@ -5,7 +5,10 @@ using System.Collections.Generic;
 namespace MGAlienLib
 {
     /// <summary>
+    /// draw 순서를 조정해서
     /// primitive 를 효율적으로 그리기 위해 사용하는 클래스
+    /// 
+    /// note : 현재 2D, dynamic batching 만 고려해서 만들었기 때문에, 기능을 확장해야 한다
     /// </summary>
     public class RenderChunk
     {
@@ -51,6 +54,7 @@ namespace MGAlienLib
         public int activeMaskingIndex;
 
         public Dictionary<string, RenderChunk> chunks = new();
+        public List<Action> commands = new(); // note : 임시구현
 
         public void CheckAndAddPrimitiveBatch(Material material)
         {
@@ -66,6 +70,11 @@ namespace MGAlienLib
             }
         }
 
+        public void CheckAndAddCommand(Action command)
+        {
+            commands.Add(command);
+        }
+
         public void Reset()
         {
             activeMaskingIndex = 0;
@@ -74,6 +83,8 @@ namespace MGAlienLib
                 kv.Value.vertexCount = 0;
                 kv.Value.indexCount = 0;
             }
+
+            commands.Clear(); // note : 임시구현
         }
     }
 
@@ -118,6 +129,14 @@ namespace MGAlienLib
 
             int totalBatchCount = 0;
             int totalVertexCount = 0;
+
+            // note :
+            //
+            // state 0 에서 직접 그려도 되고
+            // sprite 등은 dynamic batching을 위해 chunk 에 넣는다
+            // Renderable.Render 는 여기에서 호출된다
+            //
+            // state 1 에서는 chunk 를 그린다
 
             for (int stage = 0; stage < 2; stage++)
             {
@@ -186,6 +205,14 @@ namespace MGAlienLib
                                 totalBatchCount++;
                                 totalVertexCount += chunk.vertexCount;
                                 chunk.PrimitiveBatch.Draw<VertexPositionColorTextureExt>(cam, chunk);
+                            }
+                        }
+
+                        // 임시구현 : draw commands
+                        {
+                            foreach(var command in renderState.commands)
+                            {
+                                command?.Invoke();
                             }
                         }
 

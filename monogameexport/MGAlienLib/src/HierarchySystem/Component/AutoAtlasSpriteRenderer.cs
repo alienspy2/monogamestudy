@@ -196,7 +196,7 @@ namespace MGAlienLib
                     }
 
                     _material = SharedMaterial.Get(address);
-                    _material.asset.shader = GameBase.Instance.defaultAssets.unlitShader;
+                    _material.asset.shader = GameBase.Instance.defaultAssets.UI_unlitShader;
                     _material.asset.SetTexture("_MainTex", tex);
                     _material.asset.renderPriority = 0;
 

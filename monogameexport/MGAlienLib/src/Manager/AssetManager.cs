@@ -54,7 +54,7 @@ namespace MGAlienLib
         
         public bool IsPathDDS(string address)
         {
-            if (address.Length > 4) return false;
+            if (address.Length < 4) return false;
             var extstring = address.Substring(address.Length - 4);
             return (extstring.ToLower() == ".dds");
         }
@@ -299,7 +299,7 @@ namespace MGAlienLib
                 catch (Exception ex)
                 {
                     // 오류 처리 (예: 콘솔 출력)
-                    Logger.Log("텍스처 로드 실패: " + ex.Message);
+                    Logger.Log($"로드 실패: {source} {path} {ex.Message}");
                 }
             }
             else if (source == eAssetSource.PackedAssets)
@@ -484,6 +484,22 @@ namespace MGAlienLib
                 texture.SetData(ddsData);
                 return texture;
             }
+        }
+
+        public Mesh GetMesh(string address)
+        {
+            var source = ParseAssetSourceFromAddress(address, out string path);
+
+            if (IsAddressMGCB(address))
+            {
+                throw new Exception("mgcb:// 는 지원하지 않습니다");
+            }
+
+            return ViaStream(source, path, (fileStream) =>
+            {
+                return MeshImporter.LoadSingleMesh(fileStream);
+            });
+
         }
     }
 }
