@@ -2,8 +2,9 @@ project1 - demo project for engine development
 
 note
   * MGCB 는 shader 외에는 쓰지 말자
-    - 쓰기도 번거롭고 mesh 등 지원하지 않는 asset 은 어차피 빌드해주지 않는다.
-    - dds 압축시 quality 설정이 불가
+    - 쓰기도 번거롭고 지원하지 않는 asset 은 어차피 빌드해주지 않는다. 예) 3D mesh
+    - asset build 시 옵션이 부족하다. 예) dds 압축시 quality 설정이 불가
+  * 2D만 쓰려다가 3D 로 전환중. 따라서 여러가지를 고쳐야 한다.
 
 BUG 
   * aa spirte 삭제시 제대로 비워지지 않는것 같다 -> aa sprite 는 제거하자
@@ -11,20 +12,25 @@ BUG
   * dynamic texture manager 의 repack 이 제대로 동작하지 않음
 
 TODO  
-  * static texture atlas packing 만들자.
+
+2D
+  * AA 별로다. static texture atlas packing 만들자.
   * 2D sprite animation
   * sprite renderer 에 slice 기능을 넣거나 sliced sprite renderer 만들기
   * 임시로 만든 UI 정리
   * AA sprite 제거
 
 3D 
-  * mesh asset 추가
-  * PBR shader
-  * lighting 
-  * sharp gltf 붙이기
+  * sharp gltf 붙이기 
+    -> 어디까지 할까? 
+      scene 전체를 불러올수도 있고, 
+      unity 처럼 mesh, animation 등을 따로 불러올 수도 있다
   * navmesh (recast?) 붙이기
   * 물리엔진 (bepuphysics?) 붙이기 
-
+  * PBR shader ?
+  * matcap shader ?
+  * lighting 
+  
 고민중
   * web UI 를 추가할까?
 

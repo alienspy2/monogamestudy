@@ -1,15 +1,13 @@
-﻿using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Graphics;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Microsoft.Xna.Framework.Graphics;
 
 namespace MGAlienLib
 {
     public class MeshRenderer : Renderable
     {
+        public static readonly bool IsAddableFromInspector = true;
+
+        [SerializeField(browseFile: true)] protected string _assetAddress;
+
         private SharedMaterial.Reference _material;
         private SharedMesh.Reference _mesh;
 
@@ -21,6 +19,7 @@ namespace MGAlienLib
         public void Load(string assetAddress)
         {
             _mesh = SharedMesh.Get(assetAddress);
+            _assetAddress = assetAddress;
         }
 
         public void LoadMaterial(string shaderName)
@@ -60,6 +59,25 @@ namespace MGAlienLib
                 }
             });
 
+        }
+
+
+        public override void internal_Invalidate()
+        {
+            base.internal_Invalidate();
+            if (!_assetAddress.IsNullOrEmpty())
+            {
+                Load(_assetAddress);
+            }
+        }
+
+        public override void FinalizeDeserialize(DeserializeContext context)
+        {
+            base.FinalizeDeserialize(context);
+            if (!_assetAddress.IsNullOrEmpty())
+            {
+                Load(_assetAddress);
+            }
         }
 
         public override void OnDispose()

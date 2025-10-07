@@ -495,11 +495,13 @@ namespace MGAlienLib
                 throw new Exception("mgcb:// 는 지원하지 않습니다");
             }
 
-            return ViaStream(source, path, (fileStream) =>
+            Mesh newMesh = ViaStream(source, path, (fileStream) =>
             {
                 return MeshImporter.LoadSingleMesh(fileStream);
             });
 
+            newMesh.CalculateBounds();
+            return newMesh;
         }
     }
 }

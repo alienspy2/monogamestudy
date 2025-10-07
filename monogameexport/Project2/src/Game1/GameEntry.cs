@@ -10,8 +10,8 @@ namespace Project2
     {
         private const bool test_debugDraw = false;
         private const bool test_debugMesh = false;
-        private const bool test_softwareCursor = true;
-        private const bool test_loadDDS = true;
+        private const bool test_softwareCursor = false;
+        private const bool test_loadDDS = false;
         private const bool test_mesh = true;
 
         private Camera cam;
@@ -153,10 +153,8 @@ namespace Project2
                 float yaw = Time.time;
                 float pitch = 0;// Time.time* 1.1f;
                 float roll = 0;// Time.time * 1.2f;
-                float ypos = Mathf.Sin(Time.time);
 
                 test_meshObj.transform.localRotation = Quaternion.CreateFromYawPitchRoll(yaw,pitch,roll);
-                test_meshObj.transform.position = Vector3.Up * ypos;
             }
 
         }
@@ -188,15 +186,30 @@ namespace Project2
 
             if (test_mesh)
             {
-                test_meshObj = CreateGameObject("mesh", transform);
-                test_meshObj.layer = LayerMask.NameToLayer("Default");
-                test_meshObj.transform.position = new Vector3(0, 0, 0);
-                test_meshObj.transform.localPosition = Vector3.One * 1;
-                var meshRenderer = test_meshObj.AddComponent<MeshRenderer>();
-                meshRenderer.Load("raw://test/box.glb");
-                //meshRenderer.LoadMaterial("BasicEffect");
-                meshRenderer.LoadMaterial("MG/3D/Lit");
+                test_meshObj = CreateAndLoadMesh("raw://test/tank.glb", Vector3.Right * 0);
+                CreateAndLoadMesh("raw://test/buggycar.glb", Vector3.Right * 2);
+                CreateAndLoadMesh("raw://test/bomber.glb", Vector3.Right * 4);
+                CreateAndLoadMesh("raw://test/cannonTurret.glb", Vector3.Right * 6);
+                CreateAndLoadMesh("raw://test/island.glb", Vector3.Right * 8);
             }
         }
+
+        private GameObject CreateAndLoadMesh(string address, Vector3 position)
+        {
+            var obj = CreateGameObject("mesh", transform);
+            var start = address.LastIndexOf("/");
+            var end = address.IndexOf(".");
+            obj.name = address.Substring(start + 1, end - start - 1);
+            obj.layer = LayerMask.NameToLayer("Default");
+            obj.transform.position = position;
+            obj.transform.localScale = Vector3.One * 1;
+            var meshRenderer = obj.AddComponent<MeshRenderer>();
+            meshRenderer.Load(address);
+            meshRenderer.LoadMaterial("MG/3D/Lit");
+
+            return obj;
+        }
     }
+
+
 }

@@ -3,6 +3,7 @@
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using System;
+using System.Linq;
 using System.Runtime.InteropServices;
 
 namespace MGAlienLib
@@ -49,7 +50,13 @@ namespace MGAlienLib
 
         public VertexPositionNormalTextureColor[] v;
         public short[] indices;
+        public BoundingBox bounds;
 
+        public void CalculateBounds()
+        {
+            Vector3[] points = v.Select(vertex => vertex.Position).ToArray();
+            bounds = BoundingBox.CreateFromPoints(points);
+        }
 
         #region IDisposable Support
         private bool disposed = false;

@@ -1,4 +1,5 @@
-﻿using SharpGLTF.Schema2;
+﻿using Microsoft.Xna.Framework;
+using SharpGLTF.Schema2;
 using System.IO;
 
 namespace MGAlienLib
@@ -28,11 +29,18 @@ namespace MGAlienLib
                 var texcoords = prim.GetVertexAccessor("TEXCOORD_0")
                                     ?.AsVector2Array();
 
+
                 result.v = new Mesh.VertexPositionNormalTextureColor[positions.Count];
 
                 for (int i = 0; i < result.v.Length; i++)
                 {
-                    result.v[i] = new Mesh.VertexPositionNormalTextureColor(positions[i], normals[i], texcoords[i], colors[i]);
+                    Color color = Color.White;
+                    Vector2 tc = Vector2.Zero;
+
+                    if (colors != null) color = colors[i];
+                    if (texcoords != null) tc = texcoords[i];
+
+                    result.v[i] = new Mesh.VertexPositionNormalTextureColor(positions[i], normals[i], tc, color);
                 }
 
                 // 인덱스 읽기
