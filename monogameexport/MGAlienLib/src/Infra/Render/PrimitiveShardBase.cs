@@ -8,6 +8,7 @@ namespace MGAlienLib
     {
         protected virtual int TrianglesCount => 0;
         protected virtual int VerticesCount => 0;
+        public int GetVerticesCount() => VerticesCount;
 
         protected Vector3[] pos;
         protected Vector3[] transformedPos;

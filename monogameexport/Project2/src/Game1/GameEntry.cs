@@ -22,7 +22,7 @@ namespace Project2
         private List<GravityBall> balls;
 
         private EditorFunctionality editorFunction;
-        private GizmoFunction gizmoFunction; // <- 만드는 중 
+        private SceneViewControl gizmoFunction; // <- 만드는 중 
 
         private List<Vector3> test_oldMousePos = new List<Vector3>();
 
@@ -93,6 +93,8 @@ namespace Project2
         {
             base.Start();
             Logger.Log("GameEntry Start");
+
+            editorFunction.sceneViewControl.SetTargetCamera(cam);
         }
 
         public override void Update()
@@ -101,10 +103,6 @@ namespace Project2
             {
                 RefreshScreenSize();
             }
-
-            DebugDraw.DrawLine(Vector3.Zero, Vector3.Right, Color.Red);
-            DebugDraw.DrawLine(Vector3.Zero, Vector3.Up, Color.Green);
-            DebugDraw.DrawLine(Vector3.Zero, Vector3.Forward, Color.Blue);
 
             if (test_softwareCursor)
             {
@@ -122,21 +120,22 @@ namespace Project2
                 if (test_oldMousePos.Count > 20) test_oldMousePos.RemoveAt(0);
             }
 
-            if (inputManager.WasPressedThisFrame(Keys.Space))
-            {
-                var newBallObj = CreateGameObject("ball" + balls.Count, transform);
-                newBallObj.layer = LayerMask.NameToLayer("Default");
-                var newBall = newBallObj.AddComponent<GravityBall>();
+            // 망가졌음
+            //if (inputManager.WasPressedThisFrame(Keys.Space))
+            //{
+            //    var newBallObj = CreateGameObject("ball" + balls.Count, transform);
+            //    newBallObj.layer = LayerMask.NameToLayer("Default");
+            //    var newBall = newBallObj.AddComponent<GravityBall>();
 
-                newBall.velocityX = (float)(random.NextDouble() * 2 - 1) * 50f;
-                newBall.ball.color = new Color(
-                    (float)random.NextDouble(),
-                    (float)random.NextDouble(),
-                    (float)random.NextDouble()
-                    );
+            //    newBall.velocityX = (float)(random.NextDouble() * 2 - 1) * 50f;
+            //    newBall.ball.color = new Color(
+            //        (float)random.NextDouble(),
+            //        (float)random.NextDouble(),
+            //        (float)random.NextDouble()
+            //        );
 
-                balls.Add(newBall);
-            }
+            //    balls.Add(newBall);
+            //}
 
             // test serializing
             if (inputManager.WasPressedThisFrame(Keys.D1))
@@ -148,6 +147,9 @@ namespace Project2
             {
                 DebugDraw.DrawMesh(test_debugMeshData);
             }
+
+            if (editorFunction.sceneViewControl.Activated)
+                return;
 
             if (test_mesh)
             {
@@ -169,10 +171,6 @@ namespace Project2
 
         private void Test()
         {
-            var gizmoObj = CreateGameObject("gizmoObj", root);
-            gizmoObj.transform.position = Vector3.Up * 2;
-            gizmoFunction = gizmoObj.AddComponent<GizmoFunction>();
-            gizmoFunction.SetTargetCamera(cam);
 
             if (test_loadDDS)
             {
@@ -196,7 +194,10 @@ namespace Project2
                 CreateAndLoadMesh("raw://test/buggycar.glb", Vector3.Right * 2);
                 CreateAndLoadMesh("raw://test/bomber.glb", Vector3.Right * 4);
                 CreateAndLoadMesh("raw://test/cannonTurret.glb", Vector3.Right * 6);
-                CreateAndLoadMesh("raw://test/island.glb", Vector3.Right * 8);
+                var island = CreateAndLoadMesh("raw://test/island.glb", Vector3.Right * 8);
+                island.transform.position = new Vector3(8, 13, -72);
+                island.transform.scale = new Vector3(200, 200, 200);
+                island.transform.IsSelectableInSceneView = false;
             }
         }
 

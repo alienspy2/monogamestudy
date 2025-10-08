@@ -18,6 +18,13 @@ namespace MGAlienLib
         private UIInputField _uiInputFocus;
         private UIInputField _lastUIInputFocus;
 
+        private bool _inputIsConsumedByUI = false;
+        public bool InputIsConsumedByUI
+        {
+            get => _inputIsConsumedByUI;
+            set => _inputIsConsumedByUI = value;
+        }
+
         public InputManager(GameBase owner) : base(owner)
         {
             owner.Window.TextInput += OnTextInput;
@@ -61,6 +68,7 @@ namespace MGAlienLib
         {
             keyboardState = Keyboard.GetState();
             mouseState = Mouse.GetState();
+            _inputIsConsumedByUI = false;
         }
 
         public override void OnPostDraw()

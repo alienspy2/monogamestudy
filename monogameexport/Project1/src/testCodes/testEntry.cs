@@ -29,6 +29,7 @@ namespace Project1
         private TextRenderer statusText_3;
         [SerializeField] private List<UIButton> test_List = new();
 
+
         public override void Awake()
         {
 

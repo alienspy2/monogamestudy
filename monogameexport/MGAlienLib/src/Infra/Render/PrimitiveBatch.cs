@@ -31,7 +31,7 @@ namespace MGAlienLib
             };
         }
 
-        public void Draw<T>(Camera cam, RenderChunk chunk) where T : struct, IVertexType
+        public void Draw<T>(RenderState renderState, Camera cam, RenderChunk chunk) where T : struct, IVertexType
         {
             if (chunk.vertexCount == 0 || chunk.indexCount == 0) return;
 

@@ -6,14 +6,17 @@ namespace MGAlienLib
     public class EditorFunctionality : ComponentBase
     {
         private UIHierarchyViewPanel _hierarchyViewPanel;
-        private UIInspectorPanel _uIInspectorPanel;
-
         public UIHierarchyViewPanel hierarchyViewPanel => _hierarchyViewPanel;
+
+        private UIInspectorPanel _uIInspectorPanel;
         public UIInspectorPanel uIInspectorPanel => uIInspectorPanel;
 
-        private GameObject _mainMenuObj;
+        private SceneViewControl _sceneViewControl;
+        public SceneViewControl sceneViewControl => _sceneViewControl;
 
         private bool visible = true;
+        private GameObject? oldSelectedObject = null;
+
 
         public void ShowHierarchyView(bool show)
         {
@@ -80,10 +83,9 @@ namespace MGAlienLib
                 }
             };
 
-            //var path = System.IO.Path.Combine(assetManager.rawAssetsRootPath, "prefabs/MainMenu.prefab");
-            //var toml = System.IO.File.ReadAllText(path);
-            //_mainMenuObj = Serializer.DeserializePrefab(toml);
-            //_mainMenuObj.transform.SetParent(uiman.uiRoot);
+            var sceneViewControlObj = CreateGameObject("sceneViewControl", transform);
+            _sceneViewControl = sceneViewControlObj.AddComponent<SceneViewControl>();
+            _sceneViewControl.Deactivate();
 
             ShowHierarchyView(true);
             ShowInspectorPanel(true);
@@ -118,6 +120,25 @@ namespace MGAlienLib
                 ShowHierarchyView(visible);
                 ShowInspectorPanel(visible);
             }
+
+            if (selectionManager.count > 0)
+            {
+                var obj = selectionManager.gameObjects[^1];
+                if (obj != oldSelectedObject)
+                {
+                    _uIInspectorPanel?.SetTarget(obj);
+                    oldSelectedObject = selectionManager.gameObjects[^1];
+                }
+            }
+            else
+            {
+                if (oldSelectedObject != null)
+                {
+                    _uIInspectorPanel?.SetTarget(null);
+                    oldSelectedObject = null;
+                }
+            }
+
         }
 
     }

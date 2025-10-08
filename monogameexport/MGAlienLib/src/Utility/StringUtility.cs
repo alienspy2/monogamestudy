@@ -35,5 +35,20 @@ namespace MGAlienLib
 
             return matchesInOrder;
         }
+
+        public static string ToReadableSizeString(this long rawValue)
+        {
+            string[] sizes = { "", "K", "M", "T" };
+            double len = rawValue;
+            int order = 0;
+            while (len >= 1000 && order < sizes.Length - 1)
+            {
+                order++;
+                len /= 1000;
+                if (order == sizes.Length - 1) break;
+            }
+
+            return $"{len:0.##} {sizes[order]}";
+        }
     }
 }

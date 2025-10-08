@@ -29,6 +29,27 @@ namespace MGAlienLib
         private bool isWorldDirty = true;
         private bool _hideInHierarchy = false;
 
+        public bool IsHiddenInHierarchy
+        {
+            get
+            {
+                if (_hideInHierarchy) return false;
+                if (parent != null)
+                {
+                    return parent.IsHiddenInHierarchy;
+                }
+                return false;
+            }
+        }
+
+        private bool _isSelectableInSceneView = true;
+
+        public bool IsSelectableInSceneView
+        {
+            get => _isSelectableInSceneView;
+            set => _isSelectableInSceneView = value;
+        }
+
         /// <summary>
         /// local space 에서의 위치를 가져오거나 설정합니다.
         /// </summary>

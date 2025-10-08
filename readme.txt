@@ -1,5 +1,6 @@
 monogame 공부중
-만드는 중이라 정리 안되어있음
+  만드는 중이라 정리 안되어있음.
+  일단 넣을 것을 다 넣고, 동작하는 상태로 만든 후 정리하자
 
   * unity 엔진과 비슷한 interface 를 지향. unity 엔진으로부터 쉽게 porting 할 수 있도록 한다
   * 범용엔진을 지향하지 않는다.
@@ -17,17 +18,21 @@ monogame 공부중
   * blender 에서 glb 로 저장하는 것을 표준으로 삼는다. export 시 up = +Y 옵션을 지정한다
     - blender 의 +Z 가 MGA 의 +Y = forward
     - blender 의 -Y 가 MGA 의 -Z = forward 
-
+  * (바뀔수도 있음) scene 시스템은 사용하지 않는다.
 
 * 프로젝트 여는 방법
 
-project1 solution 을 열면, 다음 2개의 project 가 있음
+project1 solution 을 열면, 다음 4개의 project 가 있음
 
-* MGAEditor project
-* Project1 project
+* MGA : core
+* MGAEditor : (거의 진행되지 않음) editor 용 template project.
+* Project1 project : engine core 를 만들기위한 demo project
+* Project2 project : 실제로 필요한 것을 찾기위해 , toy game 을 만드는 중
 
 최초 1회 실행하면 bin directory 에 config.toml 파일이 생긴다.
 여기에서 asset file 들의 path 를 설정해 줘야 한다. <- 나중에 자동화 해야함
+
+즉, project 마다 asset 을 따로 만들지 않아도 된다.
 
 * doc
 

@@ -250,6 +250,12 @@ namespace MGAlienLib
             }
 
             _primitiveShard.Render(renderState.chunks[_material.asset.id]);
+
+            if (transform.IsHiddenInHierarchy == false)
+            {
+                renderState.renderedVertexCount += _primitiveShard.GetVerticesCount();
+            }
+
         }
 
         private void UpdateTexture()

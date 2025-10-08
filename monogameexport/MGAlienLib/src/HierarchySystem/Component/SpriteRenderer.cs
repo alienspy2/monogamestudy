@@ -152,6 +152,13 @@ namespace MGAlienLib
             }
 
             _rectPrimitiveShard.Render(renderState.chunks[_material.asset.id]);
+
+            if (transform.IsHiddenInHierarchy == false)
+            {
+                renderState.renderedVertexCount += _rectPrimitiveShard.GetVerticesCount();
+            }
+
+
         }
 
         /// <summary>

@@ -54,7 +54,8 @@ namespace MGAlienLib
         public int activeMaskingIndex;
 
         public Dictionary<string, RenderChunk> chunks = new();
-        public List<Action> commands = new(); // note : 임시구현
+        public PriorityQueue<Action, int> commands = new(); // note : 임시구현
+        public int renderedVertexCount;
 
         public void CheckAndAddPrimitiveBatch(Material material)
         {
@@ -70,13 +71,14 @@ namespace MGAlienLib
             }
         }
 
-        public void CheckAndAddCommand(Action command)
+        public void CheckAndAddCommand(Action command, int priority)
         {
-            commands.Add(command);
+            commands.Enqueue(command, priority);
         }
 
         public void Reset()
         {
+            renderedVertexCount = 0;
             activeMaskingIndex = 0;
             foreach (var kv in chunks)
             {
@@ -205,15 +207,16 @@ namespace MGAlienLib
                                 var chunk = renderState.chunks[key];
                                 if (chunk.vertexCount == 0) continue;
                                 totalBatchCount++;
-                                totalVertexCount += chunk.vertexCount;
-                                chunk.PrimitiveBatch.Draw<VertexPositionColorTextureExt>(cam, chunk);
+                                chunk.PrimitiveBatch.Draw<VertexPositionColorTextureExt>(renderState, cam, chunk);
                             }
                         }
 
                         // 임시구현 : draw commands
                         {
-                            foreach(var command in renderState.commands)
+                            while(renderState.commands.Count > 0)
                             {
+                                var command = renderState.commands.Dequeue();
+                                totalBatchCount++;
                                 command?.Invoke();
                             }
                         }
@@ -226,6 +229,8 @@ namespace MGAlienLib
                             owner.internalRenderManager.OnRenderQ(renderState);
                         }
                     }
+
+                    totalVertexCount += renderState.renderedVertexCount;
                 }
             }
 

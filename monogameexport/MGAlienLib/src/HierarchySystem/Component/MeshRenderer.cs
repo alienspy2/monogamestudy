@@ -85,8 +85,16 @@ namespace MGAlienLib
                         _mesh.asset.v, 0, _mesh.asset.v.Length,
                         _mesh.asset.indices, 0, _mesh.asset.indices.Length / 3);
                 }
-            });
 
+            }, material.asset.renderPriority);
+
+            if (transform.IsHiddenInHierarchy == false)
+            {
+                if (_mesh != null && _mesh.asset != null)
+                {
+                    renderState.renderedVertexCount += _mesh.asset.v.Length;
+                }
+            }
         }
 
         public float? RaycastToBounds(Ray ray)

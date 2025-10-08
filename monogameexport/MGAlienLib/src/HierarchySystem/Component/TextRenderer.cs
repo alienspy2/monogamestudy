@@ -263,7 +263,14 @@ namespace MGAlienLib
             {
                 _rectPrimitiveShard.transform.position += transform.backward * 0.1f;
             }
+
             _rectPrimitiveShard.Render(renderState.chunks[_material.asset.id]);
+
+            if (transform.IsHiddenInHierarchy == false)
+            {
+                renderState.renderedVertexCount += _rectPrimitiveShard.GetVerticesCount();
+            }
+
         }
 
         public override void OnDispose()

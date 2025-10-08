@@ -141,7 +141,6 @@ namespace MGAlienLib
 
         private GraphicsDevice device => GameBase.Instance.GraphicsDevice;
 
-
         /// <summary>
         /// Create a new instance of Camera
         /// </summary>
@@ -328,9 +327,6 @@ namespace MGAlienLib
         {
             if (_useAsUI)
             {
-                //return; 
-                // debugging 시에는 이 아래 부분을 사용하지 않는게 편하다
-
                 var pickedUITransform = UIRaycast(inputManager.GetMousePos());
 
                 if (_lastPickedUITransform != pickedUITransform)
@@ -388,6 +384,9 @@ namespace MGAlienLib
                     }
                     _pointerDownRenderablesCache.Clear();
                 }
+
+                if (_lastPickedUITransform != null)
+                    inputManager.InputIsConsumedByUI = true;
             }
         }
 

@@ -293,7 +293,10 @@ namespace MGAlienLib
                 if (newRect.Height < MinSize.Y) newRect.Height = MinSize.Y;
 
                 UITransform.anchoredRect = newRect;
-                _titleBG.UITransform.anchoredRect = new RectangleF(0, 0, newRect.Width, TitleHeight);
+                if (_titleBG != null)
+                {
+                    _titleBG.UITransform.anchoredRect = new RectangleF(0, 0, newRect.Width, TitleHeight);
+                }
                 _contentRoot.anchoredRect = new RectangleF(0, -TitleHeight, newRect.Width, newRect.Height - TitleHeight);
 
                 OnContentSizeChanged((Vector2)_contentRoot.anchoredRect.Size);
@@ -386,9 +389,16 @@ namespace MGAlienLib
             panel._useContextSizeFitter = useContextSizeFitter;
             panel.UITransform.size = new Vector2(anchoredRect.Width, anchoredRect.Height);
 
-            panel._titleBG.color = titleBarColor.Value;
-            panel.titleText.color = titleTextColor.Value;
-            panel.titleText.text = titleText;
+            if (panel._titleBG != null)
+            {
+                panel._titleBG.color = titleBarColor.Value;
+            }
+
+            if (panel.titleText != null)
+            {
+                panel.titleText.color = titleTextColor.Value;
+                panel.titleText.text = titleText;
+            }
 
             panel._contentBG.sliceLeftMargin = 24;
             panel._contentBG.sliceTopMargin = 1;

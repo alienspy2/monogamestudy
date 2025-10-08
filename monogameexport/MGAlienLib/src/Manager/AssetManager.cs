@@ -500,7 +500,7 @@ namespace MGAlienLib
                 return MeshImporter.LoadSingleMesh(fileStream);
             });
 
-            newMesh.CalculateBounds();
+            newMesh?.CalculateBounds();
             return newMesh;
         }
     }

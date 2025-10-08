@@ -14,8 +14,9 @@ namespace MGAlienLib
         public static float PopupElevation = 3000f;
 
         public static float ConsoleElevation = 1000f;
-        public static float InspectorElevation = 999f;
-        public static float HierarchyViewElevation = 998f;
+        public static float SceneControlViewElevation = 999f;
+        public static float InspectorElevation = 998f;
+        public static float HierarchyViewElevation = 997f;
 
         public static float DefaultElevationEnd = 900f;
         public static float DefaultElevationStart = 500f;
@@ -29,6 +30,8 @@ namespace MGAlienLib
         public Camera cam => _cam;
         public Transform uiRoot => _uiRoot;
         public UIDebugConsolePanel console => _console;
+
+
 
         public BuiltinUIManager(GameBase owner) : base(owner)
         {
@@ -99,7 +102,7 @@ namespace MGAlienLib
                 var uit = _activePopupMenu.GetComponent<UITransform>();
 
                 // esc 키로 닫기
-                if (owner.inputManager.WasPressedThisFrame(Microsoft.Xna.Framework.Input.Keys.Escape))
+                if (owner.inputManager.WasPressedThisFrame(Keys.Escape))
                 {
                     ClosePopupMenu();
                 }
