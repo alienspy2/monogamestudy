@@ -1,4 +1,5 @@
-﻿using Microsoft.Xna.Framework.Graphics;
+﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Graphics;
 
 namespace MGAlienLib
 {
@@ -10,10 +11,30 @@ namespace MGAlienLib
 
         private SharedMaterial.Reference _material;
         private SharedMesh.Reference _mesh;
+        private SharedAsset<Material> _unmanagedMaterial;
+
+        public SharedMaterial.Reference material
+        {
+            get => _material;
+        }
 
         ~MeshRenderer()
         {
             Dispose(false);
+        }
+
+        /// <summary>
+        /// sharing 된 matrial 의 값을 바꾸면,
+        /// 같은 material 을 사용한 모든 renderer 의 값이 바뀐다.
+        /// 이 renderer 에서 사용하는 material 의 값만 바꾸고 싶으면
+        /// 값을 바꾸기 전에
+        /// sharing 을 멈춰야한다.
+        /// </summary>
+        public void BreakMaterialSharing()
+        {
+            _unmanagedMaterial = _material.internal_GetSource().MakeUnsharedCopy();
+            _material = _unmanagedMaterial.internal_CreateReference();
+            // note : material 이 삭제되지 않고, memory leak 의 위험이 있나?
         }
 
         public void Load(string assetAddress)
@@ -26,7 +47,14 @@ namespace MGAlienLib
         {
             var shader = shaderManager.GetShaderByName(shaderName);
             _material = SharedMaterial.Get(0, shader, game.defaultAssets.whiteTexture);
-            _material.asset.cullMode = CullMode.CullClockwiseFace;
+
+            // todo : 새로 만들어진 material 일 경우 기본값 적용. 더 나은 방법을 찾아야한다.
+            if (_material.internal_ReferenceCount == 1)
+            {
+                _material.asset.cullMode = CullMode.CullClockwiseFace;
+                _material.asset.SetVector4("_BaseColor", new Vector4(1, 1, 1, 1));
+            }
+
         }
 
         public override void Render(RenderState renderState)
@@ -61,6 +89,18 @@ namespace MGAlienLib
 
         }
 
+        public float? RaycastToBounds(Ray ray)
+        {
+            if (_mesh == null) return null;
+            if (_mesh.asset == null) return null;
+
+            // ray 를 local 좌표계로 변환
+            var localRayOrigin = Vector3.Transform(ray.Position, transform.worldToLocalMatrix);
+            var localRayDirection = Vector3.TransformNormal(ray.Direction, transform.worldToLocalMatrix);
+
+            // _mesh.asset.bounds 와 교차 판정
+            return _mesh.asset.bounds.Intersects(new Ray(localRayOrigin, localRayDirection));
+        }
 
         public override void internal_Invalidate()
         {

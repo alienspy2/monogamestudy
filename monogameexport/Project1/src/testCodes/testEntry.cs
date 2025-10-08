@@ -273,7 +273,7 @@ namespace Project1
                     Vector2 mousePos = inputManager.GetMousePos();
                     lastMousePos = mousePos;
                     // Logger.Log(mousePos.ToString());
-                    var worldPos = cam.Unproject(mousePos, 0);
+                    var worldPos = cam.UnprojectAtZ(mousePos, 0);
                     // Logger.Log(worldPos.ToString());
                     scrolling = true;
                 }
@@ -290,8 +290,8 @@ namespace Project1
                 if (!cam.orthographic) mul = 1;
 
                 var mousePos = inputManager.GetMousePos();
-                var lastWorldPos = cam.Unproject(lastMousePos, 0);
-                var currentWorldPos = cam.Unproject(mousePos, 0);
+                var lastWorldPos = cam.UnprojectAtZ(lastMousePos, 0);
+                var currentWorldPos = cam.UnprojectAtZ(mousePos, 0);
                 var worldDelta = currentWorldPos - lastWorldPos;
                 cam.transform.position -= worldDelta * mul;
                 lastMousePos = mousePos;

@@ -232,7 +232,7 @@ namespace MGAlienLib
 
                 if (UITransform == null) AddComponent<UITransform>();
 
-                _primitiveShard.transform.position = UITransform.canvas.transform.position + UITransform.canvas.transform.forward * UITransform.accumulatedElevation;
+                _primitiveShard.transform.position = UITransform.canvas.transform.position + UITransform.canvas.transform.backward * UITransform.accumulatedElevation;
                 _primitiveShard.transform.rotation = UITransform.canvas.transform.rotation;
                 _primitiveShard.transform.scale = UITransform.canvas.transform.scale;
 

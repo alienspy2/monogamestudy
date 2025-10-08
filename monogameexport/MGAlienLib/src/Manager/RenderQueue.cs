@@ -97,6 +97,8 @@ namespace MGAlienLib
         private List<Renderable> renderables = new();
         private List<RenderState> renderStates = new();
 
+        public List<Renderable> internal_Renderables => renderables;
+
         public RenderQueue(GameBase owner) : base(owner)
         {
         }

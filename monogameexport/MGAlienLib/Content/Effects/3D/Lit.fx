@@ -13,6 +13,8 @@ cbuffer Data : register(b0)
     float4x4 World;
     float4x4 ViewProjection;
     Texture2D _MainTex;
+    float4 _BaseColor;
+
     float _Sharpness;
     sampler2D MainTextureSampler = sampler_state
     {
@@ -27,12 +29,14 @@ struct VertexShaderInput
 {
 	float4 Position : POSITION0;
     float3 Normal : NORMAL0;
+    float2 TextureCoordinates : TEXCOORD0;
 	float4 Color : COLOR0;
 };
 
 struct VertexShaderOutput
 {
 	float4 Position : SV_POSITION;
+    float2 tc0 : TEXCOORD0;
     float4 WorldPosition : TEXCOORD1;
 	float4 Color : COLOR0;
 };
@@ -51,17 +55,22 @@ VertexShaderOutput MainVS(in VertexShaderInput input)
 
     output.WorldPosition = mul(input.Position, World);
     output.Position = mul(output.WorldPosition, ViewProjection);
-    
+    output.tc0 = input.TextureCoordinates;
+
     float3 L = test_Lighting(input.Normal);
-    output.Color.rgb = input.Color.rgb * L;
-    output.Color.a = 1;
+    output.Color.rgb = input.Color.rgb * L * _BaseColor.rgb;
+    output.Color.a = 1 * _BaseColor.a;
     
 	return output;
 }
 
 float4 MainPS(VertexShaderOutput input) : COLOR
 {
-	return input.Color;
+	float4 tex = tex2D(MainTextureSampler, input.tc0);
+    float3 color = tex.rgb * input.Color.rgb;
+    float alpha = tex.a * input.Color.a;
+
+    return float4(color, alpha);
 }
 
 technique BasicColorDrawing

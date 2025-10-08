@@ -48,6 +48,7 @@ namespace MGAlienLib.Utility
             switch (easingType)
             {
                 case eEasingType.Linear:
+                    Logger.Log(progress);
                     return Mathf.Lerp(startValue, endValue, progress);
                 case eEasingType.EaseInQuad:
                     return Mathf.Lerp(startValue, endValue, progress * progress);

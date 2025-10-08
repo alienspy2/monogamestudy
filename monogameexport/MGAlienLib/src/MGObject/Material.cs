@@ -21,11 +21,26 @@ namespace MGAlienLib
         public Dictionary<string, Vector4> vectorParams = new();    
         public Dictionary<string, Texture2D> textureParams = new();
 
-        RasterizerState rasterizerState = new RasterizerState();
+        private CullMode _cullMode = CullMode.CullCounterClockwiseFace;
+        private bool _zWrite = true;
+        private bool _zTest = true;
+
         public CullMode cullMode
         {
-            get => rasterizerState.CullMode;
-            set => rasterizerState.CullMode = value;
+            get => _cullMode;
+            set => _cullMode = value;
+        }
+        public bool zWrite
+        {
+            get => _zWrite;
+            set => _zWrite = value;
+        }
+
+
+        public bool zTest
+        {
+            get => _zTest;
+            set => _zTest = value;
         }
 
         public void SetFloat(string name, float value)
@@ -41,6 +56,11 @@ namespace MGAlienLib
         public void SetTexture(string name, Texture2D value)
         {
             textureParams[name] = value;
+        }
+
+        public void SetColor(string name, Color red)
+        {
+            SetVector4(name, red.ToVector4());
         }
 
         public void ApplyParams()
@@ -60,9 +80,35 @@ namespace MGAlienLib
                 shader.SetTexture(kv.Key, kv.Value);
             }
 
-            GameBase.Instance.GraphicsDevice.RasterizerState = rasterizerState;
+            // todo : 다른 방법으로 했을 때 에러가 발생해서 일단 이렇게 했지만, 
+            // 매 프레임 생성하면 안된다.
+            var rasterzierState = new RasterizerState()
+            {
+                CullMode = _cullMode
+            };
+            
+            var depthStencilState = new DepthStencilState()
+            {
+                DepthBufferWriteEnable = zWrite,
+                DepthBufferEnable = zTest
+            };
+
+            GameBase.Instance.GraphicsDevice.RasterizerState = rasterzierState;
+            GameBase.Instance.GraphicsDevice.DepthStencilState = depthStencilState;
         }
 
+        public Material internal_Clone()
+        {
+            var newMaterial = new Material();
+            newMaterial.renderPriority = renderPriority;
+            newMaterial.shader = shader;
+            newMaterial.floatParams = new(floatParams);
+            newMaterial.vectorParams = new(vectorParams);
+            newMaterial.textureParams = new(textureParams);
+            newMaterial.cullMode = cullMode;
+
+            return newMaterial;
+        }
 
         #region IDisposable Support
         private bool disposed = false;

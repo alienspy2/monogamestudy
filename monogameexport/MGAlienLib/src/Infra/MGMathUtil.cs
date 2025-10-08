@@ -129,6 +129,11 @@ namespace MGAlienLib
             );
         }
 
+        /// <summary>
+        /// Vector3 (Euler angles in degrees, YXZ order) to Quaternion
+        /// </summary>
+        /// <param name="from"></param>
+        /// <returns></returns>
         public static Quaternion FromEulerAnglesToQuaternion(this Vector3 from)
         {
             return Quaternion.CreateFromYawPitchRoll(from.Y.ToRadians(), from.X.ToRadians(), from.Z.ToRadians());

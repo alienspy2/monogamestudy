@@ -22,6 +22,7 @@ namespace Project2
         private List<GravityBall> balls;
 
         private EditorFunctionality editorFunction;
+        private GizmoFunction gizmoFunction; // <- 만드는 중 
 
         private List<Vector3> test_oldMousePos = new List<Vector3>();
 
@@ -114,7 +115,7 @@ namespace Project2
             if (test_debugDraw)
             {
                 var mousePos = inputManager.GetMousePos();
-                var worldPos = cam.Unproject(mousePos, 0);
+                var worldPos = cam.UnprojectAtZ(mousePos, 0);
                 test_oldMousePos.Add(worldPos);
 
                 if (test_oldMousePos.Count >= 2) DebugDraw.DrawLineStrip(test_oldMousePos, Color.Red);
@@ -168,6 +169,11 @@ namespace Project2
 
         private void Test()
         {
+            var gizmoObj = CreateGameObject("gizmoObj", root);
+            gizmoObj.transform.position = Vector3.Up * 2;
+            gizmoFunction = gizmoObj.AddComponent<GizmoFunction>();
+            gizmoFunction.SetTargetCamera(cam);
+
             if (test_loadDDS)
             {
                 test_ddsImage = CreateGameObject("image", transform);
@@ -186,7 +192,7 @@ namespace Project2
 
             if (test_mesh)
             {
-                test_meshObj = CreateAndLoadMesh("raw://test/tank.glb", Vector3.Right * 0);
+                test_meshObj = CreateAndLoadMesh("raw://test/tank.glb", Vector3.Right * -2);
                 CreateAndLoadMesh("raw://test/buggycar.glb", Vector3.Right * 2);
                 CreateAndLoadMesh("raw://test/bomber.glb", Vector3.Right * 4);
                 CreateAndLoadMesh("raw://test/cannonTurret.glb", Vector3.Right * 6);

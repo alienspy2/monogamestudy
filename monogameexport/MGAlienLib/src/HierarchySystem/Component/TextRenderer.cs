@@ -261,7 +261,7 @@ namespace MGAlienLib
 
             if (_outline || _shadow)
             {
-                _rectPrimitiveShard.transform.position += transform.forward * 0.1f;
+                _rectPrimitiveShard.transform.position += transform.backward * 0.1f;
             }
             _rectPrimitiveShard.Render(renderState.chunks[_material.asset.id]);
         }

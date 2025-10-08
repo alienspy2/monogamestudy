@@ -32,6 +32,13 @@ namespace MGAlienLib
             return newMat;
         }
 
+        public override SharedAsset<Material> MakeUnsharedCopy()
+        {
+            if (asset == null) return null;
+
+            var newMaterial = asset.internal_Clone();
+            return new SharedMaterial(address + "+Detached", newMaterial);
+        }
 
         protected override Material CreateAsset(string address, object parameters)
         {
@@ -53,5 +60,6 @@ namespace MGAlienLib
 
             return newMat;
         }
+
     }
 }

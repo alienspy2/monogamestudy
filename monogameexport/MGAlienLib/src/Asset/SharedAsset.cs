@@ -49,6 +49,7 @@ namespace MGAlienLib
                 }
             }
 
+
             /// <summary>
             /// 관리 중인 모든 자원을 해제하고 컬렉션을 비웁니다.
             /// 실행중 이 함수를 호출하면 절대 안됩니다.
@@ -116,6 +117,9 @@ namespace MGAlienLib
             }
 
             private SharedAsset<T> source;
+
+            public SharedAsset<T> internal_GetSource() => source;
+
 
             /// <summary>
             /// 새로운 자원 참조를 생성합니다.
@@ -201,6 +205,8 @@ namespace MGAlienLib
         /// <param name="parameters">자원을 생성해야 할 때 전달되는 parameter </param>
         /// <returns>생성된 자원</returns>
         protected abstract T CreateAsset(string address, object parameters);
+
+        public virtual SharedAsset<T> MakeUnsharedCopy() => null;
 
         public Reference internal_CreateReference()
         {

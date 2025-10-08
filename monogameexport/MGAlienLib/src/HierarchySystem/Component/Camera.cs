@@ -151,13 +151,23 @@ namespace MGAlienLib
             aspectRatio = (float)viewport.Width / (float)viewport.Height;
         }
 
-        public Vector3 Unproject(Vector2 screenPos, float z_world)
+        public Vector3 UnprojectAtZ(Vector2 screenPos, float z_world)
         {
             Vector3 screenSpace = new Vector3(screenPos, 0);
             Vector3 nearPoint = ViewportUnproject(screenSpace, _nearClipPlane);
             Vector3 farPoint = ViewportUnproject(screenSpace, _farClipPlane);
 
             float t = (z_world - nearPoint.Z) / (farPoint.Z - nearPoint.Z);
+            return Vector3.Lerp(nearPoint, farPoint, t);
+        }
+
+        public Vector3 UnprojectAtX(Vector2 screenPos, float x_world)
+        {
+            Vector3 screenSpace = new Vector3(screenPos, 0);
+            Vector3 nearPoint = ViewportUnproject(screenSpace, _nearClipPlane);
+            Vector3 farPoint = ViewportUnproject(screenSpace, _farClipPlane);
+
+            float t = (x_world - nearPoint.X) / (farPoint.X - nearPoint.X);
             return Vector3.Lerp(nearPoint, farPoint, t);
         }
 

@@ -28,6 +28,7 @@ namespace MGAlienLib.Tweening
 
         public TweeningBase<T> Init(T initialValue, T targetValue, float duration)
         {
+            _easingType = eEasingType.Linear;
             _initialValue = initialValue;
             _currentValue = initialValue;
             _targetValue = targetValue;

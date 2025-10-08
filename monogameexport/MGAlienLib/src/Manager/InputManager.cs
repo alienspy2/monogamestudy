@@ -183,5 +183,6 @@ namespace MGAlienLib
         {
             return mouseState.ScrollWheelValue - oldMouseState.ScrollWheelValue;
         }
+
     }
 }
