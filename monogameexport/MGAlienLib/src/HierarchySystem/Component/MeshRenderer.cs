@@ -1,5 +1,6 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
+using System;
 
 namespace MGAlienLib
 {
@@ -36,6 +37,12 @@ namespace MGAlienLib
             _material = _unmanagedMaterial.internal_CreateReference();
             // note : material 이 삭제되지 않고, memory leak 의 위험이 있나?
         }
+
+        public void ShareMaterial(SharedAsset<Material>.Reference material)
+        {
+            _material = material.Clone();
+        }
+
 
         public void Load(string assetAddress)
         {

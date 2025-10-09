@@ -23,10 +23,6 @@ namespace MGAlienLib
         private Matrix _invTransformMatrix;
         private bool isLocalDirty = true;
 
-        // todo : parent 의 matrix 들 까지 모두 cache
-        private Matrix _cachedLocalToWorldMatrix;
-        private Matrix _cachedWorldToLocalMatrix;
-        private bool isWorldDirty = true;
         private bool _hideInHierarchy = false;
 
         public bool IsHiddenInHierarchy
@@ -264,6 +260,15 @@ namespace MGAlienLib
                     Matrix.CreateTranslation(_localPosition); // 위치 적용
                 _invTransformMatrix = Matrix.Invert(_transformMatrix);
                 isLocalDirty = false;
+
+                if (gameObject != null)
+                {
+                    var collider = GetComponent<Collider>();
+                    if (collider != null)
+                    {
+                        collider.internal_ColliderDirty();
+                    }
+                }
             }
         }
 

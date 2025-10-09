@@ -85,6 +85,8 @@ namespace MGAlienLib
 
         protected GameBase.DefaultAssets defaultAssets => game.defaultAssets;
 
+        protected PhysicsManager physMan => game.physicsManager;
+
         protected Transform root => hierarchyManager.GetRootTransform();
 
         /// <summary>
