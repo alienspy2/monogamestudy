@@ -71,6 +71,15 @@ namespace MGAlienLib
             return newV;
         }
 
+        public static System.Numerics.Vector3 ToSystemNumericVector3(this Vector3 v)
+        {
+            return new System.Numerics.Vector3(v.X, v.Y, v.Z);
+        }
+
+        public static Vector3 ToMonogameVector3(System.Numerics.Vector3 v)
+        {
+            return new Vector3(v.X, v.Y, v.Z);
+        }
 
         /// <summary>
         /// Extension method to convert a Quaternion to Euler angles using YXZ order

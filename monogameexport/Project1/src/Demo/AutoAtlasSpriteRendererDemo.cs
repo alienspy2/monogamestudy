@@ -1,9 +1,9 @@
 ﻿using Microsoft.Xna.Framework;
 using System;
 using System.Collections.Generic;
+using MGAlienLib;
 
-
-namespace MGAlienLib
+namespace Project1
 {
     /// <summary>
     /// AutoAtlasSpriteRenderer 를 테스트하는 데모입니다.
@@ -16,7 +16,7 @@ namespace MGAlienLib
     /// 실시간으로 texture 를 생성하는 procedural texture 와 같이 사용하면
     /// 유용합니다
     /// </summary>
-    public class AutoAtlasSpriteRendererDemo : ComponentBase
+    public class AutoAtlasSpriteRendererDemo : _2DDemoBase
     {
         private List<AutoAtlasSpriteRenderer> testAASpriteRenderers;
         public float spacing = 40;

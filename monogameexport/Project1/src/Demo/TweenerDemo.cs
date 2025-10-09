@@ -4,9 +4,9 @@ using MGAlienLib.Tweening;
 using Microsoft.Xna.Framework;
 using System.Collections.Generic;
 
-namespace MGAlienLib
+namespace Project1
 {
-    public class TweenerDemo : ComponentBase
+    public class TweenerDemo : _2DDemoBase
     {
         public float duration = 3;
         private List<SpriteRenderer> balls;

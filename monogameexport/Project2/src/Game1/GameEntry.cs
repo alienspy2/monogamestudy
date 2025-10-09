@@ -22,7 +22,6 @@ namespace Project2
         private List<GravityBall> balls;
 
         private EditorFunctionality editorFunction;
-        private SceneViewControl gizmoFunction; // <- 만드는 중 
 
         private List<Vector3> test_oldMousePos = new List<Vector3>();
 

@@ -1,10 +1,11 @@
 ﻿
 using Microsoft.Xna.Framework;
 using System;
+using MGAlienLib;
 
-namespace MGAlienLib
+namespace Project1
 {
-    public class _3DUIDemo : ComponentBase
+    public class _3DUIDemo : _2DDemoBase
     {
         private UICanvas anchorTestCanvas;
 
@@ -32,7 +33,7 @@ namespace MGAlienLib
                 {
                     var uiimage2 = SpriteRenderer.BuildAsUI<UIImage>(anchorTestFrame.transform, 
                         $"uiimage2 {x},{y}", "raw://art/UI/SimpleFrame.png",
-                        new Rectangle(0, 0, 100, 100), 0.1f,
+                        new Rectangle(0, 0, 100, 100), -0.1f,
                         new Vector2(x * .5f, y * .5f),
                         new Vector2(x * .5f, y * .5f),
                         layer: layer);
@@ -59,7 +60,7 @@ namespace MGAlienLib
                         "notoKR", 16,
                         "Hello",
                         Color.White,// * alpha,
-                        new Rectangle(0, 0, 100, 100), 0.1f,
+                        new Rectangle(0, 0, 100, 100), -0.1f,
                         x switch
                         {
                             0 => eHAlign.Left,

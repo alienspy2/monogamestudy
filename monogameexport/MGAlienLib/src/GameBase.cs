@@ -45,6 +45,7 @@ namespace MGAlienLib
         public DynamicTextureAtlasManager dynamicTextureAtlasManager;
         public BuiltinUIManager builtinUIManager;
         public SelectionManager selectionManager;
+        public PhysicsManager physicsManager;
 
         #region config
         public class Config
@@ -131,6 +132,7 @@ namespace MGAlienLib
             managers.Add(dynamicTextureAtlasManager = new DynamicTextureAtlasManager(this));
             managers.Add(builtinUIManager = new BuiltinUIManager(this));
             managers.Add(selectionManager = new SelectionManager(this));
+            managers.Add(physicsManager = new PhysicsManager(this));
 
             hierarchyManager.Intenal_CreateRoot();
 
