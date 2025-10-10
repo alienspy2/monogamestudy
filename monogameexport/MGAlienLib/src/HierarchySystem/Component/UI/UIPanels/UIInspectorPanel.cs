@@ -31,7 +31,7 @@ namespace MGAlienLib
 
             var refreshButton = UIButton.Build(_titleBG.transform,
                 "Refresh Button",
-                "raw://art/UI/refresh.png", false, false,
+                "raw://EditorResources/icons/refresh.png", false, false,
                 new RectangleF(0, 0, 24, 24), 0.1f,
                 onCommand: (_) => Refresh(),
                 pivot: Vector2.UnitY, anchor: Vector2.UnitY);

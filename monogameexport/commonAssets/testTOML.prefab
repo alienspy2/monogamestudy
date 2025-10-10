@@ -1,0 +1,15 @@
+["MGAlienLib.GameObject:20f0ff04-5cf8-4182-88fe-61ea2fda4435"]
+_layer = 0
+_active = true
+_name = "testTOML"
+["MGAlienLib.Transform:64cb73df-e713-44ef-8faf-e6fa74d7af5f"]
+_localPosition = [0.0, 0.0, 0.0]
+_localRotation = [0.0, 0.0, 0.0, 1.0]
+_localScale = [1.0, 1.0, 1.0]
+_parent = "37f1720b-5f74-4846-bc3f-51fa22e12207"
+_gameObjectId = "20f0ff04-5cf8-4182-88fe-61ea2fda4435"
+_enabled = true
+["Project1.testTOML:3e6240b3-4215-4000-9329-66d3a32c7905"]
+data = ["asdf", "123", "xzcv"]
+_gameObjectId = "20f0ff04-5cf8-4182-88fe-61ea2fda4435"
+_enabled = true

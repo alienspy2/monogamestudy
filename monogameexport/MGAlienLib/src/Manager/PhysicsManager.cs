@@ -80,20 +80,44 @@ namespace MGAlienLib
             simulation.Statics.Add(new StaticDescription(new Vector3(5, 0, 0), simulation.Shapes.Add(new Box(1, 20, 500))));
         }
 
+        #region STATIC
+        // sphere
         public StaticHandle AddStatic(Transform t, float _in_radius)
-        {
-            RigidPose pose = new RigidPose(Convert(t.position), Convert(t.rotation));
-            var radius = _in_radius * (t.scale.X + t.scale.Y + t.scale.Z) / 3f;
-            return simulation.Statics.Add(new StaticDescription(pose, simulation.Shapes.Add(new Sphere(radius))));
-        }
+            => AddOrUpdateStatic(null, t, _in_radius)!.Value;
 
+        // sphere
+        public void UpdateStatic(StaticHandle handle, Transform t, float _in_radius)
+            => AddOrUpdateStatic(handle, t, _in_radius);
+
+        // box
         public StaticHandle AddStatic(Transform t, Microsoft.Xna.Framework.BoundingBox box)
             => AddOrUpdateStatic(null, t, box)!.Value;
 
+        // box
         public void UpdateStatic(StaticHandle handle, Transform t, Microsoft.Xna.Framework.BoundingBox box)
             => AddOrUpdateStatic(handle, t, box);
 
-        public StaticHandle? AddOrUpdateStatic(StaticHandle? handle, Transform t, Microsoft.Xna.Framework.BoundingBox box)
+        // sphere
+        private StaticHandle? AddOrUpdateStatic(StaticHandle? handle, Transform t, float _in_radius)
+        {
+            RigidPose pose = new RigidPose(Convert(t.position), Convert(t.rotation));
+            var radius = _in_radius * (t.scale.X + t.scale.Y + t.scale.Z) / 3f;
+            var desc = new StaticDescription(pose, simulation.Shapes.Add(new Sphere(radius)));
+
+            if (handle.HasValue)
+            {
+                simulation.Statics.ApplyDescription(handle.Value, desc);
+            }
+            else
+            {
+                handle = simulation.Statics.Add(desc);
+            }
+
+            return handle;
+        }
+
+        // box
+        private StaticHandle? AddOrUpdateStatic(StaticHandle? handle, Transform t, Microsoft.Xna.Framework.BoundingBox box)
         {
             var center = (box.Min + box.Max) / 2f;
             RigidPose pose = new RigidPose(Convert(t.position + center), Convert(t.rotation));
@@ -103,61 +127,91 @@ namespace MGAlienLib
             size.Z = size.Z * t.scale.Z;
             var desc = new StaticDescription(pose, simulation.Shapes.Add(new Box(size.X, size.Y, size.Z)));
 
-            if (!handle.HasValue)
+            if (handle.HasValue)
             {
-                handle = simulation.Statics.Add(desc);
+                simulation.Statics.ApplyDescription(handle.Value, desc);
             }
             else
             {
-                simulation.Statics.ApplyDescription(handle.Value, desc);
+                handle = simulation.Statics.Add(desc);
             }
 
             return handle;
         }
 
-        public void UpdateStatic(StaticHandle handle, Transform t, float _in_radius)
-        {
-            RigidPose pose = new RigidPose(Convert(t.position), Convert(t.rotation));
-            var radius = _in_radius * (t.scale.X + t.scale.Y + t.scale.Z) / 3f;
-            simulation.Statics.ApplyDescription(handle, new StaticDescription(pose, simulation.Shapes.Add(new Sphere(radius))));
-        }
-
-        //public void UpdateStatic(StaticHandle handle, Transform t, Microsoft.Xna.Framework.BoundingBox box)
-        //{
-        //    var center = (box.Min + box.Max) / 2f;
-        //    RigidPose pose = new RigidPose(Convert(t.position + center), Convert(t.rotation));
-        //    Vector3 size = Convert(box.Max - box.Min);
-        //    size.X = size.X * t.scale.X;
-        //    size.Y = size.Y * t.scale.Y;
-        //    size.Z = size.Z * t.scale.Z;
-        //    var desc = new StaticDescription(pose, simulation.Shapes.Add(new Box(size.X, size.Y, size.Z)));
-
-        //    if (handle.ha)
-                
-        //}
 
         public void RemoveStatic(StaticHandle handle)
         {
             simulation.Statics.Remove(handle);
         }
 
+        #endregion
+
+        #region DYNAMIC
         public BodyHandle AddBody(Transform t, float _in_radius, float mass)
         {
             RigidPose pose = new RigidPose(Convert(t.position), Convert(t.rotation));
             var radius = _in_radius * (t.scale.X + t.scale.Y + t.scale.Z) / 3f;
             var sphere = new Sphere(radius);
             var inertia = sphere.ComputeInertia(mass);
-            return simulation.Bodies.Add(BodyDescription.CreateDynamic(pose, inertia, simulation.Shapes.Add(sphere), 0.01f));
+            var desc = BodyDescription.CreateDynamic(pose, inertia, simulation.Shapes.Add(sphere), 0.01f);
+
+            return simulation.Bodies.Add(desc);
         }
 
-        public StaticHandle AddBody(Transform t, Microsoft.Xna.Framework.BoundingBox box, float mass)
+        public void UpdateBody(BodyHandle? handle, Transform t, float _in_radius, float mass)
+        {
+            if (handle == null) return;
+
+            var bodyRef = simulation.Bodies.GetBodyReference(handle.Value);
+            if (bodyRef.Exists == false) return;
+
+            var radius = _in_radius * (t.scale.X + t.scale.Y + t.scale.Z) / 3f;
+            var sphere = new Sphere(radius);
+            var desc = BodyDescription.CreateDynamic(
+                    bodyRef.Pose,
+                    bodyRef.Velocity,
+                    bodyRef.LocalInertia,
+                    simulation.Shapes.Add(sphere),
+                    0.01f);
+
+            simulation.Bodies.ApplyDescription(handle.Value, desc);
+            bodyRef.Awake = true;
+        }
+
+        public BodyHandle AddBody(Transform t, Microsoft.Xna.Framework.BoundingBox box, float mass)
         {
             var center = (box.Min + box.Max) / 2f;
             var pose = new RigidPose(Convert(t.position + center), Convert(t.rotation));
             Vector3 size = Convert(box.Max - box.Min);
             var boxShape = new Box(size.X * t.scale.X, size.Y * t.scale.Y, size.Z * t.scale.Z);
             var inertia = boxShape.ComputeInertia(mass);
-            return simulation.Statics.Add(new StaticDescription(pose, simulation.Shapes.Add(boxShape)));
+            var desc = BodyDescription.CreateDynamic(pose, inertia, simulation.Shapes.Add(boxShape), 0.01f);
+
+            return simulation.Bodies.Add(desc);
+        }
+
+        public void UpdateBody(BodyHandle? handle, Transform t, Microsoft.Xna.Framework.BoundingBox box, float mass)
+        {
+            if (handle == null) return;
+
+            var bodyRef = simulation.Bodies.GetBodyReference(handle.Value);
+            if (bodyRef.Exists == false) return;
+
+            var center = (box.Min + box.Max) / 2f;
+            //var pose = new RigidPose(Convert(t.position + center), Convert(t.rotation));
+            Vector3 size = Convert(box.Max - box.Min);
+            var boxShape = new Box(size.X * t.scale.X, size.Y * t.scale.Y, size.Z * t.scale.Z);
+            //var inertia = boxShape.ComputeInertia(mass);
+            var desc = BodyDescription.CreateDynamic(
+                        bodyRef.Pose,
+                        bodyRef.Velocity,
+                        bodyRef.LocalInertia,
+                        simulation.Shapes.Add(boxShape), 
+                        0.01f);
+
+            simulation.Bodies.ApplyDescription(handle.Value, desc);
+            bodyRef.Awake = true;
         }
 
         public void RemoveBody(BodyHandle handle)
@@ -177,6 +231,8 @@ namespace MGAlienLib
             rot = Convert(bodyRef.Pose.Orientation);
             vel = Convert(bodyRef.Velocity.Linear);
         }
+
+        #endregion
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         private Microsoft.Xna.Framework.Vector3 Convert(System.Numerics.Vector3 v)

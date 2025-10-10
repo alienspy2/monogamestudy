@@ -1,15 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿
 namespace MGAlienLib
 {
     public class SphereBody : RigidBody
     {
         [SerializeField] public float _radius = 0.5f;
-        [SerializeField] public float _mass = 1f;
 
         public float radius
         {
@@ -19,21 +13,7 @@ namespace MGAlienLib
                 if (_radius != value)
                 {
                     _radius = value;
-                    // todo : update physics body
-
-                }
-            }
-        }
-
-        public float mass
-        {
-            get { return _mass; }
-            set
-            {
-                if (_mass != value)
-                {
-                    _mass = value;
-                    // todo : update physics body
+                    internal_BodyDirty();
                 }
             }
         }
@@ -45,5 +25,14 @@ namespace MGAlienLib
             _handle = physMan.AddBody(transform, _radius * adjust, _mass);
         }
 
+
+        public override void internal_BodyDirty()
+        {
+            base.internal_BodyDirty();
+
+            if (_handle == null) return;
+
+            physMan.UpdateBody(_handle.Value, transform, _radius, _mass);
+        }
     }
 }

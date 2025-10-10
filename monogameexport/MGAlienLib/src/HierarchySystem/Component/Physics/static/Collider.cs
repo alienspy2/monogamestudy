@@ -22,15 +22,5 @@ namespace MGAlienLib
 
         }
 
-        protected void internal_Invalidate()
-        {
-            if (_handle.HasValue)
-            {
-                physMan.RemoveStatic(_handle.Value);
-                _handle = null;
-            }
-            _handle = null;
-            //_handle = internal_CreateCollider();
-        }
     }
 }

@@ -4,7 +4,8 @@ namespace MGAlienLib
 {
     public class SphereCollider : Collider
     {
-        [SerializeField] public float _radius = 0.5f;
+        [SerializeField] protected float _radius = 0.5f;
+
         public float radius
         {
             get { return _radius; }
@@ -21,7 +22,7 @@ namespace MGAlienLib
         public override void OnEnable()
         {
             base.OnEnable();
-            const float adjust = 1f/ 1.25f; // 왜인지는 모르겠으나, 1.25f 로 나누어야함.
+            const float adjust = 1f / 1.25f; // 왜인지는 모르겠으나, 1.25f 로 나누어야함.
             _handle = physMan.AddStatic(transform, _radius * adjust);
         }
 

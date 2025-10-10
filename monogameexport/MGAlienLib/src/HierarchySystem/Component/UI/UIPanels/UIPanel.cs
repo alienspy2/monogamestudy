@@ -10,7 +10,7 @@ namespace MGAlienLib
         protected static readonly int TitleHeight = 30;
         protected static readonly int TitleFontSize = 13;
         protected static readonly string BgTexAddress = "raw://art/UI/white.png";
-        protected static readonly string ResizerTexAddress = "raw://art/UI/resize3.png";
+        protected static readonly string ResizerTexAddress = "raw://EditorResources/icons/resize3.png";
 
         [SerializeField] protected bool _useTitleBar = false;
         [SerializeField] protected Color _titleBarColor = Color.DarkGray;
@@ -157,7 +157,7 @@ namespace MGAlienLib
                         // close button
                         _closeButton = UIButton.Build(_titleBG.transform,
                             name + "_closeBtn",
-                            "raw://art/UI/close.png", false, false,
+                            "raw://EditorResources/icons/close.png", false, false,
                             new RectangleF(0, 0, 30, 30), 0.1f,
                             anchor: Vector2.One, pivot: Vector2.One,
                             color: Color.White);

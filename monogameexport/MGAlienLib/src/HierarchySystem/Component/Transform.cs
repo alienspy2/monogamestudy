@@ -263,6 +263,7 @@ namespace MGAlienLib
 
                 if (gameObject != null)
                 {
+                    // todo : 이거 매우 느림. 더 나은 방법 생각해보기
                     var collider = GetComponent<Collider>();
                     if (collider != null)
                     {

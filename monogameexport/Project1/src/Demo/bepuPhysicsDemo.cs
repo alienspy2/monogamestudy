@@ -66,8 +66,7 @@ namespace Project1
 
             var random = new System.Random();
 
-            if (inputManager.IsPressed(Keys.Space))
-            //if (inputManager.WasPressedThisFrame(Keys.Space))
+            if (inputManager.IsPressed(Keys.D1))
             {
 
                 var obj = hierarchyManager.CreateGameObject("ball", transform);
@@ -75,6 +74,16 @@ namespace Project1
                                                     10,
                                                     random.NextSingle() * 3f);
                 var ball = obj.AddComponent<RigidbodyBall>();
+            }
+
+            if (inputManager.IsPressed(Keys.D2))
+            {
+
+                var obj = hierarchyManager.CreateGameObject("ball", transform);
+                obj.transform.position = new Vector3(random.NextSingle() * 3f,
+                                                    10,
+                                                    random.NextSingle() * 3f);
+                var ball = obj.AddComponent<RigidbodyBox>();
             }
         }
     }

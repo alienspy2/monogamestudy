@@ -1,15 +1,23 @@
 ﻿using Microsoft.Xna.Framework;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace MGAlienLib
 {
     public class BoxCollider : Collider
     {
-        [SerializeField] public BoundingBox _box = new BoundingBox(new Vector3(-0.5f, -0.5f, -0.5f), new Vector3(0.5f, 0.5f, 0.5f));
+        [SerializeField] protected BoundingBox _box = new BoundingBox(new Vector3(-0.5f, -0.5f, -0.5f), new Vector3(0.5f, 0.5f, 0.5f));
+
+        public BoundingBox box
+        {
+            get { return _box; }
+            set
+            {
+                if (_box != value)
+                {
+                    _box = value;
+                    internal_ColliderDirty();
+                }
+            }
+        }
 
         public override void OnEnable()
         {
@@ -19,9 +27,10 @@ namespace MGAlienLib
 
         public override void internal_ColliderDirty()
         {
-            base.internal_Invalidate();
+            base.internal_ColliderDirty();
 
             if (_handle == null) return;
+
             physMan.UpdateStatic(_handle.Value, transform, _box);
         }
 

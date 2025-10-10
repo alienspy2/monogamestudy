@@ -22,6 +22,10 @@ BUG
   * aa spirte 삭제시 제대로 비워지지 않는것 같다 -> aa sprite 는 제거하자
   * auto atlas sprite texture 로 load 할 때 sprite 를 매번 load 한다. 옳지 않다 -> aa sprite 는 제거하자
   * dynamic texture manager 의 repack 이 제대로 동작하지 않음
+  * OnDisable 이 제대로 호출되지 않는다.
+    - game object 가 비활성화 될 때
+    - component.enabled 가 false 로 바뀔 때
+
 
 TODO  
 

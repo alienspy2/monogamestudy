@@ -1,0 +1,78 @@
+["MGAlienLib.GameObject:6782fee8-e17e-4af6-bde0-7a3a3b5e1b9a"]
+_layer = 1
+_active = true
+_name = "Demo_titleBG"
+["MGAlienLib.Transform:7cd85277-01ec-46dd-afb1-7da76b90bc5d"]
+_localPosition = [0.0, 0.0, 0.0]
+_localRotation = [0.0, 0.0, 0.0, 1.0]
+_localScale = [1.0, 1.0, 1.0]
+_parent = "fda3578c-7f1a-4c11-9b96-4574318680f1"
+_gameObjectId = "6782fee8-e17e-4af6-bde0-7a3a3b5e1b9a"
+_enabled = true
+["MGAlienLib.AutoAtlasSpriteRenderer:7c93a4ba-552d-45c7-90a7-d61e35c06a50"]
+_flipX = false
+_source = "RawAssets"
+_address = "art/UI/white.png"
+_importWidth = 0
+_importHeight = 0
+_dialate = true
+_useSlice = false
+_useAsUI = true
+_enableUIRaycast = true
+_size = [1.0, 1.0]
+_pivot = [0.0, 0.0]
+_color = [0, 0, 0, 255]
+_gameObjectId = "6782fee8-e17e-4af6-bde0-7a3a3b5e1b9a"
+_enabled = true
+["MGAlienLib.UITransform:43be9817-e364-4127-9e10-6453791903d9"]
+_anchoredRect = [0.0, 0.0, 140.0, 30.0]
+_pivot = [0.0, 1.0]
+_anchor = [0.0, 1.0]
+_offset = [0.0, 0.0]
+_elevation = 0.100000001
+_expandWidthToParent = false
+_expandWidthToParentMargin = 0.0
+_expandHeightToParent = false
+_gameObjectId = "6782fee8-e17e-4af6-bde0-7a3a3b5e1b9a"
+_enabled = true
+["MGAlienLib.GameObject:1894d09a-d1aa-48ae-a7f1-023b01fd5f59"]
+_layer = 1
+_active = true
+_name = "Demo_titleText"
+["MGAlienLib.Transform:32da4e64-af87-4968-b54f-2635349961dc"]
+_localPosition = [0.0, 0.0, 0.0]
+_localRotation = [0.0, 0.0, 0.0, 1.0]
+_localScale = [1.0, 1.0, 1.0]
+_parent = "7cd85277-01ec-46dd-afb1-7da76b90bc5d"
+_gameObjectId = "1894d09a-d1aa-48ae-a7f1-023b01fd5f59"
+_enabled = true
+["MGAlienLib.TextRenderer:e6a4d930-726c-4148-8fbb-a07808020af7"]
+HAlign = "Center"
+VAlign = "Middle"
+_fontSize = 13
+_text = "Demo"
+_sharpness = 0.5
+_shadow = false
+_shadowColor = [0, 0, 0, 255]
+_shadowOffset = [2.0, -2.0]
+_outline = true
+_outlineColor = [0, 0, 0, 255]
+_outlineOffset = 2.0
+_useAsUI = true
+_enableUIRaycast = false
+_size = [50.0, 13.0]
+_pivot = [0.0, 0.0]
+_color = [255, 255, 255, 255]
+_gameObjectId = "1894d09a-d1aa-48ae-a7f1-023b01fd5f59"
+_enabled = true
+["MGAlienLib.UITransform:df9e7b1f-40c0-4bf9-88ce-5010337b6f58"]
+_anchoredRect = [0.0, 0.0, 140.0, 30.0]
+_pivot = [0.5, 0.5]
+_anchor = [0.5, 0.5]
+_offset = [0.0, 0.0]
+_elevation = 0.100000001
+_expandWidthToParent = false
+_expandWidthToParentMargin = 0.0
+_expandHeightToParent = false
+_gameObjectId = "1894d09a-d1aa-48ae-a7f1-023b01fd5f59"
+_enabled = true

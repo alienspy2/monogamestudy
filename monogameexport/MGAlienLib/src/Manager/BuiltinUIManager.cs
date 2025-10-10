@@ -74,7 +74,7 @@ namespace MGAlienLib
 
             // log panel
             _console = UIDebugConsolePanel.Build(_uiRoot);
-            _console.transform.hideInHierarchy = true;
+            _console.transform.hideInHierarchy = false;
             Logger.Pipe += _console.Log;
 
 

@@ -44,7 +44,7 @@ struct VertexShaderOutput
 float3 test_Lighting(float3 modelNormal)
 {
     float3 worldNormal = normalize(mul(float4(modelNormal, 0), World).xyz);
-    float3 fake_directionalLight = normalize(float3(1, 1, 1));
+    float3 fake_directionalLight = normalize(float3(.7, 1, .5));
     float half_lambert = dot(worldNormal, fake_directionalLight) * .5 + .5;
     return float3(half_lambert, half_lambert, half_lambert);
 }

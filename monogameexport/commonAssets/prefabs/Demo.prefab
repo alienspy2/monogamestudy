@@ -1,0 +1,528 @@
+["MGAlienLib.GameObject:c03f4a0b-2418-422f-9e1c-5e3f3cb5f87d"]
+_layer = 1
+_active = true
+_name = "Demo"
+["MGAlienLib.Transform:87feb99f-8337-48cb-9681-a381c1f1a69e"]
+_localPosition = [0.0, 0.0, 0.0]
+_localRotation = [0.0, 0.0, 0.0, 1.0]
+_localScale = [1.0, 1.0, 1.0]
+_parent = "9eb7eeb7-14fb-4fd8-9572-f7397fe9c566"
+_gameObjectId = "c03f4a0b-2418-422f-9e1c-5e3f3cb5f87d"
+_enabled = true
+["MGAlienLib.UIPanel:c42e7dd4-72a6-40a6-a194-b4891d35b55a"]
+_useTitleBar = true
+_titleBarColor = [169, 169, 169, 255]
+_titleTextColor = [245, 222, 179, 255]
+_useResizer = false
+_useCloseButton = false
+_useContextSizeFitter = true
+_titleBG = "5f4c9448-8a06-4f33-b1e9-80742efe6aa5"
+_titleText = "d9170a48-edf9-4faa-90d2-6e10276bfd36"
+_contentRoot = "0990c3d3-3a21-4126-88e5-5fdfc402f34b"
+_contentBG = "c869dd9f-661a-4b53-a22a-42bc2234b35a"
+_useAsUI = true
+_enableUIRaycast = false
+_size = [1.0, 1.0]
+_pivot = [0.0, 0.0]
+_color = [255, 255, 255, 255]
+_gameObjectId = "c03f4a0b-2418-422f-9e1c-5e3f3cb5f87d"
+_enabled = true
+["MGAlienLib.UITransform:8a31649e-76f6-4126-94aa-88999bac7161"]
+_anchoredRect = [20.0, 0.0, 140.0, 250.0]
+_pivot = [0.0, 1.0]
+_anchor = [0.0, 1.0]
+_offset = [0.0, 0.0]
+_elevation = 100.0
+_expandWidthToParent = false
+_expandWidthToParentMargin = 0.0
+_expandHeightToParent = false
+_gameObjectId = "c03f4a0b-2418-422f-9e1c-5e3f3cb5f87d"
+_enabled = true
+["MGAlienLib.GameObject:a9b8580a-07c7-4390-8e37-abf01ff4c7d3"]
+_layer = 1
+_active = true
+_name = "Demo_contentBG"
+["MGAlienLib.Transform:864c8c57-5129-4832-add5-b087df142494"]
+_localPosition = [0.0, 0.0, 0.0]
+_localRotation = [0.0, 0.0, 0.0, 1.0]
+_localScale = [1.0, 1.0, 1.0]
+_parent = "87feb99f-8337-48cb-9681-a381c1f1a69e"
+_gameObjectId = "a9b8580a-07c7-4390-8e37-abf01ff4c7d3"
+_enabled = true
+["MGAlienLib.AutoAtlasSpriteRenderer:c869dd9f-661a-4b53-a22a-42bc2234b35a"]
+_flipX = false
+_source = "RawAssets"
+_address = "art/UI/white.png"
+_importWidth = 0
+_importHeight = 0
+_dialate = true
+_useSlice = false
+_useAsUI = true
+_enableUIRaycast = true
+_size = [1.0, 1.0]
+_pivot = [0.0, 0.0]
+_color = [255, 255, 255, 255]
+_gameObjectId = "a9b8580a-07c7-4390-8e37-abf01ff4c7d3"
+_enabled = true
+["MGAlienLib.UITransform:0990c3d3-3a21-4126-88e5-5fdfc402f34b"]
+_anchoredRect = [0.0, -30.0, 140.0, 220.0]
+_pivot = [0.0, 1.0]
+_anchor = [0.0, 1.0]
+_offset = [0.0, 0.0]
+_elevation = 0.0
+_expandWidthToParent = false
+_expandWidthToParentMargin = 0.0
+_expandHeightToParent = false
+_gameObjectId = "a9b8580a-07c7-4390-8e37-abf01ff4c7d3"
+_enabled = true
+["MGAlienLib.UIVStacker:76d106a2-aa06-4b55-84c4-13f7e9e0d194"]
+_topMargin = 10.0
+_bottomMargin = 10.0
+_leftMargin = 10.0
+_rightMargin = 10.0
+_spacing = 10.0
+_autoSize = true
+_expandChildWidth = false
+_gameObjectId = "a9b8580a-07c7-4390-8e37-abf01ff4c7d3"
+_enabled = true
+["MGAlienLib.GameObject:3f0cfc04-3cdb-4568-a8b2-c821580e4e79"]
+_layer = 1
+_active = true
+_name = "statusText"
+["MGAlienLib.Transform:74df1835-cf12-4c45-ad54-e6587cb23d04"]
+_localPosition = [0.0, 0.0, 0.0]
+_localRotation = [0.0, 0.0, 0.0, 1.0]
+_localScale = [1.0, 1.0, 1.0]
+_parent = "864c8c57-5129-4832-add5-b087df142494"
+_gameObjectId = "3f0cfc04-3cdb-4568-a8b2-c821580e4e79"
+_enabled = true
+["MGAlienLib.TextRenderer:a63627b0-aa23-43f9-9ca1-192aee91ed4f"]
+HAlign = "Center"
+VAlign = "Middle"
+_fontSize = 16
+_text = "FPS : 61"
+_sharpness = 0.5
+_shadow = false
+_shadowColor = [0, 0, 0, 255]
+_shadowOffset = [2.0, -2.0]
+_outline = false
+_outlineColor = [0, 0, 0, 255]
+_outlineOffset = 2.0
+_useAsUI = true
+_enableUIRaycast = false
+_size = [76.0, 16.0]
+_pivot = [0.0, 0.0]
+_color = [0, 0, 0, 255]
+_gameObjectId = "3f0cfc04-3cdb-4568-a8b2-c821580e4e79"
+_enabled = true
+["MGAlienLib.UITransform:6f54d816-3b28-468d-a1a3-27e3ef680adb"]
+_anchoredRect = [10.0, -10.0, 120.0, 20.0]
+_pivot = [0.0, 1.0]
+_anchor = [0.0, 1.0]
+_offset = [0.0, 0.0]
+_elevation = 0.100000001
+_expandWidthToParent = false
+_expandWidthToParentMargin = 0.0
+_expandHeightToParent = false
+_gameObjectId = "3f0cfc04-3cdb-4568-a8b2-c821580e4e79"
+_enabled = true
+["MGAlienLib.GameObject:100b370a-f390-4ed7-85ed-3304a61c555d"]
+_layer = 1
+_active = true
+_name = "statusText"
+["MGAlienLib.Transform:ebd56de7-f684-43a6-9892-205e4d4b98d7"]
+_localPosition = [0.0, 0.0, 0.0]
+_localRotation = [0.0, 0.0, 0.0, 1.0]
+_localScale = [1.0, 1.0, 1.0]
+_parent = "864c8c57-5129-4832-add5-b087df142494"
+_gameObjectId = "100b370a-f390-4ed7-85ed-3304a61c555d"
+_enabled = true
+["MGAlienLib.TextRenderer:8a5ad593-1dee-412f-a892-83cadb56e6e2"]
+HAlign = "Center"
+VAlign = "Middle"
+_fontSize = 16
+_text = "Drawcalls : 2"
+_sharpness = 0.5
+_shadow = false
+_shadowColor = [0, 0, 0, 255]
+_shadowOffset = [2.0, -2.0]
+_outline = false
+_outlineColor = [0, 0, 0, 255]
+_outlineOffset = 2.0
+_useAsUI = true
+_enableUIRaycast = false
+_size = [120.0, 17.0]
+_pivot = [0.0, 0.0]
+_color = [0, 0, 0, 255]
+_gameObjectId = "100b370a-f390-4ed7-85ed-3304a61c555d"
+_enabled = true
+["MGAlienLib.UITransform:177c6840-fe79-4ea6-bebc-171db44e831a"]
+_anchoredRect = [10.0, -40.0, 120.0, 20.0]
+_pivot = [0.0, 1.0]
+_anchor = [0.0, 1.0]
+_offset = [0.0, 0.0]
+_elevation = 0.100000001
+_expandWidthToParent = false
+_expandWidthToParentMargin = 0.0
+_expandHeightToParent = false
+_gameObjectId = "100b370a-f390-4ed7-85ed-3304a61c555d"
+_enabled = true
+["MGAlienLib.GameObject:e90fb8c8-90a6-4e2c-a8e5-6e0da380f138"]
+_layer = 1
+_active = true
+_name = "statusText"
+["MGAlienLib.Transform:67d83601-19c9-4e56-bc93-6c24bee9539c"]
+_localPosition = [0.0, 0.0, 0.0]
+_localRotation = [0.0, 0.0, 0.0, 1.0]
+_localScale = [1.0, 1.0, 1.0]
+_parent = "864c8c57-5129-4832-add5-b087df142494"
+_gameObjectId = "e90fb8c8-90a6-4e2c-a8e5-6e0da380f138"
+_enabled = true
+["MGAlienLib.TextRenderer:3d36bf9a-dc59-4691-be08-de95059b9c70"]
+HAlign = "Center"
+VAlign = "Middle"
+_fontSize = 16
+_text = "Verts : 328"
+_sharpness = 0.5
+_shadow = false
+_shadowColor = [0, 0, 0, 255]
+_shadowOffset = [2.0, -2.0]
+_outline = false
+_outlineColor = [0, 0, 0, 255]
+_outlineOffset = 2.0
+_useAsUI = true
+_enableUIRaycast = false
+_size = [99.0, 16.0]
+_pivot = [0.0, 0.0]
+_color = [0, 0, 0, 255]
+_gameObjectId = "e90fb8c8-90a6-4e2c-a8e5-6e0da380f138"
+_enabled = true
+["MGAlienLib.UITransform:ef928add-d2bf-480e-8f35-0d2c5c87f31a"]
+_anchoredRect = [10.0, -70.0, 120.0, 20.0]
+_pivot = [0.0, 1.0]
+_anchor = [0.0, 1.0]
+_offset = [0.0, 0.0]
+_elevation = 0.100000001
+_expandWidthToParent = false
+_expandWidthToParentMargin = 0.0
+_expandHeightToParent = false
+_gameObjectId = "e90fb8c8-90a6-4e2c-a8e5-6e0da380f138"
+_enabled = true
+["MGAlienLib.GameObject:8ac88ccb-a7a2-43da-b4e7-e813aa1a2b0b"]
+_layer = 1
+_active = true
+_name = "aademo"
+["MGAlienLib.Transform:60a58e80-861f-47b1-a93f-dedcd4284fa6"]
+_localPosition = [0.0, 0.0, 0.0]
+_localRotation = [0.0, 0.0, 0.0, 1.0]
+_localScale = [1.0, 1.0, 1.0]
+_parent = "864c8c57-5129-4832-add5-b087df142494"
+_gameObjectId = "8ac88ccb-a7a2-43da-b4e7-e813aa1a2b0b"
+_enabled = true
+["MGAlienLib.UIButton:871d8eb3-5ab1-4daf-acbd-e78065bcabd8"]
+_useDimmingAnimation = true
+_text = "81d92534-15e5-4834-9ca4-465649a8bb45"
+_flipX = false
+_source = "RawAssets"
+_address = "art/UI/white.png"
+_importWidth = 0
+_importHeight = 0
+_dialate = true
+_useSlice = false
+_useAsUI = true
+_enableUIRaycast = true
+_size = [1.0, 1.0]
+_pivot = [0.0, 0.0]
+_color = [64, 119, 122, 255]
+_gameObjectId = "8ac88ccb-a7a2-43da-b4e7-e813aa1a2b0b"
+_enabled = true
+["MGAlienLib.UITransform:50e62a0f-9e91-44aa-b01d-302a93fda012"]
+_anchoredRect = [10.0, -100.0, 120.0, 30.0]
+_pivot = [0.0, 1.0]
+_anchor = [0.0, 1.0]
+_offset = [0.0, 0.0]
+_elevation = 0.100000001
+_expandWidthToParent = false
+_expandWidthToParentMargin = 0.0
+_expandHeightToParent = false
+_gameObjectId = "8ac88ccb-a7a2-43da-b4e7-e813aa1a2b0b"
+_enabled = true
+["MGAlienLib.GameObject:9925d3db-5cd6-4358-adf9-6c0215ba3edb"]
+_layer = 1
+_active = true
+_name = "aademo_text"
+["MGAlienLib.Transform:ba56ef4b-3427-4baa-af42-c1a734df1b99"]
+_localPosition = [0.0, 0.0, 0.0]
+_localRotation = [0.0, 0.0, 0.0, 1.0]
+_localScale = [1.0, 1.0, 1.0]
+_parent = "60a58e80-861f-47b1-a93f-dedcd4284fa6"
+_gameObjectId = "9925d3db-5cd6-4358-adf9-6c0215ba3edb"
+_enabled = true
+["MGAlienLib.TextRenderer:81d92534-15e5-4834-9ca4-465649a8bb45"]
+HAlign = "Center"
+VAlign = "Middle"
+_fontSize = 12
+_text = "AA Sprite"
+_sharpness = 0.5
+_shadow = false
+_shadowColor = [0, 0, 0, 255]
+_shadowOffset = [2.0, -2.0]
+_outline = true
+_outlineColor = [0, 0, 0, 255]
+_outlineOffset = 2.0
+_useAsUI = true
+_enableUIRaycast = false
+_size = [66.0, 16.0]
+_pivot = [0.0, 0.0]
+_color = [255, 255, 255, 255]
+_gameObjectId = "9925d3db-5cd6-4358-adf9-6c0215ba3edb"
+_enabled = true
+["MGAlienLib.UITransform:a17ff199-b17d-4376-9918-b635dd89f16f"]
+_anchoredRect = [0.0, 0.0, 120.0, 30.0]
+_pivot = [0.0, 0.0]
+_anchor = [0.0, 0.0]
+_offset = [0.0, 0.0]
+_elevation = 0.100000001
+_expandWidthToParent = true
+_expandWidthToParentMargin = 0.0
+_expandHeightToParent = true
+_gameObjectId = "9925d3db-5cd6-4358-adf9-6c0215ba3edb"
+_enabled = true
+["MGAlienLib.GameObject:f2ecd6db-126e-4237-877d-ebbf0a57b059"]
+_layer = 1
+_active = true
+_name = "tweener"
+["MGAlienLib.Transform:84a10605-9614-4b06-a807-ecc6952e372f"]
+_localPosition = [0.0, 0.0, 0.0]
+_localRotation = [0.0, 0.0, 0.0, 1.0]
+_localScale = [1.0, 1.0, 1.0]
+_parent = "864c8c57-5129-4832-add5-b087df142494"
+_gameObjectId = "f2ecd6db-126e-4237-877d-ebbf0a57b059"
+_enabled = true
+["MGAlienLib.UIButton:2492cc37-68a9-408e-b0a8-e0ed842e41ea"]
+_useDimmingAnimation = true
+_text = "2e77d427-1dc3-4845-b4c4-898e7e7c4dd3"
+_flipX = false
+_source = "RawAssets"
+_address = "art/UI/white.png"
+_importWidth = 0
+_importHeight = 0
+_dialate = true
+_useSlice = false
+_useAsUI = true
+_enableUIRaycast = true
+_size = [1.0, 1.0]
+_pivot = [0.0, 0.0]
+_color = [64, 119, 122, 255]
+_gameObjectId = "f2ecd6db-126e-4237-877d-ebbf0a57b059"
+_enabled = true
+["MGAlienLib.UITransform:aa3de926-eb3e-497a-bc8c-980808870c8e"]
+_anchoredRect = [10.0, -140.0, 120.0, 30.0]
+_pivot = [0.0, 1.0]
+_anchor = [0.0, 1.0]
+_offset = [0.0, 0.0]
+_elevation = 0.100000001
+_expandWidthToParent = false
+_expandWidthToParentMargin = 0.0
+_expandHeightToParent = false
+_gameObjectId = "f2ecd6db-126e-4237-877d-ebbf0a57b059"
+_enabled = true
+["MGAlienLib.GameObject:4d529538-f9d8-4150-98da-9a15c823ef5a"]
+_layer = 1
+_active = true
+_name = "tweener_text"
+["MGAlienLib.Transform:5a59b07a-e1b1-4240-b5d2-f464772cca00"]
+_localPosition = [0.0, 0.0, 0.0]
+_localRotation = [0.0, 0.0, 0.0, 1.0]
+_localScale = [1.0, 1.0, 1.0]
+_parent = "84a10605-9614-4b06-a807-ecc6952e372f"
+_gameObjectId = "4d529538-f9d8-4150-98da-9a15c823ef5a"
+_enabled = true
+["MGAlienLib.TextRenderer:2e77d427-1dc3-4845-b4c4-898e7e7c4dd3"]
+HAlign = "Center"
+VAlign = "Middle"
+_fontSize = 12
+_text = "tweener"
+_sharpness = 0.5
+_shadow = false
+_shadowColor = [0, 0, 0, 255]
+_shadowOffset = [2.0, -2.0]
+_outline = true
+_outlineColor = [0, 0, 0, 255]
+_outlineOffset = 2.0
+_useAsUI = true
+_enableUIRaycast = false
+_size = [60.0, 12.0]
+_pivot = [0.0, 0.0]
+_color = [255, 255, 255, 255]
+_gameObjectId = "4d529538-f9d8-4150-98da-9a15c823ef5a"
+_enabled = true
+["MGAlienLib.UITransform:5b334a03-b6a1-47ee-a082-52de5dd96afb"]
+_anchoredRect = [0.0, 0.0, 120.0, 30.0]
+_pivot = [0.0, 0.0]
+_anchor = [0.0, 0.0]
+_offset = [0.0, 0.0]
+_elevation = 0.100000001
+_expandWidthToParent = true
+_expandWidthToParentMargin = 0.0
+_expandHeightToParent = true
+_gameObjectId = "4d529538-f9d8-4150-98da-9a15c823ef5a"
+_enabled = true
+["MGAlienLib.GameObject:0c5d8775-1681-4d50-ac39-d16c904dfdff"]
+_layer = 1
+_active = true
+_name = "3D UI"
+["MGAlienLib.Transform:4164992a-fe56-4ebc-a3b2-f5eb1e194657"]
+_localPosition = [0.0, 0.0, 0.0]
+_localRotation = [0.0, 0.0, 0.0, 1.0]
+_localScale = [1.0, 1.0, 1.0]
+_parent = "864c8c57-5129-4832-add5-b087df142494"
+_gameObjectId = "0c5d8775-1681-4d50-ac39-d16c904dfdff"
+_enabled = true
+["MGAlienLib.UIButton:929e5917-8b74-4f3e-bb36-56cf0f7891b3"]
+_useDimmingAnimation = true
+_text = "b2a37521-1b36-4b7d-a257-ed84e69f4104"
+_flipX = false
+_source = "RawAssets"
+_address = "art/UI/white.png"
+_importWidth = 0
+_importHeight = 0
+_dialate = true
+_useSlice = false
+_useAsUI = true
+_enableUIRaycast = true
+_size = [1.0, 1.0]
+_pivot = [0.0, 0.0]
+_color = [64, 119, 122, 255]
+_gameObjectId = "0c5d8775-1681-4d50-ac39-d16c904dfdff"
+_enabled = true
+["MGAlienLib.UITransform:db37f1f9-2e10-453b-a0f6-2df3a116dfdd"]
+_anchoredRect = [10.0, -180.0, 120.0, 30.0]
+_pivot = [0.0, 1.0]
+_anchor = [0.0, 1.0]
+_offset = [0.0, 0.0]
+_elevation = 0.100000001
+_expandWidthToParent = false
+_expandWidthToParentMargin = 0.0
+_expandHeightToParent = false
+_gameObjectId = "0c5d8775-1681-4d50-ac39-d16c904dfdff"
+_enabled = true
+["MGAlienLib.GameObject:2bfe5aaf-7f63-465f-8c63-05801f1f1a1b"]
+_layer = 1
+_active = true
+_name = "3D UI_text"
+["MGAlienLib.Transform:c1f0d2fd-8b11-4ebd-a664-ed8b3e43620a"]
+_localPosition = [0.0, 0.0, 0.0]
+_localRotation = [0.0, 0.0, 0.0, 1.0]
+_localScale = [1.0, 1.0, 1.0]
+_parent = "4164992a-fe56-4ebc-a3b2-f5eb1e194657"
+_gameObjectId = "2bfe5aaf-7f63-465f-8c63-05801f1f1a1b"
+_enabled = true
+["MGAlienLib.TextRenderer:b2a37521-1b36-4b7d-a257-ed84e69f4104"]
+HAlign = "Center"
+VAlign = "Middle"
+_fontSize = 12
+_text = "3D UI"
+_sharpness = 0.5
+_shadow = false
+_shadowColor = [0, 0, 0, 255]
+_shadowOffset = [2.0, -2.0]
+_outline = true
+_outlineColor = [0, 0, 0, 255]
+_outlineOffset = 2.0
+_useAsUI = true
+_enableUIRaycast = false
+_size = [39.0, 13.0]
+_pivot = [0.0, 0.0]
+_color = [255, 255, 255, 255]
+_gameObjectId = "2bfe5aaf-7f63-465f-8c63-05801f1f1a1b"
+_enabled = true
+["MGAlienLib.UITransform:2ac5dcce-1523-40d9-a00a-ab01b6e58f08"]
+_anchoredRect = [0.0, 0.0, 120.0, 30.0]
+_pivot = [0.0, 0.0]
+_anchor = [0.0, 0.0]
+_offset = [0.0, 0.0]
+_elevation = 0.100000001
+_expandWidthToParent = true
+_expandWidthToParentMargin = 0.0
+_expandHeightToParent = true
+_gameObjectId = "2bfe5aaf-7f63-465f-8c63-05801f1f1a1b"
+_enabled = true
+["MGAlienLib.GameObject:b2e072c7-c5eb-49f6-b0d4-28bdf2d144c5"]
+_layer = 1
+_active = true
+_name = "Demo_titleBG"
+["MGAlienLib.Transform:fe8544b2-ba74-479e-b589-d20124594903"]
+_localPosition = [0.0, 0.0, 0.0]
+_localRotation = [0.0, 0.0, 0.0, 1.0]
+_localScale = [1.0, 1.0, 1.0]
+_parent = "87feb99f-8337-48cb-9681-a381c1f1a69e"
+_gameObjectId = "b2e072c7-c5eb-49f6-b0d4-28bdf2d144c5"
+_enabled = true
+["MGAlienLib.AutoAtlasSpriteRenderer:5f4c9448-8a06-4f33-b1e9-80742efe6aa5"]
+_flipX = false
+_source = "RawAssets"
+_address = "art/UI/white.png"
+_importWidth = 0
+_importHeight = 0
+_dialate = true
+_useSlice = false
+_useAsUI = true
+_enableUIRaycast = true
+_size = [1.0, 1.0]
+_pivot = [0.0, 0.0]
+_color = [0, 0, 0, 255]
+_gameObjectId = "b2e072c7-c5eb-49f6-b0d4-28bdf2d144c5"
+_enabled = true
+["MGAlienLib.UITransform:d0e7ffe1-f171-4234-9b50-04efc8eb8b89"]
+_anchoredRect = [0.0, 0.0, 140.0, 30.0]
+_pivot = [0.0, 1.0]
+_anchor = [0.0, 1.0]
+_offset = [0.0, 0.0]
+_elevation = 0.100000001
+_expandWidthToParent = false
+_expandWidthToParentMargin = 0.0
+_expandHeightToParent = false
+_gameObjectId = "b2e072c7-c5eb-49f6-b0d4-28bdf2d144c5"
+_enabled = true
+["MGAlienLib.GameObject:838253fd-f8cc-4376-90ef-aeef01a8d958"]
+_layer = 1
+_active = true
+_name = "Demo_titleText"
+["MGAlienLib.Transform:e6091ee2-386b-41eb-b62b-04d89acc22ce"]
+_localPosition = [0.0, 0.0, 0.0]
+_localRotation = [0.0, 0.0, 0.0, 1.0]
+_localScale = [1.0, 1.0, 1.0]
+_parent = "fe8544b2-ba74-479e-b589-d20124594903"
+_gameObjectId = "838253fd-f8cc-4376-90ef-aeef01a8d958"
+_enabled = true
+["MGAlienLib.TextRenderer:d9170a48-edf9-4faa-90d2-6e10276bfd36"]
+HAlign = "Center"
+VAlign = "Middle"
+_fontSize = 13
+_text = "Demo"
+_sharpness = 0.5
+_shadow = false
+_shadowColor = [0, 0, 0, 255]
+_shadowOffset = [2.0, -2.0]
+_outline = true
+_outlineColor = [0, 0, 0, 255]
+_outlineOffset = 2.0
+_useAsUI = true
+_enableUIRaycast = false
+_size = [47.0, 13.0]
+_pivot = [0.0, 0.0]
+_color = [255, 255, 255, 255]
+_gameObjectId = "838253fd-f8cc-4376-90ef-aeef01a8d958"
+_enabled = true
+["MGAlienLib.UITransform:391676de-a375-4ce6-9d94-73c03701c860"]
+_anchoredRect = [0.0, 0.0, 140.0, 30.0]
+_pivot = [0.5, 0.5]
+_anchor = [0.5, 0.5]
+_offset = [0.0, 0.0]
+_elevation = 0.100000001
+_expandWidthToParent = false
+_expandWidthToParentMargin = 0.0
+_expandHeightToParent = false
+_gameObjectId = "838253fd-f8cc-4376-90ef-aeef01a8d958"
+_enabled = true

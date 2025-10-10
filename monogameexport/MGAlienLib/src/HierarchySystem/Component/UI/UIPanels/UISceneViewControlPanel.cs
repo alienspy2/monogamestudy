@@ -24,9 +24,6 @@ namespace MGAlienLib
 
         public void AfterBuild()
         {
-            useTitleBar = true;
-            useResizer = true;
-
             UITransform.size = new Vector2(300, 100);
 
             infoText = TextRenderer.BuildAsUI(contentRoot.transform, "Info Text",
@@ -43,21 +40,21 @@ namespace MGAlienLib
 
             moveBtn = UIButton.Build(contentRoot.transform,
                 "Move Tool Button",
-                "raw://art/UI/moveTool.png", false, false,
+                "raw://EditorResources/icons/moveTool.png", false, false,
                 new RectangleF(0, -24, 32, 32), 0.1f,
                 onCommand: (_) => ChangeToolMode(eTooolMode.Translate),
                 pivot: Vector2.UnitY, anchor: Vector2.UnitY);
 
             rotateBtn = UIButton.Build(contentRoot.transform,
                 "Rotate Tool Button",
-                "raw://art/UI/rotateTool.png", false, false,
+                "raw://EditorResources/icons/rotateTool.png", false, false,
                 new RectangleF(32, -24, 32, 32), 0.1f,
                 onCommand: (_) => ChangeToolMode(eTooolMode.Rotate),
                 pivot: Vector2.UnitY, anchor: Vector2.UnitY);
 
             scaleBtn = UIButton.Build(contentRoot.transform,
                 "Scale Tool Button",
-                "raw://art/UI/scaleTool.png", false, false,
+                "raw://EditorResources/icons/scaleTool.png", false, false,
                 new RectangleF(64, -24, 32, 32), 0.1f,
                 onCommand: (_) => ChangeToolMode(eTooolMode.Scale),
                 pivot: Vector2.UnitY, anchor: Vector2.UnitY);
@@ -96,7 +93,7 @@ namespace MGAlienLib
 
             var sceneControlPanel = UIPanel.Build<UISceneViewControlPanel>(parent, "Scene view control panel",
                 new RectangleF(1000, 0, 400, 100), BuiltinUIManager.SceneControlViewElevation,
-                true, true, false, false, false,
+                true, false, false, false, false,
                 titleBarColor: Color.Black,
                 titleTextColor: Color.White,
                 contentColor: contentBGColor,

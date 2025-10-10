@@ -1,14 +1,24 @@
 ﻿using Microsoft.Xna.Framework;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace MGAlienLib
 {
     public class RigidBody : ComponentBase
     {
+        [SerializeField] protected float _mass = 1f;
+
+        public float mass
+        {
+            get { return _mass; }
+            set
+            {
+                if (_mass != value)
+                {
+                    _mass = value;
+                    internal_BodyDirty();
+                }
+            }
+        }
+
         protected BepuPhysics.BodyHandle? _handle = null;
 
         protected Vector3 _velocity = Vector3.Zero;
@@ -48,5 +58,11 @@ namespace MGAlienLib
             transform.position = _position;
             transform.rotation = _rotation;
         }
+
+        public virtual void internal_BodyDirty()
+        {
+
+        }
+
     }
 }

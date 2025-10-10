@@ -223,22 +223,6 @@ namespace Project1
             statusText_1.text = $"FPS : {GameBase.Instance.performanceManager.fps}";
             statusText_2.text = $"Drawcalls : {GameBase.Instance.performanceManager.drawcallCount}";
             statusText_3.text = $"Verts : {GameBase.Instance.performanceManager.verticesCount}";
-
-
-            if (inputManager.WasPressedThisFrame(Keys.OemTilde))
-            {
-                uiman.ShowConsole(!uiman.IsConsoleVisible());
-            }
-            //if (inputManager.WasPressedThisFrame(Keys.F1))
-            //{
-            //    uiman.ShowHierarchyView(!uiman.IsHierarchyViewVisible());
-            //}
-            //if (inputManager.WasPressedThisFrame(Keys.F2))
-            //{
-            //    uiman.ShowInspectorPanel(!uiman.IsInspectorPanelVisible());
-            //}
-
-
         }
 
 

@@ -53,14 +53,14 @@ namespace MGAlienLib
             {
                 foldOutButton = AutoAtlasSpriteRenderer.BuildAsUI<AutoAtlasSpriteRenderer>(owner.transform,
                     "foldOutButton",
-                    "raw://art/UI/foldOutButton.png", false, false,
+                    "raw://EditorResources/icons/foldOutButton.png", false, false,
                     new RectangleF(4, -4, 16, 16), 0.1f,
                     pivot: Vector2.UnitY, anchor: Vector2.UnitY);
                 foldOutButton.OnUICommand += (_) => Expand();
 
                 expandOutButton = AutoAtlasSpriteRenderer.BuildAsUI<AutoAtlasSpriteRenderer>(owner.transform,
                     "expandOutButton",
-                    "raw://art/UI/expandOutButton.png", false, false,
+                    "raw://EditorResources/icons/expandOutButton.png", false, false,
                     new RectangleF(4, -4, 16, 16), 0.1f,
                     pivot: Vector2.UnitY, anchor: Vector2.UnitY);
                 expandOutButton.OnUICommand += (_) => Fold();
