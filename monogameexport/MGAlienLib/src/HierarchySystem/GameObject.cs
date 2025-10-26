@@ -275,6 +275,8 @@ namespace MGAlienLib
 
         public void internal_Update()
         {
+            if (!active) return;
+
             foreach (var component in _components.ToArray())
             {
                 if (component.enabled)
@@ -287,6 +289,7 @@ namespace MGAlienLib
         public void internal_LateUpdate()
         {
             if (!active) return;
+
             foreach (var component in _components)
             {
                 component.LateUpdate();

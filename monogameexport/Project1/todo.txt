@@ -34,7 +34,7 @@ TODO
   * 2D sprite animation
   * sprite renderer 에 slice 기능을 넣거나 sliced sprite renderer 만들기
   * 임시로 만든 UI 정리
-  * AA sprite 제거
+  * AA sprite 제거 <- text 용은 따로 만든다 
 
 3D 
   * sharp gltf 붙이기 
@@ -43,6 +43,9 @@ TODO
       unity 처럼 mesh, animation 등을 따로 불러올 수도 있다
   * navmesh (recast?) 붙이기
   * 물리엔진 (bepuphysics?) 붙이기 
+    * 일단 대충 붙여보는 중
+    * mesh collider 추가
+    * 만들었다 지웠다 하는데, 뭔가 계속 쌓이나보다. 예제를 참고해서 제대로 붙이자
   * PBR shader ?
   * matcap shader ?
   * lighting 
@@ -67,5 +70,6 @@ TODO
   * texture 나 material 을 해제했다가 다시 할당받는 경우가 꽤 있을 수 있으므로, 
     reference 가 0 이 되자마자 삭제하지 말고, 일정 시간 동안 유예를 줘야한다
   * UI 조작시 consume 된 조작은 거기에서 stop
+  * (최적화) Update 가 필요한 component 만 update 하도록
 
 

@@ -22,18 +22,19 @@ namespace MGAlienLib
         public override void OnEnable()
         {
             base.OnEnable();
-            const float adjust = 1f / 1.25f; // 왜인지는 모르겠으나, 1.25f 로 나누어야함.
-            _handle = physMan.AddStatic(transform, _radius * adjust);
+            internal_UpdatePhysics();
         }
 
         public override void internal_ColliderDirty()
         {
             base.internal_Invalidate();
+            internal_UpdatePhysics();
+        }
 
-            if (_handle == null) return;
-
+        private void internal_UpdatePhysics()
+        {
             const float adjust = 1f / 1.25f; // 왜인지는 모르겠으나, 1.25f 로 나누어야함.
-            physMan.UpdateStatic(_handle.Value, transform, _radius * adjust);
+            _handle = physMan.AddOrUpdateStatic(_handle, transform, _radius * adjust);
         }
     }
 }

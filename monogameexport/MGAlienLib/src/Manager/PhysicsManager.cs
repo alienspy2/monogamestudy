@@ -49,64 +49,29 @@ namespace MGAlienLib
 
         }
 
-        public void AddStatic(MGAlienLib.Mesh mgaMesh)
-        {
-        }
-
-
-        public BodyHandle test_addSphere(Microsoft.Xna.Framework.Vector3 pos, float radius)
-        {
-            //Drop a ball on a big static box.
-            var sphere = new Sphere(radius/1.25f);
-            var sphereInertia = sphere.ComputeInertia(1);
-            BodyHandle sphereHandle = 
-                simulation.Bodies.Add(
-                    BodyDescription.CreateDynamic(
-                        Convert(pos), 
-                        sphereInertia, 
-                        simulation.Shapes.Add(sphere), 
-                        0.01f));
-
-            return sphereHandle;
-        }
-
-
-        public void test_addStaticBox()
-        {
-            simulation.Statics.Add(new StaticDescription(new Vector3(0, 0, 0), simulation.Shapes.Add(new Box(500, 1, 500))));
-            simulation.Statics.Add(new StaticDescription(new Vector3(0, 0, -5), simulation.Shapes.Add(new Box(500, 20, 1))));
-            simulation.Statics.Add(new StaticDescription(new Vector3(0, 0, 5), simulation.Shapes.Add(new Box(500, 20, 1))));
-            simulation.Statics.Add(new StaticDescription(new Vector3(-5, 0, 0), simulation.Shapes.Add(new Box(1, 20, 500))));
-            simulation.Statics.Add(new StaticDescription(new Vector3(5, 0, 0), simulation.Shapes.Add(new Box(1, 20, 500))));
-        }
 
         #region STATIC
-        // sphere
-        public StaticHandle AddStatic(Transform t, float _in_radius)
-            => AddOrUpdateStatic(null, t, _in_radius)!.Value;
+
 
         // sphere
-        public void UpdateStatic(StaticHandle handle, Transform t, float _in_radius)
-            => AddOrUpdateStatic(handle, t, _in_radius);
-
-        // box
-        public StaticHandle AddStatic(Transform t, Microsoft.Xna.Framework.BoundingBox box)
-            => AddOrUpdateStatic(null, t, box)!.Value;
-
-        // box
-        public void UpdateStatic(StaticHandle handle, Transform t, Microsoft.Xna.Framework.BoundingBox box)
-            => AddOrUpdateStatic(handle, t, box);
-
-        // sphere
-        private StaticHandle? AddOrUpdateStatic(StaticHandle? handle, Transform t, float _in_radius)
+        public StaticHandle? AddOrUpdateStatic(StaticHandle? handle, Transform t, float _in_radius)
         {
             RigidPose pose = new RigidPose(Convert(t.position), Convert(t.rotation));
             var radius = _in_radius * (t.scale.X + t.scale.Y + t.scale.Z) / 3f;
+            var shapeIndex = simulation.Shapes.Add(new Sphere(radius));
             var desc = new StaticDescription(pose, simulation.Shapes.Add(new Sphere(radius)));
 
-            if (handle.HasValue)
+            if (handle.HasValue && simulation.Statics.StaticExists(handle.Value))
             {
+                // 기존 핸들이 있으면 이전 Shape 제거
+                var staticReference = simulation.Statics[handle.Value];
+                var oldShapeIndex = staticReference.Shape;
+
+                // 업데이트 적용
                 simulation.Statics.ApplyDescription(handle.Value, desc);
+
+                // 이전 Shape 제거
+                simulation.Shapes.Remove(oldShapeIndex);
             }
             else
             {
@@ -116,8 +81,9 @@ namespace MGAlienLib
             return handle;
         }
 
+
         // box
-        private StaticHandle? AddOrUpdateStatic(StaticHandle? handle, Transform t, Microsoft.Xna.Framework.BoundingBox box)
+        public StaticHandle? AddOrUpdateStatic(StaticHandle? handle, Transform t, Microsoft.Xna.Framework.BoundingBox box)
         {
             var center = (box.Min + box.Max) / 2f;
             RigidPose pose = new RigidPose(Convert(t.position + center), Convert(t.rotation));
@@ -125,11 +91,19 @@ namespace MGAlienLib
             size.X = size.X * t.scale.X;
             size.Y = size.Y * t.scale.Y;
             size.Z = size.Z * t.scale.Z;
-            var desc = new StaticDescription(pose, simulation.Shapes.Add(new Box(size.X, size.Y, size.Z)));
+            var shapeIndex = simulation.Shapes.Add(new Box(size.X, size.Y, size.Z));
+            var desc = new StaticDescription(pose, shapeIndex);
 
-            if (handle.HasValue)
+            if (handle.HasValue && simulation.Statics.StaticExists(handle.Value))
             {
+                // 기존 핸들이 있으면 이전 Shape 제거
+                var staticReference = simulation.Statics[handle.Value];
+                var oldShapeIndex = staticReference.Shape;
+
                 simulation.Statics.ApplyDescription(handle.Value, desc);
+
+                // 이전 Shape 제거
+                simulation.Shapes.Remove(oldShapeIndex);
             }
             else
             {
@@ -140,91 +114,139 @@ namespace MGAlienLib
         }
 
 
-        public void RemoveStatic(StaticHandle handle)
+        public void RemoveStatic(StaticHandle? handle)
         {
-            simulation.Statics.Remove(handle);
-        }
+            if (handle == null) return;
 
+            // StaticReference 가져오기 (인덱서 사용)
+            var staticReference = simulation.Statics[handle.Value];
+
+            // ShapeIndex 추출
+            var shapeIndex = staticReference.Shape;
+
+            // StaticHandle 제거
+            simulation.Statics.Remove(handle.Value);
+
+            // Shape 제거 (참조 카운트가 0이 되면 실제로 삭제됨)
+            simulation.Shapes.Remove(shapeIndex);
+        }
         #endregion
 
         #region DYNAMIC
-        public BodyHandle AddBody(Transform t, float _in_radius, float mass)
+
+        public BodyHandle? AddOrUpdateBody(BodyHandle? handle, Transform t, float _in_radius, float mass)
         {
             RigidPose pose = new RigidPose(Convert(t.position), Convert(t.rotation));
             var radius = _in_radius * (t.scale.X + t.scale.Y + t.scale.Z) / 3f;
             var sphere = new Sphere(radius);
             var inertia = sphere.ComputeInertia(mass);
-            var desc = BodyDescription.CreateDynamic(pose, inertia, simulation.Shapes.Add(sphere), 0.01f);
+            var shapeIndex = simulation.Shapes.Add(sphere);
+            var newShapeIndex = simulation.Shapes.Add(sphere);
 
-            return simulation.Bodies.Add(desc);
+            if (handle.HasValue && simulation.Bodies.BodyExists(handle.Value))
+            {
+                // 기존 BodyHandle이 있으면 이전 Shape 제거
+                var bodyRef = simulation.Bodies.GetBodyReference(handle.Value);
+
+                // 이전 ShapeIndex 가져오기
+                var oldShapeIndex = bodyRef.Collidable.Shape;
+
+                // 이전 Shape 제거
+                simulation.Shapes.Remove(oldShapeIndex);
+
+                // 새로운 BodyDescription 생성 (기존 속성 재사용)
+                var desc = new BodyDescription
+                {
+                    Pose = pose, // 새로운 위치와 회전
+                    Velocity = bodyRef.Velocity, // 기존 속도 유지
+                    LocalInertia = inertia, // 새로운 관성
+                    Collidable = new CollidableDescription(shapeIndex, 0.01f), // 새로운 Shape
+                };
+
+                // 업데이트 적용
+                simulation.Bodies.ApplyDescription(handle.Value, desc);
+                bodyRef.Awake = true;
+            }
+            else
+            {
+                // 새로운 Body 추가
+                var desc = BodyDescription.CreateDynamic(pose, inertia, shapeIndex, 0.01f);
+                handle = simulation.Bodies.Add(desc);
+            }
+
+            return handle;
         }
 
-        public void UpdateBody(BodyHandle? handle, Transform t, float _in_radius, float mass)
-        {
-            if (handle == null) return;
-
-            var bodyRef = simulation.Bodies.GetBodyReference(handle.Value);
-            if (bodyRef.Exists == false) return;
-
-            var radius = _in_radius * (t.scale.X + t.scale.Y + t.scale.Z) / 3f;
-            var sphere = new Sphere(radius);
-            var desc = BodyDescription.CreateDynamic(
-                    bodyRef.Pose,
-                    bodyRef.Velocity,
-                    bodyRef.LocalInertia,
-                    simulation.Shapes.Add(sphere),
-                    0.01f);
-
-            simulation.Bodies.ApplyDescription(handle.Value, desc);
-            bodyRef.Awake = true;
-        }
-
-        public BodyHandle AddBody(Transform t, Microsoft.Xna.Framework.BoundingBox box, float mass)
+        public BodyHandle? AddOrUpdateBody(BodyHandle? handle, Transform t, Microsoft.Xna.Framework.BoundingBox box, float mass)
         {
             var center = (box.Min + box.Max) / 2f;
             var pose = new RigidPose(Convert(t.position + center), Convert(t.rotation));
             Vector3 size = Convert(box.Max - box.Min);
             var boxShape = new Box(size.X * t.scale.X, size.Y * t.scale.Y, size.Z * t.scale.Z);
             var inertia = boxShape.ComputeInertia(mass);
-            var desc = BodyDescription.CreateDynamic(pose, inertia, simulation.Shapes.Add(boxShape), 0.01f);
+            var shapeIndex = simulation.Shapes.Add(boxShape);
 
-            return simulation.Bodies.Add(desc);
+            if (handle.HasValue && simulation.Bodies.BodyExists(handle.Value))
+            {
+                // 기존 BodyHandle이 있으면 이전 Shape 제거
+                var bodyRef = simulation.Bodies.GetBodyReference(handle.Value);
+                var oldShapeIndex = bodyRef.Collidable.Shape;
+
+                // 새로운 BodyDescription 생성
+                var desc = BodyDescription.CreateDynamic(
+                    pose,                       // 새로운 위치와 회전
+                    bodyRef.Velocity,          // 기존 속도 유지
+                    inertia,                   // 새로운 관성
+                    new CollidableDescription(shapeIndex, 0.01f), // 새로운 Shape
+                    bodyRef.Activity.SleepThreshold // 기존 SleepThreshold 유지
+                );
+
+                // 업데이트 적용
+                simulation.Bodies.ApplyDescription(handle.Value, desc);
+                bodyRef.Awake = true; // 명시적으로 깨우기
+
+                // 이전 Shape 제거
+                simulation.Shapes.Remove(oldShapeIndex);
+            }
+            else
+            {
+                // 새로운 Body 추가
+                var desc = BodyDescription.CreateDynamic(pose, inertia, shapeIndex, 0.01f);
+                handle = simulation.Bodies.Add(desc);
+            }
+
+            return handle;
         }
 
-        public void UpdateBody(BodyHandle? handle, Transform t, Microsoft.Xna.Framework.BoundingBox box, float mass)
+        public void RemoveBody(BodyHandle? handle)
         {
             if (handle == null) return;
 
-            var bodyRef = simulation.Bodies.GetBodyReference(handle.Value);
-            if (bodyRef.Exists == false) return;
+            // BodyHandle이 존재하는지 확인
+            if (simulation.Bodies.BodyExists(handle.Value))
+            {
+                // BodyReference 가져오기
+                var bodyRef = simulation.Bodies.GetBodyReference(handle.Value);
 
-            var center = (box.Min + box.Max) / 2f;
-            //var pose = new RigidPose(Convert(t.position + center), Convert(t.rotation));
-            Vector3 size = Convert(box.Max - box.Min);
-            var boxShape = new Box(size.X * t.scale.X, size.Y * t.scale.Y, size.Z * t.scale.Z);
-            //var inertia = boxShape.ComputeInertia(mass);
-            var desc = BodyDescription.CreateDynamic(
-                        bodyRef.Pose,
-                        bodyRef.Velocity,
-                        bodyRef.LocalInertia,
-                        simulation.Shapes.Add(boxShape), 
-                        0.01f);
+                // ShapeIndex 가져오기
+                var shapeIndex = bodyRef.Collidable.Shape;
 
-            simulation.Bodies.ApplyDescription(handle.Value, desc);
-            bodyRef.Awake = true;
+                // BodyHandle 제거
+                simulation.Bodies.Remove(handle.Value);
+
+                // Shape 제거
+                simulation.Shapes.Remove(shapeIndex);
+            }
         }
 
-        public void RemoveBody(BodyHandle handle)
-        {
-            simulation.Bodies.Remove(handle);
-        }
-
-        public void GetBodyReference(BodyHandle handle, 
+        public void GetBodyReference(BodyHandle? handle, 
             ref Microsoft.Xna.Framework.Vector3 pos,
             ref Microsoft.Xna.Framework.Quaternion rot,
             ref Microsoft.Xna.Framework.Vector3 vel)
         {
-            var bodyRef = simulation.Bodies.GetBodyReference(handle);
+            if (handle == null) return;
+
+            var bodyRef = simulation.Bodies.GetBodyReference(handle.Value);
 
             // 현재 위치와 회전 가져오기
             pos = Convert(bodyRef.Pose.Position);
@@ -233,6 +255,14 @@ namespace MGAlienLib
         }
 
         #endregion
+
+        public string GetStatistics()
+        {
+            var desc = "";
+            desc += $"Bodies: {simulation.Bodies.ActiveSet.Count}\n";
+            desc += $"Statics: {simulation.Statics.Count}\n";
+            return desc;
+        }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         private Microsoft.Xna.Framework.Vector3 Convert(System.Numerics.Vector3 v)

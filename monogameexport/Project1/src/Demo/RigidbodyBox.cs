@@ -11,14 +11,22 @@ namespace Project1
         {
             base.Awake();
 
+            var random = new Random();
+
             var rdr = AddComponent<MeshRenderer>();
             rdr.Load("raw://EditorResources/box.glb");
             rdr.LoadMaterial("MG/3D/Lit");
+            rdr.BreakMaterialSharing();
+            var randomColor = new Color(
+                random.NextSingle(),
+                random.NextSingle(),
+                random.NextSingle(),
+                1f);
+            rdr.material.asset.SetColor("_BaseColor", randomColor);
 
             var rb = AddComponent<BoxBody>();
 
-            var random = new Random();
-            transform.scale = Vector3.One * (random.NextSingle() * 1f + .5f);
+            transform.scale = Vector3.One * (random.NextSingle() * .4f + 1f);
         }
 
         public override void Update()

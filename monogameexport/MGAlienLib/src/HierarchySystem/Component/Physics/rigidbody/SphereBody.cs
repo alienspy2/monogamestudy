@@ -22,7 +22,7 @@ namespace MGAlienLib
         {
             base.OnEnable();
             const float adjust = 1f / 1.25f; // 왜인지는 모르겠으나, 1.25f 로 나누어야함.
-            _handle = physMan.AddBody(transform, _radius * adjust, _mass);
+            _handle = physMan.AddOrUpdateBody(_handle, transform, _radius * adjust, _mass);
         }
 
 
@@ -32,7 +32,7 @@ namespace MGAlienLib
 
             if (_handle == null) return;
 
-            physMan.UpdateBody(_handle.Value, transform, _radius, _mass);
+            physMan.AddOrUpdateBody(_handle.Value, transform, _radius, _mass);
         }
     }
 }

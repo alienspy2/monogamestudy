@@ -11,12 +11,6 @@ namespace Project1
         public override void Awake()
         {
             base.Awake();
-            //game.physicsManager.test_addStaticBox();
-
-            //var obj = hierarchyManager.CreateGameObject("static ball", transform);
-            //obj.transform.position = new Vector3(0, 0, 0);
-            //obj.transform.scale = new Vector3(5,5,5);
-            //var ball = obj.AddComponent<StaticBall>();
 
             var groundObj = hierarchyManager.CreateGameObject("ground", transform);
             groundObj.transform.scale = new Vector3(10, 1, 10);
@@ -58,6 +52,23 @@ namespace Project1
             wallRdr4.Load("raw://EditorResources/box.glb");
             wallRdr4.ShareMaterial(groundRdr.material);
             var wallCollider4 = wallRdr4.AddComponent<BoxCollider>();
+
+        }
+
+        public override void OnEnable()
+        {
+            base.OnEnable();
+            console.RegisterCommand("phys", (_) =>
+            {
+                foreach (var line in game.physicsManager.GetStatistics().Split('\n'))
+                    Logger.Log(line);
+            });
+        }
+
+        public override void OnDestroy()
+        {
+            base.OnDestroy();
+            console.UnregisterCommand("phys");
         }
 
         public override void Update()
@@ -79,11 +90,11 @@ namespace Project1
             if (inputManager.IsPressed(Keys.D2))
             {
 
-                var obj = hierarchyManager.CreateGameObject("ball", transform);
+                var obj = hierarchyManager.CreateGameObject("box", transform);
                 obj.transform.position = new Vector3(random.NextSingle() * 3f,
                                                     10,
                                                     random.NextSingle() * 3f);
-                var ball = obj.AddComponent<RigidbodyBox>();
+                var box = obj.AddComponent<RigidbodyBox>();
             }
         }
     }

@@ -22,16 +22,18 @@ namespace MGAlienLib
         public override void OnEnable()
         {
             base.OnEnable();
-            _handle = physMan.AddStatic(transform, _box);
+            internal_UpdatePhysics();
         }
 
         public override void internal_ColliderDirty()
         {
             base.internal_ColliderDirty();
+            internal_UpdatePhysics();
+        }
 
-            if (_handle == null) return;
-
-            physMan.UpdateStatic(_handle.Value, transform, _box);
+        private void internal_UpdatePhysics()
+        {
+            _handle = physMan.AddOrUpdateStatic(_handle, transform, _box);
         }
 
     }

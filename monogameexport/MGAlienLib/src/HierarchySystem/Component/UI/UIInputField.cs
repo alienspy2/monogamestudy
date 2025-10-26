@@ -17,6 +17,7 @@ namespace MGAlienLib
 
         [SerializeField] protected TextRenderer _textRenderer;
         [SerializeField] protected SpriteRenderer _caret;
+        [SerializeField] private int _lengthLimit = 100; // todo : 값이 바뀔 때 현재 텍스트 길이와 비교해서 짤라내기
 
         private Action<UIInputField> _onEndEdit;
         private Action<UIInputField> _onCancelEdit;
@@ -82,6 +83,12 @@ namespace MGAlienLib
                 _textRenderer.text = value;
                 cursorIndex = value.Length;
             }
+        }
+
+        public int lengthLimit
+        {
+            get => _lengthLimit;
+            set => _lengthLimit = value;
         }
 
         public Action<UIInputField> onEndEdit
@@ -217,6 +224,11 @@ namespace MGAlienLib
             }
             else
             {
+                if (_textRenderer.text.Length >= _lengthLimit)
+                {
+                    return;
+                }
+
                 _textRenderer.text = _textRenderer.text.Insert(cursorIndex, c.ToString());
                 cursorIndex++;
                 onValueChanged?.Invoke(this);

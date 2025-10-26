@@ -23,7 +23,7 @@ namespace MGAlienLib
         public override void OnEnable()
         {
             base.OnEnable();
-            _handle = physMan.AddBody(transform, _box, _mass);
+            _handle = physMan.AddOrUpdateBody(_handle, transform, _box, _mass);
         }
 
 
@@ -33,7 +33,7 @@ namespace MGAlienLib
 
             if (_handle == null) return;
 
-            physMan.UpdateBody(_handle.Value, transform, _box, _mass);
+            physMan.AddOrUpdateBody(_handle.Value, transform, _box, _mass);
         }
 
     }

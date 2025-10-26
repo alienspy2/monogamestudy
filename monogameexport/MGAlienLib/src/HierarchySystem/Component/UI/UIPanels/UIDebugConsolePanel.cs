@@ -73,6 +73,19 @@ namespace MGAlienLib
             _inputField?.TryGetFocus();
         }
 
+        public override void OnDisable()
+        {
+            base.OnDisable();   
+            if (_inputField != null)
+            {
+                if (inputManager != null)
+                {
+                    if (_inputField.focus)
+                        inputManager.TryGetFocus(null);
+                }
+            }
+        }
+
         public void Clear()
         {
             foreach (var line in _logLines)
@@ -190,12 +203,6 @@ namespace MGAlienLib
             }
 
             {
-                // 위 부터
-                //var line = _logLines[_logLines.Count - 1];
-                //_logLines.RemoveAt(_logLines.Count - 1);
-                //_logLines.Insert(0, line);
-                //line.transform.SetAsFirstSibling();
-
                 // 아래 부터
                 var line = _logLines[0];
                 _logLines.RemoveAt(0);

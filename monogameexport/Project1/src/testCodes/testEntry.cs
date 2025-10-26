@@ -51,9 +51,6 @@ namespace Project1
 
             Logger.Log($"***** Hello ***** : {DateTime.Now.ToString("yyMMdd_HH:mm:ss")}");
 
-
-            
-
             bool useDemoPanel = true;
             if (useDemoPanel)
             {
